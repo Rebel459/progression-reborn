@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "progression_reborn",
+	"version": "${version}",
+	"name": "Progression Reborn",
+	"description": "Completely reimagines and rebalances early and mid-game progression in a vanilla-like fashion. The ultimate survival progression overhaul mod.",
+	"authors": [
+		"Rebel459"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/user/Rebel459",
+		"sources": "https://github.com/Rebel459/progression-reborn"
+	},
+	"license": "Legacy License",
+	"icon": "assets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.legacy.progression_reborn.ProgressionReborn"
+		]
+	},
+	"mixins": [
+		"progression_reborn.mixins.json"
+	],
+	"depends": {
+		"minecraft": ">=1.21 <=1.21.1",
+		"fabric-api": "*",
+		"frozenlib": "*"
+	}
+}
