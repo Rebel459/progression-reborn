@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","pattern":["AA ","BB ","BB "],"key":{"A":{"item":"minecraft:iron_ingot"},"B":{"tag":"minecraft:planks"}},"result":{"item":"minecraft:smithing_table","count":1},"group": "smithing_table"}

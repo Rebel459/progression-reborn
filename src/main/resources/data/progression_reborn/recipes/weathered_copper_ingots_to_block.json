@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "progression_reborn:weathered_copper_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:weathered_copper",
+    "count": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "progression_reborn:rose_alloy"
+  }
+}

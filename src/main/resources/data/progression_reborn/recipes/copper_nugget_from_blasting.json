@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "progression_reborn:copper_pickaxe"
+    },
+    {
+      "item": "progression_reborn:copper_shovel"
+    },
+    {
+      "item": "progression_reborn:copper_axe"
+    },
+    {
+      "item": "progression_reborn:copper_hoe"
+    },
+    {
+      "item": "progression_reborn:copper_sword"
+    },
+    {
+      "item": "progression_reborn:copper_helmet"
+    },
+    {
+      "item": "progression_reborn:copper_chestplate"
+    },
+    {
+      "item": "progression_reborn:copper_leggings"
+    },
+    {
+      "item": "progression_reborn:copper_boots"
+    }
+  ],
+  "result": "progression_reborn:copper_nugget"
+}

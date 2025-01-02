@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "1": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "2": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "3": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "4": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "5": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "6": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "7": {
+      "item": "progression_reborn:raw_rose"
+    },
+    "8": {
+      "item": "progression_reborn:raw_rose"
+    }
+  },
+  "result": {
+    "item": "progression_reborn:raw_rose_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "progression_reborn:item/exposed_copper_knife"
+  }
+}

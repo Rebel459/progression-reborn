@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 0.08,
+  "cookingtime": 50,
+  "ingredient": {
+    "item": "progression_reborn:raw_copper_nugget"
+  },
+  "result": "progression_reborn:copper_nugget"
+}

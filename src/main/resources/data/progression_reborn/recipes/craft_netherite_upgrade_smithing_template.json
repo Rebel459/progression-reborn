@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "S": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "group": "netherite_template",
+  "show_notification": true
+}

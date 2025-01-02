@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "progression_reborn:item/copper_axe"
+  }
+}

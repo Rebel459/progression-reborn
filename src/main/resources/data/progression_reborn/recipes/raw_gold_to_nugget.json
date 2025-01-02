@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_gold"
+    }
+  ],
+  "result": {
+    "item": "progression_reborn:raw_gold_nugget",
+    "count": 9
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "progression_reborn:block/nether_rose_ore",
+    "up": "progression_reborn:block/nether_rose_ore",
+    "north": "progression_reborn:block/nether_rose_ore",
+    "east": "progression_reborn:block/nether_rose_ore",
+    "south": "progression_reborn:block/nether_rose_ore",
+    "west": "progression_reborn:block/nether_rose_ore",
+    "particle": "progression_reborn:block/nether_rose_ore"
+  },
+  "render_type": "solid"
+}

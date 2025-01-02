@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "1": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "2": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "3": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "4": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "5": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "6": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "7": {
+      "item": "progression_reborn:rose_ingot"
+    },
+    "8": {
+      "item": "progression_reborn:rose_ingot"
+    }
+  },
+  "result": {
+    "item": "progression_reborn:rose_block",
+    "count": 1
+  }
+}

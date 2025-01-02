@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:netherrack"
+    },
+    "C": {
+      "item": "progression_reborn:rose_alloy"
+    },
+    "S": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "progression_reborn:rose_upgrade_smithing_template"
+  },
+  "group": "rose_template",
+  "show_notification": true
+}

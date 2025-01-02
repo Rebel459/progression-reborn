@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:end_stone"
+    },
+    "C": {
+      "item": "end_reborn:remnant_scrap"
+    },
+    "S": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "end_reborn:remnant_upgrade_smithing_template"
+  },
+  "group": "remnant_template",
+  "show_notification": true
+}

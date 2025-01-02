@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    },
+    {
+      "item": "progression_reborn:copper_nugget"
+    }
+  ],
+  "result": {
+    "item": "minecraft:copper_ingot",
+    "count": 1
+  }
+}

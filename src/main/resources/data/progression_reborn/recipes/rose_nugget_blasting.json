@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "experience": 0.125,
+  "cookingtime": 25,
+  "ingredient": {
+    "item": "progression_reborn:raw_rose_nugget"
+  },
+  "result": "progression_reborn:rose_nugget"
+}

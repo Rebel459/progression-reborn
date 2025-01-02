@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "has_diamond_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:diamond_nugget"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:diamond_from_nuggets",
+      "progression_reborn:diamond_to_nugget"
+    ]
+  }
+}

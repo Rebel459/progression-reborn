@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "template": {
+      "item": "progression_reborn:iron_upgrade_smithing_template"
+    },
+    "base": {
+        "item": "progression_reborn:copper_chestplate"
+    },
+    "addition": {
+        "item": "minecraft:iron_ingot"
+    },
+    "result": {
+        "item": "minecraft:iron_chestplate"
+    }
+}

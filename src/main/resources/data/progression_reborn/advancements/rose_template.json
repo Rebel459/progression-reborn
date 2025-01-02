@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "has_rose_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:rose_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:craft_rose_upgrade_smithing_template",
+      "progression_reborn:rose_upgrade_smithing_template",
+      "progression_reborn:rose_alloy",
+      "progression_reborn:rose_sword_smithing",
+      "progression_reborn:rose_axe_smithing",
+      "progression_reborn:rose_pickaxe_smithing",
+      "progression_reborn:rose_shovel_smithing",
+      "progression_reborn:rose_hoe_smithing",
+      "progression_reborn:rose_helmet_smithing",
+      "progression_reborn:rose_chestplate_smithing",
+      "progression_reborn:rose_leggings_smithing",
+      "progression_reborn:rose_boots_smithing"
+    ]
+  }
+}

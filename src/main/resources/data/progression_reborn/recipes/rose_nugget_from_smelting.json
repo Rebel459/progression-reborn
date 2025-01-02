@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": [
+    {
+      "item": "progression_reborn:rose_pickaxe"
+    },
+    {
+      "item": "progression_reborn:rose_shovel"
+    },
+    {
+      "item": "progression_reborn:rose_axe"
+    },
+    {
+      "item": "progression_reborn:rose_hoe"
+    },
+    {
+      "item": "progression_reborn:rose_sword"
+    },
+    {
+      "item": "progression_reborn:rose_helmet"
+    },
+    {
+      "item": "progression_reborn:rose_chestplate"
+    },
+    {
+      "item": "progression_reborn:rose_leggings"
+    },
+    {
+      "item": "progression_reborn:rose_boots"
+    },
+    {
+      "item": "progression_reborn:rose_knife"
+    }
+  ],
+  "result": "progression_reborn:rose_nugget"
+}

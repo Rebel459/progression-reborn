@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "has_raw_rose_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:raw_rose_nugget"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:raw_rose_from_nuggets",
+      "progression_reborn:raw_rose_to_nugget",
+      "progression_reborn:rose_ingot_to_block",
+      "progression_reborn:rose_block_to_ingot",
+      "progression_reborn:raw_rose_block_to_raw_rose",
+      "progression_reborn:raw_rose_ore_to_block",
+      "progression_reborn:rose_ingot_from_smelting",
+      "progression_reborn:rose_ingot_from_blasting",
+      "progression_reborn:rose_nugget_from_smelting",
+      "progression_reborn:rose_nugget_from_blasting"
+    ]
+  }
+}

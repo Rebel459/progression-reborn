@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "chainmail_craft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:craft_iron_upgrade_smithing_template",
+      "progression_reborn:iron_upgrade_smithing_template",
+      "progression_reborn:iron_alloy",
+      "minecraft:iron_sword",
+      "minecraft:iron_axe",
+      "minecraft:iron_pickaxe",
+      "minecraft:iron_shovel",
+      "minecraft:iron_hoe",
+      "minecraft:iron_helmet",
+      "minecraft:iron_chestplate",
+      "minecraft:iron_leggings",
+      "minecraft:iron_boots"
+    ]
+  }
+}
