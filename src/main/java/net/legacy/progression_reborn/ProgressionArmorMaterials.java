@@ -19,6 +19,7 @@ import java.util.function.Supplier;
 
 public class ProgressionArmorMaterials {
     public static final Holder<ArmorMaterial> COPPER;
+    public static final Holder<ArmorMaterial> ROSE;
 
     public ProgressionArmorMaterials() {
     }
@@ -49,6 +50,18 @@ public class ProgressionArmorMaterials {
             enumMap.put(ArmorItem.Type.HELMET, 2);
             enumMap.put(ArmorItem.Type.BODY, 0);
         }), 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.COPPER_INGOT});
+        });
+    }
+
+    static {
+        ROSE = register("rose", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+            enumMap.put(ArmorItem.Type.BOOTS, 2);
+            enumMap.put(ArmorItem.Type.LEGGINGS, 4);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 4);
+            enumMap.put(ArmorItem.Type.HELMET, 2);
+            enumMap.put(ArmorItem.Type.BODY, 0);
+        }), 10, SoundEvents.ARMOR_EQUIP_GOLD, 0.5F, 0.0F, () -> {
             return Ingredient.of(new ItemLike[]{Items.COPPER_INGOT});
         });
     }

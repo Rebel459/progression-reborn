@@ -16,6 +16,16 @@ public final class ProgressionItems {
     private ProgressionItems() {}
 
     public static final Item ROSE_INGOT = new Item(new Item.Properties().stacksTo(64).fireResistant());
+    public static final Item ROSE_NUGGET = new Item(new Item.Properties().stacksTo(64).fireResistant());
+    public static final Item RAW_ROSE_NUGGET = new Item(new Item.Properties().stacksTo(64).fireResistant());
+
+    public static final Item RAW_IRON_NUGGET = new Item(new Item.Properties().stacksTo(64));
+    public static final Item RAW_GOLD_NUGGET = new Item(new Item.Properties().stacksTo(64));
+    public static final Item RAW_COPPER_NUGGET = new Item(new Item.Properties().stacksTo(64));
+    public static final Item DIAMOND_NUGGET = new Item(new Item.Properties().stacksTo(64));
+
+    public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = new Item(new Item.Properties().stacksTo(64));
+    public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = new Item(new Item.Properties().stacksTo(64));
     
     public static final Item ENCHANTED_GOLDEN_CARROT = new Item(new Item.Properties().rarity(Rarity.RARE).food(ProgressionFoods.ENCHANTED_GOLDEN_CARROT).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true));
     
@@ -25,7 +35,12 @@ public final class ProgressionItems {
     public static final Item COPPER_CHESTPLATE = new ArmorItem(ProgressionArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(27)));
     public static final Item COPPER_LEGGINGS = new ArmorItem(ProgressionArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(27)));
     public static final Item COPPER_BOOTS = new ArmorItem(ProgressionArmorMaterials.COPPER, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(27)));
-    
+
+    public static final Item ROSE_HELMET = new ArmorItem(ProgressionArmorMaterials.ROSE, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(27)).fireResistant());
+    public static final Item ROSE_CHESTPLATE = new ArmorItem(ProgressionArmorMaterials.ROSE, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(27)).fireResistant());
+    public static final Item ROSE_LEGGINGS = new ArmorItem(ProgressionArmorMaterials.ROSE, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(27)).fireResistant());
+    public static final Item ROSE_BOOTS = new ArmorItem(ProgressionArmorMaterials.ROSE, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(27)).fireResistant());
+
     public static void register() {
         registerItemAfter(Items.GOLDEN_CARROT, ENCHANTED_GOLDEN_CARROT, "enchanted_golden_carrot", CreativeModeTabs.FOOD_AND_DRINKS);
 
