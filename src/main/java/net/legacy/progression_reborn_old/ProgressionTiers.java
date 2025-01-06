@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn_old;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.tags.BlockTags;

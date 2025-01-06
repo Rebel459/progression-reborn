@@ -2,7 +2,7 @@
 	"required": true,
 	"package": "net.legacy.progression_reborn.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": ["TestMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	}

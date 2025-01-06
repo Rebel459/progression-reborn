@@ -1,7 +1,6 @@
-Progression Reborn
+Progression Reborn - Legacy License
 
-All Rights Reserved assets
-MIT License code
-Source code: https://github.com/Rebel459/progression-reborn
+- Assets ARR / specific to the relevant rights holder. Assets include anything in the assets/ directory
+- All code and code contributions licensed under MIT. This includes all code used in the java/, recipe/, worldgen/, loot_table/ and enchantment/ directories
 
-https://github.com/Rebel459/legacies/blob/main/legacy-license.md
+Source code: https://github.com/Rebel459/legacies-and-legends

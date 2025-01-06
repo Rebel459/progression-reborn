@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn_old;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -9,12 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 public class ProgressionReborn implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		ProgressionItems.init();
-		ProgressionGearItems.init();
-		ProgressionBlocks.init();
-		ProgressionCreativeInventorySorting.init();
-		ProgressionFuelRegistry.registerFuels();
-		ProgressionSounds.init();
+		ProgressionItems.register();
 	}
 
 	public static ResourceLocation id(String path) {

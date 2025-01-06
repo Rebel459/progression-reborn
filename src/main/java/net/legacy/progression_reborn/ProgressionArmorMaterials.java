@@ -1,25 +1,43 @@
 package net.legacy.progression_reborn;
 
 import net.minecraft.Util;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.EnumMap;
-import java.util.List;
-import java.util.function.Supplier;
 
-public class ProgressionArmorMaterials {
-    public static final Holder<ArmorMaterial> COPPER;
-    public static final Holder<ArmorMaterial> ROSE;
+public interface ProgressionArmorMaterials {
+    net.minecraft.world.item.equipment.ArmorMaterial DUNGEON = new net.minecraft.world.item.equipment.ArmorMaterial(5, Util.make(new EnumMap(ArmorType.class), enumMap -> {
+        enumMap.put(ArmorType.BOOTS, 2);
+        enumMap.put(ArmorType.LEGGINGS, 5);
+        enumMap.put(ArmorType.CHESTPLATE, 6);
+        enumMap.put(ArmorType.HELMET, 3);
+        enumMap.put(ArmorType.BODY, 5);
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.1F, ProgressionItemTags.REPAIRS_DUNGEON_ARMOR, ProgressionEquipmentAssets.DUNGEON);
+
+    net.minecraft.world.item.equipment.ArmorMaterial FORTRESS = new net.minecraft.world.item.equipment.ArmorMaterial(5, Util.make(new EnumMap(ArmorType.class), enumMap -> {
+        enumMap.put(ArmorType.BOOTS, 3);
+        enumMap.put(ArmorType.LEGGINGS, 6);
+        enumMap.put(ArmorType.CHESTPLATE, 6);
+        enumMap.put(ArmorType.HELMET, 3);
+        enumMap.put(ArmorType.BODY, 7);
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.1F, ProgressionItemTags.REPAIRS_FORTRESS_ARMOR, ProgressionEquipmentAssets.FORTRESS);
+
+    net.minecraft.world.item.equipment.ArmorMaterial WARD = new net.minecraft.world.item.equipment.ArmorMaterial(5, Util.make(new EnumMap(ArmorType.class), enumMap -> {
+        enumMap.put(ArmorType.BOOTS, 3);
+        enumMap.put(ArmorType.LEGGINGS, 6);
+        enumMap.put(ArmorType.CHESTPLATE, 7);
+        enumMap.put(ArmorType.HELMET, 4);
+        enumMap.put(ArmorType.BODY, 11);
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.2F, ProgressionItemTags.REPAIRS_WARD_ARMOR, ProgressionEquipmentAssets.WARD);
+}
+
+
+/*
+public class ProgressionArmorMaterialsOld {
+    public static final Holder<ArmorMaterial> DUNGEON;
+    public static final Holder<ArmorMaterial> FORTRESS;
+    public static final Holder<ArmorMaterial> WARD;
 
     public ProgressionArmorMaterials() {
     }
@@ -43,26 +61,32 @@ public class ProgressionArmorMaterials {
     }
 
     static {
-        COPPER = register("copper", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
-            enumMap.put(ArmorItem.Type.BOOTS, 1);
-            enumMap.put(ArmorItem.Type.LEGGINGS, 3);
-            enumMap.put(ArmorItem.Type.CHESTPLATE, 4);
-            enumMap.put(ArmorItem.Type.HELMET, 2);
-            enumMap.put(ArmorItem.Type.BODY, 0);
-        }), 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
-            return Ingredient.of(new ItemLike[]{Items.COPPER_INGOT});
-        });
-    }
-
-    static {
-        ROSE = register("rose", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+        DUNGEON = register("dungeon", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
             enumMap.put(ArmorItem.Type.BOOTS, 2);
-            enumMap.put(ArmorItem.Type.LEGGINGS, 4);
-            enumMap.put(ArmorItem.Type.CHESTPLATE, 4);
-            enumMap.put(ArmorItem.Type.HELMET, 2);
-            enumMap.put(ArmorItem.Type.BODY, 0);
-        }), 10, SoundEvents.ARMOR_EQUIP_GOLD, 0.5F, 0.0F, () -> {
-            return Ingredient.of(new ItemLike[]{Items.COPPER_INGOT});
+            enumMap.put(ArmorItem.Type.LEGGINGS, 5);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 6);
+            enumMap.put(ArmorItem.Type.HELMET, 3);
+            enumMap.put(ArmorItem.Type.BODY, 5);
+        }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.1F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.IRON_INGOT});
+        });
+        FORTRESS = register("fortress", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+            enumMap.put(ArmorItem.Type.BOOTS, 3);
+            enumMap.put(ArmorItem.Type.LEGGINGS, 6);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 6);
+            enumMap.put(ArmorItem.Type.HELMET, 3);
+            enumMap.put(ArmorItem.Type.BODY, 7);
+        }), 16, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.1F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.BLAZE_ROD});
+        });
+        WARD = register("ward", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+            enumMap.put(ArmorItem.Type.BOOTS, 3);
+            enumMap.put(ArmorItem.Type.LEGGINGS, 6);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 7);
+            enumMap.put(ArmorItem.Type.HELMET, 4);
+            enumMap.put(ArmorItem.Type.BODY, 11);
+        }), 8, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.2F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.ECHO_SHARD});
         });
     }
-}
+}*/
