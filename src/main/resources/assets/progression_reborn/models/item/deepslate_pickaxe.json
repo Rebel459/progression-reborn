@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "progression_reborn:item/deepslate_pickaxe"
-  }
-}

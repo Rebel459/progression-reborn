@@ -53,7 +53,10 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
-		generator.createTrivialCube(PRBlocks.PLACEHOLDER_BLOCK);
+		generator.createTrivialCube(PRBlocks.COPPER_BLOCK);
+		generator.createTrivialCube(PRBlocks.ROSE_ORE);
+		generator.createTrivialCube(PRBlocks.RAW_ROSE_BLOCK);
+		generator.createTrivialCube(PRBlocks.ROSE_BLOCK);
 	}
 
 	@Override
@@ -63,7 +66,35 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateTrimmableItem(PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
 		generator.generateTrimmableItem(PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
 
-		generator.generateFlatItem(PRGearItems.PLACEHOLDER_SWORD, ModelTemplates.FLAT_ITEM);
+		generator.generateTrimmableItem(PRGearItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
+		generator.generateTrimmableItem(PRGearItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
+		generator.generateTrimmableItem(PRGearItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
+		generator.generateTrimmableItem(PRGearItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
+
+		generator.generateFlatItem(PRItems.RAW_COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.RAW_IRON_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.RAW_GOLD_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.RAW_ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.DIAMOND_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_INGOT, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.IRON_ALLOY, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_ALLOY, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.IRON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+
+		generator.generateFlatItem(PRGearItems.COPPER_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.COPPER_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.COPPER_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.COPPER_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.COPPER_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+		generator.generateFlatItem(PRGearItems.ROSE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.ROSE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.ROSE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.ROSE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRGearItems.ROSE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 	}
 
 	@Contract("_, _ -> new")

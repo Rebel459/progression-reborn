@@ -12,10 +12,52 @@ import java.util.function.Function;
 
 public final class PRGearItems {
 
-    // Weapons
-    public static final SwordItem PLACEHOLDER_SWORD = register("placeholder_sword", settings -> new SwordItem(PRToolMaterial.COPPER, 4f, -3.2f, settings
+    // Tools
+    public static final SwordItem COPPER_SWORD = register("copper_sword", settings -> new SwordItem(PRToolMaterial.COPPER, 3f, -2.4f, settings
             .stacksTo(1)
-            .durability(750)
+            .durability(190)
+    ));
+    public static final PickaxeItem COPPER_PICKAXE = register("copper_pickaxe", settings -> new PickaxeItem(PRToolMaterial.COPPER, 1f, -2.8f, settings
+            .stacksTo(1)
+            .durability(190)
+    ));
+    public static final AxeItem COPPER_AXE = register("copper_axe", settings -> new AxeItem(PRToolMaterial.COPPER, 6f, -3.1f, settings
+            .stacksTo(1)
+            .durability(190)
+    ));
+    public static final ShovelItem COPPER_SHOVEL = register("copper_shovel", settings -> new ShovelItem(PRToolMaterial.COPPER, 1.5f, -3f, settings
+            .stacksTo(1)
+            .durability(190)
+    ));
+    public static final HoeItem COPPER_HOE = register("copper_hoe", settings -> new HoeItem(PRToolMaterial.COPPER, -2f, -1f, settings
+            .stacksTo(1)
+            .durability(190)
+    ));
+
+    public static final SwordItem ROSE_SWORD = register("rose_sword", settings -> new SwordItem(PRToolMaterial.ROSE, 3f, -2.4f, settings
+            .stacksTo(1)
+            .durability(281)
+            .fireResistant()
+    ));
+    public static final PickaxeItem ROSE_PICKAXE = register("rose_pickaxe", settings -> new PickaxeItem(PRToolMaterial.ROSE, 1f, -2.8f, settings
+            .stacksTo(1)
+            .durability(281)
+            .fireResistant()
+    ));
+    public static final AxeItem ROSE_AXE = register("rose_axe", settings -> new AxeItem(PRToolMaterial.ROSE, 6f, -3.1f, settings
+            .stacksTo(1)
+            .durability(281)
+            .fireResistant()
+    ));
+    public static final ShovelItem ROSE_SHOVEL = register("rose_shovel", settings -> new ShovelItem(PRToolMaterial.ROSE, 1.5f, -3f, settings
+            .stacksTo(1)
+            .durability(281)
+            .fireResistant()
+    ));
+    public static final HoeItem ROSE_HOE = register("rose_hoe", settings -> new HoeItem(PRToolMaterial.ROSE, -2f, -1f, settings
+            .stacksTo(1)
+            .durability(281)
+            .fireResistant()
     ));
 
     // Armor
@@ -30,6 +72,23 @@ public final class PRGearItems {
     ));
     public static final ArmorItem COPPER_BOOTS = register("copper_boots", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
             .stacksTo(1)
+    ));
+
+    public static final ArmorItem ROSE_HELMET = register("rose_helmet", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+            .stacksTo(1)
+            .fireResistant()
+    ));
+    public static final ArmorItem ROSE_CHESTPLATE = register("rose_chestplate", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+            .stacksTo(1)
+            .fireResistant()
+    ));
+    public static final ArmorItem ROSE_LEGGINGS = register("rose_leggings", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+            .stacksTo(1)
+            .fireResistant()
+    ));
+    public static final ArmorItem ROSE_BOOTS = register("rose_boots", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+            .stacksTo(1)
+            .fireResistant()
     ));
 
     public static void init() {

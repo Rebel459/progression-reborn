@@ -9,14 +9,45 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 
 public class PRBlocks {
 
-    public static final Block PLACEHOLDER_BLOCK = register("placeholder_block",
+    public static final Block COPPER_BLOCK = register("copper_block",
             Block::new,
-            Properties.ofFullCopy(Blocks.DIRT)
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER)
+    );
+
+    public static final Block ROSE_ORE = register("rose_ore",
+            Block::new,
+            Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)
+    );
+    public static final Block RAW_ROSE_BLOCK = register("raw_rose_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(5.0F, 6.0F)
+    );
+    public static final Block ROSE_BLOCK = register("rose_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.NETHERITE_BLOCK)
     );
 
     public static void init() {
