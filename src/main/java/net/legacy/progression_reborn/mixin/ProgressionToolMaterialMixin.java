@@ -21,8 +21,11 @@ public interface ProgressionToolMaterialMixin {
                             target = "(Lnet/minecraft/tags/TagKey;IFFILnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/ToolMaterial;"
                     )
             )
-    private static ToolMaterial modifyToughness(TagKey tagKey, int i, float f, float g, int j, TagKey tagKey2, Operation<ToolMaterial> original){
-        if (tagKey == BlockTags.INCORRECT_FOR_GOLD_TOOL && i == 32 && f == 12f && g == 0f && j == 22 && tagKey2 == ItemTags.GOLD_TOOL_MATERIALS){
+    private static ToolMaterial modifyToolMaterial(TagKey tagKey, int i, float f, float g, int j, TagKey tagKey2, Operation<ToolMaterial> original){
+        if (tagKey == BlockTags.INCORRECT_FOR_IRON_TOOL && tagKey2 == ItemTags.IRON_TOOL_MATERIALS){
+            return original.call(tagKey, 510, f, g, j, tagKey2);
+        }
+        else if (tagKey == BlockTags.INCORRECT_FOR_GOLD_TOOL && tagKey2 == ItemTags.GOLD_TOOL_MATERIALS){
             return original.call(tagKey, 73, 10f, g, j, tagKey2);
         }
         else {

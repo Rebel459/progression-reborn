@@ -12,18 +12,18 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import org.jetbrains.annotations.NotNull;
 
-public class ProgressionBlocks {
+public class PRBlocks {
 
-    public static final Block CRACKED_END_STONE_BRICKS = register("cracked_end_stone_bricks",
+    public static final Block PLACEHOLDER_BLOCK = register("placeholder_block",
             Block::new,
-            Properties.ofFullCopy(Blocks.END_STONE_BRICKS)
+            Properties.ofFullCopy(Blocks.DIRT)
     );
 
     public static void init() {
     }
 
     private static <T extends Block> @NotNull T registerWithoutItem(String path, Function<Properties, T> block, Properties properties) {
-        ResourceLocation id = ProgressionConstants.id(path);
+        ResourceLocation id = net.legacy.progression_reborn.PRConstants.id(path);
         return doRegister(id, makeBlock(block, properties, id));
     }
 

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.nio.file.Path;
 import java.util.Map;
 
-public class ProgressionConstants {
+public class PRConstants {
 	public static final String MOD_ID = "progression_reborn";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final ModContainer MOD_CONTAINER = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow();
@@ -57,7 +57,7 @@ public class ProgressionConstants {
 
 	@NotNull
 	public static String string(@NotNull String path) {
-		return ProgressionConstants.id(path).toString();
+		return net.legacy.progression_reborn.PRConstants.id(path).toString();
 	}
 
 	public static String safeString(String path) {

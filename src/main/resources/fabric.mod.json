@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.legacy.progression_reborn.ProgressionReborn"
+		],
+		"fabric-datagen": [
+			"net.legacy.progression_reborn.PRDataGenerator"
 		]
 	},
 	"mixins": [

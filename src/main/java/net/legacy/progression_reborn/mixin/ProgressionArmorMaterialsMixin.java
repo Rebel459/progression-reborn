@@ -30,7 +30,7 @@ public interface ProgressionArmorMaterialsMixin {
                             target = "(ILjava/util/Map;ILnet/minecraft/core/Holder;FFLnet/minecraft/tags/TagKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/equipment/ArmorMaterial;"
                     )
             )
-    private static ArmorMaterial modifyToughness(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
+    private static ArmorMaterial modifyArmorMaterial(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
         if (resourceKey == LEATHER){
             Map<ArmorType, Integer> leatherMap;
             leatherMap = Util.make(new EnumMap(ArmorType.class), customMap -> {

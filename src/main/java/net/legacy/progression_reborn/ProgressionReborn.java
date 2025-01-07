@@ -9,12 +9,10 @@ import net.minecraft.resources.ResourceLocation;
 public class ProgressionReborn implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		ProgressionItems.init();
-		ProgressionGearItems.init();
-		ProgressionBlocks.init();
-		ProgressionCreativeInventorySorting.init();
-		ProgressionFuelRegistry.registerFuels();
-		ProgressionSounds.init();
+		PRItems.init();
+		PRGearItems.init();
+		PRBlocks.init();
+		PRCreativeInventorySorting.init();
 	}
 
 	public static ResourceLocation id(String path) {

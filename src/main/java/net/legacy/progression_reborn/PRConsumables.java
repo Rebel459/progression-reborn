@@ -9,22 +9,15 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 import java.util.List;
 
-public class ProgressionConsumables {
-    public static final Consumable ENCHANTED_BEETROOT = defaultFood()
+public class PRConsumables {
+    public static final Consumable ENCHANTED_GOLDEN_CARROT = defaultFood()
             .onConsume(
                     new ApplyStatusEffectsConsumeEffect(
                             List.of(
-                                    new MobEffectInstance(MobEffects.REGENERATION, 100, 1)
-                            )
-                    )
-            )
-            .build();
-    public static final Consumable ENCHANTED_BEETROOT_SOUP = defaultFood()
-            .onConsume(
-                    new ApplyStatusEffectsConsumeEffect(
-                            List.of(
-                                    new MobEffectInstance(MobEffects.REGENERATION, 300, 2),
-                                    new MobEffectInstance(MobEffects.SATURATION, 10, 0)
+                                    new MobEffectInstance(MobEffects.REGENERATION, 300, 1),
+                                    new MobEffectInstance(MobEffects.SATURATION, 10, 1),
+                                    new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0),
+                                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 900, 0)
                             )
                     )
             )

@@ -17,11 +17,11 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.block.Blocks;
 
-public record ProgressionToolMaterial(
+public record PRToolMaterial(
         TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems
 ) {
-    public static final net.minecraft.world.item.ToolMaterial METAL = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 250, 6.0F, 5.0F, 10, ProgressionItemTags.METAL_TOOL_MATERIALS);
-    public static final net.minecraft.world.item.ToolMaterial ANCIENT = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 3.0F, 25, ProgressionItemTags.ANCIENT_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial COPPER = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 190, 5.0F, 1.0F, 14, PRItemTags.COPPER_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial ROSE = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 281, 10.0F, 2.0F, 22, PRItemTags.ROSE_TOOL_MATERIALS);
 
     private Item.Properties applyCommonProperties(Item.Properties properties) {
         return properties.durability(this.durability).repairable(this.repairItems).enchantable(this.enchantmentValue);
