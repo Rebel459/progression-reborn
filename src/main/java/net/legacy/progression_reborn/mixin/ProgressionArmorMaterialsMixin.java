@@ -21,15 +21,16 @@ import static net.minecraft.world.item.equipment.EquipmentAssets.*;
 @Mixin(ArmorMaterials.class)
 public interface ProgressionArmorMaterialsMixin {
 
-    @WrapOperation(
+    @WrapOperation
+            (
             method = "<clinit>",
             at = @At
                     (
                             value = "NEW",
                             target = "(ILjava/util/Map;ILnet/minecraft/core/Holder;FFLnet/minecraft/tags/TagKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/equipment/ArmorMaterial;"
                     )
-    )
-    private static ArmorMaterial modifyToughness(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original) {
+            )
+    private static ArmorMaterial modifyToughness(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
         if (resourceKey == LEATHER){
             Map<ArmorType, Integer> leatherMap;
             leatherMap = Util.make(new EnumMap(ArmorType.class), customMap -> {
