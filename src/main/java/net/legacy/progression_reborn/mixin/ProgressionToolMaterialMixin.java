@@ -15,7 +15,8 @@ public interface ProgressionToolMaterialMixin {
     @WrapOperation(
             method = "<clinit>",
             at = @At
-                    (value = "NEW",
+                    (
+                            value = "NEW",
                             target = "(Lnet/minecraft/tags/TagKey;IFFILnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/ToolMaterial;"
                     )
     )

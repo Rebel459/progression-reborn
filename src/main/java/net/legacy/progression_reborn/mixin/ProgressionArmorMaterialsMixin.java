@@ -24,7 +24,8 @@ public interface ProgressionArmorMaterialsMixin {
     @WrapOperation(
             method = "<clinit>",
             at = @At
-                    (value = "NEW",
+                    (
+                            value = "NEW",
                             target = "(ILjava/util/Map;ILnet/minecraft/core/Holder;FFLnet/minecraft/tags/TagKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/equipment/ArmorMaterial;"
                     )
     )
