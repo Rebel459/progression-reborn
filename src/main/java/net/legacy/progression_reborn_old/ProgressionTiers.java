@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 
 public enum ProgressionTiers implements Tier {
     COPPER(BlockTags.INCORRECT_FOR_STONE_TOOL, 190, 5.0F, 1.0F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
-    ROSE(BlockTags.INCORRECT_FOR_IRON_TOOL, 141, 12.0F, 2.0F, 22, () -> Ingredient.of(ProgressionItems.ROSE_INGOT));
+    ROSE(BlockTags.INCORRECT_FOR_IRON_TOOL, 141, 10.0F, 2.0F, 22, () -> Ingredient.of(ProgressionItems.ROSE_INGOT));
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;
