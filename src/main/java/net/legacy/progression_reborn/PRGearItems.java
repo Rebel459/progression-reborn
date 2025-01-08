@@ -2,7 +2,9 @@ package net.legacy.progression_reborn;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
@@ -73,6 +75,9 @@ public final class PRGearItems {
     public static final ArmorItem COPPER_BOOTS = register("copper_boots", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
             .stacksTo(1)
     ));
+    public static final AnimalArmorItem COPPER_HORSE_ARMOR = register("copper_horse_armor", settings -> new AnimalArmorItem(PRArmorMaterials.COPPER, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
+            .stacksTo(1)
+    ));
 
     public static final ArmorItem ROSE_HELMET = register("rose_helmet", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
             .stacksTo(1)
@@ -90,6 +95,16 @@ public final class PRGearItems {
             .stacksTo(1)
             .fireResistant()
     ));
+    public static final AnimalArmorItem ROSE_HORSE_ARMOR = register("rose_horse_armor", settings -> new AnimalArmorItem(PRArmorMaterials.ROSE, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
+            .stacksTo(1)
+            .fireResistant()
+    ));
+
+    public static final AnimalArmorItem NETHERITE_HORSE_ARMOR = register("netherite_horse_armor", settings -> new AnimalArmorItem(ArmorMaterials.NETHERITE, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
+            .stacksTo(1)
+            .fireResistant()
+    ));
+
 
     public static void init() {
     }

@@ -76,19 +76,19 @@ public final class PRItems {
     public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = register("iron_upgrade_smithing_template",
             SmithingTemplateItem::createArmorTrimTemplate,
             new Properties()
-                    .stacksTo(1)
+                    .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)
     );
     public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = register("rose_upgrade_smithing_template",
             SmithingTemplateItem::createArmorTrimTemplate,
             new Properties()
-                    .stacksTo(1)
+                    .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)
     );
     public static final Item ENCHANTED_GOLDEN_CARROT = register("enchanted_golden_carrot",
             Item::new,
             new Properties()
-                    .stacksTo(1)
+                    .stacksTo(64)
                     .rarity(Rarity.EPIC)
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT, PRConsumables.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)

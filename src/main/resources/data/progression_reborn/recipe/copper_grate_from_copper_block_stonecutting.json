@@ -1,6 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "progression_rebornprogression_reborn:copper_block",
+  "ingredient": "progression_reborn:copper_block",
   "result": {
     "count": 16,
     "id": "minecraft:copper_grate"

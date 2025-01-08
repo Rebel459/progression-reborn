@@ -4,6 +4,6 @@
   "cookingtime": 200,
   "ingredient": "progression_reborn:nether_rose_ore",
   "result": {
-    "id": "minecraft:rose_ingot"
+    "id": "progression_reborn:rose_ingot"
   }
 }

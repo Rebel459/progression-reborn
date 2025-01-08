@@ -72,7 +72,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:rose_nugget",
+          "name": "progression_reborn:rose_nugget",
           "weight": 10
         },
         {

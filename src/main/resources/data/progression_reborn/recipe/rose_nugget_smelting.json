@@ -4,6 +4,6 @@
   "cookingtime": 50,
   "ingredient": "progression_reborn:raw_rose_nugget",
   "result": {
-    "id": "minecraft:rose_nugget"
+    "id": "progression_reborn:rose_nugget"
   }
 }

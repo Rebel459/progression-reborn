@@ -4,7 +4,7 @@
     "cookingtime": 1600,
     "experience": 5.6,
     "ingredient": [
-        "minecraft:raw_irom_block"
+        "minecraft:raw_iron_block"
     ],
     "result": {
         "id": "minecraft:iron_block"

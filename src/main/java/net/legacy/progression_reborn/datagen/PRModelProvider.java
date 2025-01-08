@@ -58,7 +58,7 @@ public final class PRModelProvider extends FabricModelProvider {
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
 		generator.createTrivialCube(PRBlocks.COPPER_BLOCK);
-		generator.createTrivialCube(PRBlocks.ROSE_ORE);
+		generator.createTrivialCube(PRBlocks.NETHER_ROSE_ORE);
 		generator.createTrivialCube(PRBlocks.RAW_ROSE_BLOCK);
 		generator.createTrivialCube(PRBlocks.ROSE_BLOCK);
 	}
