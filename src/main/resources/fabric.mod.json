@@ -19,7 +19,7 @@
 			"net.legacy.progression_reborn.ProgressionReborn"
 		],
 		"fabric-datagen": [
-			"net.legacy.progression_reborn.PRDataGenerator"
+			"net.legacy.progression_reborn.datagen.PRDataGenerator"
 		]
 	},
 	"mixins": [

@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Blocks;
 public class PRCreativeInventorySorting {
 
 	public static void init() {
-		addAfterInBuildingBlocks(Blocks.GRASS_BLOCK, PRBlocks.PLACEHOLDER_BLOCK);
+		addAfterInBuildingBlocks(Blocks.GRASS_BLOCK, PRBlocks.ROSE_BLOCK);
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {

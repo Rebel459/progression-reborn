@@ -1,19 +1,20 @@
 package net.legacy.progression_reborn;
 import java.util.function.Function;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.NotNull;
 
 public class PRBlocks {
@@ -48,6 +49,62 @@ public class PRBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.NETHERITE_BLOCK)
+    );
+
+    public static final Block POLISHED_ROSE = register("polished_rose",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.NETHERITE_BLOCK)
+    );
+    public static final Block ROSE_LANTERN = register("rose_lantern",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(3.0F, 6.0F)
+                    .lightLevel(blockStatex -> 15)
+                    .sound(SoundType.NETHERITE_BLOCK)
+    );
+
+    public static final Block CUT_ROSE = register("cut_rose_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .requiresCorrectToolForDrops()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.NETHERITE_BLOCK)
+    );
+    public static final Block CUT_ROSE_STAIRS = register("cut_rose_stairs",
+            properties -> new StairBlock(CUT_ROSE.defaultBlockState(), properties),
+            Properties.ofFullCopy(CUT_ROSE)
+    );
+    public static final Block CUT_ROSE_SLAB = register("cut_rose_slab",
+            SlabBlock::new,
+            Properties.ofFullCopy(CUT_ROSE)
+    );
+
+    public static final DoorBlock ROSE_DOOR = register("rose_door",
+            properties -> new DoorBlock(PRBlockSetType.ROSE, properties),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .strength(5.0F)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+    );
+    public static final TrapDoorBlock ROSE_TRAPDOOR = register("rose_trapdoor",
+            properties -> new TrapDoorBlock(PRBlockSetType.ROSE, properties),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .strength(5.0F)
+                    .noOcclusion()
+                    .isValidSpawn(Blocks::never)
+                    .requiresCorrectToolForDrops()
     );
 
     public static void init() {
