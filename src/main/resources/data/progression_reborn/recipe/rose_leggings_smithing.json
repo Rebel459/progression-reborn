@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progression_reborn:rose_upgrade_smithing_template",
+  "base": "minecraft:golden_leggings",
+  "addition": "progression_reborn:rose_ingot",
+  "result": {
+    "id": "progression_reborn:rose_leggings"
+  }
+}

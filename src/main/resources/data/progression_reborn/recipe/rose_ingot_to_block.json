@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": "progression_reborn:rose_ingot",
+    "1": "progression_reborn:rose_ingot",
+    "2": "progression_reborn:rose_ingot",
+    "3": "progression_reborn:rose_ingot",
+    "4": "progression_reborn:rose_ingot",
+    "5": "progression_reborn:rose_ingot",
+    "6": "progression_reborn:rose_ingot",
+    "7": "progression_reborn:rose_ingot",
+    "8": "progression_reborn:rose_ingot" 
+  },
+  "result": {
+    "id": "progression_reborn:rose_block",
+    "count": 1
+  }
+}

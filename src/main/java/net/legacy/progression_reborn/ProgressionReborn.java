@@ -16,7 +16,7 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class ProgressionReborn implements ModInitializer {
 
-	public static final ResourceKey<PlacedFeature> ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose"));
+	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
 
 	@Override
 	public void onInitialize() {
@@ -25,7 +25,7 @@ public class ProgressionReborn implements ModInitializer {
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
 
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, ROSE_ORE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 	}
 
 	public static ResourceLocation id(String path) {

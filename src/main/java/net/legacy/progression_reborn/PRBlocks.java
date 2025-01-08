@@ -29,7 +29,7 @@ public class PRBlocks {
                     .sound(SoundType.COPPER)
     );
 
-    public static final Block ROSE_ORE = register("rose_ore",
+    public static final Block NETHER_ROSE_ORE = register("nether_rose_ore",
             Block::new,
             Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)
     );

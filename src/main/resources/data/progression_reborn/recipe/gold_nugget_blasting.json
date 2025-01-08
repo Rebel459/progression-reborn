@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 0.125,
+  "cookingtime": 25,
+  "ingredient": [
+    "progression_reborn:raw_gold_nugget"
+  ],
+  "result": {
+    "id": "minecraft:gold_nugget"
+  }
+}

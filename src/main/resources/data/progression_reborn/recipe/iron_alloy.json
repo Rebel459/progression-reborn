@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot",
+    "#minecraft:coals",
+    "#minecraft:coals",
+    "#minecraft:coals",
+    "#minecraft:coals"
+  ],
+  "result": {
+    "id": "progression_reborn:iron_alloy"
+  }
+}

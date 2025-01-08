@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 800,
+  "experience": 8,
+  "ingredient": [
+      "progression_reborn:raw_rose_block"
+  ],
+  "result": {
+      "id": "progression_reborn:rose_block"
+  }
+}

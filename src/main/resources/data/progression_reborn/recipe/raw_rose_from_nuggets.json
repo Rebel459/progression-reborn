@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget",
+    "progression_reborn:raw_rose_nugget"
+  ],
+  "result": {
+    "id": "progression_reborn:raw_rose",
+    "count": 1
+  }
+}

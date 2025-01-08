@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget",
+    "progression_reborn:diamond_nugget"
+  ],
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 1
+  }
+}

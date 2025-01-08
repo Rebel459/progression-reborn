@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:raw_copper"
+  ],
+  "result": {
+    "id": "progression_reborn:raw_copper_nugget",
+    "count": 9
+  }
+}

@@ -50,6 +50,12 @@ public final class PRItems {
             new Properties()
                     .stacksTo(64)
     );
+    public static final Item RAW_ROSE = register("raw_rose",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+    );
     public static final Item ROSE_INGOT = register("rose_ingot",
             Item::new,
             new Properties()

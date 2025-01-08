@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "progression_reborn:copper_block",
+  "result": {
+    "count": 16,
+    "id": "minecraft:cut_copper"
+  }
+}

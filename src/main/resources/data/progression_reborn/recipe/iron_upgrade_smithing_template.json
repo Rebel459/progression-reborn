@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:cobblestone",
+    "C": "progression_reborn:iron_alloy",
+    "S": "progression_reborn:iron_upgrade_smithing_template" 
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "progression_reborn:iron_upgrade_smithing_template"
+  },
+  "group": "iron_template",
+  "show_notification": true
+}
