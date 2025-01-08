@@ -25,7 +25,13 @@ public final class PRBlockTagProvider extends FabricTagProvider.BlockTagProvider
 			.add(PRBlocks.ROSE_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.SLABS)
-			.add(PRBlocks.ROSE_BLOCK);
+				.add(PRBlocks.ROSE_BLOCK);
+
+		this.getOrCreateTagBuilder(BlockTags.DOORS)
+				.add(PRBlocks.ROSE_BLOCK);
+
+		this.getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+				.add(PRBlocks.ROSE_BLOCK);
 	}
 
 }
