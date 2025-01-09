@@ -1,7 +1,7 @@
 {
   "anvil_cost": 8,
   "description": {
-    "translate": "enchantment.progression_reborn.collection"
+    "translate": "enchantment.progression_reborn.smelting"
   },
   "effects": {},
   "exclusive_set": "#progression_reborn:exclusive_set/mining_utilities",
