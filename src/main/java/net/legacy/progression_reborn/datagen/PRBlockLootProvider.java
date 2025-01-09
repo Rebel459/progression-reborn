@@ -26,7 +26,7 @@ public final class PRBlockLootProvider extends FabricBlockLootTableProvider {
 	@Override
 	public void generate() {
 		this.dropSelf(PRBlocks.ROSE_BLOCK);
-		this.add(PRBlocks.CUT_ROSE_SLAB, this::createSlabItemTable);
+		this.add(PRBlocks.POLISHED_CUT_ROSE_SLAB, this::createSlabItemTable);
 	}
 
 	public LootTable.@NotNull Builder createMultifaceBlockDrops(Block drop) {

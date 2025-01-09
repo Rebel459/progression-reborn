@@ -105,6 +105,7 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRGearItems.ROSE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRGearItems.ROSE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRGearItems.ROSE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
 	}
 
 	@Contract("_, _ -> new")

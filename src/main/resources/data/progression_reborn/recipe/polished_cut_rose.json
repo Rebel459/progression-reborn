@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+      "#": "progression_reborn:polished_rose"
+    },
+    "result": {
+      "id": "progression_reborn:polished_cut_rose",
+      "count": 4
+    }
+  }

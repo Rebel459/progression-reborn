@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "progression_reborn:rose_nugget"
+          }
+        ]
+      }
+    },
+    "collection_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "weapon.mainhand": {
+              "items": "#minecraft:pickaxes",
+              "predicates": {
+                "minecraft:enchantments": [
+                  {
+                    "enchantments": "progression_reborn:collection"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "progression_reborn:rose_nugget_collection"
+  }
+}

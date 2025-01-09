@@ -71,7 +71,7 @@ public class PRBlocks {
                     .sound(SoundType.NETHERITE_BLOCK)
     );
 
-    public static final Block CUT_ROSE = register("cut_rose_block",
+    public static final Block POLISHED_CUT_ROSE = register("polished_cut_rose",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
@@ -80,13 +80,13 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.NETHERITE_BLOCK)
     );
-    public static final Block CUT_ROSE_STAIRS = register("cut_rose_stairs",
-            properties -> new StairBlock(CUT_ROSE.defaultBlockState(), properties),
-            Properties.ofFullCopy(CUT_ROSE)
+    public static final Block POLISHED_CUT_ROSE_STAIRS = register("polished_cut_rose_stairs",
+            properties -> new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), properties),
+            Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
-    public static final Block CUT_ROSE_SLAB = register("cut_rose_slab",
+    public static final Block POLISHED_CUT_ROSE_SLAB = register("polished_cut_rose_slab",
             SlabBlock::new,
-            Properties.ofFullCopy(CUT_ROSE)
+            Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
 
     public static final DoorBlock ROSE_DOOR = register("rose_door",

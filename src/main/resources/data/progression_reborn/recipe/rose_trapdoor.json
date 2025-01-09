@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+      "#": "progression_reborn:rose_ingot"
+    },
+    "result": {
+      "id": "progression_reborn:rose_trapdoor",
+      "count": 2
+    }
+  }

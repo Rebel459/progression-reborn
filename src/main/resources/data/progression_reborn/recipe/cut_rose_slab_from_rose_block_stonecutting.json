@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "progression_reborn:rose_block",
+  "result": {
+    "count": 32,
+    "id": "progression_reborn:polished_cut_rose_slab"
+  }
+}

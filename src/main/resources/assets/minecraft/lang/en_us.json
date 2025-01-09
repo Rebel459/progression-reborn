@@ -1,0 +1,18 @@
+{
+  "block.minecraft.copper_block": "Polished Copper",
+  "block.minecraft.exposed_copper": "Polished Exposed Copper",
+  "block.minecraft.weathered_copper": "Polished Weathered Copper",
+  "block.minecraft.oxidized_copper": "Polished Oxidized Copper",
+  "block.minecraft.cut_copper": "Polished Cut Copper",
+  "block.minecraft.cut_copper_slab": "Polished Cut Copper Slab",
+  "block.minecraft.cut_copper_stairs": "Polished Cut Copper Stairs",
+  "block.minecraft.exposed_cut_copper": "Polished Exposed Cut Copper",
+  "block.minecraft.exposed_cut_copper_slab": "Polished Exposed Cut Copper Slab",
+  "block.minecraft.exposed_cut_copper_stairs": "Polished Exposed Cut Copper Stairs",
+  "block.minecraft.weathered_cut_copper": "Polished Weathered Cut Copper",
+  "block.minecraft.weathered_cut_copper_slab": "Polished Weathered Cut Copper Slab",
+  "block.minecraft.weathered_cut_copper_stairs": "Polished Weathered Cut Copper Stairs",
+  "block.minecraft.oxidized_cut_copper": "Polished Oxidized Cut Copper",
+  "block.minecraft.oxidized_cut_copper_slab": "Polished Oxidized Cut Copper Slab",
+  "block.minecraft.oxidized_cut_copper_stairs": "Polished Oxidized Cut Copper Stairs"
+}
