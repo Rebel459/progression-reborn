@@ -82,11 +82,17 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.DIAMOND_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.RAW_ROSE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_INGOT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.IRON_ALLOY, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_ALLOY, ModelTemplates.FLAT_ITEM);
+
 		generator.generateFlatItem(PRItems.IRON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+
+		generator.generateFlatItem(PRGearItems.COPPER_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRGearItems.ROSE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRGearItems.NETHERITE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
 		generator.generateFlatItem(PRGearItems.COPPER_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRGearItems.COPPER_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);

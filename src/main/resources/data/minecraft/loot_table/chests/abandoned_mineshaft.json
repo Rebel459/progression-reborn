@@ -387,12 +387,11 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 75
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "progression_reborn:iron_upgrade_smithing_template",
-          "weight": 25
+          "name": "progression_reborn:iron_upgrade_smithing_template"
         }
       ],
       "rolls": 1.0

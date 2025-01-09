@@ -60,7 +60,7 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.NETHERITE_BLOCK)
     );
-    public static final Block ROSE_LANTERN = register("rose_lantern",
+    public static final Block ROSE_LAMP = register("rose_lamp",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)

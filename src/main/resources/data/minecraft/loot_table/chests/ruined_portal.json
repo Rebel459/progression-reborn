@@ -279,15 +279,15 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:empty"
+          "type": "minecraft:empty",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:lodestone",
-          "weight": 2
+          "name": "minecraft:lodestone"
         }
       ],
-      "rolls": 1.0
+      "rolls": 2.0
     }
   ],
   "random_sequence": "minecraft:chests/ruined_portal"
