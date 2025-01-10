@@ -2,38 +2,40 @@ package net.legacy.progression_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderLookup;
+import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.PRTrimMaterials;
+import net.minecraft.core.*;
 import net.minecraft.core.registries.Registries;
-import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import java.util.concurrent.CompletableFuture;
 
 public class PRRegistryProvider extends FabricDynamicRegistryProvider {
-    PRRegistryProvider(@NotNull FabricDataOutput output, @NotNull CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    protected PRRegistryProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
-    @Override
-    protected void configure(@NotNull HolderLookup.Provider registries, @NotNull Entries entries) {
-        entries.addAll(registries.lookupOrThrow(Registries.TRIM_MATERIAL));
-
-        bootstrap(entries);
-    }
-
-    public static void bootstrap(@NotNull Entries entries) {
-        final var customTrimMaterials = asLookup(entries.getLookup(Registries.TRIM_MATERIAL));
-
-    }
-
-    public static <T> HolderLookup.RegistryLookup<T> asLookup(HolderGetter<T> getter) {
-        return (HolderLookup.RegistryLookup<T>) getter;
+    public static void buildRegistry(RegistrySetBuilder registrySetBuilder) {
+        registrySetBuilder.add(Registries.TRIM_MATERIAL, PRTrimMaterials::bootstrap);
     }
 
     @Override
-    @NotNull
+    public void configure(HolderLookup.Provider registries, Entries entries) {
+        addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), PRConstants.MOD_ID);
+    }
+
+    @Override
     public String getName() {
-        return "Progression Reborn Dynamic Registries";
+        return "Progression Reborn";
     }
+
+    @SuppressWarnings("UnusedReturnValue")
+    public <T> List<Holder<T>> addAll(Entries entries, HolderLookup.RegistryLookup<T> registry, String modId) {
+        return registry.listElementIds()
+                .filter(registryKey -> registryKey.location().getNamespace().equals(PRConstants.MOD_ID))
+                .map(key -> entries.add(registry, key))
+                .toList();
+    }
+
 }

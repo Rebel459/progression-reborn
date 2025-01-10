@@ -10,15 +10,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
+import net.minecraft.world.item.equipment.trim.TrimMaterials;
 
 import java.util.Map;
 
 public class PRTrimMaterials {
-    public static final ResourceKey<TrimMaterial> ROSE = registryKey("rose");
+    public static final ResourceKey<TrimMaterial> ROSE = createResourceKey("rose");
 
-    public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        register(context, ROSE, PRItems.ROSE_INGOT, Style.EMPTY.withColor(12876948), Map.of(EquipmentAssets.DIAMOND, "rose"));
+    public static void bootstrap(BootstrapContext<TrimMaterial> bootstrapContext) {
+        register(bootstrapContext, ROSE, PRItems.ROSE_INGOT, Style.EMPTY.withColor(12876948), Map.of(PREquipmentAssets.ROSE, "rose_darker"));
     }
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> materialKey, Item ingredient, Style style) {
@@ -41,7 +43,7 @@ public class PRTrimMaterials {
         context.register(materialKey, trimMaterial);
     }
 
-    private static ResourceKey<TrimMaterial> registryKey(String name) {
-        return ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "rose"));
+    private static ResourceKey<TrimMaterial> createResourceKey(String id) {
+        return ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, id));
     }
 }

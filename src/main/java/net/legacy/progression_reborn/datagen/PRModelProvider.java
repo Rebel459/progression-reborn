@@ -26,29 +26,29 @@ import org.jetbrains.annotations.NotNull;
 
 public final class PRModelProvider extends FabricModelProvider {
 	public static final List<Pair<BooleanProperty, Function<ResourceLocation, Variant>>> MULTIFACE_GENERATOR_NO_UV_LOCK = List.of(
-		Pair.of(BlockStateProperties.NORTH, model -> Variant.variant().with(VariantProperties.MODEL, model)),
-		Pair.of(
-			BlockStateProperties.EAST,
-			model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
-		),
-		Pair.of(
-			BlockStateProperties.SOUTH,
-			model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
-		),
-		Pair.of(
-			BlockStateProperties.WEST,
-			model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-		),
-		Pair.of(
-			BlockStateProperties.UP,
-			model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.X_ROT, VariantProperties.Rotation.R270)
-		),
-		Pair.of(
-			BlockStateProperties.DOWN,
-			resourceLocation -> Variant.variant()
-				.with(VariantProperties.MODEL, resourceLocation)
-				.with(VariantProperties.X_ROT, VariantProperties.Rotation.R90)
-		)
+			Pair.of(BlockStateProperties.NORTH, model -> Variant.variant().with(VariantProperties.MODEL, model)),
+			Pair.of(
+					BlockStateProperties.EAST,
+					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
+			),
+			Pair.of(
+					BlockStateProperties.SOUTH,
+					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
+			),
+			Pair.of(
+					BlockStateProperties.WEST,
+					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+			),
+			Pair.of(
+					BlockStateProperties.UP,
+					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.X_ROT, VariantProperties.Rotation.R270)
+			),
+			Pair.of(
+					BlockStateProperties.DOWN,
+					resourceLocation -> Variant.variant()
+							.with(VariantProperties.MODEL, resourceLocation)
+							.with(VariantProperties.X_ROT, VariantProperties.Rotation.R90)
+			)
 	);
 
 	public PRModelProvider(FabricDataOutput output) {

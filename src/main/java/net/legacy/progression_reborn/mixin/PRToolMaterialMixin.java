@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = ToolMaterial.class, priority = 1001)
-public class ProgressionToolMaterialMixin {
+public class PRToolMaterialMixin {
 
     @WrapOperation
             (

@@ -23,8 +23,9 @@ public final class PRDataGenerator implements DataGeneratorEntrypoint {
 
 	}
 
-	@Override
 	public void buildRegistry(RegistrySetBuilder registrySetBuilder) {
-		registrySetBuilder.add(Registries.TRIM_MATERIAL, PRTrimMaterials::bootstrap);
+		PRRegistryProvider.buildRegistry(registrySetBuilder);
 	}
+
+
 }
