@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "progression_reborn:block/polished_cut_rose_slab"
+    },
+    "type=double": {
+      "model": "progression_reborn:block/polished_cut_rose"
+    },
+    "type=top": {
+      "model": "progression_reborn:block/polished_cut_rose_slab_top"
+    }
+  }
+}

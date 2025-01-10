@@ -376,6 +376,26 @@
         }
       ],
       "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": "progression_reborn:reforge"
+            }
+          ],
+          "name": "minecraft:book",
+          "weight": 2
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "minecraft:chests/bastion_treasure"

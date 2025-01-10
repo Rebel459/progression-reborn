@@ -8,6 +8,32 @@
           "type": "minecraft:alternatives",
           "children": [
             {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "progression_reborn:reforge/nether_rose_ore"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "progression_reborn:reforge",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
               "type": "minecraft:item",
               "conditions": [
                 {
@@ -33,7 +59,7 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 6.0,
+                    "max": 9.0,
                     "min": 3.0
                   },
                   "function": "minecraft:set_count"

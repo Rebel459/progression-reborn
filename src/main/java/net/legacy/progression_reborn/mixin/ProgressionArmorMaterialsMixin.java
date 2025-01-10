@@ -18,7 +18,7 @@ import java.util.Map;
 
 import static net.minecraft.world.item.equipment.EquipmentAssets.*;
 
-@Mixin(ArmorMaterials.class)
+@Mixin(value = ArmorMaterials.class, priority = 1001)
 public interface ProgressionArmorMaterialsMixin {
 
     @WrapOperation

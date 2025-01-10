@@ -66,13 +66,13 @@ public final class PRGearItems {
     public static final ArmorItem COPPER_HELMET = register("copper_helmet", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
             .stacksTo(1)
     ));
-    public static final ArmorItem COPPER_CHESTPLATE = register("copper_chestplate", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
+    public static final ArmorItem COPPER_CHESTPLATE = register("copper_chestplate", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.CHESTPLATE, settings
             .stacksTo(1)
     ));
-    public static final ArmorItem COPPER_LEGGINGS = register("copper_leggings", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
+    public static final ArmorItem COPPER_LEGGINGS = register("copper_leggings", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.LEGGINGS, settings
             .stacksTo(1)
     ));
-    public static final ArmorItem COPPER_BOOTS = register("copper_boots", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.HELMET, settings
+    public static final ArmorItem COPPER_BOOTS = register("copper_boots", settings -> new ArmorItem(PRArmorMaterials.COPPER, ArmorType.BOOTS, settings
             .stacksTo(1)
     ));
     public static final AnimalArmorItem COPPER_HORSE_ARMOR = register("copper_horse_armor", settings -> new AnimalArmorItem(PRArmorMaterials.COPPER, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
@@ -83,15 +83,15 @@ public final class PRGearItems {
             .stacksTo(1)
             .fireResistant()
     ));
-    public static final ArmorItem ROSE_CHESTPLATE = register("rose_chestplate", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+    public static final ArmorItem ROSE_CHESTPLATE = register("rose_chestplate", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.CHESTPLATE, settings
             .stacksTo(1)
             .fireResistant()
     ));
-    public static final ArmorItem ROSE_LEGGINGS = register("rose_leggings", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+    public static final ArmorItem ROSE_LEGGINGS = register("rose_leggings", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.LEGGINGS, settings
             .stacksTo(1)
             .fireResistant()
     ));
-    public static final ArmorItem ROSE_BOOTS = register("rose_boots", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.HELMET, settings
+    public static final ArmorItem ROSE_BOOTS = register("rose_boots", settings -> new ArmorItem(PRArmorMaterials.ROSE, ArmorType.BOOTS, settings
             .stacksTo(1)
             .fireResistant()
     ));

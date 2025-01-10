@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "progression_reborn:block/polished_cut_rose_stairs",
+    "side": "progression_reborn:block/polished_cut_rose_stairs",
+    "top": "progression_reborn:block/polished_cut_rose_stairs"
+  }
+}

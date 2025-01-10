@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "progression_reborn:block/polished_cut_rose_slab",
+    "side": "progression_reborn:block/polished_cut_rose_slab",
+    "top": "progression_reborn:block/polished_cut_rose_slab"
+  }
+}

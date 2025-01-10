@@ -10,13 +10,13 @@
         ]
       }
     },
-    "collection_pickaxe": {
+    "collection_chestplate": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
           "slots": {
-            "weapon.mainhand": {
-              "items": "#minecraft:pickaxes",
+            "armor.chest": {
+              "items": "#minecraft:chest_armor",
               "predicates": {
                 "minecraft:enchantments": [
                   {
@@ -24,6 +24,18 @@
                   }
                 ]
               }
+            }
+          }
+        }
+      }
+    },
+    "holding_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "weapon.mainhand": {
+              "items": "#minecraft:pickaxes"
             }
           }
         }
