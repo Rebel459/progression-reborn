@@ -23,57 +23,99 @@ public class PRVillagerTradesMixin {
                             )
             )
     private static VillagerTrades.ItemsForEmeralds modifyVillagerTrades(ItemStack itemStack, int emeraldCost, int numberOfItems, int maxUses, int villagerXp, Operation<VillagerTrades.ItemsForEmeralds> original){
-        if (itemStack.toString() == "iron_boots")
+        if (itemStack == new ItemStack(Items.IRON_BOOTS))
             return original.call(new ItemStack(PRGearItems.COPPER_BOOTS), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_chestplate")
+        else if (itemStack == new ItemStack(Items.IRON_CHESTPLATE))
             return original.call(new ItemStack(PRGearItems.COPPER_CHESTPLATE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_leggings")
+        else if (itemStack == new ItemStack(Items.IRON_LEGGINGS))
             return original.call(new ItemStack(PRGearItems.COPPER_LEGGINGS), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_helmet")
+        else if (itemStack == new ItemStack(Items.IRON_HELMET))
             return original.call(new ItemStack(PRGearItems.COPPER_HELMET), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_hoe")
+        else if (itemStack == new ItemStack(Items.IRON_HOE))
             return original.call(new ItemStack(PRGearItems.COPPER_HOE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_sword")
+        else if (itemStack == new ItemStack(Items.IRON_SWORD))
             return original.call(new ItemStack(PRGearItems.COPPER_SWORD), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_pickaxe")
+        else if (itemStack == new ItemStack(Items.IRON_PICKAXE))
             return original.call(new ItemStack(PRGearItems.COPPER_PICKAXE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_axe")
+        else if (itemStack == new ItemStack(Items.IRON_AXE))
             return original.call(new ItemStack(PRGearItems.COPPER_AXE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_shovel")
+        else if (itemStack == new ItemStack(Items.IRON_SHOVEL))
             return original.call(new ItemStack(PRGearItems.COPPER_SHOVEL), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else {
-            return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
-        }
-    }
 
-    @Inject
-            (
-                    method = "<clinit>",
-                    at = @At
-                            (
-                                    value = "NEW",
-                                    target = "(Lnet/minecraft/world/item/trading/ItemCost;III)Lnet/minecraft/world/entity/npc/VillagerTrades$EmeraldForItems;"
-                            )
-            )
-    private static void addVillagerTrades(CallbackInfo ci){
-        if (itemStack.toString() == "iron_boots")
-            return original.call(new ItemStack(PRGearItems.COPPER_BOOTS), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_chestplate")
-            return original.call(new ItemStack(PRGearItems.COPPER_CHESTPLATE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_leggings")
-            return original.call(new ItemStack(PRGearItems.COPPER_LEGGINGS), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_helmet")
-            return original.call(new ItemStack(PRGearItems.COPPER_HELMET), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_hoe")
-            return original.call(new ItemStack(PRGearItems.COPPER_HOE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_sword")
-            return original.call(new ItemStack(PRGearItems.COPPER_SWORD), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_pickaxe")
-            return original.call(new ItemStack(PRGearItems.COPPER_PICKAXE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_axe")
-            return original.call(new ItemStack(PRGearItems.COPPER_AXE), emeraldCost, numberOfItems, maxUses, villagerXp);
-        else if (itemStack.toString() == "iron_shovel")
-            return original.call(new ItemStack(PRGearItems.COPPER_SHOVEL), emeraldCost, numberOfItems, maxUses, villagerXp);
+        else if (itemStack == new ItemStack(Items.DIAMOND_SWORD)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_AXE)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_PICKAXE)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_SHOVEL)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_HOE)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_CHESTPLATE)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_LEGGINGS)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_HELMET)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+        else if (itemStack == new ItemStack(Items.DIAMOND_BOOTS)){
+            if (emeraldCost < 30)
+                return original.call(itemStack, emeraldCost*2, numberOfItems, maxUses, villagerXp);
+            else if (emeraldCost < 36)
+                return original.call(itemStack, emeraldCost+8, numberOfItems, maxUses, villagerXp);
+            else
+                return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
+        }
+
         else {
             return original.call(itemStack, emeraldCost, numberOfItems, maxUses, villagerXp);
         }
