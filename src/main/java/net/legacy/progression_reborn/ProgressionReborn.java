@@ -35,24 +35,28 @@ public class ProgressionReborn implements ModInitializer {
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
 		PRBlockRenderLayers.init();
-		PRVillagerTrades.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 
 		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends")) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "legacies_and_legends_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.legacies_and_legends_integration"),
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_legacies_and_legends_data_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.legacies_and_legends_data_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
 		if (FabricLoader.getInstance().isModLoaded("end_reborn")) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "end_reborn_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.end_reborn_integration"),
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_end_reborn_data_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.end_reborn_data_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
+		ResourceManagerHelper.registerBuiltinResourcePack(
+				ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_asset_overrides"), modContainer.get(),
+				Component.translatable("pack.progression_reborn.asset_overrides"),
+				ResourcePackActivationType.ALWAYS_ENABLED
+		);
 	}
 
 	public static ResourceLocation id(String path) {

@@ -1,0 +1,572 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:coal",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 15,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "price_multiplier": 0.05,
+              "trader_experience": 2,
+              "max_uses": 16
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:copper_ingot",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 12,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "price_multiplier": 0.05,
+              "trader_experience": 2,
+              "max_uses": 8
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 7,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "progression_reborn:copper_leggings"
+              },
+              "trader_experience": 1
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 4,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "progression_reborn:copper_boots"
+              },
+              "trader_experience": 1
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 5,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "progression_reborn:copper_helmet"
+              },
+              "trader_experience": 1
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 9,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "progression_reborn:copper_chestplate"
+              },
+              "trader_experience": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 10,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:iron_ingot",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 4,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "price_multiplier": 0.05,
+              "trader_experience": 10
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 36,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:bell"
+              },
+              "trader_experience": 5
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:chainmail_boots"
+              },
+              "trader_experience": 5
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 3,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:chainmail_leggings"
+              },
+              "trader_experience": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 70,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:lava_bucket"
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "price_multiplier": 0.05,
+              "trader_experience": 20
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond"
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "price_multiplier": 0.05,
+              "trader_experience": 20
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:chainmail_helmet"
+              },
+              "trader_experience": 10
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 4,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:chainmail_chestplate"
+              },
+              "trader_experience": 10
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 5,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:shield"
+              },
+              "trader_experience": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 150,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 14,
+                    "add": false
+                  },
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "add": true
+                  }
+                ]
+              },
+              "cost_b": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 3,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond_leggings",
+                "functions": [
+                  {
+                    "function": "minecraft:enchant_with_levels",
+                    "levels": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "options": "#minecraft:on_traded_equipment"
+                  }
+                ]
+              },
+              "trader_experience": 15,
+              "max_uses": 3,
+              "reference_providers": {
+                "enchantLevel": {
+                  "type": "minecraft:uniform",
+                  "min": 5,
+                  "max": 19
+                }
+              }
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 8,
+                    "add": false
+                  },
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "add": true
+                  }
+                ]
+              },
+              "cost_b": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 2,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond_boots",
+                "functions": [
+                  {
+                    "function": "minecraft:enchant_with_levels",
+                    "levels": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "options": "#minecraft:on_traded_equipment"
+                  }
+                ]
+              },
+              "trader_experience": 15,
+              "max_uses": 3,
+              "reference_providers": {
+                "enchantLevel": {
+                  "type": "minecraft:uniform",
+                  "min": 5,
+                  "max": 19
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 250,
+      "groups": [
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 8,
+                    "add": false
+                  },
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "add": true
+                  }
+                ]
+              },
+              "cost_b": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 2,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond_helmet",
+                "functions": [
+                  {
+                    "function": "minecraft:enchant_with_levels",
+                    "levels": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "options": "#minecraft:on_traded_equipment"
+                  }
+                ]
+              },
+              "trader_experience": 30,
+              "max_uses": 3,
+              "reference_providers": {
+                "enchantLevel": {
+                  "type": "minecraft:uniform",
+                  "min": 5,
+                  "max": 19
+                }
+              }
+            },
+            {
+              "cost_a": {
+                "type": "minecraft:item",
+                "name": "minecraft:emerald",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 16,
+                    "add": false
+                  },
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "add": true
+                  }
+                ]
+              },
+              "cost_b": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 4,
+                    "add": false
+                  }
+                ]
+              },
+              "result": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond_chestplate",
+                "functions": [
+                  {
+                    "function": "minecraft:enchant_with_levels",
+                    "levels": {
+                      "type": "villagerconfig:reference",
+                      "id": "enchantLevel"
+                    },
+                    "options": "#minecraft:on_traded_equipment"
+                  }
+                ]
+              },
+              "trader_experience": 30,
+              "max_uses": 3,
+              "reference_providers": {
+                "enchantLevel": {
+                  "type": "minecraft:uniform",
+                  "min": 5,
+                  "max": 19
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
