@@ -78,6 +78,13 @@
           "model": "progression_reborn:item/copper_chestplate_resin_trim"
         },
         "when": "minecraft:resin"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "progression_reborn:item/copper_chestplate_rose_ingot_trim"
+        },
+        "when": "progression_reborn:rose_ingot"
       }
     ],
     "fallback": {

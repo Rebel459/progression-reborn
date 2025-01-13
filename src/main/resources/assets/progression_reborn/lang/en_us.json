@@ -25,7 +25,7 @@
   "item.progression_reborn.copper_hoe": "Copper Hoe",
   "item.progression_reborn.rose_upgrade_smithing_template": "Rose Upgrade",
   "item.progression_reborn.smithing_template.rose_upgrade.applies_to": "Rose Equipment",
-  "item.progression_reborn.smithing_template.rose_upgrade.ingredients": "Golds Ingot",
+  "item.progression_reborn.smithing_template.rose_upgrade.ingredients": "Gold Ingot",
   "item.progression_reborn.raw_rose": "Raw Rose",
   "item.progression_reborn.rose_chestplate": "Rose Chestplate",
   "item.progression_reborn.rose_leggings": "Rose Leggings",
@@ -36,5 +36,18 @@
   "item.progression_reborn.smithing_template.iron_upgrade.applies_to": "Copper Equipment",
   "item.progression_reborn.smithing_template.iron_upgrade.ingredients": "Iron Ingot",
   "item.progression_reborn.copper_helmet": "Copper Helmet",
-  "item.progression_reborn.rose_nugget": "Rose Nugget"
+  "item.progression_reborn.rose_nugget": "Rose Nugget",
+  "item.progression_reborn.enchanted_golden_carrot": "Enchanted Golden Carrot",
+  "item.progression_reborn.rose_horse_armor": "Rose Horse Armor",
+  "item.progression_reborn.copper_horse_armor": "Copper Horse Armor",
+  "item.progression_reborn.netherite_horse_armor": "Netherite Horse Armor",
+  "block.progression_reborn.copper_block": "Block of Copper",
+  "block.progression_reborn.polished_rose": "Polished Rose",
+  "block.progression_reborn.polished_cut_rose": "Polished Cut Rose",
+  "block.progression_reborn.polished_cut_rose_stairs": "Polished Cut Rose Stairs",
+  "block.progression_reborn.polished_cut_rose_slab": "Polished Cut Rose Slab",
+  "block.progression_reborn.rose_trapdoor": "Rose Trapdoor",
+  "block.progression_reborn.rose_door": "Rose Door",
+  "block.progression_reborn.rose_lamp": "Rose Lamp",
+  "trim_material.progression_reborn.rose_ingot": "Rose Material"
 }

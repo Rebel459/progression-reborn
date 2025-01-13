@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "chainmail_craft": {
+    "iron_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

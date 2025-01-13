@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "has_rose_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ],
+        "horse_armor": [
+          {
+            "items": [
+              "progression_reborn:copper_horse_armor"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:iron_horse_armor_smithing"
+    ]
+  }
+}

@@ -12,7 +12,7 @@ import java.util.List;
 
 public final class PRTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
-    private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite", "copper", "rose");
+    private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private PRTrimItemModels() {

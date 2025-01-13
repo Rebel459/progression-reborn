@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "has_rose_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:netherite_ingot"
+            ]
+          }
+        ],
+        "horse_armor": [
+          {
+            "items": [
+              "minecraft:diamond_horse_armor"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:netherite_horse_armor_smithing"
+    ]
+  }
+}
