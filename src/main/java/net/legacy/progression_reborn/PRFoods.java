@@ -1,7 +1,6 @@
 package net.legacy.progression_reborn;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Items;
 
 public class PRFoods {
     public static final FoodProperties ENCHANTED_GOLDEN_CARROT;

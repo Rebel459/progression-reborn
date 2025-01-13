@@ -1,11 +1,7 @@
 package net.legacy.progression_reborn;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
-import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorMaterials;
@@ -124,5 +120,5 @@ public final class PRGearItems {
     public static Function<Properties, Item> createBlockItemWithCustomItemName(Block block) {
         return properties -> new BlockItem(block, properties.useItemDescriptionPrefix());
     }
-s
+
 }
