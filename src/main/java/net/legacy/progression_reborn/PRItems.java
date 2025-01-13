@@ -1,8 +1,12 @@
 package net.legacy.progression_reborn;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
@@ -73,14 +77,14 @@ public final class PRItems {
                     .stacksTo(64)
                     .fireResistant()
     );
-    public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = register("iron_upgrade_smithing_template",
-            SmithingTemplateItem::createArmorTrimTemplate,
+    public static final SmithingTemplateItem IRON_UPGRADE_SMITHING_TEMPLATE = register("iron_upgrade_smithing_template",
+            PRItems::createIronUpgradeTemplate,
             new Properties()
                     .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)
     );
-    public static final Item ROSE_UPGRADE_SMITHING_TEMPLATE = register("rose_upgrade_smithing_template",
-            SmithingTemplateItem::createArmorTrimTemplate,
+    public static final SmithingTemplateItem ROSE_UPGRADE_SMITHING_TEMPLATE = register("rose_upgrade_smithing_template",
+            PRItems::createRoseUpgradeTemplate,
             new Properties()
                     .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)
@@ -101,7 +105,27 @@ public final class PRItems {
         return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, net.legacy.progression_reborn.PRConstants.id(name)), function, properties);
     }
 
-    public static Function<Properties, Item> createBlockItemWithCustomItemName(Block block) {
-        return properties -> new BlockItem(block, properties.useItemDescriptionPrefix());
+    public static SmithingTemplateItem createIronUpgradeTemplate(Item.Properties properties) {
+        return new SmithingTemplateItem(
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
+                SmithingTemplateItem.createNetheriteUpgradeIconList(),
+                SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
+                properties
+        );
+    }
+
+    public static SmithingTemplateItem createRoseUpgradeTemplate(Item.Properties properties) {
+        return new SmithingTemplateItem(
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
+                SmithingTemplateItem.createNetheriteUpgradeIconList(),
+                SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
+                properties
+        );
     }
 }
