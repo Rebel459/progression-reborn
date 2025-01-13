@@ -1,6 +1,5 @@
 plugins {
 	id 'fabric-loom' version '1.7-SNAPSHOT'
-	id 'maven-publish'
 }
 
 version = project.mod_version
@@ -13,7 +12,23 @@ base {
 repositories {
 	maven { url = "https://api.modrinth.com/maven"}
 	maven { url = 'https://maven.parchmentmc.org' }
+	exclusiveContent {
+		forRepository {
+			maven {
+				url 'https://jitpack.io'
+			}
+		}
+		filter {
+			includeGroup "com.github.ramixin"
+		}
+	}
 }
+
+subprojects {
+	dependencies {
+		modImplementation "com.github.ramixin:mixson:${project.mixson_version}"
+	}
+	}
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -26,6 +41,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	include modImplementation("maven.modrinth:frozenlib:${project.frozenlib_version}")
+
+	include modImplementation("com.github.ramixin:mixson:${project.mixson_version}")
 
 	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.4.1")))
 
@@ -51,6 +68,10 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_21
 	targetCompatibility = JavaVersion.VERSION_21
+}
+
+loom {
+	accessWidenerPath = file("src/main/resources/progression_reborn.accesswidener")
 }
 
 // Datagen

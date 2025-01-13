@@ -22,6 +22,7 @@
 			"net.legacy.progression_reborn.datagen.PRDataGenerator"
 		]
 	},
+	"accessWidener": "progression_reborn.accesswidener",
 	"mixins": [
 		"progression_reborn.mixins.json"
 	],

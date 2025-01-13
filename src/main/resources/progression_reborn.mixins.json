@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "PRArmorMaterialsMixin",
-    "PRToolMaterialMixin"
+    "PRToolMaterialMixin",
+    "PRTrimMaterialsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

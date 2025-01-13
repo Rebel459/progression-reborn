@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.fabric.mixin.resource.loader.ResourcePackManagerMixin;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.legacy.progression_reborn.client.PRBlockRenderLayers;
@@ -35,6 +36,7 @@ public class ProgressionReborn implements ModInitializer {
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
 		PRBlockRenderLayers.init();
+		PRTrimItemModels.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 
@@ -52,11 +54,6 @@ public class ProgressionReborn implements ModInitializer {
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
-		ResourceManagerHelper.registerBuiltinResourcePack(
-				ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_asset_overrides"), modContainer.get(),
-				Component.translatable("pack.progression_reborn.asset_overrides"),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
 	}
 
 	public static ResourceLocation id(String path) {
