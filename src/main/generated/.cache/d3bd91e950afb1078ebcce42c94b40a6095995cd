@@ -1,0 +1,14 @@
+// 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:item
+1d2b2d9a7988a139fe10dd06c064529742b658ca data/minecraft/tags/item/beacon_payment_items.json
+5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/iron_tool_materials.json
+63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/netherite_tool_materials.json
+06b0623097d15e778bca64c137758b1fbace8468 data/minecraft/tags/item/piglin_loved.json
+834a46305ac63cf1f6bf65070a1215243c887ca6 data/minecraft/tags/item/piglin_safe_armor.json
+5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/repairs_iron_armor.json
+63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/repairs_netherite_armor.json
+1d2b2d9a7988a139fe10dd06c064529742b658ca data/minecraft/tags/item/trim_materials.json
+e150c1bcd2f63271168d3269775655883181c88d data/minecraft/tags/item/trimmable_armor.json
+6222fd0d7d2ce08ee1f70be68a61f4e167dda650 data/progression_reborn/tags/item/copper_tool_materials.json
+6222fd0d7d2ce08ee1f70be68a61f4e167dda650 data/progression_reborn/tags/item/repairs_copper_armor.json
+a08bb95545a36bcb894b88f63f539298b50ea6af data/progression_reborn/tags/item/repairs_rose_armor.json
+a08bb95545a36bcb894b88f63f539298b50ea6af data/progression_reborn/tags/item/rose_tool_materials.json

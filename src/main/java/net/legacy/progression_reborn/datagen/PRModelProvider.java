@@ -85,6 +85,11 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
+		generator.generateTrimmableItem(PRGearItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
+		generator.generateTrimmableItem(PRGearItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
+		generator.generateTrimmableItem(PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
+		generator.generateTrimmableItem(PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
+
 		generator.generateTrimmableItem(PRGearItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
 		generator.generateTrimmableItem(PRGearItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
 		generator.generateTrimmableItem(PRGearItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
@@ -147,10 +152,10 @@ public final class PRModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
-		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
-		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
-		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
-		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
+		this.registerArmorTrims(generator, PRGearItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
+		this.registerArmorTrims(generator, PRGearItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
+		this.registerArmorTrims(generator, PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
+		this.registerArmorTrims(generator, PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
 
 		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
 		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);

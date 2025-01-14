@@ -32,7 +32,7 @@ public interface PRArmorMaterialsMixin {
                     )
             )
     private static ArmorMaterial modifyArmorMaterial(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
-        if (!PRConfig.modified_vanilla_armor_mixin){
+        if (!PRConfig.modified_armor_values){
             return original.call(i, map, j, holder, f, g, tagKey, resourceKey);
         }
         else {

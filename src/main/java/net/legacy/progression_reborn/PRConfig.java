@@ -13,8 +13,8 @@ import net.fabricmc.loader.api.FabricLoader;
 public class PRConfig {
 
   public static boolean compat_datapacks_enabled;
-  public static boolean modified_vanilla_armor_mixin;
-  public static boolean modified_vanilla_tools_mixin;
+  public static boolean modified_armor_values;
+  public static boolean modified_tool_values;
 
   public PRConfig() {}
 
@@ -33,11 +33,11 @@ public class PRConfig {
       JsonObject config = (JsonObject) obj.get("config");
 
       compat_datapacks_enabled = config.get("compat_datapacks_enabled").getAsBoolean();
-      modified_vanilla_armor_mixin = config.get("modified_vanilla_armor_mixin").getAsBoolean();
-      modified_vanilla_tools_mixin = config.get("modified_vanilla_tools_mixin").getAsBoolean();
+      modified_armor_values = config.get("modified_armor_values").getAsBoolean();
+      modified_tool_values = config.get("modified_tool_values").getAsBoolean();
 
     } catch (final IOException e) {
-      System.err.println("An error occurred, delete the progression reborn config file in your config/ and relaunch");
+      System.err.println("An error occurred, delete the progression reborn config file in your config/ folder and relaunch");
     }
   }
 
@@ -47,8 +47,8 @@ public class PRConfig {
 
     JsonObject configObject = new JsonObject();
     configObject.addProperty("compat_datapacks_enabled", true);
-    configObject.addProperty("modified_vanilla_armor_mixin", true);
-    configObject.addProperty("modified_vanilla_tools_mixin", true);
+    configObject.addProperty("modified_armor_values", true);
+    configObject.addProperty("modified_tool_values", true);
     jsonObjects.add("config", configObject);
 
     return jsonObjects;

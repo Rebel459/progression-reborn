@@ -1,5 +1,14 @@
 {
   "values": [
+    "progression_reborn:copper_block",
+    "progression_reborn:nether_rose_ore",
+    "progression_reborn:polished_rose",
+    "progression_reborn:polished_cut_rose",
+    "progression_reborn:polished_cut_rose_slab",
+    "progression_reborn:polished_cut_rose_stairs",
+    "progression_reborn:rose_lamp",
+    "progression_reborn:rose_trapdoor",
+    "progression_reborn:rose_door",
     "progression_reborn:rose_block"
   ]
 }

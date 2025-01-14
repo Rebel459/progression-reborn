@@ -23,7 +23,7 @@ public class PRToolMaterialMixin {
                     )
             )
     private static ToolMaterial modifyToolMaterial(TagKey tagKey, int i, float f, float g, int j, TagKey tagKey2, Operation<ToolMaterial> original){
-        if (!PRConfig.modified_vanilla_tools_mixin){
+        if (!PRConfig.modified_tool_values){
             return original.call(tagKey, i, f, g, j, tagKey2);
         }
         else {

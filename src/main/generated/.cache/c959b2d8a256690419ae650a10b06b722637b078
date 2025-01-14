@@ -1,7 +1,9 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:block
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/doors.json
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/mineable/pickaxe.json
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/needs_stone_tool.json
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/slabs.json
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/stairs.json
-a252faba7f0ae1f955940f4adfa8c448bccfd7a1 data/minecraft/tags/block/trapdoors.json
+841654f4f76fa12be7aad7c13841e8370141ec20 data/minecraft/tags/block/beacon_base_blocks.json
+0404d4c6c25b35d9acfc5496f567e2c9c255c9f5 data/minecraft/tags/block/doors.json
+ecc79703a48bd0948cbcb0919564d9634a73022b data/minecraft/tags/block/mineable/pickaxe.json
+ecc79703a48bd0948cbcb0919564d9634a73022b data/minecraft/tags/block/needs_stone_tool.json
+3d3751e16ffa48da07de9bfa62c8f1ea155bef9b data/minecraft/tags/block/piglin_repellents.json
+d9d19caf8c19041c3b22b8213ea4192bac566098 data/minecraft/tags/block/slabs.json
+6ccf6df532dc63813910ca07d3e3a517c50110ed data/minecraft/tags/block/stairs.json
+782adbd3d2b4335cd1412627c3d415baab21bf8c data/minecraft/tags/block/trapdoors.json

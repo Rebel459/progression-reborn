@@ -17,6 +17,7 @@ public final class PRDataGenerator implements DataGeneratorEntrypoint {
 		final FabricDataGenerator.Pack pack = dataGenerator.createPack();
 
 		pack.addProvider(PRModelProvider::new);
+		pack.addProvider(PRItemTagProvider::new);
 		pack.addProvider(PRBlockTagProvider::new);
 		pack.addProvider(PRBlockLootProvider::new);
 		pack.addProvider(PRRegistryProvider::new);

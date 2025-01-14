@@ -16,22 +16,47 @@ public final class PRBlockTagProvider extends FabricTagProvider.BlockTagProvider
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
 		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+				.add(PRBlocks.COPPER_BLOCK)
+				.add(PRBlocks.NETHER_ROSE_ORE)
+				.add(PRBlocks.POLISHED_ROSE)
+				.add(PRBlocks.POLISHED_CUT_ROSE)
+				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB)
+				.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS)
+				.add(PRBlocks.ROSE_LAMP)
+				.add(PRBlocks.ROSE_TRAPDOOR)
+				.add(PRBlocks.ROSE_DOOR)
 				.add(PRBlocks.ROSE_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+				.add(PRBlocks.COPPER_BLOCK)
+				.add(PRBlocks.NETHER_ROSE_ORE)
+				.add(PRBlocks.POLISHED_ROSE)
+				.add(PRBlocks.POLISHED_CUT_ROSE)
+				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB)
+				.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS)
+				.add(PRBlocks.ROSE_LAMP)
+				.add(PRBlocks.ROSE_TRAPDOOR)
+				.add(PRBlocks.ROSE_DOOR)
 				.add(PRBlocks.ROSE_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
-			.add(PRBlocks.ROSE_BLOCK);
+			.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS);
 
 		this.getOrCreateTagBuilder(BlockTags.SLABS)
-				.add(PRBlocks.ROSE_BLOCK);
+				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB);
 
 		this.getOrCreateTagBuilder(BlockTags.DOORS)
-				.add(PRBlocks.ROSE_BLOCK);
+				.add(PRBlocks.ROSE_DOOR);
 
 		this.getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+				.add(PRBlocks.ROSE_TRAPDOOR);
+
+		this.getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+				.add(PRBlocks.COPPER_BLOCK)
 				.add(PRBlocks.ROSE_BLOCK);
+
+		this.getOrCreateTagBuilder(BlockTags.PIGLIN_REPELLENTS)
+				.add(PRBlocks.ROSE_LAMP);
 	}
 
 }

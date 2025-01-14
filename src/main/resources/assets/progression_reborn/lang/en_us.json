@@ -51,5 +51,8 @@
   "block.progression_reborn.rose_lamp": "Rose Lamp",
   "trim_material.progression_reborn.rose_ingot": "Rose Material",
   "enchantment.progression_reborn.collection": "Collection",
-  "enchantment.progression_reborn.reforge": "Reforge"
+  "enchantment.progression_reborn.reforge": "Reforge",
+  "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
+  "pack.progression_reborn.legacies_and_legends_data_integration": "Progression Reborn - Legacies and Legends Integration",
+  "pack.progression_reborn.end_reborn_data_integration": "Progression Reborn - End Reborn Integration"
 }
