@@ -13,6 +13,7 @@ import java.util.List;
 public final class PRTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
     private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
+    private static final List<String> ARMOR_MATERIALS_ROSE = List.of("rose");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private PRTrimItemModels() {
@@ -24,6 +25,7 @@ public final class PRTrimItemModels {
          * Add trim materials to each armor.
          */
         ARMORS.forEach(armor -> ARMOR_MATERIALS.forEach(armorMaterial -> registerAddTrimsToArmor(armor, armorMaterial)));
+        ARMORS.forEach(armor -> ARMOR_MATERIALS_ROSE.forEach(armorMaterial -> registerAddTrimsToArmorRose(armor, armorMaterial)));
 
         // (dare to be different)
         registerAddTrimsToArmor("helmet", "turtle");
@@ -38,6 +40,39 @@ public final class PRTrimItemModels {
     private static void registerAddTrimsToArmor(String armor, String armorMaterial) {
         Mixson.registerModificationEvent(
                 ResourceLocation.withDefaultNamespace("items/" + armorMaterial + "_" + armor),
+                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
+                new ModificationEvent() {
+                    @Override
+                    public @NotNull JsonElement run(JsonElement elem) {
+                        JsonObject root = elem.getAsJsonObject();
+                        JsonObject model = root.getAsJsonObject("model");
+                        JsonArray cases = model.getAsJsonArray("cases");
+                        JsonObject case0 = cases.get(0).getAsJsonObject();
+
+                        PRTrimMaterials.TRIM_MATERIALS.forEach(trim -> {
+                            JsonObject newCase = case0.deepCopy();
+
+                            newCase.addProperty("when", trimMaterialId(trim).toString());
+                            newCase.getAsJsonObject("model")
+                                    .addProperty("model", itemModelId(armor, armorMaterial, trim).toString());
+
+                            cases.add(newCase);
+                        });
+
+                        return elem;
+                    }
+
+                    @Override
+                    public int ordinal() {
+                        return 0;
+                    }
+                }
+        );
+    }
+
+    private static void registerAddTrimsToArmorRose(String armor, String armorMaterial) {
+        Mixson.registerModificationEvent(
+                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "items/" + armorMaterial + "_" + armor),
                 ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
                 new ModificationEvent() {
                     @Override

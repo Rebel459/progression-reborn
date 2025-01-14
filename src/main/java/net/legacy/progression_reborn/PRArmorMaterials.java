@@ -22,5 +22,5 @@ public interface PRArmorMaterials {
         enumMap.put(ArmorType.CHESTPLATE, 4);
         enumMap.put(ArmorType.HELMET, 2);
         enumMap.put(ArmorType.BODY, 6);
-    }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.2F, 0.0F, PRItemTags.REPAIRS_ROSE_ARMOR, PREquipmentAssets.ROSE);
+    }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 2F, 0.0F, PRItemTags.REPAIRS_ROSE_ARMOR, PREquipmentAssets.ROSE);
 }

@@ -2,6 +2,7 @@ package net.legacy.progression_reborn.datagen;
 
 import com.mojang.datafixers.util.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -9,15 +10,16 @@ import java.util.function.Function;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.legacy.progression_reborn.*;
-import net.minecraft.client.data.models.model.ModelTemplate;
+import net.minecraft.client.color.item.Dye;
+import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.blockstates.Variant;
 import net.minecraft.client.data.models.blockstates.VariantProperties;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.SelectItemModel;
+import net.minecraft.client.renderer.item.properties.select.TrimMaterialProperty;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -25,6 +27,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimMaterials;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -82,11 +85,6 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(PRGearItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
-		generator.generateTrimmableItem(PRGearItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
-		generator.generateTrimmableItem(PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
-		generator.generateTrimmableItem(PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
-
 		generator.generateTrimmableItem(PRGearItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
 		generator.generateTrimmableItem(PRGearItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
 		generator.generateTrimmableItem(PRGearItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
@@ -149,6 +147,16 @@ public final class PRModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
+		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
+
+		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
+		this.registerArmorTrimsDarker(generator, PRGearItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
+
 	}
 
 	@Contract("_, _ -> new")
@@ -180,4 +188,26 @@ public final class PRModelProvider extends FabricModelProvider {
 			}
 		}
 	}
+
+	private void registerArmorTrimsDarker(ItemModelGenerators generator, Item armor, ResourceKey<EquipmentAsset> equipmentKey, String armorType, boolean dyeable) {
+		ResourceLocation armorModelId = TextureMapping.getItemTexture(armor);
+		ResourceLocation armorTextures = TextureMapping.getItemTexture(armor);
+		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
+		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
+			if (trimMaterial.name() == "copper")
+				return;
+			else {
+				ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID,
+						armorModelId.getPath()).withSuffix("_" + trimMaterial.name() + "_trim");
+				ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(
+						"trims/items/" + armorType + "_trim_" + trimMaterial.textureName(equipmentKey) + "_darker");
+				if (dyeable) {
+					this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
+				} else {
+					this.uploadArmor2(generator, trimmedModelId, armorTextures, trimTextureId);
+				}
+			}
+		}
+	}
+
 }
