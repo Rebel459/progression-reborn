@@ -2,6 +2,7 @@ package net.legacy.progression_reborn.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.legacy.progression_reborn.PRConfig;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -22,14 +23,17 @@ public class PRToolMaterialMixin {
                     )
             )
     private static ToolMaterial modifyToolMaterial(TagKey tagKey, int i, float f, float g, int j, TagKey tagKey2, Operation<ToolMaterial> original){
-        if (tagKey == BlockTags.INCORRECT_FOR_IRON_TOOL && tagKey2 == ItemTags.IRON_TOOL_MATERIALS){
-            return original.call(tagKey, 510, f, g, j, tagKey2);
-        }
-        else if (tagKey == BlockTags.INCORRECT_FOR_GOLD_TOOL && tagKey2 == ItemTags.GOLD_TOOL_MATERIALS){
-            return original.call(tagKey, 73, 10f, g, j, tagKey2);
+        if (!PRConfig.modified_vanilla_tools_mixin){
+            return original.call(tagKey, i, f, g, j, tagKey2);
         }
         else {
-            return original.call(tagKey, i, f, g, j, tagKey2);
+            if (tagKey == BlockTags.INCORRECT_FOR_IRON_TOOL && tagKey2 == ItemTags.IRON_TOOL_MATERIALS) {
+                return original.call(tagKey, 510, f, g, j, tagKey2);
+            } else if (tagKey == BlockTags.INCORRECT_FOR_GOLD_TOOL && tagKey2 == ItemTags.GOLD_TOOL_MATERIALS) {
+                return original.call(tagKey, 73, 10f, g, j, tagKey2);
+            } else {
+                return original.call(tagKey, i, f, g, j, tagKey2);
+            }
         }
     }
 }

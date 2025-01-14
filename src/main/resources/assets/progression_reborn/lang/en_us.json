@@ -49,5 +49,7 @@
   "block.progression_reborn.rose_trapdoor": "Rose Trapdoor",
   "block.progression_reborn.rose_door": "Rose Door",
   "block.progression_reborn.rose_lamp": "Rose Lamp",
-  "trim_material.progression_reborn.rose_ingot": "Rose Material"
+  "trim_material.progression_reborn.rose_ingot": "Rose Material",
+  "enchantment.progression_reborn.collection": "Collection",
+  "enchantment.progression_reborn.reforge": "Reforge"
 }
