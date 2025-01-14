@@ -11,7 +11,7 @@ import org.quiltmc.qsl.frozenblock.misc.datafixerupper.api.QuiltDataFixes;
 import org.quiltmc.qsl.frozenblock.misc.datafixerupper.api.SimpleFixes;
 
 public class PRDataFixer {
-	public static final int DATA_VERSION = 1;
+	public static final int DATA_VERSION = 4189;
 
 	private PRDataFixer() {
 		throw new UnsupportedOperationException("PRDataFixer contains only static declarations.");

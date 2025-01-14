@@ -18,10 +18,6 @@
                 {
                   "type": "minecraft:loot_table",
                   "value": "progression_reborn:reforge/sand"
-                },
-                {
-                  "type": "minecraft:item",
-                  "name": "minecraft:glass"
                 }
               ],
               "conditions": [
