@@ -25,7 +25,14 @@ public final class PRBlockLootProvider extends FabricBlockLootTableProvider {
 
 	@Override
 	public void generate() {
+		this.dropSelf(PRBlocks.COPPER_BLOCK);
 		this.dropSelf(PRBlocks.ROSE_BLOCK);
+		this.dropSelf(PRBlocks.POLISHED_ROSE);
+		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE);
+		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE_STAIRS);
+		this.dropSelf(PRBlocks.ROSE_DOOR);
+		this.dropSelf(PRBlocks.ROSE_TRAPDOOR);
+		this.dropSelf(PRBlocks.ROSE_LAMP);
 		this.add(PRBlocks.POLISHED_CUT_ROSE_SLAB, this::createSlabItemTable);
 	}
 
