@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legacies_and_legends:verdant_pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legacies_and_legends:forager_pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legacies_and_legends:wooden_bucket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legacies_and_legends:knife"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "progression_reborn:copper_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_shovel",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:coal",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "progression_reborn:copper_nugget",
+          "weight": 2
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "legacies_and_legends:archaeology/ruins"
+}
