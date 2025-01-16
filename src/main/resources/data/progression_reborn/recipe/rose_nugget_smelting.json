@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "experience": 0.125,
-  "cookingtime": 50,
+  "cookingtime": 25,
   "ingredient": "progression_reborn:raw_rose_nugget",
   "result": {
     "id": "progression_reborn:rose_nugget"

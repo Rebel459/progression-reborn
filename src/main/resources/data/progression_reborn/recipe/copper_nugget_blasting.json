@@ -1,8 +1,8 @@
 {
   "type": "minecraft:blasting",
   "category": "misc",
-  "experience": 0.04,
-  "cookingtime": 25,
+  "experience": 0.08,
+  "cookingtime": 12.5,
   "ingredient": [
     "progression_reborn:raw_copper_nugget"
   ],

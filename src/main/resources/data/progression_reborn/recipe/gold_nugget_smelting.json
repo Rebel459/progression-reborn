@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "experience": 0.125,
-  "cookingtime": 50,
+  "cookingtime": 25,
   "ingredient": [
     "progression_reborn:raw_gold_nugget"
   ],
