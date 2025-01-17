@@ -58,14 +58,14 @@ public class ProgressionReborn extends FrozenModInitializer {
 				ResourcePackActivationType.ALWAYS_ENABLED
 		);
 
-		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends") && PRConfig.compat_datapacks_enabled) {
+		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends") && PRConfig.integration_datapacks_enabled) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_legacies_and_legends_data_integration"), modContainer.get(),
 					Component.translatable("pack.progression_reborn.legacies_and_legends_data_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
-		if (FabricLoader.getInstance().isModLoaded("end_reborn") && PRConfig.compat_datapacks_enabled) {
+		if (FabricLoader.getInstance().isModLoaded("end_reborn") && PRConfig.integration_datapacks_enabled) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_end_reborn_data_integration"), modContainer.get(),
 					Component.translatable("pack.progression_reborn.end_reborn_data_integration"),
