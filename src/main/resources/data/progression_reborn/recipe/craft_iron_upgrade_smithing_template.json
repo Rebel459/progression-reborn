@@ -4,7 +4,7 @@
   "key": {
     "#": "minecraft:cobblestone",
     "C": "progression_reborn:iron_alloy",
-    "S": "minecraft:copper_block"
+    "S": "progression_reborn:copper_block"
   },
   "pattern": [
     "#S#",
