@@ -1,7 +1,6 @@
 package net.legacy.progression_reborn.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.legacy.progression_reborn.PRConfig;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -32,10 +31,6 @@ public interface PRArmorMaterialsMixin {
                     )
             )
     private static ArmorMaterial modifyArmorMaterial(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
-        if (!PRConfig.modified_armor_values){
-            return original.call(i, map, j, holder, f, g, tagKey, resourceKey);
-        }
-        else {
             if (resourceKey == LEATHER) {
                 Map<ArmorType, Integer> leatherMap;
                 leatherMap = Util.make(new EnumMap(ArmorType.class), enumMap -> {
@@ -98,7 +93,6 @@ public interface PRArmorMaterialsMixin {
                 return original.call(i, netheriteMap, j, holder, 2f, g, tagKey, resourceKey);
             } else {
                 return original.call(i, map, j, holder, f, g, tagKey, resourceKey);
-            }
         }
     }
 }

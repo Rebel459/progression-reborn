@@ -1,5 +1,6 @@
 package net.legacy.progression_reborn;
 
+import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -26,16 +27,12 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
 /**
  * by Rebel459
  */
-public class ProgressionReborn extends FrozenModInitializer {
-
-	public ProgressionReborn() {
-		super(PRConstants.MOD_ID);
-	}
+public class ProgressionReborn implements ModInitializer {
 
 	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
 
 	@Override
-	public void onInitialize(String modId, ModContainer container) {
+	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("progression_reborn");
 		try {
 			PRConfig.main(); // Delete this during Datagen
