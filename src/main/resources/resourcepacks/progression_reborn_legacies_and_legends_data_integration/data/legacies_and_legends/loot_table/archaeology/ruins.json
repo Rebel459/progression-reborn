@@ -18,7 +18,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "legacies_and_legends:knife"
+          "name": "minecraft:emerald"
         },
         {
           "type": "minecraft:item",
@@ -26,7 +26,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:emerald",
+          "name": "minecraft:brick",
           "weight": 2
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "progression_reborn:copper_nugget",
+          "name": "minecraft:iron_nugget",
           "weight": 2
         }
       ],

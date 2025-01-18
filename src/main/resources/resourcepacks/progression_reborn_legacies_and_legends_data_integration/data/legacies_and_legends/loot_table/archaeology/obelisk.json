@@ -31,7 +31,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:seeds",
+          "name": "minecraft:wheat_seeds",
           "weight": 2
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "progression_reborn:copper_nugget",
+          "name": "minecraft:iron_nugget",
           "weight": 2
         }
       ],
