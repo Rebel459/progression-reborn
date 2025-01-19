@@ -53,6 +53,8 @@
   "enchantment.progression_reborn.collection": "Collection",
   "enchantment.progression_reborn.reforge": "Reforge",
   "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
-  "pack.progression_reborn.legacies_and_legends_data_integration": "Progression Reborn - Legacies and Legends Integration",
-  "pack.progression_reborn.end_reborn_data_integration": "Progression Reborn - End Reborn Integration"
+  "pack.progression_reborn.modified_ore_generation": "Modified Ore Generation",
+  "pack.progression_reborn.legacies_and_legends_integration": "Progression Reborn - Legacies and Legends Integration",
+  "pack.progression_reborn.end_reborn_integration": "Progression Reborn - End Reborn Integration",
+  "pack.progression_reborn.wilder_wild_integration": "Progression Reborn - Wilder Wild Integration"
 }

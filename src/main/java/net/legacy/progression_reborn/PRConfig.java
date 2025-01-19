@@ -12,8 +12,7 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public class PRConfig {
 
-  public static boolean modified_armor_values;
-  public static boolean modified_tool_values;
+  public static boolean modified_ore_generation;
   public static boolean mod_integration_datapacks;
 
   public PRConfig() {}
@@ -32,8 +31,7 @@ public class PRConfig {
       JsonObject obj = (JsonObject) JsonParser.parseReader(new FileReader(configPath.toString()));
       JsonObject config = (JsonObject) obj.get("config");
 
-      modified_armor_values = config.get("modified_armor_values").getAsBoolean();
-      modified_tool_values = config.get("modified_tool_values").getAsBoolean();
+      modified_ore_generation = config.get("modified_ore_generation").getAsBoolean();
       mod_integration_datapacks = config.get("mod_integration_datapacks").getAsBoolean();
 
     } catch (final IOException e) {
@@ -46,8 +44,7 @@ public class PRConfig {
     JsonObject jsonObjects = new JsonObject();
 
     JsonObject configObject = new JsonObject();
-    configObject.addProperty("modified_armor_values", true);
-    configObject.addProperty("modified_tool_values", true);
+    configObject.addProperty("modified_ore_generation", true);
     configObject.addProperty("mod_integration_datapacks", true);
     jsonObjects.add("config", configObject);
 

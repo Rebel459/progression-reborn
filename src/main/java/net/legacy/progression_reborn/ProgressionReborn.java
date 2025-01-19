@@ -55,17 +55,32 @@ public class ProgressionReborn implements ModInitializer {
 				ResourcePackActivationType.ALWAYS_ENABLED
 		);
 
+		if (PRConfig.modified_ore_generation) {
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "modified_ore_generation"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.modified_ore_generation"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+
 		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends") && PRConfig.mod_integration_datapacks) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_legacies_and_legends_data_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.legacies_and_legends_data_integration"),
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_legacies_and_legends_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.legacies_and_legends_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
 		if (FabricLoader.getInstance().isModLoaded("end_reborn") && PRConfig.mod_integration_datapacks) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_end_reborn_data_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.end_reborn_data_integration"),
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_end_reborn_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.end_reborn_integration"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+		if (FabricLoader.getInstance().isModLoaded("wilder_wild") && PRConfig.mod_integration_datapacks) {
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_wilder_wild_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.end_reborn_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
