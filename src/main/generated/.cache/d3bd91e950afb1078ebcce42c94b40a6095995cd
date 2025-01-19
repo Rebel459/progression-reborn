@@ -1,5 +1,7 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:item
 1d2b2d9a7988a139fe10dd06c064529742b658ca data/minecraft/tags/item/beacon_payment_items.json
+eb3465e0f4b44644520357b62e34159dc9ef3eff data/minecraft/tags/item/horse_food.json
+eb3465e0f4b44644520357b62e34159dc9ef3eff data/minecraft/tags/item/horse_tempt_items.json
 5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/iron_tool_materials.json
 63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/netherite_tool_materials.json
 06b0623097d15e778bca64c137758b1fbace8468 data/minecraft/tags/item/piglin_loved.json

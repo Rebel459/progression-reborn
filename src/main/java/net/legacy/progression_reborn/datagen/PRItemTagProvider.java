@@ -77,6 +77,11 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(PRItems.ROSE_INGOT);
+
+		this.getOrCreateTagBuilder(ItemTags.HORSE_FOOD)
+				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
+		this.getOrCreateTagBuilder(ItemTags.HORSE_TEMPT_ITEMS)
+				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
 	}
 
 }
