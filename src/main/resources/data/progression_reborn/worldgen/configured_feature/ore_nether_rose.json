@@ -1,15 +1,13 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 7,
-    "discard_chance_on_air_exposure": 0,
+    "size": 8,
+    "discard_chance_on_air_exposure": 0.5,
     "targets": [
       {
         "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:netherrack"
-          }
+          "block": "minecraft:netherrack",
+          "predicate_type": "minecraft:block_match"
         },
         "state": {
           "Name": "progression_reborn:nether_rose_ore"
