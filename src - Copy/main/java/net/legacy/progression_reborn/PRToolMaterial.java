@@ -23,11 +23,6 @@ public record PRToolMaterial(
 
     static int roseItemDurability = 281;
 
-    static {
-        if (!PRConfig.modified_tool_values)
-            roseItemDurability = 141;
-    }
-
     public static final net.minecraft.world.item.ToolMaterial COPPER = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 190, 5.0F, 1.0F, 14, PRItemTags.COPPER_TOOL_MATERIALS);
     public static final net.minecraft.world.item.ToolMaterial ROSE = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, roseItemDurability, 10.0F, 2.0F, 22, PRItemTags.ROSE_TOOL_MATERIALS);
 
