@@ -18,6 +18,9 @@
 		"main": [
 			"net.legacy.progression_reborn.ProgressionReborn"
 		],
+		"client": [
+			"net.legacy.progression_reborn.ProgressionRebornClient"
+		],
 		"fabric-datagen": [
 			"net.legacy.progression_reborn.datagen.PRDataGenerator"
 		]
@@ -27,7 +30,7 @@
 		"progression_reborn.mixins.json"
 	],
 	"depends": {
-		"minecraft": ">=1.21.3 <=1.21.4",
+		"minecraft": "1.21.4",
 		"fabric-api": "*",
 		"frozenlib": "*"
 	}

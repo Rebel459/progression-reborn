@@ -44,7 +44,6 @@ public class ProgressionReborn implements ModInitializer {
 		PRGearItems.init();
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
-		PRBlockRenderLayers.init();
 		PRTrimItemModels.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
