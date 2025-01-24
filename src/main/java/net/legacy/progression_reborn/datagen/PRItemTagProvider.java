@@ -75,6 +75,35 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRGearItems.ROSE_LEGGINGS)
 				.add(PRGearItems.ROSE_BOOTS);
 
+		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+				.add(PRGearItems.COPPER_HELMET)
+				.add(PRGearItems.ROSE_HELMET);
+		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+				.add(PRGearItems.COPPER_CHESTPLATE)
+				.add(PRGearItems.ROSE_CHESTPLATE);
+		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+				.add(PRGearItems.COPPER_LEGGINGS)
+				.add(PRGearItems.ROSE_LEGGINGS);
+		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+				.add(PRGearItems.COPPER_BOOTS)
+				.add(PRGearItems.ROSE_BOOTS);
+
+		this.getOrCreateTagBuilder(ItemTags.SWORDS)
+				.add(PRGearItems.COPPER_SWORD)
+				.add(PRGearItems.ROSE_SWORD);
+		this.getOrCreateTagBuilder(ItemTags.AXES)
+				.add(PRGearItems.COPPER_AXE)
+				.add(PRGearItems.ROSE_AXE);
+		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
+				.add(PRGearItems.COPPER_PICKAXE)
+				.add(PRGearItems.ROSE_PICKAXE);
+		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
+				.add(PRGearItems.COPPER_SHOVEL)
+				.add(PRGearItems.ROSE_SHOVEL);
+		this.getOrCreateTagBuilder(ItemTags.HOES)
+				.add(PRGearItems.COPPER_HOE)
+				.add(PRGearItems.ROSE_HOE);
+
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(PRItems.ROSE_INGOT);
 

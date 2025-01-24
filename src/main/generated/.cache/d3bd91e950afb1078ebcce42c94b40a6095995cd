@@ -1,13 +1,22 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:item
+db7eba077cea4cb060629e848e46a0a2a7f30a1d data/minecraft/tags/item/axes.json
 1d2b2d9a7988a139fe10dd06c064529742b658ca data/minecraft/tags/item/beacon_payment_items.json
+47f8dba08362e55ae594b5c9bf7be5a6cfe615fb data/minecraft/tags/item/chest_armor.json
+933583f42e5d6c001c1b6e1c34cac497ade3d047 data/minecraft/tags/item/foot_armor.json
+e5a63344d8074a241c958588fe1fc3a4cc772b73 data/minecraft/tags/item/head_armor.json
+8fb80ce1dd0114265146962c2a0f36454def3e2a data/minecraft/tags/item/hoes.json
 eb3465e0f4b44644520357b62e34159dc9ef3eff data/minecraft/tags/item/horse_food.json
 eb3465e0f4b44644520357b62e34159dc9ef3eff data/minecraft/tags/item/horse_tempt_items.json
 5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/iron_tool_materials.json
+7e36c9777772df86f4b5df746aba5a93c7cfc140 data/minecraft/tags/item/leg_armor.json
 63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/netherite_tool_materials.json
+6f46c81b43a6780611faa2671206340b11e7c7b6 data/minecraft/tags/item/pickaxes.json
 06b0623097d15e778bca64c137758b1fbace8468 data/minecraft/tags/item/piglin_loved.json
 834a46305ac63cf1f6bf65070a1215243c887ca6 data/minecraft/tags/item/piglin_safe_armor.json
 5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/repairs_iron_armor.json
 63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/repairs_netherite_armor.json
+2f793a54cf6a3ff8dab7b9715b924f132b094536 data/minecraft/tags/item/shovels.json
+530dcdd6b04c3afb00fb782302792d664bfd164e data/minecraft/tags/item/swords.json
 1d2b2d9a7988a139fe10dd06c064529742b658ca data/minecraft/tags/item/trim_materials.json
 e150c1bcd2f63271168d3269775655883181c88d data/minecraft/tags/item/trimmable_armor.json
 6222fd0d7d2ce08ee1f70be68a61f4e167dda650 data/progression_reborn/tags/item/copper_tool_materials.json
