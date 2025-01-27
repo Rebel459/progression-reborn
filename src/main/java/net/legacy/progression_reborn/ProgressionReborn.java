@@ -35,7 +35,7 @@ public class ProgressionReborn implements ModInitializer {
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("progression_reborn");
 		try {
-			PRConfig.main(); // Delete this during Datagen
+			PRConfig.main();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
