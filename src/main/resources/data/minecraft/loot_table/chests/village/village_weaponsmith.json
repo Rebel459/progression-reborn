@@ -33,8 +33,24 @@
               "function": "minecraft:set_count"
             }
           ],
+          "name": "minecraft:copper_ingot",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "minecraft:iron_ingot",
-          "weight": 10
+          "weight": 5
         },
         {
           "type": "minecraft:item",
@@ -86,32 +102,32 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_pickaxe",
+          "name": "progression_reborn:copper_pickaxe",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_sword",
+          "name": "progression_reborn:copper_sword",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_chestplate",
+          "name": "progression_reborn:copper_chestplate",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_helmet",
+          "name": "progression_reborn:copper_helmet",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_leggings",
+          "name": "progression_reborn:copper_leggings",
           "weight": 5
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
+          "name": "progression_reborn:copper_boots",
           "weight": 5
         },
         {
