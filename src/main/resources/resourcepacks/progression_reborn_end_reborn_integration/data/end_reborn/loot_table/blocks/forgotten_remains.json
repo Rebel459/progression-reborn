@@ -17,7 +17,7 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/ancient_debris"
+                  "value": "progression_reborn:reforge/forgotten_remains"
                 }
               ],
               "conditions": [
@@ -40,7 +40,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:ancient_debris"
+              "name": "end_reborn:forgotten_remains"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/ancient_debris"
+  "random_sequence": "end_reborn:blocks/forgotten_remains"
 }
