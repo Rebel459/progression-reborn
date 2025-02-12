@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "progression_reborn:item/rose_leggings",
-    "layer1": "minecraft:trims/items/leggings_trim_remnant_ingot"
+    "layer1": "minecraft:trims/items/leggings_trim_featherzeal_ingot"
   }
 }

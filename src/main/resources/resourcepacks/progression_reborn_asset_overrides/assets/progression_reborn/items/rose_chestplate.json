@@ -89,9 +89,9 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "progression_reborn:item/rose_chestplate_remnant_ingot_trim"
+          "model": "progression_reborn:item/rose_chestplate_remnium_ingot_trim"
         },
-        "when": "end_reborn:remnant_ingot"
+        "when": "end_reborn:remnium_ingot"
       },
       {
         "model": {
@@ -103,9 +103,9 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "progression_reborn:item/rose_chestplate_nullium_trim"
+          "model": "progression_reborn:item/rose_chestplate_featherzeal_ingot_trim"
         },
-        "when": "end_reborn:nullium"
+        "when": "end_reborn:featherzeal_ingot"
       }
     ],
     "fallback": {
