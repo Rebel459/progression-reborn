@@ -1,5 +1,7 @@
 package net.legacy.progression_reborn;
 
+import net.legacy.progression_reborn.sound.PRBlockSounds;
+import net.legacy.progression_reborn.sound.PRSounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -35,11 +37,11 @@ public class PRBlockSetType {
                     true,
                     true,
                     BlockSetType.PressurePlateSensitivity.EVERYTHING,
-                    SoundType.NETHERITE_BLOCK,
-                    SoundEvents.IRON_DOOR_CLOSE,
-                    SoundEvents.IRON_DOOR_OPEN,
-                    SoundEvents.IRON_TRAPDOOR_CLOSE,
-                    SoundEvents.IRON_TRAPDOOR_OPEN,
+                    PRBlockSounds.ROSE_BLOCK,
+                    PRSounds.ROSE_DOOR_TOGGLE,
+                    PRSounds.ROSE_DOOR_TOGGLE,
+                    PRSounds.ROSE_TRAPDOOR_TOGGLE,
+                    PRSounds.ROSE_TRAPDOOR_TOGGLE,
                     SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
                     SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
                     SoundEvents.STONE_BUTTON_CLICK_OFF,

@@ -1,6 +1,7 @@
 package net.legacy.progression_reborn;
 import java.util.function.Function;
 
+import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -46,7 +47,7 @@ public class PRBlocks {
                     .requiresCorrectToolForDrops()
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
-                    .sound(SoundType.NETHERITE_BLOCK)
+                    .sound(PRBlockSounds.ROSE_BLOCK)
     );
 
     public static final Block POLISHED_ROSE = register("polished_rose",
@@ -56,7 +57,7 @@ public class PRBlocks {
                     .requiresCorrectToolForDrops()
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
-                    .sound(SoundType.NETHERITE_BLOCK)
+                    .sound(PRBlockSounds.ROSE_BLOCK)
     );
     public static final Block ROSE_LAMP = register("rose_lamp",
             Block::new,
@@ -66,7 +67,7 @@ public class PRBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(3.0F, 6.0F)
                     .lightLevel(blockStatex -> 15)
-                    .sound(SoundType.NETHERITE_BLOCK)
+                    .sound(PRBlockSounds.ROSE_LAMP)
     );
 
     public static final Block POLISHED_CUT_ROSE = register("polished_cut_rose",
@@ -76,7 +77,7 @@ public class PRBlocks {
                     .requiresCorrectToolForDrops()
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
-                    .sound(SoundType.NETHERITE_BLOCK)
+                    .sound(PRBlockSounds.ROSE_BLOCK)
     );
     public static final Block POLISHED_CUT_ROSE_STAIRS = register("polished_cut_rose_stairs",
             properties -> new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), properties),

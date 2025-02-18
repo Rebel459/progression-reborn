@@ -1,0 +1,216 @@
+{
+  "block.rose_block.break": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_block/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break3",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rose_block.fall": {
+    "sounds": [
+      "progression_reborn:block/rose_block/step1",
+      "progression_reborn:block/rose_block/step2",
+      "progression_reborn:block/rose_block/step3"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.rose_block.hit": {
+    "sounds": [
+      "progression_reborn:block/rose_block/step1",
+      "progression_reborn:block/rose_block/step2",
+      "progression_reborn:block/rose_block/step3"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.rose_block.place": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_block/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_block/break3",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.rose_block.step": {
+    "sounds": [
+      "progression_reborn:block/rose_block/step1",
+      "progression_reborn:block/rose_block/step2",
+      "progression_reborn:block/rose_block/step3"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.rose_lamp.break": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_lamp/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/break1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/break2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/break3",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rose_lamp.fall": {
+    "sounds": [
+      "progression_reborn:block/rose_lamp/step1",
+      "progression_reborn:block/rose_lamp/step2",
+      "progression_reborn:block/rose_lamp/step3"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.rose_lamp.hit": {
+    "sounds": [
+      "progression_reborn:block/rose_lamp/step1",
+      "progression_reborn:block/rose_lamp/step2",
+      "progression_reborn:block/rose_lamp/step3"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.rose_lamp.place": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_lamp/place1",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/place1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/place2",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/place2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/place3",
+        "volume": 0.8
+      },
+      {
+        "name": "progression_reborn:block/rose_lamp/place3",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.rose_lamp.step": {
+    "sounds": [
+      "progression_reborn:block/rose_lamp/step1",
+      "progression_reborn:block/rose_lamp/step2",
+      "progression_reborn:block/rose_lamp/step3"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.rose_door.toggle": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_door/toggle1",
+        "volume": 0.9
+      },
+      {
+        "name": "progression_reborn:block/rose_door/toggle2",
+        "volume": 0.9
+      },
+      {
+        "name": "progression_reborn:block/rose_door/toggle3",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "subtitles.block.door.toggle"
+  },
+  "block.rose_trapdoor.toggle": {
+    "sounds": [
+      {
+        "name": "progression_reborn:block/rose_trapdoor/toggle1",
+        "volume": 0.9
+      },
+      {
+        "name": "progression_reborn:block/rose_trapdoor/toggle2",
+        "volume": 0.9
+      },
+      {
+        "name": "progression_reborn:block/rose_trapdoor/toggle3",
+        "volume": 0.9
+      },
+      {
+        "name": "progression_reborn:block/rose_trapdoor/toggle4",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "subtitles.block.trapdoor.toggle"
+  }
+}
