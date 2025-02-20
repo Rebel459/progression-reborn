@@ -1,0 +1,165 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:sand",
+                  "weight": 63
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:iron_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ],
+                  "weight": 3
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ],
+                  "weight": 3
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#legacies_and_legends:prospecting"
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "progression_reborn:reforge",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "progression_reborn:reforge/sand"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "progression_reborn:reforge",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:sand",
+                  "weight": 63
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:iron_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ],
+                  "weight": 3
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ],
+                  "weight": 3
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#legacies_and_legends:prospecting"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:sand"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:blocks/sand"
+}

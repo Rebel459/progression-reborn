@@ -1,0 +1,137 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:red_sand",
+                  "weight": 63
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 5
+                      }
+                    }
+                  ],
+                  "weight": 6
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#legacies_and_legends:prospecting"
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "progression_reborn:reforge",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "progression_reborn:reforge/red_sand"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "progression_reborn:reforge",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:red_sand",
+                  "weight": 63
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_nugget",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 5
+                      }
+                    }
+                  ],
+                  "weight": 6
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#legacies_and_legends:prospecting"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:red_sand"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:blocks/red_sand"
+}
