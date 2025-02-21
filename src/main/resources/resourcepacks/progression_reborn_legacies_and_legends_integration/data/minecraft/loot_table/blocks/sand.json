@@ -16,7 +16,8 @@
               "type": "minecraft:alternatives",
               "children": [
                 {
-                  "type": "minecraft:sand",
+                  "type": "minecraft:item",
+                  "name": "minecraft:red_sand",
                   "weight": 63
                 },
                 {
@@ -105,8 +106,10 @@
             {
               "type": "minecraft:alternatives",
               "children": [
+
                 {
-                  "type": "minecraft:sand",
+                  "type": "minecraft:item",
+                  "name": "minecraft:sand",
                   "weight": 63
                 },
                 {
