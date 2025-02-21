@@ -13,7 +13,7 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:alternatives",
+              "type": "minecraft:group",
               "children": [
                 {
                   "type": "minecraft:item",
@@ -90,7 +90,7 @@
               ]
             },
             {
-              "type": "minecraft:alternatives",
+              "type": "minecraft:group",
               "children": [
                 {
                   "type": "minecraft:item",
