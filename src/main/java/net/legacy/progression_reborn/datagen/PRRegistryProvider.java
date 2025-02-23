@@ -3,7 +3,7 @@ package net.legacy.progression_reborn.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.legacy.progression_reborn.PRConstants;
-import net.legacy.progression_reborn.PRTrimMaterials;
+import net.legacy.progression_reborn.registry.PRTrimMaterials;
 import net.minecraft.core.*;
 import net.minecraft.core.registries.Registries;
 

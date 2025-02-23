@@ -10,8 +10,9 @@ base {
 }
 
 repositories {
-	maven { url = "https://api.modrinth.com/maven"}
+	maven { url = "https://api.modrinth.com/maven" }
 	maven { url = 'https://maven.parchmentmc.org' }
+	maven{ url = "https://maven.shedaniel.me/" }
 	exclusiveContent {
 		forRepository {
 			maven {
@@ -44,7 +45,11 @@ dependencies {
 
 	include modImplementation("com.github.ramixin:mixson:${project.mixson_version}")
 
-	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.4.1")))
+	modImplementation("maven.modrinth:modmenu:$modmenu_version")
+
+	modImplementation("maven.modrinth:cloth-config:$cloth_config_version")
+
+	modApi ("me.shedaniel.cloth:basic-math:+")
 
 }
 

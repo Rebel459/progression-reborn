@@ -1,5 +1,6 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
+import net.legacy.progression_reborn.tag.PRItemTags;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;

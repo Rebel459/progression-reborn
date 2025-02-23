@@ -2,9 +2,9 @@ package net.legacy.progression_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.legacy.progression_reborn.PRGearItems;
-import net.legacy.progression_reborn.PRItemTags;
-import net.legacy.progression_reborn.PRItems;
+import net.legacy.progression_reborn.registry.PREquipmentItems;
+import net.legacy.progression_reborn.tag.PRItemTags;
+import net.legacy.progression_reborn.registry.PRItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
@@ -48,61 +48,61 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRItems.RAW_GOLD_NUGGET)
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT)
 				.add(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE)
-				.add(PRGearItems.ROSE_SWORD)
-				.add(PRGearItems.ROSE_AXE)
-				.add(PRGearItems.ROSE_PICKAXE)
-				.add(PRGearItems.ROSE_SHOVEL)
-				.add(PRGearItems.ROSE_HOE)
-				.add(PRGearItems.ROSE_HELMET)
-				.add(PRGearItems.ROSE_CHESTPLATE)
-				.add(PRGearItems.ROSE_LEGGINGS)
-				.add(PRGearItems.ROSE_BOOTS)
-				.add(PRGearItems.ROSE_HORSE_ARMOR);
+				.add(PREquipmentItems.ROSE_SWORD)
+				.add(PREquipmentItems.ROSE_AXE)
+				.add(PREquipmentItems.ROSE_PICKAXE)
+				.add(PREquipmentItems.ROSE_SHOVEL)
+				.add(PREquipmentItems.ROSE_HOE)
+				.add(PREquipmentItems.ROSE_HELMET)
+				.add(PREquipmentItems.ROSE_CHESTPLATE)
+				.add(PREquipmentItems.ROSE_LEGGINGS)
+				.add(PREquipmentItems.ROSE_BOOTS)
+				.add(PREquipmentItems.ROSE_HORSE_ARMOR);
 
 		this.getOrCreateTagBuilder(ItemTags.PIGLIN_SAFE_ARMOR)
-				.add(PRGearItems.ROSE_HELMET)
-				.add(PRGearItems.ROSE_CHESTPLATE)
-				.add(PRGearItems.ROSE_LEGGINGS)
-				.add(PRGearItems.ROSE_BOOTS);
+				.add(PREquipmentItems.ROSE_HELMET)
+				.add(PREquipmentItems.ROSE_CHESTPLATE)
+				.add(PREquipmentItems.ROSE_LEGGINGS)
+				.add(PREquipmentItems.ROSE_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-				.add(PRGearItems.COPPER_HELMET)
-				.add(PRGearItems.COPPER_CHESTPLATE)
-				.add(PRGearItems.COPPER_LEGGINGS)
-				.add(PRGearItems.COPPER_BOOTS)
-				.add(PRGearItems.ROSE_HELMET)
-				.add(PRGearItems.ROSE_CHESTPLATE)
-				.add(PRGearItems.ROSE_LEGGINGS)
-				.add(PRGearItems.ROSE_BOOTS);
+				.add(PREquipmentItems.COPPER_HELMET)
+				.add(PREquipmentItems.COPPER_CHESTPLATE)
+				.add(PREquipmentItems.COPPER_LEGGINGS)
+				.add(PREquipmentItems.COPPER_BOOTS)
+				.add(PREquipmentItems.ROSE_HELMET)
+				.add(PREquipmentItems.ROSE_CHESTPLATE)
+				.add(PREquipmentItems.ROSE_LEGGINGS)
+				.add(PREquipmentItems.ROSE_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
-				.add(PRGearItems.COPPER_HELMET)
-				.add(PRGearItems.ROSE_HELMET);
+				.add(PREquipmentItems.COPPER_HELMET)
+				.add(PREquipmentItems.ROSE_HELMET);
 		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-				.add(PRGearItems.COPPER_CHESTPLATE)
-				.add(PRGearItems.ROSE_CHESTPLATE);
+				.add(PREquipmentItems.COPPER_CHESTPLATE)
+				.add(PREquipmentItems.ROSE_CHESTPLATE);
 		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
-				.add(PRGearItems.COPPER_LEGGINGS)
-				.add(PRGearItems.ROSE_LEGGINGS);
+				.add(PREquipmentItems.COPPER_LEGGINGS)
+				.add(PREquipmentItems.ROSE_LEGGINGS);
 		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
-				.add(PRGearItems.COPPER_BOOTS)
-				.add(PRGearItems.ROSE_BOOTS);
+				.add(PREquipmentItems.COPPER_BOOTS)
+				.add(PREquipmentItems.ROSE_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.SWORDS)
-				.add(PRGearItems.COPPER_SWORD)
-				.add(PRGearItems.ROSE_SWORD);
+				.add(PREquipmentItems.COPPER_SWORD)
+				.add(PREquipmentItems.ROSE_SWORD);
 		this.getOrCreateTagBuilder(ItemTags.AXES)
-				.add(PRGearItems.COPPER_AXE)
-				.add(PRGearItems.ROSE_AXE);
+				.add(PREquipmentItems.COPPER_AXE)
+				.add(PREquipmentItems.ROSE_AXE);
 		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
-				.add(PRGearItems.COPPER_PICKAXE)
-				.add(PRGearItems.ROSE_PICKAXE);
+				.add(PREquipmentItems.COPPER_PICKAXE)
+				.add(PREquipmentItems.ROSE_PICKAXE);
 		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
-				.add(PRGearItems.COPPER_SHOVEL)
-				.add(PRGearItems.ROSE_SHOVEL);
+				.add(PREquipmentItems.COPPER_SHOVEL)
+				.add(PREquipmentItems.ROSE_SHOVEL);
 		this.getOrCreateTagBuilder(ItemTags.HOES)
-				.add(PRGearItems.COPPER_HOE)
-				.add(PRGearItems.ROSE_HOE);
+				.add(PREquipmentItems.COPPER_HOE)
+				.add(PREquipmentItems.ROSE_HOE);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(PRItems.ROSE_INGOT);

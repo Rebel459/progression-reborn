@@ -21,7 +21,7 @@ package net.legacy.progression_reborn.client;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.legacy.progression_reborn.PRBlocks;
+import net.legacy.progression_reborn.registry.PRBlocks;
 import net.minecraft.client.renderer.RenderType;
 
 @Environment(EnvType.CLIENT)

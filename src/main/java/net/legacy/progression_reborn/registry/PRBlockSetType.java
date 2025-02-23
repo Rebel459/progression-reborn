@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.legacy.progression_reborn.sound.PRSounds;

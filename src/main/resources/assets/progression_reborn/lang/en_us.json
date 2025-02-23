@@ -62,5 +62,13 @@
   "pack.progression_reborn.modified_ore_generation": "Modified Ore Generation",
   "pack.progression_reborn.legacies_and_legends_integration": "Progression Reborn - Legacies and Legends Integration",
   "pack.progression_reborn.end_reborn_integration": "Progression Reborn - End Reborn Integration",
-  "pack.progression_reborn.wilder_wild_integration": "Progression Reborn - Wilder Wild Integration"
+  "pack.progression_reborn.wilder_wild_integration": "Progression Reborn - Wilder Wild Integration",
+
+  "text.autoconfig.progression_reborn.title": "Progression Reborn",
+  "text.autoconfig.progression_reborn.option.worldgen": "World Generation",
+  "text.autoconfig.progression_reborn.option.worldgen.modified_ore_generation": "Modified Ore Generation",
+  "text.autoconfig.progression_reborn.option.integrations": "Mod Integration",
+  "text.autoconfig.progression_reborn.option.integrations.end_reborn": "End Reborn",
+  "text.autoconfig.progression_reborn.option.integrations.legacies_and_legends": "Legacies and Legends",
+  "text.autoconfig.progression_reborn.option.integrations.wilder_wild": "Wilder Wild"
 }

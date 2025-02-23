@@ -21,6 +21,9 @@
 		"client": [
 			"net.legacy.progression_reborn.ProgressionRebornClient"
 		],
+		"modmenu": [
+			"net.legacy.progression_reborn.config.PRModMenuIntegration"
+		],
 		"fabric-datagen": [
 			"net.legacy.progression_reborn.datagen.PRDataGenerator"
 		]
@@ -32,6 +35,7 @@
 	"depends": {
 		"minecraft": "1.21.4",
 		"fabric-api": "*",
-		"frozenlib": "*"
+		"frozenlib": "*",
+		"cloth-config": "*"
 	}
 }

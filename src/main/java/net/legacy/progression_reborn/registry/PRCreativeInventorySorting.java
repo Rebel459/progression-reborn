@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
 import net.frozenblock.lib.item.api.FrozenCreativeTabs;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -11,36 +11,36 @@ public class PRCreativeInventorySorting {
 	public static void init() {
 
 		// Combat
-		addAfterInCombat(Items.CHAINMAIL_BOOTS, PRGearItems.COPPER_HELMET);
-		addAfterInCombat(PRGearItems.COPPER_HELMET, PRGearItems.COPPER_CHESTPLATE);
-		addAfterInCombat(PRGearItems.COPPER_CHESTPLATE, PRGearItems.COPPER_LEGGINGS);
-		addAfterInCombat(PRGearItems.COPPER_LEGGINGS, PRGearItems.COPPER_BOOTS);
+		addAfterInCombat(Items.CHAINMAIL_BOOTS, PREquipmentItems.COPPER_HELMET);
+		addAfterInCombat(PREquipmentItems.COPPER_HELMET, PREquipmentItems.COPPER_CHESTPLATE);
+		addAfterInCombat(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentItems.COPPER_LEGGINGS);
+		addAfterInCombat(PREquipmentItems.COPPER_LEGGINGS, PREquipmentItems.COPPER_BOOTS);
 
-		addAfterInCombat(Items.GOLDEN_BOOTS, PRGearItems.ROSE_HELMET);
-		addAfterInCombat(PRGearItems.ROSE_HELMET, PRGearItems.ROSE_CHESTPLATE);
-		addAfterInCombat(PRGearItems.ROSE_CHESTPLATE, PRGearItems.ROSE_LEGGINGS);
-		addAfterInCombat(PRGearItems.ROSE_LEGGINGS, PRGearItems.ROSE_BOOTS);
+		addAfterInCombat(Items.GOLDEN_BOOTS, PREquipmentItems.ROSE_HELMET);
+		addAfterInCombat(PREquipmentItems.ROSE_HELMET, PREquipmentItems.ROSE_CHESTPLATE);
+		addAfterInCombat(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentItems.ROSE_LEGGINGS);
+		addAfterInCombat(PREquipmentItems.ROSE_LEGGINGS, PREquipmentItems.ROSE_BOOTS);
 
-		addAfterInCombat(Items.STONE_SWORD, PRGearItems.COPPER_SWORD); // shovel pickaxe axe hoe
-		addAfterInCombat(Items.STONE_AXE, PRGearItems.COPPER_AXE);
+		addAfterInCombat(Items.STONE_SWORD, PREquipmentItems.COPPER_SWORD); // shovel pickaxe axe hoe
+		addAfterInCombat(Items.STONE_AXE, PREquipmentItems.COPPER_AXE);
 
-		addAfterInCombat(Items.GOLDEN_SWORD, PRGearItems.ROSE_SWORD);
-		addAfterInCombat(Items.GOLDEN_AXE, PRGearItems.ROSE_AXE);
+		addAfterInCombat(Items.GOLDEN_SWORD, PREquipmentItems.ROSE_SWORD);
+		addAfterInCombat(Items.GOLDEN_AXE, PREquipmentItems.ROSE_AXE);
 
-		addAfterInCombat(Items.LEATHER_HORSE_ARMOR, PRGearItems.COPPER_HORSE_ARMOR);
-		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PRGearItems.ROSE_HORSE_ARMOR);
-		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, PRGearItems.NETHERITE_HORSE_ARMOR);
+		addAfterInCombat(Items.LEATHER_HORSE_ARMOR, PREquipmentItems.COPPER_HORSE_ARMOR);
+		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PREquipmentItems.ROSE_HORSE_ARMOR);
+		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, PREquipmentItems.NETHERITE_HORSE_ARMOR);
 
 		// Tools and Utilities
-		addAfterInToolsAndUtilities(Items.STONE_HOE, PRGearItems.COPPER_SHOVEL);
-		addAfterInToolsAndUtilities(PRGearItems.COPPER_SHOVEL, PRGearItems.COPPER_PICKAXE);
-		addAfterInToolsAndUtilities(PRGearItems.COPPER_PICKAXE, PRGearItems.COPPER_AXE);
-		addAfterInToolsAndUtilities(PRGearItems.COPPER_AXE, PRGearItems.COPPER_HOE);
+		addAfterInToolsAndUtilities(Items.STONE_HOE, PREquipmentItems.COPPER_SHOVEL);
+		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_SHOVEL, PREquipmentItems.COPPER_PICKAXE);
+		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_PICKAXE, PREquipmentItems.COPPER_AXE);
+		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_AXE, PREquipmentItems.COPPER_HOE);
 
-		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PRGearItems.ROSE_SHOVEL);
-		addAfterInToolsAndUtilities(PRGearItems.ROSE_SHOVEL, PRGearItems.ROSE_PICKAXE);
-		addAfterInToolsAndUtilities(PRGearItems.ROSE_PICKAXE, PRGearItems.ROSE_AXE);
-		addAfterInToolsAndUtilities(PRGearItems.ROSE_AXE, PRGearItems.ROSE_HOE);
+		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PREquipmentItems.ROSE_SHOVEL);
+		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_SHOVEL, PREquipmentItems.ROSE_PICKAXE);
+		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_PICKAXE, PREquipmentItems.ROSE_AXE);
+		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_AXE, PREquipmentItems.ROSE_HOE);
 
 		// Food and Drinks
 		addAfterInFoodAndDrinks(Items.GOLDEN_CARROT, PRItems.ENCHANTED_GOLDEN_CARROT);

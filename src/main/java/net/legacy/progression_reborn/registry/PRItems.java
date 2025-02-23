@@ -1,6 +1,9 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
+import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.food.PRConsumables;
+import net.legacy.progression_reborn.food.PRFoods;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;

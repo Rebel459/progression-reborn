@@ -1,5 +1,6 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
+import net.legacy.progression_reborn.tag.PRItemTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;

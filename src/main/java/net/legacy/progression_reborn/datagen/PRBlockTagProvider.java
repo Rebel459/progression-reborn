@@ -3,7 +3,7 @@ package net.legacy.progression_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.legacy.progression_reborn.PRBlocks;
+import net.legacy.progression_reborn.registry.PRBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;

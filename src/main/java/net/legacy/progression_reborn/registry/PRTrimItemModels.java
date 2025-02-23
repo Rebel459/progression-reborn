@@ -1,8 +1,9 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.legacy.progression_reborn.PRConstants;
 import net.minecraft.resources.ResourceLocation;
 import net.ramixin.mixson.Mixson;
 import net.ramixin.mixson.events.ModificationEvent;

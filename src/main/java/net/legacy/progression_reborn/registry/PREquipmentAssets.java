@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn;
+package net.legacy.progression_reborn.registry;
 
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
