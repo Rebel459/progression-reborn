@@ -1,5 +1,4 @@
 {
-  "type": "minecraft:chest",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -7,7 +6,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:saddle",
-          "weight": 20
+          "weight": 15
         },
         {
           "type": "minecraft:item",
@@ -21,18 +20,18 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_otherside",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:music_disc_13",
-          "weight": 15
+          "weight": 10
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:music_disc_cat",
-          "weight": 15
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_ward",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
@@ -41,41 +40,32 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_horse_armor",
-          "weight": 15,
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "max": 0
-                  }
-                }
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "progression_reborn:copper_horse_armor",
-          "weight": 15,
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 1
-                  }
-                }
-              }
-            }
-          ]
+          "weight": 10
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_horse_armor",
+          "name": "minecraft:iron_horse_armor",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_boots",
           "weight": 5
         },
         {
@@ -87,7 +77,7 @@
             }
           ],
           "name": "minecraft:book",
-          "weight": 15
+          "weight": 5
         }
       ],
       "rolls": {
@@ -112,47 +102,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:iron_ingot",
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "max": 0
-                  }
-                }
-              }
-            }
-          ],
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "minecraft:copper_ingot",
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 1
-                  }
-                }
-              }
-            }
-          ],
           "weight": 10
         },
         {
@@ -355,35 +305,14 @@
       "rolls": 3.0
     },
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 76
-        },
-        {
-         "type":"item",
-         "name":"legacies_and_legends:dungeon_helmet",
-         "weight":6
-        },
-        {
-         "type":"item",
-         "name":"legacies_and_legends:dungeon_chestplate",
-         "weight":6
-        },
-        {
-         "type":"item",
-         "name":"legacies_and_legends:dungeon_leggings",
-         "weight":6
-        },
-        {
-         "type":"item",
-         "name":"legacies_and_legends:dungeon_boots",
-         "weight":6
+          "type": "minecraft:loot_table",
+          "value": "legacies_and_legends:chests/dungeon/chest"
         }
-      ],
-      "rolls": 1.0
+      ]
     }
   ],
-  "random_sequence": "minecraft:chests/simple_dungeon"
+  "random_sequence": "legacies_and_legends:chests/dungeon/frozen/chest"
 }
