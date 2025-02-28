@@ -1,7 +1,7 @@
 Progression Reborn - Legacy License
 
 - Assets ARR / specific to the relevant rights holder. Assets include anything in the assets/ directory
-- All code and code contributions licensed under LGPL. This includes all code used in the java/, recipe/, worldgen/, loot_table/ and enchantment/ directories
+- All code and code contributions licensed under LGPL-3.0 Only. This includes all code used in the java/, recipe/, worldgen/, loot_table/ and enchantment/ directories
 
 Source code: https://github.com/Rebel459/progression-reborn
 
