@@ -25,6 +25,8 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class ProgressionReborn implements ModInitializer {
 
+	public static boolean isEndRebornLoaded = false;
+
 	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
 
 	@Override
@@ -37,6 +39,7 @@ public class ProgressionReborn implements ModInitializer {
 		PRCreativeInventorySorting.init();
 		PRTrimItemModels.init();
 		PRConfig.initClient();
+		PRItemComponents.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 
@@ -62,6 +65,7 @@ public class ProgressionReborn implements ModInitializer {
 			);
 		}
 		if (FabricLoader.getInstance().isModLoaded("end_reborn") && PRConfig.get.integrations.end_reborn) {
+			isEndRebornLoaded = true;
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_end_reborn_integration"), modContainer.get(),
 					Component.translatable("pack.progression_reborn.end_reborn_integration"),

@@ -2,17 +2,17 @@
   "layers": {
     "horse_body": [
       {
-        "texture": "minecraft:copper"
+        "texture": "end_reborn:copper"
       }
     ],
     "humanoid": [
       {
-        "texture": "minecraft:copper"
+        "texture": "end_reborn:copper"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "minecraft:copper"
+        "texture": "end_reborn:copper"
       }
     ]
   }

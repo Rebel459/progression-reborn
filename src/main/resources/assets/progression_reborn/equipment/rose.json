@@ -2,17 +2,17 @@
   "layers": {
     "horse_body": [
       {
-        "texture": "minecraft:rose"
+        "texture": "progression_reborn:rose"
       }
     ],
     "humanoid": [
       {
-        "texture": "minecraft:rose"
+        "texture": "progression_reborn:rose"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "minecraft:rose"
+        "texture": "progression_reborn:rose"
       }
     ]
   }

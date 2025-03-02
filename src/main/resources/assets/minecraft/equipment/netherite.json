@@ -2,7 +2,7 @@
   "layers": {
     "horse_body": [
       {
-        "texture": "minecraft:netherite"
+        "texture": "end_reborn:netherite"
       }
     ],
     "humanoid": [

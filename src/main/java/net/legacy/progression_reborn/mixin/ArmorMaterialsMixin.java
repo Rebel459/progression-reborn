@@ -19,7 +19,7 @@ import java.util.Map;
 import static net.minecraft.world.item.equipment.EquipmentAssets.*;
 
 @Mixin(value = ArmorMaterials.class, priority = 1001)
-public interface PRArmorMaterialsMixin {
+public interface ArmorMaterialsMixin {
 
     @WrapOperation
             (

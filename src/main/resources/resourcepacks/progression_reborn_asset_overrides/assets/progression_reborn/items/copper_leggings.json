@@ -96,9 +96,9 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "progression_reborn:item/copper_leggings_remnium_ingot_trim"
+          "model": "progression_reborn:item/copper_leggings_remnant_ingot_trim"
         },
-        "when": "end_reborn:remnium_ingot"
+        "when": "end_reborn:remnant_ingot"
       },
       {
         "model": {
