@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "progression_reborn:diamond_nugget"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "progression_reborn:mine_diamond"
+  }
+}

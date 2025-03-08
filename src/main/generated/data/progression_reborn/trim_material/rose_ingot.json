@@ -6,6 +6,6 @@
   },
   "ingredient": "progression_reborn:rose_ingot",
   "override_armor_assets": {
-    "minecraft:rose": "rose_ingot_darker"
+    "progression_reborn:rose": "rose_ingot_darker"
   }
 }

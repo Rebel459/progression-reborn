@@ -13,6 +13,8 @@ public class PRItemTags {
     public static final TagKey<Item> REPAIRS_COPPER_ARMOR = bind("repairs_copper_armor");
     public static final TagKey<Item> REPAIRS_ROSE_ARMOR = bind("repairs_rose_armor");
 
+    public static final TagKey<Item> STONE_PICKAXES = bind("stone_pickaxes");
+
     @NotNull
     private static TagKey<Item> bind(@NotNull String path) {
         return TagKey.create(Registries.ITEM, PRConstants.id(path));

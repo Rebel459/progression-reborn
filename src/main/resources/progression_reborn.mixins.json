@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ArmorMaterialsMixin",
-    "ToolMaterialMixin"
+    "ToolMaterialMixin",
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

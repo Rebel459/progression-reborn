@@ -9,6 +9,18 @@
           "children": [
             {
               "type": "minecraft:group",
+              "children": [],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "#progression_reborn:stone_pickaxes"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
               "children": [
                 {
                   "type": "minecraft:loot_table",
