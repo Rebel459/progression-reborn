@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "template": "end_reborn:remnium_upgrade_smithing_template",
-  "base": "minecraft:diamond_horse_armor",
-  "addition": "end_reborn:remnium_ingot",
-  "result": {
-    "id": "end_reborn:remnium_horse_armor"
-  }
-}

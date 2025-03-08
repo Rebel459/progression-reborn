@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:end_stone",
-    "C": "end_reborn:remnium_scrap",
+    "#": "minecraft:cobbled_deepslate",
+    "C": "end_reborn:remnant_scrap",
     "S": "minecraft:diamond_block"
   },
   "pattern": [
@@ -13,8 +13,8 @@
   ],
   "result": {
     "count": 1,
-    "id": "end_reborn:remnium_upgrade_smithing_template"
+    "id": "end_reborn:remnant_upgrade_smithing_template"
   },
-  "group": "remnium_template",
+  "group": "remnant_template",
   "show_notification": true
 }

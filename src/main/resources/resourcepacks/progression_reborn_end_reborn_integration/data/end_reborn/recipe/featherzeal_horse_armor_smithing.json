@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "end_reborn:featherzeal_upgrade_smithing_template",
+  "base": "minecraft:diamond_horse_armor",
+  "addition": "end_reborn:featherzeal_ingot",
+  "result": {
+    "id": "end_reborn:featherzeal_horse_armor"
+  }
+}
