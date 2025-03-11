@@ -27,14 +27,16 @@ public class PRConfig implements ConfigData {
   }
 
   @ConfigEntry.Gui.CollapsibleObject
-  public WorldgenConfig worldgen = new WorldgenConfig();
+  public GeneralConfig general = new GeneralConfig();
 
   @ConfigEntry.Gui.CollapsibleObject
   public IntegrationsConfig integrations = new IntegrationsConfig();
 
-  public static class WorldgenConfig {
+  public static class GeneralConfig {
     @ConfigEntry.Category("config")
     public boolean modified_ore_generation = true;
+    @ConfigEntry.Category("config")
+    public boolean retextured_iron_equipment = true;
   }
 
   public static class IntegrationsConfig {

@@ -49,10 +49,17 @@ public class ProgressionReborn implements ModInitializer {
 				ResourcePackActivationType.ALWAYS_ENABLED
 		);
 
-		if (PRConfig.get.worldgen.modified_ore_generation) {
+		if (PRConfig.get.general.modified_ore_generation) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "modified_ore_generation"), modContainer.get(),
 					Component.translatable("pack.progression_reborn.modified_ore_generation"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+		if (PRConfig.get.general.retextured_iron_equipment) {
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "retextured_iron_equipment"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.retextured_iron_equipment"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
