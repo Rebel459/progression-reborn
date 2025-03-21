@@ -95,7 +95,7 @@ public final class PRItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
-                    .rarity(Rarity.EPIC)
+                    .rarity(Rarity.RARE)
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT, PRConsumables.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );
