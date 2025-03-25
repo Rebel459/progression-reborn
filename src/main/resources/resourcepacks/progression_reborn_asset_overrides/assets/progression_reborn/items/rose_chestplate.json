@@ -82,6 +82,13 @@
       {
         "model": {
           "type": "minecraft:model",
+          "model": "progression_reborn:item/rose_chestplate_rose_ingot_trim"
+        },
+        "when": "progression_reborn:rose_ingot"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
           "model": "progression_reborn:item/rose_chestplate_echo_shard_trim"
         },
         "when": "legacies_and_legends:echo_shard"

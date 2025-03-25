@@ -5,149 +5,80 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.legacy.progression_reborn.PRConstants;
 import net.minecraft.resources.ResourceLocation;
-import net.ramixin.mixson.Mixson;
-import net.ramixin.mixson.events.ModificationEvent;
-import org.jetbrains.annotations.NotNull;
+import net.ramixin.mixson.inline.Mixson;
 
 import java.util.List;
 
 public final class PRTrimItemModels {
-    private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
-    private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
-    private static final List<String> ARMOR_MATERIALS_ROSE = List.of("rose");
+    private static final List<String> ARMOR_PIECE_TYPES = List.of("helmet", "chestplate", "leggings", "boots");
 
-    @SuppressWarnings("UnnecessaryReturnStatement")
-    private PRTrimItemModels() {
-        return;
+    private static final List<ResourceLocation> ARMOR_MATERIALS = List.of(
+            ResourceLocation.withDefaultNamespace("leather"),
+            ResourceLocation.withDefaultNamespace("chainmail"),
+            ResourceLocation.withDefaultNamespace("iron"),
+            ResourceLocation.withDefaultNamespace("golden"),
+            ResourceLocation.withDefaultNamespace("diamond"),
+            ResourceLocation.withDefaultNamespace("netherite")
+    );
+
+
+    public static void init() {}
+
+    static {
+        ARMOR_PIECE_TYPES.forEach(armorType -> ARMOR_MATERIALS.forEach(material -> registerItemModelModification(armorType, material)));
+        registerItemModelModification("helmet", ResourceLocation.withDefaultNamespace("turtle"));
+
+        registerAtlasModification("armor_trims");
+        registerAtlasModification("blocks");
     }
 
-    public static void init() {
-        /*
-         * Add trim materials to each armor.
-         */
-        ARMORS.forEach(armor -> ARMOR_MATERIALS.forEach(armorMaterial -> registerAddTrimsToArmor(armor, armorMaterial)));
-        ARMORS.forEach(armor -> ARMOR_MATERIALS_ROSE.forEach(armorMaterial -> registerAddTrimsToArmorRose(armor, armorMaterial)));
+    private static void registerItemModelModification(String armorPieceType, ResourceLocation armorMaterial) {
+        Mixson.registerEvent(
+                1,
+                ResourceLocation.fromNamespaceAndPath(armorMaterial.getNamespace(), "items/" + armorMaterial.getPath() + "_" + armorPieceType).toString(),
+                PRConstants.id("add_trims_to_" + armorMaterial.getPath() + "_" + armorPieceType).toString(),
+                (context) -> {
+                    JsonObject rootJson = context.getFile().getAsJsonObject();
+                    JsonObject modelJson = rootJson.getAsJsonObject("model");
+                    JsonArray casesArray = modelJson.getAsJsonArray("cases");
+                    JsonObject baseCase = casesArray.get(0).getAsJsonObject();
 
-        // (dare to be different)
-        registerAddTrimsToArmor("helmet", "turtle");
+                    PRTrimMaterials.TRIM_MATERIALS.forEach(trimMaterial -> {
+                        JsonObject newCase = baseCase.deepCopy();
 
-        /*
-         * Add trim materials to vanilla atlases.
-         */
-        registerAddTrimsToAtlas("armor_trims");
-        registerAddTrimsToAtlas("blocks");
-    }
+                        newCase.addProperty("when", trimMaterial.location().toString());
+                        newCase.getAsJsonObject("model").addProperty("model", PRConstants.id("item/" + armorMaterial.getPath() + "_" + armorPieceType + "_" + trimMaterial.location().getPath() + "_trim").toString());
 
-    private static void registerAddTrimsToArmor(String armor, String armorMaterial) {
-        Mixson.registerModificationEvent(
-                ResourceLocation.withDefaultNamespace("items/" + armorMaterial + "_" + armor),
-                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
-                new ModificationEvent() {
-                    @Override
-                    public @NotNull JsonElement run(JsonElement elem) {
-                        JsonObject root = elem.getAsJsonObject();
-                        JsonObject model = root.getAsJsonObject("model");
-                        JsonArray cases = model.getAsJsonArray("cases");
-                        JsonObject case0 = cases.get(0).getAsJsonObject();
-
-                        PRTrimMaterials.TRIM_MATERIALS.forEach(trim -> {
-                            JsonObject newCase = case0.deepCopy();
-
-                            newCase.addProperty("when", trimMaterialId(trim).toString());
-                            newCase.getAsJsonObject("model")
-                                    .addProperty("model", itemModelId(armor, armorMaterial, trim).toString());
-
-                            cases.add(newCase);
-                        });
-
-                        return elem;
-                    }
-
-                    @Override
-                    public int ordinal() {
-                        return 0;
-                    }
+                        casesArray.add(newCase);
+                    });
                 }
         );
     }
 
-    private static void registerAddTrimsToArmorRose(String armor, String armorMaterial) {
-        Mixson.registerModificationEvent(
-                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "items/" + armorMaterial + "_" + armor),
-                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
-                new ModificationEvent() {
-                    @Override
-                    public @NotNull JsonElement run(JsonElement elem) {
-                        JsonObject root = elem.getAsJsonObject();
-                        JsonObject model = root.getAsJsonObject("model");
-                        JsonArray cases = model.getAsJsonArray("cases");
-                        JsonObject case0 = cases.get(0).getAsJsonObject();
+    private static void registerAtlasModification(String atlasName) {
+        Mixson.registerEvent(
+                1,
+                ResourceLocation.withDefaultNamespace("atlases/" + atlasName).toString(),
+                PRConstants.id("add_trims_to_" + atlasName + "_atlas").toString(),
+                (context) -> {
+                    JsonObject rootJson = context.getFile().getAsJsonObject();
+                    JsonArray sourcesArray = rootJson.getAsJsonArray("sources");
 
-                        PRTrimMaterials.TRIM_MATERIALS.forEach(trim -> {
-                            JsonObject newCase = case0.deepCopy();
+                    for (JsonElement sourceElement : sourcesArray) {
+                        JsonObject sourceObject = sourceElement.getAsJsonObject();
 
-                            newCase.addProperty("when", trimMaterialId(trim).toString());
-                            newCase.getAsJsonObject("model")
-                                    .addProperty("model", itemModelId(armor, armorMaterial, trim).toString());
+                        if ("paletted_permutations".equals(sourceObject.get("type").getAsString())) {
+                            JsonObject permutationsJson = sourceObject.getAsJsonObject("permutations");
 
-                            cases.add(newCase);
-                        });
+                            PRTrimMaterials.TRIM_MATERIALS.forEach(trimMaterial -> {
+                                String trimName = trimMaterial.location().getPath();
+                                permutationsJson.addProperty(trimName, PRConstants.id("trims/color_palettes/" + trimName).toString());
+                            });
 
-                        return elem;
-                    }
-
-                    @Override
-                    public int ordinal() {
-                        return 0;
-                    }
-                }
-        );
-    }
-
-    private static void registerAddTrimsToAtlas(String name) {
-        Mixson.registerModificationEvent(
-                ResourceLocation.withDefaultNamespace("atlases/" + name),
-                ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "add_trims_to_" + name + "_atlas"),
-                new ModificationEvent() {
-                    @Override
-                    public @NotNull JsonElement run(JsonElement elem) {
-                        JsonObject root = elem.getAsJsonObject();
-                        JsonArray sources = root.getAsJsonArray("sources");
-
-                        for (int i = 0; i < sources.size(); ++i) {
-                            JsonObject source = sources.get(i).getAsJsonObject();
-
-                            if ("paletted_permutations".equals(source.getAsJsonPrimitive("type").getAsString())) {
-                                JsonObject permutations = source.getAsJsonObject("permutations");
-
-                                PRTrimMaterials.TRIM_MATERIALS.forEach(trim ->
-                                        permutations.addProperty(trim, paletteId(trim).toString())
-                                );
-
-                                break;
-                            }
+                            break;
                         }
-
-                        return elem;
-                    }
-
-                    @Override
-                    public int ordinal() {
-                        return 0;
                     }
                 }
         );
-    }
-
-    private static ResourceLocation trimMaterialId(String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, trim);
-    }
-
-    private static ResourceLocation itemModelId(String armor, String armorMaterial, String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "item/" + armorMaterial + "_" + armor + "_" + trim + "_trim");
-    }
-
-    private static ResourceLocation paletteId(String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "trims/color_palettes/" + trim);
     }
 }
