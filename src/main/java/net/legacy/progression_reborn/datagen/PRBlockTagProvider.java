@@ -17,6 +17,9 @@ public final class PRBlockTagProvider extends FabricTagProvider.BlockTagProvider
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
 		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(PRBlocks.COPPER_BLOCK)
+				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE)
+				.add(PRBlocks.BLACKSTONE_GOLD_ORE)
+				.add(PRBlocks.BLACKSTONE_ROSE_ORE)
 				.add(PRBlocks.NETHER_ROSE_ORE)
 				.add(PRBlocks.POLISHED_ROSE)
 				.add(PRBlocks.POLISHED_CUT_ROSE)

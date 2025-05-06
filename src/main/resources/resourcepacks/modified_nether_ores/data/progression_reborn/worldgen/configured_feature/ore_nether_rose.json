@@ -12,6 +12,15 @@
         "state": {
           "Name": "progression_reborn:nether_rose_ore"
         }
+      },
+      {
+        "target": {
+          "block": "minecraft:blackstone",
+          "predicate_type": "minecraft:block_match"
+        },
+        "state": {
+          "Name": "progression_reborn:blackstone_rose_ore"
+        }
       }
     ]
   }

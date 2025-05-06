@@ -1,6 +1,5 @@
 package net.legacy.progression_reborn.registry;
 
-import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
@@ -9,11 +8,11 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 
 public final class PREquipmentItems {
-
     // Tools
     public static final SwordItem COPPER_SWORD = register("copper_sword", settings -> new SwordItem(PRToolMaterial.COPPER, 3f, -2.4f, settings
             .stacksTo(1)

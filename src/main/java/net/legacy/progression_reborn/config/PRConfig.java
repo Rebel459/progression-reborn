@@ -27,15 +27,25 @@ public class PRConfig implements ConfigData {
   }
 
   @ConfigEntry.Gui.CollapsibleObject
-  public GeneralConfig general = new GeneralConfig();
+  public GenerationConfig generation = new GenerationConfig();
+
+  @ConfigEntry.Gui.CollapsibleObject
+  public MiscConfig misc = new MiscConfig();
 
   @ConfigEntry.Gui.CollapsibleObject
   public IntegrationsConfig integrations = new IntegrationsConfig();
 
-  public static class GeneralConfig {
+  public static class GenerationConfig {
     @ConfigEntry.Category("config")
-    public boolean modified_ore_generation = true;
+    @ConfigEntry.Gui.Tooltip
+    public boolean modified_overworld_ores = true;
     @ConfigEntry.Category("config")
+    @ConfigEntry.Gui.Tooltip
+    public boolean modified_nether_ores = true;
+  }
+
+  public static class MiscConfig {
+    @ConfigEntry.Gui.Tooltip
     public boolean retextured_iron_equipment = true;
   }
 

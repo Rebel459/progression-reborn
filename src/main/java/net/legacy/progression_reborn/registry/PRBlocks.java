@@ -28,6 +28,19 @@ public class PRBlocks {
                     .sound(SoundType.COPPER)
     );
 
+    public static final Block BLACKSTONE_QUARTZ_ORE = register("blackstone_quartz_ore",
+            Block::new,
+            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+    );
+    public static final Block BLACKSTONE_GOLD_ORE = register("blackstone_gold_ore",
+            Block::new,
+            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+    );
+    public static final Block BLACKSTONE_ROSE_ORE = register("blackstone_rose_ore",
+            Block::new,
+            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+    );
+
     public static final Block NETHER_ROSE_ORE = register("nether_rose_ore",
             Block::new,
             Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)

@@ -1,6 +1,4 @@
 {
-  "block.progression_reborn.raw_rose_block": "Block of Raw Rose",
-  "block.progression_reborn.nether_rose_ore": "Nether Rose Ore",
   "item.progression_reborn.rose_pickaxe": "Rose Pickaxe",
   "item.progression_reborn.rose_alloy": "Rose Alloy",
   "item.progression_reborn.raw_rose_nugget": "Raw Rose Nugget",
@@ -31,7 +29,6 @@
   "item.progression_reborn.raw_rose": "Raw Rose",
   "item.progression_reborn.rose_chestplate": "Rose Chestplate",
   "item.progression_reborn.rose_leggings": "Rose Leggings",
-  "block.progression_reborn.rose_block": "Block of Rose",
   "item.progression_reborn.raw_iron_nugget": "Raw Iron Nugget",
   "item.progression_reborn.copper_shovel": "Copper Shovel",
   "item.progression_reborn.iron_upgrade_smithing_template": "Iron Upgrade",
@@ -45,6 +42,13 @@
   "item.progression_reborn.rose_horse_armor": "Rose Horse Armor",
   "item.progression_reborn.copper_horse_armor": "Copper Horse Armor",
   "item.progression_reborn.netherite_horse_armor": "Netherite Horse Armor",
+
+  "block.progression_reborn.blackstone_quartz_ore": "Blackstone Quartz Ore",
+  "block.progression_reborn.blackstone_gold_ore": "Blackstone Gold Ore",
+  "block.progression_reborn.blackstone_rose_ore": "Blackstone Rose Ore",
+  "block.progression_reborn.nether_rose_ore": "Nether Rose Ore",
+  "block.progression_reborn.raw_rose_block": "Block of Raw Rose",
+  "block.progression_reborn.rose_block": "Block of Rose",
   "block.progression_reborn.copper_block": "Block of Copper",
   "block.progression_reborn.polished_rose": "Polished Rose",
   "block.progression_reborn.polished_cut_rose": "Polished Cut Rose",
@@ -53,23 +57,34 @@
   "block.progression_reborn.rose_trapdoor": "Rose Trapdoor",
   "block.progression_reborn.rose_door": "Rose Door",
   "block.progression_reborn.rose_lamp": "Rose Lamp",
+
   "trim_material.progression_reborn.rose_ingot": "Rose Material",
+
   "enchantment.progression_reborn.collection": "Collection",
   "enchantment.progression_reborn.collection.desc": "Consumes collected nuggets and outputs them as their full ingot / raw ore.",
   "enchantment.progression_reborn.reforge": "Reforge",
   "enchantment.progression_reborn.reforge.desc": "Smelts certain block drops and has a low chance to provide unique bonus drops when doing so.",
 
   "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
-  "pack.progression_reborn.modified_ore_generation": "Modified Ore Generation",
+  "pack.progression_reborn.modified_overworld_ores": "Modified Overworld Ores",
+  "pack.progression_reborn.modified_nether_ores": "Modified Nether Ores",
   "pack.progression_reborn.retextured_iron_equipment": "Retextured Iron Equipment",
   "pack.progression_reborn.legacies_and_legends_integration": "Progression Reborn - Legacies and Legends Integration",
   "pack.progression_reborn.end_reborn_integration": "Progression Reborn - End Reborn Integration",
   "pack.progression_reborn.wilder_wild_integration": "Progression Reborn - Wilder Wild Integration",
 
   "text.autoconfig.progression_reborn.title": "Progression Reborn",
-  "text.autoconfig.progression_reborn.option.general": "General",
-  "text.autoconfig.progression_reborn.option.general.modified_ore_generation": "Modified Ore Generation",
-  "text.autoconfig.progression_reborn.option.general.retextured_iron_equipment": "Retextured Iron Equipment",
+
+  "text.autoconfig.progression_reborn.option.generation": "World Generation",
+  "text.autoconfig.progression_reborn.option.generation.modified_overworld_ores": "Modified Overworld Ores",
+  "text.autoconfig.progression_reborn.option.generation.modified_overworld_ores.@Tooltip": "Tweaks the placement of Copper and Iron ores.",
+  "text.autoconfig.progression_reborn.option.generation.modified_nether_ores": "Modified Nether Ores",
+  "text.autoconfig.progression_reborn.option.generation.modified_nether_ores.@Tooltip": "Adds new Blackstone ore variants to Nether generation.",
+
+  "text.autoconfig.progression_reborn.option.misc": "Miscellaneous",
+  "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment": "Retextured Iron Equipment",
+  "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment.@Tooltip": "Changes the textures of Iron tools and armor to better match the styles of Rose and Netherite.",
+
   "text.autoconfig.progression_reborn.option.integrations": "Mod Integration",
   "text.autoconfig.progression_reborn.option.integrations.end_reborn": "End Reborn",
   "text.autoconfig.progression_reborn.option.integrations.legacies_and_legends": "Legacies and Legends",

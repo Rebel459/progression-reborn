@@ -1,6 +1,5 @@
 package net.legacy.progression_reborn.registry;
 
-import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
 import net.legacy.progression_reborn.PRConstants;
 import net.legacy.progression_reborn.food.PRConsumables;
 import net.legacy.progression_reborn.food.PRFoods;
@@ -13,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 

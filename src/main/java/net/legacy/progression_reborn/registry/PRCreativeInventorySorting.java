@@ -77,7 +77,10 @@ public class PRCreativeInventorySorting {
 		addAfterInBuildingBlocks(PRBlocks.ROSE_TRAPDOOR, PRBlocks.ROSE_LAMP);
 
 		// Natural Blocks
-		addAfterInNaturalBlocks(Blocks.NETHER_GOLD_ORE, PRBlocks.NETHER_ROSE_ORE);
+		addAfterInNaturalBlocks(Blocks.NETHER_QUARTZ_ORE, PRBlocks.BLACKSTONE_QUARTZ_ORE);
+		addAfterInNaturalBlocks(Blocks.NETHER_GOLD_ORE, PRBlocks.BLACKSTONE_GOLD_ORE);
+		addAfterInNaturalBlocks(PRBlocks.BLACKSTONE_GOLD_ORE, PRBlocks.NETHER_ROSE_ORE);
+		addAfterInNaturalBlocks(PRBlocks.NETHER_ROSE_ORE, PRBlocks.BLACKSTONE_ROSE_ORE);
 
 		addAfterInNaturalBlocks(Blocks.RAW_GOLD_BLOCK, PRBlocks.RAW_ROSE_BLOCK);
 
