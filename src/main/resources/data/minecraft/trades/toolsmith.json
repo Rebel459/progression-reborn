@@ -366,6 +366,17 @@
                   }
                 ]
               },
+              "cost_b": {
+                "type": "minecraft:item",
+                "name": "minecraft:diamond",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 1,
+                    "add": false
+                  }
+                ]
+              },
               "result": {
                 "type": "minecraft:item",
                 "name": "minecraft:diamond_hoe"
