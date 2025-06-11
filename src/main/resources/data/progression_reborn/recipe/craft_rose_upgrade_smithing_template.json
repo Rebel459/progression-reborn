@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:netherrack",
+    "#": "minecraft:blackstone",
     "C": "progression_reborn:rose_alloy",
     "S": "minecraft:gold_block" 
   },
