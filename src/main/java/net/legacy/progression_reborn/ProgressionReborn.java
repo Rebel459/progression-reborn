@@ -89,7 +89,21 @@ public class ProgressionReborn implements ModInitializer {
 		if (FabricLoader.getInstance().isModLoaded("wilder_wild") && PRConfig.get.integrations.wilder_wild) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_wilder_wild_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.end_reborn_integration"),
+					Component.translatable("pack.progression_reborn.wilder_wild_integration"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+		if (FabricLoader.getInstance().isModLoaded("trailier_tales") && PRConfig.get.integrations.trailier_tales) {
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_trailier_tales_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.trailier_tales_integration"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+		if (FabricLoader.getInstance().isModLoaded("remnants") && PRConfig.get.integrations.remnants) {
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_remnants_integration"), modContainer.get(),
+					Component.translatable("pack.progression_reborn.remnants_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
