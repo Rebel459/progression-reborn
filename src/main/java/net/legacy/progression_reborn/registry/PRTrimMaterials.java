@@ -1,6 +1,7 @@
 package net.legacy.progression_reborn.registry;
 
 import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.datagen.PRModelProvider;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -32,7 +33,7 @@ public class PRTrimMaterials {
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> key, Item item, Style style) {
         ResourceLocation location = key.location();
-        TrimMaterial material = TrimMaterial.create(location.getPath(), item, Component.translatable(Util.makeDescriptionId("trim_material", location)).withStyle(style), Map.of());
+        TrimMaterial material = new TrimMaterial(PRModelProvider.ROSE, Component.translatable(Util.makeDescriptionId("trim_material", location)).withStyle(style));
         context.register(key, material);
     }
 

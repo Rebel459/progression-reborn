@@ -13,49 +13,50 @@ import net.legacy.progression_reborn.registry.*;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.blockstates.Variant;
-import net.minecraft.client.data.models.blockstates.VariantProperties;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 public final class PRModelProvider extends FabricModelProvider {
+	public static final MaterialAssetGroup ROSE = MaterialAssetGroup.create("rose");
+
 	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS = List.of(
-			new ItemModelGenerators.TrimMaterialData("rose_ingot", PRTrimMaterials.ROSE, Map.of())
+			new ItemModelGenerators.TrimMaterialData(ROSE, PRTrimMaterials.ROSE)
 	);
 
-	public static final List<Pair<BooleanProperty, Function<ResourceLocation, Variant>>> MULTIFACE_GENERATOR_NO_UV_LOCK = List.of(
-			Pair.of(BlockStateProperties.NORTH, model -> Variant.variant().with(VariantProperties.MODEL, model)),
-			Pair.of(
-					BlockStateProperties.EAST,
-					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
-			),
-			Pair.of(
-					BlockStateProperties.SOUTH,
-					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
-			),
-			Pair.of(
-					BlockStateProperties.WEST,
-					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-			),
-			Pair.of(
-					BlockStateProperties.UP,
-					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.X_ROT, VariantProperties.Rotation.R270)
-			),
-			Pair.of(
-					BlockStateProperties.DOWN,
-					resourceLocation -> Variant.variant()
-							.with(VariantProperties.MODEL, resourceLocation)
-							.with(VariantProperties.X_ROT, VariantProperties.Rotation.R90)
-			)
-	);
+//	public static final List<Pair<BooleanProperty, Function<ResourceLocation, Variant>>> MULTIFACE_GENERATOR_NO_UV_LOCK = List.of(
+//			Pair.of(BlockStateProperties.NORTH, model -> Variant.variant().with(VariantProperties.MODEL, model)),
+//			Pair.of(
+//					BlockStateProperties.EAST,
+//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
+//			),
+//			Pair.of(
+//					BlockStateProperties.SOUTH,
+//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
+//			),
+//			Pair.of(
+//					BlockStateProperties.WEST,
+//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+//			),
+//			Pair.of(
+//					BlockStateProperties.UP,
+//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.X_ROT, VariantProperties.Rotation.R270)
+//			),
+//			Pair.of(
+//					BlockStateProperties.DOWN,
+//					resourceLocation -> Variant.variant()
+//							.with(VariantProperties.MODEL, resourceLocation)
+//							.with(VariantProperties.X_ROT, VariantProperties.Rotation.R90)
+//			)
+//	);
 
 	public PRModelProvider(FabricDataOutput output) {
 		super(output);
@@ -80,15 +81,15 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("helmet"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("chestplate"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("leggings"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("boots"), false);
 
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("helmet"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("chestplate"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("leggings"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("boots"), false);
 
 		generator.generateFlatItem(PRItems.RAW_COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_IRON_NUGGET, ModelTemplates.FLAT_ITEM);
@@ -178,9 +179,9 @@ public final class PRModelProvider extends FabricModelProvider {
 		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
 		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
 			ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID,
-					armorModelId.getPath()).withSuffix("_" + trimMaterial.name() + "_trim");
+					armorModelId.getPath()).withSuffix("_" + trimMaterial.assets().base().suffix() + "_trim");
 			ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(
-					"trims/items/" + armorType + "_trim_" + trimMaterial.textureName(equipmentKey));
+					"trims/items/" + armorType + "_trim_" + trimMaterial.assets().assetId(equipmentKey).suffix());
 			if (dyeable) {
 				this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
 			} else {
@@ -194,13 +195,13 @@ public final class PRModelProvider extends FabricModelProvider {
 		ResourceLocation armorTextures = TextureMapping.getItemTexture(armor);
 		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
 		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
-			if (trimMaterial.name() == "copper")
+			if (trimMaterial.materialKey.location().getPath().equals("copper"))
 				return;
 			else {
 				ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID,
-						armorModelId.getPath()).withSuffix("_" + trimMaterial.name() + "_trim");
+						armorModelId.getPath()).withSuffix("_" + trimMaterial.assets().base().suffix() + "_trim");
 				ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(
-						"trims/items/" + armorType + "_trim_" + trimMaterial.textureName(equipmentKey) + "_darker");
+						"trims/items/" + armorType + "_trim_" + trimMaterial.assets().assetId(equipmentKey).suffix() + "_darker");
 				if (dyeable) {
 					this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
 				} else {
