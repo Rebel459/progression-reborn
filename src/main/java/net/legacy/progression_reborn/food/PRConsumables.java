@@ -17,7 +17,7 @@ public class PRConsumables {
                                     new MobEffectInstance(MobEffects.REGENERATION, 300, 1),
                                     new MobEffectInstance(MobEffects.SATURATION, 10, 1),
                                     new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0),
-                                    new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0)
+                                    new MobEffectInstance(MobEffects.SPEED, 1200, 0)
                             )
                     )
             )

@@ -41,7 +41,8 @@ public record PRToolMaterial(
                                         Tool.Rule.minesAndDrops(holderGetter.getOrThrow(mineableBlocks), this.speed)
                                 ),
                                 1.0F,
-                                1
+                                1,
+                                true
                         )
                 )
                 .attributes(this.createToolAttributes(attackDamage, attackSpeed));
@@ -73,7 +74,8 @@ public record PRToolMaterial(
                                         Tool.Rule.overrideSpeed(holderGetter.getOrThrow(BlockTags.SWORD_EFFICIENT), 1.5F)
                                 ),
                                 1.0F,
-                                2
+                                2,
+                                false
                         )
                 )
                 .attributes(this.createSwordAttributes(attackDamage, attackSpeed));
