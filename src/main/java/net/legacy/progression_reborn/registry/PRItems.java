@@ -73,7 +73,7 @@ public final class PRItems {
     public static final Item ENCHANTED_GOLDEN_CARROT = new Item(
             new Item.Properties()
                     .stacksTo(64)
-                    .rarity(Rarity.RARE)
+                    .rarity(Rarity.EPIC)
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );
