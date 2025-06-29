@@ -1,22 +1,35 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "building",
-  "pattern": [
-    "012",
-    "345",
-    "678"
+  "ingredients": [
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    }
   ],
-  "key": {
-    "0": "progression_reborn:raw_rose",
-    "1": "progression_reborn:raw_rose",
-    "2": "progression_reborn:raw_rose",
-    "3": "progression_reborn:raw_rose",
-    "4": "progression_reborn:raw_rose",
-    "5": "progression_reborn:raw_rose",
-    "6": "progression_reborn:raw_rose",
-    "7": "progression_reborn:raw_rose",
-    "8": "progression_reborn:raw_rose" 
-  },
   "result": {
     "id": "progression_reborn:raw_rose_block",
     "count": 1

@@ -1,6 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "progression_reborn:copper_block",
+  "ingredient": {
+    "item": "progression_reborn:copper_block"
+  },
   "result": {
     "count": 16,
     "id": "minecraft:chiseled_copper"

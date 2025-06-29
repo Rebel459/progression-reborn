@@ -231,7 +231,7 @@ public final class PRItems {
         registerItemAfter(Items.GOLDEN_AXE, ROSE_AXE, "rose_axe", CreativeModeTabs.COMBAT);
 
         registerItemAfter(Items.LEATHER_HORSE_ARMOR, COPPER_HORSE_ARMOR, "copper_horse_armor", CreativeModeTabs.COMBAT);
-        registerItemAfter(Items.GOLDEN_HORSE_ARMOR, ROSE_HORSE_ARMOR, "golden_horse_armor", CreativeModeTabs.COMBAT);
+        registerItemAfter(Items.GOLDEN_HORSE_ARMOR, ROSE_HORSE_ARMOR, "rose_horse_armor", CreativeModeTabs.COMBAT);
         registerItemAfter(Items.DIAMOND_HORSE_ARMOR, NETHERITE_HORSE_ARMOR, "netherite_horse_armor", CreativeModeTabs.COMBAT);
 
         // Tools and Utilities

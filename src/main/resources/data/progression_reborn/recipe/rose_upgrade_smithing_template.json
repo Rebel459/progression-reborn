@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:blackstone",
-    "C": "progression_reborn:rose_alloy",
-    "S": "progression_reborn:rose_upgrade_smithing_template" 
+    "#": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "progression_reborn:rose_alloy"
+    },
+    "S": {
+      "item": "progression_reborn:rose_upgrade_smithing_template"
+    }
   },
   "pattern": [
     "#S#",

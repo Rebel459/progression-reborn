@@ -3,9 +3,9 @@
     "category": "misc",
     "cookingtime": 1600,
     "experience": 8,
-    "ingredient": [
-        "minecraft:raw_gold_block"
-    ],
+    "ingredient": {
+        "item": "minecraft:raw_gold_block"
+    },
     "result": {
         "id": "minecraft:gold_block"
     }

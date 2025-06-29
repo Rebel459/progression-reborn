@@ -34,12 +34,8 @@ public class ProgressionReborn implements ModInitializer {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("progression_reborn");
 
 		PRItems.register();
-		PREquipmentItems.init();
-		PRBlocks.init();
-		PRCreativeInventorySorting.init();
-		PRTrimItemModels.init();
+		PRBlocks.register();
 		PRConfig.initClient();
-		PRItemComponents.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 

@@ -2,15 +2,33 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget",
-    "progression_reborn:raw_copper_nugget"
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_copper_nugget"
+    }
   ],
   "result": {
     "id": "minecraft:raw_copper",

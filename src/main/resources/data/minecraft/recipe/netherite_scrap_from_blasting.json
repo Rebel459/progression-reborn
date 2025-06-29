@@ -3,7 +3,9 @@
   "category": "misc",
   "cookingtime": 400,
   "experience": 8.0,
-  "ingredient": "minecraft:ancient_debris",
+  "ingredient": {
+    "item": "minecraft:ancient_debris"
+  },
   "result": {
     "id": "minecraft:netherite_scrap"
   }

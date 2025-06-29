@@ -3,7 +3,9 @@
   "category": "misc",
   "group": "copper_ingot",
   "ingredients": [
-    "progression_reborn:copper_block"
+    {
+      "item": "progression_reborn:copper_block"
+    }
   ],
   "result": {
     "count": 9,

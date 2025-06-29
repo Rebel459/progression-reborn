@@ -6,7 +6,9 @@
         "##"
     ],
     "key": {
-      "#": "progression_reborn:rose_block"
+      "#": {
+        "item": "progression_reborn:rose_block"
+      }
     },
     "result": {
       "id": "progression_reborn:polished_rose",

@@ -2,14 +2,30 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "progression_reborn:rose_ingot",
-    "progression_reborn:rose_ingot",
-    "progression_reborn:rose_ingot",
-    "progression_reborn:rose_ingot",
-    "minecraft:quartz",
-    "minecraft:quartz",
-    "minecraft:quartz",
-    "minecraft:quartz"
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    }
   ],
   "result": {
     "id": "progression_reborn:rose_alloy"

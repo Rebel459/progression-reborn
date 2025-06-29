@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "W": "#minecraft:planks",
-    "o": "progression_reborn:iron_alloy"
+    "W": {
+        "tag": "minecraft:planks"
+    },
+    "o": {
+        "item": "progression_reborn:iron_alloy"
+    }
   },
   "pattern": [
     "WoW",

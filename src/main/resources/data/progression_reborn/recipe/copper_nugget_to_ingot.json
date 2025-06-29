@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "progression_reborn:copper_nugget"
+    "#": {
+    "item": "progression_reborn:copper_nugget"
+    }
   },
   "pattern": [
     "###",

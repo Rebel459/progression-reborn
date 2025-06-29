@@ -2,7 +2,9 @@
   "type": "minecraft:blasting",
   "experience": 1.0,
   "cookingtime": 100,
-  "ingredient": "progression_reborn:nether_rose_ore",
+  "ingredient": {
+    "item": "progression_reborn:nether_rose_ore"
+  },
   "result": {
     "id": "progression_reborn:rose_ingot"
   }

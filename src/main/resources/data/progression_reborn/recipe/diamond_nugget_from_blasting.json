@@ -3,15 +3,36 @@
   "cookingtime": 100,
   "experience": 0.1,
   "ingredient": [
-    "minecraft:diamond_pickaxe",
-    "minecraft:diamond_shovel",
-    "minecraft:diamond_axe",
-    "minecraft:diamond_hoe",
-    "minecraft:diamond_sword",
-    "minecraft:diamond_helmet",
-    "minecraft:diamond_chestplate",
-    "minecraft:diamond_leggings",
-    "minecraft:diamond_boots"
+    {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    {
+      "item": "minecraft:diamond_shovel"
+    },
+    {
+      "item": "minecraft:diamond_axe"
+    },
+    {
+      "item": "minecraft:diamond_hoe"
+    },
+    {
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "item": "minecraft:diamond_helmet"
+    },
+    {
+      "item": "minecraft:diamond_chestplate"
+    },
+    {
+      "item": "minecraft:diamond_leggings"
+    },
+    {
+      "item": "minecraft:diamond_boots"
+    },
+    {
+      "item": "progression_reborn:diamond_horse_armor"
+    }
   ],
   "result": {
     "id": "progression_reborn:diamond_nugget"

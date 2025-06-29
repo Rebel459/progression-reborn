@@ -6,7 +6,9 @@
     "# #"
   ],
   "key": {
-    "#": "minecraft:copper_ingot"
+    "#": {
+      "item": "minecraft:copper_ingot"
+    }
   },
   "result": {
     "id": "progression_reborn:copper_helmet",

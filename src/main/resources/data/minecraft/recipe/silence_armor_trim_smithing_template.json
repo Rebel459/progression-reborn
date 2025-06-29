@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:diamond",
-    "C": "minecraft:cobbled_deepslate",
-    "S": "minecraft:silence_armor_trim_smithing_template"
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "S": {
+      "item": "minecraft:silence_armor_trim_smithing_template"
+    }
   },
   "pattern": [
     "CSC",

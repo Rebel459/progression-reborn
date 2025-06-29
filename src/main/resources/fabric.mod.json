@@ -23,9 +23,6 @@
 		],
 		"modmenu": [
 			"net.legacy.progression_reborn.config.PRModMenuIntegration"
-		],
-		"fabric-datagen": [
-			"net.legacy.progression_reborn.datagen.PRDataGenerator"
 		]
 	},
 	"accessWidener": "progression_reborn.accesswidener",
@@ -33,9 +30,8 @@
 		"progression_reborn.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.21.4",
+		"minecraft": ">=1.21 <=1.21.1",
 		"fabric-api": "*",
-		"frozenlib": "*",
 		"cloth-config": "*"
 	}
 }

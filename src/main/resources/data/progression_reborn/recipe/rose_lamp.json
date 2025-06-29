@@ -7,8 +7,12 @@
         "###"
     ],
     "key": {
-      "#": "progression_reborn:rose_ingot",
-      "I": "minecraft:soul_lantern"
+      "#": {
+        "item": "progression_reborn:rose_ingot"
+      },
+      "I": {
+        "item": "minecraft:soul_lantern"
+      }
     },
     "result": {
       "id": "progression_reborn:rose_lamp",

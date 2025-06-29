@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "ingredients": [
-    "progression_reborn:rose_block"
-  ],
+  "ingredients": {
+    "item": "progression_reborn:rose_block"
+  },
   "result": {
     "id": "progression_reborn:rose_ingot",
     "count": 9

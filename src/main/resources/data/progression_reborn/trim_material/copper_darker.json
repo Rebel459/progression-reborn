@@ -1,8 +1,0 @@
-{
-  "asset_name": "copper_darker",
-  "description": {
-    "color": "#B4684D",
-    "translate": "trim_material.progression_reborn.copper_darker"
-  },
-  "ingredient": "minecraft:copper_ingot"
-}

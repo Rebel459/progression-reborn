@@ -7,8 +7,12 @@
         " #"
     ],
     "key": {
-      "X": "minecraft:copper_ingot",
-      "#": "minecraft:stick"
+      "X": {
+        "item": "minecraft:copper_ingot"
+      },
+      "#": {
+        "item": "minecraft:stick"
+      }
     },
     "result": {
       "id": "progression_reborn:copper_axe",

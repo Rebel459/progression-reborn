@@ -88,17 +88,18 @@ public class PRBlocks {
     );
 
     public static final DoorBlock ROSE_DOOR = new DoorBlock(PRBlockSetType.ROSE, Properties.of()
-                    .mapColor(MapColor.COLOR_MAGENTA)
-                    .strength(5.0F)
-                    .noOcclusion()
-                    .pushReaction(PushReaction.DESTROY)
+            .mapColor(MapColor.COLOR_MAGENTA)
+            .strength(5.0F)
+            .noOcclusion()
+            .pushReaction(PushReaction.DESTROY)
+            .requiresCorrectToolForDrops()
     );
     public static final TrapDoorBlock ROSE_TRAPDOOR = new TrapDoorBlock(PRBlockSetType.ROSE, Properties.of()
-                    .mapColor(MapColor.COLOR_MAGENTA)
-                    .strength(5.0F)
-                    .noOcclusion()
-                    .isValidSpawn(Blocks::never)
-                    .requiresCorrectToolForDrops()
+            .mapColor(MapColor.COLOR_MAGENTA)
+            .strength(5.0F)
+            .noOcclusion()
+            .isValidSpawn(Blocks::never)
+            .requiresCorrectToolForDrops()
     );
 
     public static void register() {

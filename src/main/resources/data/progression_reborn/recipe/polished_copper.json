@@ -6,7 +6,9 @@
         "##"
     ],
     "key": {
-      "#": "progression_reborn:copper_block"
+      "#": {
+        "item": "progression_reborn:copper_block"
+      }
     },
     "result": {
       "id": "minecraft:copper_block",

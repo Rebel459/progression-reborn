@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:netherrack",
-    "C": "minecraft:netherite_scrap",
-    "S": "minecraft:diamond_block" 
+    "#": {
+      "item": "minecraft:netherrack"
+    },
+    "C": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "S": {
+      "item": "minecraft:diamond_block"
+    }
   },
   "pattern": [
     "#S#",

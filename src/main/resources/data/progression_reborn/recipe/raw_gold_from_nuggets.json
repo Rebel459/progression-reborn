@@ -2,15 +2,33 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget",
-    "progression_reborn:raw_gold_nugget"
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_gold_nugget"
+    }
   ],
   "result": {
     "id": "minecraft:raw_gold",

@@ -1,6 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": "progression_reborn:rose_block",
+  "ingredient": {
+    "item": "progression_reborn:rose_block"
+  },
   "result": {
     "count": 16,
     "id": "progression_reborn:polished_cut_rose"

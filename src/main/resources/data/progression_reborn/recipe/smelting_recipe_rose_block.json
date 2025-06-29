@@ -3,10 +3,10 @@
   "category": "misc",
   "cookingtime": 1600,
   "experience": 8,
-  "ingredient": [
-      "progression_reborn:raw_rose_block"
-  ],
+  "ingredient": {
+    "item": "progression_reborn:raw_rose_block"
+  },
   "result": {
-      "id": "progression_reborn:rose_block"
+    "id": "progression_reborn:rose_block"
   }
 }

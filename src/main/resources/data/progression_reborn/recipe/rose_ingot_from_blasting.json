@@ -3,7 +3,9 @@
   "category": "misc",
   "experience": 1.0,
   "cookingtime": 100,
-  "ingredient": "progression_reborn:raw_rose",
+  "ingredient": {
+    "item": "progression_reborn:raw_rose"
+  },
   "result": {
     "id": "progression_reborn:rose_ingot"
   }

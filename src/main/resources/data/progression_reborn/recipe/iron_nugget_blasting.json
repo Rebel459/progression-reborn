@@ -2,7 +2,9 @@
   "type": "minecraft:blasting",
   "experience": 0.08,
   "cookingtime": 12.5,
-  "ingredient": "progression_reborn:raw_iron_nugget",
+  "ingredient": {
+    "item": "progression_reborn:raw_iron_nugget"
+  },
   "result": {
     "id": "minecraft:iron_nugget"
   }

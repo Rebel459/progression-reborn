@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:iron_ingot",
-    "S": "minecraft:chiseled_stone_bricks"
+    "#": {
+        "item": "minecraft:iron_ingot"
+    },
+    "S": {
+        "item": "minecraft:chiseled_stone_bricks"
+    }
   },
   "pattern": [
     "SSS",

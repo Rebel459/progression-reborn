@@ -7,7 +7,9 @@
         "##"
     ],
     "key": {
-      "#": "progression_reborn:rose_ingot"
+      "#": {
+        "item": "progression_reborn:rose_ingot"
+      }
     },
     "result": {
       "id": "progression_reborn:rose_door",

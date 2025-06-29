@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:diamond",
-    "C": "minecraft:end_stone",
-    "S": "minecraft:eye_armor_trim_smithing_template"
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+        "item": "minecraft:end_stone"
+    },
+    "S": {
+      "item": "minecraft:eye_armor_trim_smithing_template"
+    }
   },
   "pattern": [
     "CSC",

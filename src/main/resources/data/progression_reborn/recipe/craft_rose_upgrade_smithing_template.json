@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:blackstone",
-    "C": "progression_reborn:rose_alloy",
-    "S": "minecraft:gold_block" 
+    "#": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "progression_reborn:rose_alloy"
+    },
+    "S": {
+      "item": "minecraft:gold_block"
+    }
   },
   "pattern": [
     "#S#",

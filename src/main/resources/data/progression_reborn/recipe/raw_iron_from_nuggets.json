@@ -2,15 +2,33 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget",
-    "progression_reborn:raw_iron_nugget"
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    },
+    {
+      "item": "progression_reborn:raw_iron_nugget"
+    }
   ],
   "result": {
     "id": "minecraft:raw_iron",
