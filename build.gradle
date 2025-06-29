@@ -59,23 +59,3 @@ java {
 loom {
 	accessWidenerPath = file("src/main/resources/progression_reborn.accesswidener")
 }
-
-// Datagen
-
-fabricApi {
-	configureDataGeneration()
-}
-
-loom {
-	mods {
-		"progression_reborn" {
-			sourceSet sourceSets.main
-		}
-	}
-
-	runs {
-		datagen {
-			inherit client
-		}
-	}
-}
