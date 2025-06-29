@@ -1,11 +1,8 @@
 package net.legacy.progression_reborn.datagen;
 
-import com.mojang.datafixers.util.Pair;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.function.Function;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.legacy.progression_reborn.*;
@@ -20,43 +17,19 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 public final class PRModelProvider extends FabricModelProvider {
-	public static final MaterialAssetGroup ROSE = MaterialAssetGroup.create("rose");
+	public static final MaterialAssetGroup ROSE_INGOT = MaterialAssetGroup.create("rose_ingot", Map.of(PREquipmentAssets.ROSE, "rose_ingot_darker"));
+	public static final MaterialAssetGroup ROSE_INGOT_DARKER = MaterialAssetGroup.create("rose_ingot_darker");
+	public static final MaterialAssetGroup COPPER_DARKER = MaterialAssetGroup.create("copper_darker");
 
 	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS = List.of(
-			new ItemModelGenerators.TrimMaterialData(ROSE, PRTrimMaterials.ROSE)
+			new ItemModelGenerators.TrimMaterialData(ROSE_INGOT, PRTrimMaterials.ROSE),
+			new ItemModelGenerators.TrimMaterialData(ROSE_INGOT_DARKER, PRTrimMaterials.ROSE_DARKER),
+			new ItemModelGenerators.TrimMaterialData(COPPER_DARKER, PRTrimMaterials.COPPER_DARKER)
 	);
-
-//	public static final List<Pair<BooleanProperty, Function<ResourceLocation, Variant>>> MULTIFACE_GENERATOR_NO_UV_LOCK = List.of(
-//			Pair.of(BlockStateProperties.NORTH, model -> Variant.variant().with(VariantProperties.MODEL, model)),
-//			Pair.of(
-//					BlockStateProperties.EAST,
-//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
-//			),
-//			Pair.of(
-//					BlockStateProperties.SOUTH,
-//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
-//			),
-//			Pair.of(
-//					BlockStateProperties.WEST,
-//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-//			),
-//			Pair.of(
-//					BlockStateProperties.UP,
-//					model -> Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.X_ROT, VariantProperties.Rotation.R270)
-//			),
-//			Pair.of(
-//					BlockStateProperties.DOWN,
-//					resourceLocation -> Variant.variant()
-//							.with(VariantProperties.MODEL, resourceLocation)
-//							.with(VariantProperties.X_ROT, VariantProperties.Rotation.R90)
-//			)
-//	);
 
 	public PRModelProvider(FabricDataOutput output) {
 		super(output);
@@ -81,15 +54,15 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("helmet"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("chestplate"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("leggings"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("boots"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
 
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("helmet"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("chestplate"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("leggings"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("boots"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
+		generator.generateTrimmableItem(PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
 
 		generator.generateFlatItem(PRItems.RAW_COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_IRON_NUGGET, ModelTemplates.FLAT_ITEM);
@@ -153,16 +126,16 @@ public final class PRModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
 		this.registerArmorTrims(generator, PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
 
-		this.registerArmorTrimsDarker(generator, PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
-		this.registerArmorTrimsDarker(generator, PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
-		this.registerArmorTrimsDarker(generator, PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
-		this.registerArmorTrimsDarker(generator, PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
+		this.registerArmorTrims(generator, PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
+		this.registerArmorTrims(generator, PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
+		this.registerArmorTrims(generator, PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
+		this.registerArmorTrims(generator, PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
 
 	}
 
 	@Contract("_, _ -> new")
 	private static @NotNull ModelTemplate createItem(String string, TextureSlot... textureSlots) {
-		return new ModelTemplate(Optional.of(net.legacy.progression_reborn.PRConstants.id("item/" + string)), Optional.empty(), textureSlots);
+		return new ModelTemplate(Optional.of(PRConstants.id("item/" + string)), Optional.empty(), textureSlots);
 	}
 
 	private void uploadArmor2(ItemModelGenerators generator, ResourceLocation id, ResourceLocation layer0, ResourceLocation layer1) {
@@ -186,27 +159,6 @@ public final class PRModelProvider extends FabricModelProvider {
 				this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
 			} else {
 				this.uploadArmor2(generator, trimmedModelId, armorTextures, trimTextureId);
-			}
-		}
-	}
-
-	private void registerArmorTrimsDarker(ItemModelGenerators generator, Item armor, ResourceKey<EquipmentAsset> equipmentKey, String armorType, boolean dyeable) {
-		ResourceLocation armorModelId = TextureMapping.getItemTexture(armor);
-		ResourceLocation armorTextures = TextureMapping.getItemTexture(armor);
-		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
-		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
-			if (trimMaterial.materialKey.location().getPath().equals("copper"))
-				return;
-			else {
-				ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID,
-						armorModelId.getPath()).withSuffix("_" + trimMaterial.assets().base().suffix() + "_trim");
-				ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(
-						"trims/items/" + armorType + "_trim_" + trimMaterial.assets().assetId(equipmentKey).suffix() + "_darker");
-				if (dyeable) {
-					this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
-				} else {
-					this.uploadArmor2(generator, trimmedModelId, armorTextures, trimTextureId);
-				}
 			}
 		}
 	}
