@@ -1,9 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "ingredients": {
-    "item": "minecraft:copper_ingot"
-  },
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
   "result": {
     "id": "progression_reborn:copper_nugget",
     "count": 9

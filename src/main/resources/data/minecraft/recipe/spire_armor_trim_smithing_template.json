@@ -10,7 +10,8 @@
     },
     "S": {
       "item": "minecraft:spire_armor_trim_smithing_template"
-    },
+    }
+  },
   "pattern": [
     "CSC",
     "C#C",

@@ -10,7 +10,8 @@
     },
     "S": {
       "item": "minecraft:ward_armor_trim_smithing_template"
-    },
+    }
+  },
   "pattern": [
     "CSC",
     "C#C",
