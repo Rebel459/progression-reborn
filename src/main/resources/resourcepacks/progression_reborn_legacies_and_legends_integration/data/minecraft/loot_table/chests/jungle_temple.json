@@ -196,21 +196,6 @@
         }
       ],
       "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:empty",
-          "weight": 75
-        },
-        {
-          "type": "minecraft:item",
-          "name": "legacies_and_legends:disc_fragment_far_lands",
-          "weight": 25
-        }
-      ],
-      "rolls": 1.0
     }
   ],
   "random_sequence": "minecraft:chests/jungle_temple"

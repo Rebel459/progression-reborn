@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:diamond"
-    },
-    "#": {
-      "item": "minecraft:red_sandstone"
-    },
-    "S": {
-      "item": "trailiertales:martyr_armor_trim_smithing_template"
-    }
+    "C": "minecraft:diamond",
+    "#": "minecraft:red_sandstone",
+    "S": "trailiertales:martyr_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

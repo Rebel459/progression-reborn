@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:diamond"
-    },
-    "#": {
-      "item": "minecraft:mud_bricks"
-    },
-    "S": {
-      "item": "trailiertales:cot_armor_trim_smithing_template"
-    }
+    "C": "minecraft:diamond",
+    "#": "minecraft:mud_bricks",
+    "S": "trailiertales:cot_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",
