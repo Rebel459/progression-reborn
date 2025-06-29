@@ -1,13 +1,18 @@
 package net.legacy.progression_reborn.registry;
 import java.util.function.Function;
 
+import net.legacy.progression_reborn.PRConstants;
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
@@ -18,8 +23,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class PRBlocks {
 
-    public static final Block COPPER_BLOCK = register("copper_block",
-            Block::new,
+    public static final Block COPPER_BLOCK = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
                     .requiresCorrectToolForDrops()
@@ -28,33 +32,27 @@ public class PRBlocks {
                     .sound(SoundType.COPPER)
     );
 
-    public static final Block BLACKSTONE_QUARTZ_ORE = register("blackstone_quartz_ore",
-            Block::new,
+    public static final Block BLACKSTONE_QUARTZ_ORE = new Block(
             Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
     );
-    public static final Block BLACKSTONE_GOLD_ORE = register("blackstone_gold_ore",
-            Block::new,
+    public static final Block BLACKSTONE_GOLD_ORE = new Block(
             Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
     );
-    public static final Block BLACKSTONE_ROSE_ORE = register("blackstone_rose_ore",
-            Block::new,
+    public static final Block BLACKSTONE_ROSE_ORE = new Block(
             Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
     );
 
-    public static final Block NETHER_ROSE_ORE = register("nether_rose_ore",
-            Block::new,
+    public static final Block NETHER_ROSE_ORE = new Block(
             Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)
     );
-    public static final Block RAW_ROSE_BLOCK = register("raw_rose_block",
-            Block::new,
+    public static final Block RAW_ROSE_BLOCK = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .requiresCorrectToolForDrops()
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
     );
-    public static final Block ROSE_BLOCK = register("rose_block",
-            Block::new,
+    public static final Block ROSE_BLOCK = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .requiresCorrectToolForDrops()
@@ -63,8 +61,7 @@ public class PRBlocks {
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
 
-    public static final Block POLISHED_ROSE = register("polished_rose",
-            Block::new,
+    public static final Block POLISHED_ROSE = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .requiresCorrectToolForDrops()
@@ -72,8 +69,7 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
-    public static final Block ROSE_LAMP = register("rose_lamp",
-            Block::new,
+    public static final Block ROSE_LAMP = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_CYAN)
                     .requiresCorrectToolForDrops()
@@ -83,8 +79,7 @@ public class PRBlocks {
                     .sound(PRBlockSounds.ROSE_LAMP)
     );
 
-    public static final Block POLISHED_CUT_ROSE = register("polished_cut_rose",
-            Block::new,
+    public static final Block POLISHED_CUT_ROSE = new Block(
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .requiresCorrectToolForDrops()
@@ -92,26 +87,19 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
-    public static final Block POLISHED_CUT_ROSE_STAIRS = register("polished_cut_rose_stairs",
-            properties -> new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), properties),
-            Properties.ofFullCopy(POLISHED_CUT_ROSE)
+    public static final Block POLISHED_CUT_ROSE_STAIRS = new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
-    public static final Block POLISHED_CUT_ROSE_SLAB = register("polished_cut_rose_slab",
-            SlabBlock::new,
+    public static final Block POLISHED_CUT_ROSE_SLAB = new SlabBlock(
             Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
 
-    public static final DoorBlock ROSE_DOOR = register("rose_door",
-            properties -> new DoorBlock(PRBlockSetType.ROSE, properties),
-            BlockBehaviour.Properties.of()
+    public static final DoorBlock ROSE_DOOR = new DoorBlock(PRBlockSetType.ROSE, Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .strength(5.0F)
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)
     );
-    public static final TrapDoorBlock ROSE_TRAPDOOR = register("rose_trapdoor",
-            properties -> new TrapDoorBlock(PRBlockSetType.ROSE, properties),
-            BlockBehaviour.Properties.of()
+    public static final TrapDoorBlock ROSE_TRAPDOOR = new TrapDoorBlock(PRBlockSetType.ROSE, Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .strength(5.0F)
                     .noOcclusion()
@@ -122,25 +110,32 @@ public class PRBlocks {
     public static void init() {
     }
 
-    private static <T extends Block> @NotNull T registerWithoutItem(String path, Function<Properties, T> block, Properties properties) {
-        ResourceLocation id = net.legacy.progression_reborn.PRConstants.id(path);
-        return doRegister(id, makeBlock(block, properties, id));
+    @SafeVarargs
+    private static void registerBlockAfter(ItemLike comparedItem, String path, Block block, ResourceKey<CreativeModeTab>... tabs) {
+        registerBlockItemAfter(comparedItem, path, block, tabs);
+        actualRegisterBlock(path, block);
     }
 
-    private static <T extends Block> @NotNull T register(String path, Function<Properties, T> block, Properties properties) {
-        T registered = registerWithoutItem(path, block, properties);
-        Items.registerBlock(registered);
-        return registered;
+    @SafeVarargs
+    private static void registerBlockItemAfter(ItemLike comparedItem, String name, Block block, ResourceKey<CreativeModeTab>... tabs) {
+        registerBlockItemAfter(comparedItem, name, block, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
     }
 
-    private static <T extends Block> @NotNull T doRegister(ResourceLocation id, T block) {
-        if (BuiltInRegistries.BLOCK.getOptional(id).isEmpty()) {
-            return Registry.register(BuiltInRegistries.BLOCK, id, block);
+    @SafeVarargs
+    private static void registerBlockItemAfter(ItemLike comparedItem, String path, Block block, CreativeModeTab.TabVisibility visibility, ResourceKey<CreativeModeTab>... tabs) {
+        actualRegisterBlockItem(path, block);
+        PRCreativeTabs.addAfter(comparedItem, block, visibility, tabs);
+    }
+
+    private static void actualRegisterBlock(String path, Block block) {
+        if (BuiltInRegistries.BLOCK.getOptional(PRConstants.id(path)).isEmpty()) {
+            Registry.register(BuiltInRegistries.BLOCK, PRConstants.id(path), block);
         }
-        throw new IllegalArgumentException("Block with id " + id + " is already in the block registry.");
     }
 
-    private static <T extends Block> T makeBlock(@NotNull Function<Properties, T> function, @NotNull Properties properties, ResourceLocation id) {
-        return function.apply(properties.setId(ResourceKey.create(Registries.BLOCK, id)));
+    private static void actualRegisterBlockItem(String path, Block block) {
+        if (BuiltInRegistries.ITEM.getOptional(PRConstants.id(path)).isEmpty()) {
+            Registry.register(BuiltInRegistries.ITEM, PRConstants.id(path), new BlockItem(block, new Item.Properties()));
+        }
     }
 }

@@ -1,27 +1,66 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.tag.PRItemTags;
 import net.minecraft.Util;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorMaterials;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 
 import java.util.EnumMap;
+import java.util.List;
+import java.util.function.Supplier;
 
-public interface PRArmorMaterials {
-    ArmorMaterial COPPER = new net.minecraft.world.item.equipment.ArmorMaterial(7, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 1);
-        enumMap.put(ArmorType.LEGGINGS, 3);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, PRItemTags.REPAIRS_COPPER_ARMOR, PREquipmentAssets.COPPER);
+public class PRArmorMaterials {
+    public static final Holder<ArmorMaterial> COPPER;
+    public static final Holder<ArmorMaterial> ROSE;
 
-    ArmorMaterial ROSE = new net.minecraft.world.item.equipment.ArmorMaterial(10, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 2);
-        enumMap.put(ArmorType.LEGGINGS, 4);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 2F, 0.0F, PRItemTags.REPAIRS_ROSE_ARMOR, PREquipmentAssets.ROSE);
+    public PRArmorMaterials() {
+    }
+
+    private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> defense, int enchantmentValue, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+        List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(ResourceLocation.withDefaultNamespace(name)));
+        return register(name, defense, enchantmentValue, equipSound, toughness, knockbackResistance, repairIngredient, list);
+    }
+
+    private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> defense, int enchantmentValue, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngridient, List<ArmorMaterial.Layer> layers) {
+        EnumMap<ArmorItem.Type, Integer> enumMap = new EnumMap(ArmorItem.Type.class);
+        ArmorItem.Type[] var9 = ArmorItem.Type.values();
+        int var10 = var9.length;
+
+        for(int var11 = 0; var11 < var10; ++var11) {
+            ArmorItem.Type type = var9[var11];
+            enumMap.put(type, (Integer)defense.get(type));
+        }
+
+        return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, ResourceLocation.withDefaultNamespace(name), new ArmorMaterial(enumMap, enchantmentValue, equipSound, repairIngridient, layers, toughness, knockbackResistance));
+    }
+
+    static {
+        COPPER = register("copper", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+            enumMap.put(ArmorItem.Type.BOOTS, 1);
+            enumMap.put(ArmorItem.Type.LEGGINGS, 3);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 4);
+            enumMap.put(ArmorItem.Type.HELMET, 2);
+            enumMap.put(ArmorItem.Type.BODY, 6);
+        }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.COPPER_INGOT});
+        });
+        ROSE = register("rose", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (enumMap) -> {
+            enumMap.put(ArmorItem.Type.BOOTS, 2);
+            enumMap.put(ArmorItem.Type.LEGGINGS, 4);
+            enumMap.put(ArmorItem.Type.CHESTPLATE, 4);
+            enumMap.put(ArmorItem.Type.HELMET, 2);
+            enumMap.put(ArmorItem.Type.BODY, 6);
+        }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 2.0F, 0.1F, () -> {
+            return Ingredient.of(new ItemLike[]{Items.BLAZE_ROD});
+        });
+    }
 }

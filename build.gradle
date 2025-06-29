@@ -16,12 +16,6 @@ repositories {
 	maven { url = 'https://jitpack.io' }
 }
 
-subprojects {
-	dependencies {
-		modImplementation "com.github.ramixin:mixson:${project.mixson_version}"
-	}
-	}
-
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
@@ -31,10 +25,6 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	include modImplementation("maven.modrinth:frozenlib:${project.frozenlib_version}")
-
-	include modImplementation("com.github.ramixin:mixson-fabric:${project.mixson_version}")
 
 	modImplementation("maven.modrinth:modmenu:$modmenu_version")
 
