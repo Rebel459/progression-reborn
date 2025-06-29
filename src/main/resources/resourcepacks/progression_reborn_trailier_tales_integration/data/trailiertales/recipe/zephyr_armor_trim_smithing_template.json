@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:diamond"
-    },
-    "#": {
-      "item": "minecraft:smooth_sandstone"
-    },
-    "S": {
-      "item": "trailiertales:zephyr_armor_trim_smithing_template"
-    }
+    "C": "minecraft:diamond",
+    "#": "minecraft:smooth_sandstone",
+    "S": "trailiertales:zephyr_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:diamond"
-    },
-    "#": {
-      "item": "minecraft:deepslate_bricks"
-    },
-    "S": {
-      "item": "trailiertales:matrix_armor_trim_smithing_template"
-    }
+    "C": "minecraft:diamond",
+    "#": "minecraft:deepslate_bricks",
+    "S": "trailiertales:matrix_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

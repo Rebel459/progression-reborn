@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:diamond"
-    },
-    "#": {
-      "item": "minecraft:smooth_basalt"
-    },
-    "S": {
-      "item": "trailiertales:geode_armor_trim_smithing_template"
-    }
+    "C": "minecraft:diamond",
+    "#": "minecraft:smooth_basalt",
+    "S": "trailiertales:geode_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",
