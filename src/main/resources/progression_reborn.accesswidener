@@ -1,7 +1,6 @@
 accessWidener v2 named
 
 accessible field net/minecraft/client/data/models/ItemModelGenerators$TrimMaterialData materialKey Lnet/minecraft/resources/ResourceKey;
-accessible method net/minecraft/client/data/models/ItemModelGenerators$TrimMaterialData <init> (Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;Ljava/util/Map;)V
 accessible method net/minecraft/world/item/equipment/trim/TrimMaterials register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/network/chat/Style;Lnet/minecraft/world/item/equipment/trim/MaterialAssetGroup;)V
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeIconList ()Ljava/util/List;
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeMaterialList ()Ljava/util/List;
