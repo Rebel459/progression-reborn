@@ -160,12 +160,66 @@
       "entries": [
         {
           "type": "minecraft:empty",
+          "weight": 92
+        },
+        {
+          "type":"item",
+          "name":"legacies_and_legends:fortress_helmet",
+          "weight":2
+        },
+        {
+          "type":"item",
+          "name":"legacies_and_legends:fortress_chestplate",
+          "weight":2
+        },
+        {
+          "type":"item",
+          "name":"legacies_and_legends:fortress_leggings",
+          "weight":2
+        },
+        {
+          "type":"item",
+          "name":"legacies_and_legends:fortress_boots",
+          "weight":2
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
           "weight": 95
         },
         {
           "type": "minecraft:loot_table",
           "value": "legacies_and_legends:books/the_fortress",
           "weight": 5
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:flame",
+                "minecraft:fire_aspect"
+              ]
+            }
+          ],
+          "name": "minecraft:book",
+          "weight": 1
         }
       ],
       "rolls": 1.0

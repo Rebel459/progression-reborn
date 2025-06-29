@@ -72,7 +72,6 @@
   "pack.progression_reborn.modified_nether_ores": "Modified Nether Ores",
   "pack.progression_reborn.retextured_iron_equipment": "Retextured Iron Equipment",
   "pack.progression_reborn.legacies_and_legends_integration": "Progression Reborn - Legacies and Legends Integration",
-  "pack.progression_reborn.end_reborn_integration": "Progression Reborn - End Reborn Integration",
   "pack.progression_reborn.wilder_wild_integration": "Progression Reborn - Wilder Wild Integration",
   "pack.progression_reborn.trailier_tales_integration": "Progression Reborn - Trailier Tales Integration",
   "pack.progression_reborn.remnants_integration": "Progression Reborn - Remnants Integration",
@@ -90,7 +89,6 @@
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment.@Tooltip": "Changes the textures of Iron tools and armor to better match the styles of Rose and Netherite.",
 
   "text.autoconfig.progression_reborn.option.integrations": "Mod Integration",
-  "text.autoconfig.progression_reborn.option.integrations.end_reborn": "End Reborn",
   "text.autoconfig.progression_reborn.option.integrations.legacies_and_legends": "Legacies and Legends",
   "text.autoconfig.progression_reborn.option.integrations.wilder_wild": "Wilder Wild",
   "text.autoconfig.progression_reborn.option.integrations.trailier_tales": "Trailier Tales",

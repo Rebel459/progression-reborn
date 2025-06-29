@@ -51,9 +51,6 @@ public class PRConfig implements ConfigData {
 
   public static class IntegrationsConfig {
     @ConfigEntry.Category("config")
-    public boolean end_reborn = true;
-
-    @ConfigEntry.Category("config")
     public boolean legacies_and_legends = true;
 
     @ConfigEntry.Category("config")

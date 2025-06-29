@@ -202,6 +202,51 @@
       "entries": [
         {
           "type": "minecraft:empty",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": "minecraft:unbreaking"
+            }
+          ],
+          "name": "minecraft:book",
+          "weight": 1
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "legacies_and_legends:tangled",
+                "minecraft:thorns"
+              ]
+            }
+          ],
+          "name": "minecraft:book",
+          "weight": 1
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
           "weight": 75
         },
         {

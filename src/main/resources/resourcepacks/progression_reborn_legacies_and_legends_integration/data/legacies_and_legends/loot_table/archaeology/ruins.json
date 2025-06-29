@@ -6,48 +6,53 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "legacies_and_legends:verdant_pottery_sherd"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "legacies_and_legends:forager_pottery_sherd"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "legacies_and_legends:wooden_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:emerald"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "progression_reborn:copper_hoe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:brick",
+          "name": "minecraft:howl_pottery_sherd",
           "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:explorer_pottery_sherd",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shelter_pottery_sherd",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legacies_and_legends:ancient_knife",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "progression_reborn:copper_axe",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:wheat",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:stone_shovel",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:coal",
-          "weight": 2
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_nugget",
-          "weight": 2
+          "weight": 4
         }
       ],
       "rolls": 1.0
