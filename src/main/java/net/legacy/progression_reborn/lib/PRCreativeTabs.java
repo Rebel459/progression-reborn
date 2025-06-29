@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn.registry;
+package net.legacy.progression_reborn.lib;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,17 +1,12 @@
 package net.legacy.progression_reborn.registry;
-import java.util.function.Function;
 
 import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.lib.PRCreativeTabs;
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import org.jetbrains.annotations.NotNull;
 
 public class PRBlocks {
 
@@ -87,9 +81,9 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
-    public static final Block POLISHED_CUT_ROSE_STAIRS = new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), Properties.ofFullCopy(POLISHED_CUT_ROSE)
+    public static final StairBlock POLISHED_CUT_ROSE_STAIRS = new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
-    public static final Block POLISHED_CUT_ROSE_SLAB = new SlabBlock(
+    public static final SlabBlock POLISHED_CUT_ROSE_SLAB = new SlabBlock(
             Properties.ofFullCopy(POLISHED_CUT_ROSE)
     );
 
@@ -107,7 +101,34 @@ public class PRBlocks {
                     .requiresCorrectToolForDrops()
     );
 
-    public static void init() {
+    public static void register() {
+
+        // Building Blocks
+
+        registerBlockAfter(Blocks.AMETHYST_BLOCK, "copper_block", COPPER_BLOCK, CreativeModeTabs.BUILDING_BLOCKS);
+
+        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER_BULB, "rose_block", ROSE_BLOCK, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(ROSE_BLOCK, "polished_rose", POLISHED_ROSE, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(POLISHED_ROSE, "polished_cut_rose", POLISHED_CUT_ROSE, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(POLISHED_CUT_ROSE, "polished_cut_rose_stairs", POLISHED_CUT_ROSE_STAIRS, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(POLISHED_CUT_ROSE_STAIRS, "polished_cut_rose_slab", POLISHED_CUT_ROSE_SLAB, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(POLISHED_CUT_ROSE_SLAB, "rose_door", ROSE_DOOR, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(ROSE_DOOR, "rose_trapdoor", ROSE_TRAPDOOR, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(ROSE_TRAPDOOR, "rose_lamp", ROSE_LAMP, CreativeModeTabs.BUILDING_BLOCKS);
+
+        // Natural Blocks
+
+        registerBlockAfter(Blocks.NETHER_QUARTZ_ORE, "blackstone_quartz_ore", BLACKSTONE_QUARTZ_ORE, CreativeModeTabs.NATURAL_BLOCKS);
+        registerBlockAfter(Blocks.NETHER_GOLD_ORE, "blackstone_gold_ore", BLACKSTONE_GOLD_ORE, CreativeModeTabs.NATURAL_BLOCKS);
+        registerBlockAfter(BLACKSTONE_GOLD_ORE, "nether_rose_ore", NETHER_ROSE_ORE, CreativeModeTabs.NATURAL_BLOCKS);
+        registerBlockAfter(NETHER_ROSE_ORE, "blackstone_rose_ore", BLACKSTONE_ROSE_ORE, CreativeModeTabs.NATURAL_BLOCKS);
+
+        registerBlockAfter(Blocks.RAW_GOLD_BLOCK, "raw_rose_block", RAW_ROSE_BLOCK, CreativeModeTabs.NATURAL_BLOCKS);
+
+        // Functional Blocks
+
+        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER_BULB, "rose_lamp", ROSE_LAMP, CreativeModeTabs.FUNCTIONAL_BLOCKS);
+
     }
 
     @SafeVarargs

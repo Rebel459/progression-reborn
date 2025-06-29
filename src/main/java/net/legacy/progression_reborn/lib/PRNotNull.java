@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn.registry;
+package net.legacy.progression_reborn.lib;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

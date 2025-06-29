@@ -1,6 +1,8 @@
 package net.legacy.progression_reborn.registry;
 
 import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.lib.PRCreativeTabs;
+import net.legacy.progression_reborn.lib.PRNotNull;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.Registry;
@@ -9,7 +11,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
@@ -217,6 +218,57 @@ public final class PRItems {
         registerItemAfter(COPPER_HELMET, COPPER_CHESTPLATE, "copper_chestplate", CreativeModeTabs.COMBAT);
         registerItemAfter(COPPER_CHESTPLATE, COPPER_LEGGINGS, "copper_leggings", CreativeModeTabs.COMBAT);
         registerItemAfter(COPPER_LEGGINGS, COPPER_BOOTS, "copper_boots", CreativeModeTabs.COMBAT);
+
+        registerItemAfter(Items.GOLDEN_BOOTS, ROSE_HELMET, "rose_helmet", CreativeModeTabs.COMBAT);
+        registerItemAfter(ROSE_HELMET, ROSE_CHESTPLATE, "rose_chestplate", CreativeModeTabs.COMBAT);
+        registerItemAfter(ROSE_CHESTPLATE, ROSE_LEGGINGS, "rose_leggings", CreativeModeTabs.COMBAT);
+        registerItemAfter(ROSE_LEGGINGS, ROSE_BOOTS, "rose_boots", CreativeModeTabs.COMBAT);
+
+        registerItemAfter(Items.STONE_SWORD, COPPER_SWORD, "copper_sword", CreativeModeTabs.COMBAT);
+        registerItemAfter(Items.STONE_AXE, COPPER_AXE, "copper_axe", CreativeModeTabs.COMBAT);
+
+        registerItemAfter(Items.GOLDEN_SWORD, ROSE_SWORD, "rose_sword", CreativeModeTabs.COMBAT);
+        registerItemAfter(Items.GOLDEN_AXE, ROSE_AXE, "rose_axe", CreativeModeTabs.COMBAT);
+
+        registerItemAfter(Items.LEATHER_HORSE_ARMOR, COPPER_HORSE_ARMOR, "copper_horse_armor", CreativeModeTabs.COMBAT);
+        registerItemAfter(Items.GOLDEN_HORSE_ARMOR, ROSE_HORSE_ARMOR, "golden_horse_armor", CreativeModeTabs.COMBAT);
+        registerItemAfter(Items.DIAMOND_HORSE_ARMOR, NETHERITE_HORSE_ARMOR, "netherite_horse_armor", CreativeModeTabs.COMBAT);
+
+        // Tools and Utilities
+
+        registerItemAfter(Items.STONE_HOE, COPPER_SHOVEL, "copper_shovel", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(COPPER_SHOVEL, COPPER_PICKAXE, "copper_pickaxe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(COPPER_PICKAXE, COPPER_AXE, "copper_axe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(COPPER_AXE, COPPER_HOE, "copper_hoe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+
+        registerItemAfter(Items.GOLDEN_HOE, ROSE_SHOVEL, "rose_shovel", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(ROSE_SHOVEL, ROSE_PICKAXE, "rose_pickaxe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(ROSE_PICKAXE, ROSE_AXE, "rose_axe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+        registerItemAfter(ROSE_AXE, ROSE_HOE, "rose_hoe", CreativeModeTabs.TOOLS_AND_UTILITIES);
+
+        // Food and Drinks
+
+        registerItemAfter(Items.GOLDEN_CARROT, ENCHANTED_GOLDEN_CARROT, "enchanted_golden_carrot", CreativeModeTabs.FOOD_AND_DRINKS);
+
+        // Ingredients
+
+        registerItemAfter(Items.CHARCOAL, RAW_IRON_NUGGET, "raw_iron_nugget", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(RAW_IRON_NUGGET, RAW_COPPER_NUGGET, "raw_copper_nugget", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(RAW_COPPER_NUGGET, RAW_GOLD_NUGGET, "raw_gold_nugget", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(RAW_GOLD_NUGGET, RAW_ROSE_NUGGET, "raw_rose_nugget", CreativeModeTabs.INGREDIENTS);
+
+        registerItemAfter(Items.RAW_GOLD, RAW_ROSE, "raw_rose", CreativeModeTabs.INGREDIENTS);
+
+        registerItemAfter(Items.IRON_NUGGET, COPPER_NUGGET, "copper_nugget", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(Items.GOLD_NUGGET, ROSE_NUGGET, "rose_nugget", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(ROSE_NUGGET, DIAMOND_NUGGET, "diamond_nugget", CreativeModeTabs.INGREDIENTS);
+
+        registerItemAfter(Items.IRON_INGOT, IRON_ALLOY, "iron_alloy", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(Items.GOLD_INGOT, ROSE_INGOT, "rose_ingot", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(ROSE_INGOT, ROSE_ALLOY, "rose_alloy", CreativeModeTabs.INGREDIENTS);
+
+        registerItemAfter(Items.SNORT_POTTERY_SHERD, IRON_UPGRADE_SMITHING_TEMPLATE, "iron_upgrade_smithing_template", CreativeModeTabs.INGREDIENTS);
+        registerItemAfter(IRON_UPGRADE_SMITHING_TEMPLATE, ROSE_UPGRADE_SMITHING_TEMPLATE, "rose_upgrade_smithing_template", CreativeModeTabs.INGREDIENTS);
 
     }
 

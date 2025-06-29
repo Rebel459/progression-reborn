@@ -33,7 +33,7 @@ public class ProgressionReborn implements ModInitializer {
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("progression_reborn");
 
-		PRItems.init();
+		PRItems.register();
 		PREquipmentItems.init();
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
