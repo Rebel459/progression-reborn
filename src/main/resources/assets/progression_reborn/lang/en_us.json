@@ -61,9 +61,9 @@
   "trim_material.progression_reborn.rose_ingot": "Rose Material",
 
   "enchantment.progression_reborn.collection": "Collection",
-  "enchantment.progression_reborn.collection.desc": "Consumes collected nuggets and outputs them as their full ingot / raw ore.",
+  "enchantment.progression_reborn.collection.desc": "Consumes collected nuggets and outputs them as their full ingot / raw ore",
   "enchantment.progression_reborn.reforge": "Reforge",
-  "enchantment.progression_reborn.reforge.desc": "Smelts certain block drops and has a low chance to provide unique bonus drops when doing so.",
+  "enchantment.progression_reborn.reforge.desc": "Smelts certain block drops and has a low chance to provide unique bonus drops when doing so",
 
   "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
   "pack.progression_reborn.modified_overworld_ores": "Modified Overworld Ores",
