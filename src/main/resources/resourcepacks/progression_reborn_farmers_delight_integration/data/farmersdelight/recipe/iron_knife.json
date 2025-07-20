@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smithing_transform",
+    "template": "progression_reborn:iron_upgrade_smithing_template",
+    "base": "farmersknives:copper_knife",
+    "addition": "minecraft:iron_ingot",
+    "result": {
+        "id": "farmersdelight:iron_knife"
+    }
+}

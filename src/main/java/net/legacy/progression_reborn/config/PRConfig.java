@@ -54,6 +54,9 @@ public class PRConfig implements ConfigData {
     public boolean end_reborn = true;
 
     @ConfigEntry.Category("config")
+    public boolean farmers_delight = true;
+
+    @ConfigEntry.Category("config")
     public boolean legacies_and_legends = true;
 
     @ConfigEntry.Category("config")
