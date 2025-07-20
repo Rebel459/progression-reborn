@@ -50,6 +50,10 @@ public class PRConfig implements ConfigData {
   }
 
   public static class IntegrationsConfig {
+    
+    @ConfigEntry.Category("config")
+    public boolean farmers_delight = true;
+
     @ConfigEntry.Category("config")
     public boolean legacies_and_legends = true;
 
