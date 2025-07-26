@@ -96,6 +96,13 @@
       {
         "model": {
           "type": "minecraft:model",
+          "model": "progression_reborn:item/rose_helmet_sapphire_trim"
+        },
+        "when": "legacies_and_legends:sapphire"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
           "model": "progression_reborn:item/rose_helmet_remnant_ingot_trim"
         },
         "when": "end_reborn:remnant_ingot"
@@ -113,6 +120,20 @@
           "model": "progression_reborn:item/rose_helmet_featherzeal_ingot_trim"
         },
         "when": "end_reborn:featherzeal_ingot"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "progression_reborn:item/rose_helmet_nebulite_trim"
+        },
+        "when": "enderscape:nebulite"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "progression_reborn:item/rose_helmet_shadoline_trim"
+        },
+        "when": "enderscape:shadoline"
       }
     ],
     "fallback": {
