@@ -12,6 +12,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.equipment.ArmorMaterials;
+import net.minecraft.world.item.equipment.ArmorType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
@@ -99,6 +101,160 @@ public final class PRItems {
                     .rarity(Rarity.RARE)
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT, PRConsumables.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+    );
+
+    // Tools
+    public static final Item COPPER_SWORD = register("copper_sword",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .sword(PRToolMaterial.COPPER, 3f, -2.4f)
+                    .durability(190)
+    );
+    public static final Item COPPER_PICKAXE = register("copper_pickaxe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .pickaxe(PRToolMaterial.COPPER, 1f, -2.8f)
+                    .durability(190)
+    );
+    public static final AxeItem COPPER_AXE = register("copper_axe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .axe(PRToolMaterial.COPPER, 6f, -3.1f)
+                    .durability(190)
+    );
+    public static final ShovelItem COPPER_SHOVEL = register("copper_shovel",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .shovel(PRToolMaterial.COPPER, 1.5f, -3f)
+                    .durability(190)
+    );
+    public static final HoeItem COPPER_HOE = register("copper_hoe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .hoe(PRToolMaterial.COPPER, -2f, -1f)
+                    .durability(190)
+    );
+
+    public static final Item ROSE_SWORD = register("rose_sword",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .sword(PRToolMaterial.ROSE, 3f, -2.4f)
+                    .durability(281)
+                    .fireResistant()
+    );
+    public static final Item ROSE_PICKAXE = register("rose_pickaxe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .pickaxe(PRToolMaterial.ROSE, 1f, -2.8f)
+                    .durability(281)
+                    .fireResistant()
+    );
+    public static final AxeItem ROSE_AXE = register("rose_axe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .axe(PRToolMaterial.ROSE, 6f, -3.1f)
+                    .durability(281)
+                    .fireResistant()
+    );
+    public static final ShovelItem ROSE_SHOVEL = register("rose_shovel",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .shovel(PRToolMaterial.ROSE, 1.5f, -3f)
+                    .durability(281)
+                    .fireResistant()
+    );
+    public static final HoeItem ROSE_HOE = register("rose_hoe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .hoe(PRToolMaterial.ROSE, -2f, -1f)
+                    .durability(281)
+                    .fireResistant()
+    );
+
+    // Armor
+    public static final Item COPPER_HELMET = register("copper_helmet",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.HELMET)
+    );
+    public static final Item COPPER_CHESTPLATE = register("copper_chestplate",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.CHESTPLATE)
+    );
+    public static final Item COPPER_LEGGINGS = register("copper_leggings",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.LEGGINGS)
+    );
+    public static final Item COPPER_BOOTS = register("copper_boots",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.BOOTS)
+    );
+    public static final Item COPPER_HORSE_ARMOR = register("copper_horse_armor",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .horseArmor(PRArmorMaterials.COPPER)
+    );
+
+    public static final Item ROSE_HELMET = register("rose_helmet",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.ROSE, ArmorType.HELMET)
+                    .fireResistant()
+    );
+    public static final Item ROSE_CHESTPLATE = register("rose_chestplate",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.ROSE, ArmorType.CHESTPLATE)
+                    .fireResistant()
+    );
+    public static final Item ROSE_LEGGINGS = register("rose_leggings",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.ROSE, ArmorType.LEGGINGS)
+                    .fireResistant()
+    );
+    public static final Item ROSE_BOOTS = register("rose_boots",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .humanoidArmor(PRArmorMaterials.ROSE, ArmorType.BOOTS)
+                    .fireResistant()
+    );
+    public static final Item ROSE_HORSE_ARMOR = register("rose_horse_armor",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .horseArmor(PRArmorMaterials.ROSE)
+                    .fireResistant()
+    );
+
+    public static final Item NETHERITE_HORSE_ARMOR = register("netherite_horse_armor",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .horseArmor(ArmorMaterials.NETHERITE)
+                    .fireResistant()
     );
 
     public static void init() {
