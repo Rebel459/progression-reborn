@@ -18,9 +18,7 @@ scoreboard objectives add totalIronNuggets dummy
 scoreboard objectives add totalGoldNuggets dummy
 scoreboard objectives add totalRoseNuggets dummy
 
-scoreboard objectives add collectDiamondNuggets dummy
-scoreboard objectives add totalDiamondNuggets dummy
+scoreboard objectives add collectDiamondShards dummy
+scoreboard objectives add totalDiamondShards dummy
 
 scoreboard objectives add 9 dummy
-
-advancement revoke @a only progression_reborn:function/collected_raw_copper_nugget

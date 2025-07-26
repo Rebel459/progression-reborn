@@ -16,8 +16,8 @@
   "rewards": {
     "experience": 0,
     "recipes": [
-      "progression_reborn:diamond_from_nuggets",
-      "progression_reborn:diamond_to_nugget"
+      "progression_reborn:diamond_from_shards",
+      "progression_reborn:diamond_to_shards"
     ]
   }
 }
