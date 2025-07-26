@@ -50,7 +50,6 @@ public class PRConfig implements ConfigData {
   }
 
   public static class IntegrationsConfig {
-    
     @ConfigEntry.Category("config")
     public boolean farmers_delight = true;
 
