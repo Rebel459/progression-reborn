@@ -11,36 +11,36 @@ public class PRCreativeInventorySorting {
 	public static void init() {
 
 		// Combat
-		addAfterInCombat(Items.CHAINMAIL_BOOTS, PREquipmentItems.COPPER_HELMET);
-		addAfterInCombat(PREquipmentItems.COPPER_HELMET, PREquipmentItems.COPPER_CHESTPLATE);
-		addAfterInCombat(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentItems.COPPER_LEGGINGS);
-		addAfterInCombat(PREquipmentItems.COPPER_LEGGINGS, PREquipmentItems.COPPER_BOOTS);
+		addAfterInCombat(Items.CHAINMAIL_BOOTS, PRItems.COPPER_HELMET);
+		addAfterInCombat(PRItems.COPPER_HELMET, PRItems.COPPER_CHESTPLATE);
+		addAfterInCombat(PRItems.COPPER_CHESTPLATE, PRItems.COPPER_LEGGINGS);
+		addAfterInCombat(PRItems.COPPER_LEGGINGS, PRItems.COPPER_BOOTS);
 
-		addAfterInCombat(Items.GOLDEN_BOOTS, PREquipmentItems.ROSE_HELMET);
-		addAfterInCombat(PREquipmentItems.ROSE_HELMET, PREquipmentItems.ROSE_CHESTPLATE);
-		addAfterInCombat(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentItems.ROSE_LEGGINGS);
-		addAfterInCombat(PREquipmentItems.ROSE_LEGGINGS, PREquipmentItems.ROSE_BOOTS);
+		addAfterInCombat(Items.GOLDEN_BOOTS, PRItems.ROSE_HELMET);
+		addAfterInCombat(PRItems.ROSE_HELMET, PRItems.ROSE_CHESTPLATE);
+		addAfterInCombat(PRItems.ROSE_CHESTPLATE, PRItems.ROSE_LEGGINGS);
+		addAfterInCombat(PRItems.ROSE_LEGGINGS, PRItems.ROSE_BOOTS);
 
-		addAfterInCombat(Items.STONE_SWORD, PREquipmentItems.COPPER_SWORD); // shovel pickaxe axe hoe
-		addAfterInCombat(Items.STONE_AXE, PREquipmentItems.COPPER_AXE);
+		addAfterInCombat(Items.STONE_SWORD, PRItems.COPPER_SWORD); // shovel pickaxe axe hoe
+		addAfterInCombat(Items.STONE_AXE, PRItems.COPPER_AXE);
 
-		addAfterInCombat(Items.GOLDEN_SWORD, PREquipmentItems.ROSE_SWORD);
-		addAfterInCombat(Items.GOLDEN_AXE, PREquipmentItems.ROSE_AXE);
+		addAfterInCombat(Items.GOLDEN_SWORD, PRItems.ROSE_SWORD);
+		addAfterInCombat(Items.GOLDEN_AXE, PRItems.ROSE_AXE);
 
-		addAfterInCombat(Items.LEATHER_HORSE_ARMOR, PREquipmentItems.COPPER_HORSE_ARMOR);
-		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PREquipmentItems.ROSE_HORSE_ARMOR);
-		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, PREquipmentItems.NETHERITE_HORSE_ARMOR);
+		addAfterInCombat(Items.LEATHER_HORSE_ARMOR, PRItems.COPPER_HORSE_ARMOR);
+		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PRItems.ROSE_HORSE_ARMOR);
+		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, PRItems.NETHERITE_HORSE_ARMOR);
 
 		// Tools and Utilities
-		addAfterInToolsAndUtilities(Items.STONE_HOE, PREquipmentItems.COPPER_SHOVEL);
-		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_SHOVEL, PREquipmentItems.COPPER_PICKAXE);
-		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_PICKAXE, PREquipmentItems.COPPER_AXE);
-		addAfterInToolsAndUtilities(PREquipmentItems.COPPER_AXE, PREquipmentItems.COPPER_HOE);
+		addAfterInToolsAndUtilities(Items.STONE_HOE, PRItems.COPPER_SHOVEL);
+		addAfterInToolsAndUtilities(PRItems.COPPER_SHOVEL, PRItems.COPPER_PICKAXE);
+		addAfterInToolsAndUtilities(PRItems.COPPER_PICKAXE, PRItems.COPPER_AXE);
+		addAfterInToolsAndUtilities(PRItems.COPPER_AXE, PRItems.COPPER_HOE);
 
-		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PREquipmentItems.ROSE_SHOVEL);
-		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_SHOVEL, PREquipmentItems.ROSE_PICKAXE);
-		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_PICKAXE, PREquipmentItems.ROSE_AXE);
-		addAfterInToolsAndUtilities(PREquipmentItems.ROSE_AXE, PREquipmentItems.ROSE_HOE);
+		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PRItems.ROSE_SHOVEL);
+		addAfterInToolsAndUtilities(PRItems.ROSE_SHOVEL, PRItems.ROSE_PICKAXE);
+		addAfterInToolsAndUtilities(PRItems.ROSE_PICKAXE, PRItems.ROSE_AXE);
+		addAfterInToolsAndUtilities(PRItems.ROSE_AXE, PRItems.ROSE_HOE);
 
 		// Food and Drinks
 		addAfterInFoodAndDrinks(Items.GOLDEN_CARROT, PRItems.ENCHANTED_GOLDEN_CARROT);

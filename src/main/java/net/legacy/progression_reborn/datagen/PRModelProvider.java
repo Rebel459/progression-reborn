@@ -54,15 +54,15 @@ public final class PRModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
+		generator.generateTrimmableItem(PRItems.COPPER_HELMET, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
+		generator.generateTrimmableItem(PRItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
+		generator.generateTrimmableItem(PRItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
+		generator.generateTrimmableItem(PRItems.COPPER_BOOTS, PREquipmentAssets.COPPER, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
 
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
-		generator.generateTrimmableItem(PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
+		generator.generateTrimmableItem(PRItems.ROSE_HELMET, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/helmet_trim"), false);
+		generator.generateTrimmableItem(PRItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/chestplate_trim"), false);
+		generator.generateTrimmableItem(PRItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/leggings_trim"), false);
+		generator.generateTrimmableItem(PRItems.ROSE_BOOTS, PREquipmentAssets.ROSE, ResourceLocation.withDefaultNamespace("trims/items/boots_trim"), false);
 
 		generator.generateFlatItem(PRItems.RAW_COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_IRON_NUGGET, ModelTemplates.FLAT_ITEM);
@@ -79,21 +79,21 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.IRON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(PREquipmentItems.COPPER_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(PREquipmentItems.ROSE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(PREquipmentItems.NETHERITE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.NETHERITE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(PREquipmentItems.COPPER_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.COPPER_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.COPPER_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.COPPER_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.COPPER_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.COPPER_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-		generator.generateFlatItem(PREquipmentItems.ROSE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.ROSE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.ROSE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.ROSE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(PREquipmentItems.ROSE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(PRItems.ROSE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
 		this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
@@ -121,15 +121,15 @@ public final class PRModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
-		this.registerArmorTrims(generator, PREquipmentItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
-		this.registerArmorTrims(generator, PREquipmentItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
-		this.registerArmorTrims(generator, PREquipmentItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
-		this.registerArmorTrims(generator, PREquipmentItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
+		this.registerArmorTrims(generator, PRItems.COPPER_HELMET, PREquipmentAssets.COPPER, "helmet", false);
+		this.registerArmorTrims(generator, PRItems.COPPER_CHESTPLATE, PREquipmentAssets.COPPER, "chestplate", false);
+		this.registerArmorTrims(generator, PRItems.COPPER_LEGGINGS, PREquipmentAssets.COPPER, "leggings", false);
+		this.registerArmorTrims(generator, PRItems.COPPER_BOOTS, PREquipmentAssets.COPPER, "boots", false);
 
-		this.registerArmorTrims(generator, PREquipmentItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
-		this.registerArmorTrims(generator, PREquipmentItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
-		this.registerArmorTrims(generator, PREquipmentItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
-		this.registerArmorTrims(generator, PREquipmentItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
+		this.registerArmorTrims(generator, PRItems.ROSE_HELMET, PREquipmentAssets.ROSE, "helmet", false);
+		this.registerArmorTrims(generator, PRItems.ROSE_CHESTPLATE, PREquipmentAssets.ROSE, "chestplate", false);
+		this.registerArmorTrims(generator, PRItems.ROSE_LEGGINGS, PREquipmentAssets.ROSE, "leggings", false);
+		this.registerArmorTrims(generator, PRItems.ROSE_BOOTS, PREquipmentAssets.ROSE, "boots", false);
 
 	}
 

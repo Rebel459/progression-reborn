@@ -16,7 +16,7 @@ public class PRItemComponents {
 
         if (ProgressionReborn.isEndRebornLoaded) {
             DefaultItemComponentEvents.MODIFY.register(context -> {
-                context.modify(PREquipmentItems.NETHERITE_HORSE_ARMOR, builder -> {
+                context.modify(PRItems.NETHERITE_HORSE_ARMOR, builder -> {
                     builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteHorseArmorAttributes());
                 });
             });
