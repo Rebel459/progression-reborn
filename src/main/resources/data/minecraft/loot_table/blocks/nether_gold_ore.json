@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "minecraft:deepslate_lapis_ore"
+              "name": "minecraft:nether_gold_ore"
             },
             {
               "type": "minecraft:item",
@@ -34,7 +34,7 @@
                 {
                   "add": false,
                   "count": {
-                    "type": "minecraft:uniform",
+                    "type": "minecraft:biased_to_bottom",
                     "max": 9.0,
                     "min": 3.0
                   },
@@ -42,14 +42,24 @@
                 },
                 {
                   "enchantment": "minecraft:fortune",
-                  "formula": "minecraft:ore_drops",
-                  "function": "minecraft:apply_bonus"
+                  "formula": "minecraft:uniform_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                },
+                {
+                  "function": "minecraft:limit_count",
+                  "limit": {
+                    "max": 9.0,
+                    "min": 1.0
+                  }
                 },
                 {
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:lapis_lazuli"
+              "name": "minecraft:gold_nugget"
             }
           ]
         }
@@ -57,5 +67,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/deepslate_lapis_ore"
+  "random_sequence": "minecraft:blocks/nether_gold_ore"
 }

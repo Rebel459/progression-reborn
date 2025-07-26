@@ -21,11 +21,13 @@
           "name": "progression_reborn:copper_nugget",
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "add": false,
               "count": {
-                "min": 3,
-                "max": 6
-              }
+                "type": "minecraft:biased_to_bottom",
+                "max": 9.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
             }
           ]
         }

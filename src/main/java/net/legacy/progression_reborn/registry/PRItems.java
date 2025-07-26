@@ -114,16 +114,16 @@ public final class PRItems {
             new Properties()
                     .pickaxe(PRToolMaterial.COPPER, 1f, -2.8f)
     );
-    public static final AxeItem COPPER_AXE = register("copper_axe", (properties) -> 
-            new AxeItem(PRToolMaterial.COPPER, 6f, -3.1f, properties), (
+    public static final AxeItem COPPER_AXE = register("copper_axe",
+            (properties) -> new AxeItem(PRToolMaterial.COPPER, 6f, -3.1f, properties), (
             new Properties()
     ));
-    public static final ShovelItem COPPER_SHOVEL = register("copper_shovel", (properties) ->
-            new ShovelItem(PRToolMaterial.COPPER, 1.5f, -3f, properties), (
+    public static final ShovelItem COPPER_SHOVEL = register("copper_shovel",
+            (properties) -> new ShovelItem(PRToolMaterial.COPPER, 1.5f, -3f, properties), (
             new Properties()
     ));
-    public static final HoeItem COPPER_HOE = register("copper_hoe", (properties) ->
-            new HoeItem(PRToolMaterial.COPPER, -2f, -1f, properties), (
+    public static final HoeItem COPPER_HOE = register("copper_hoe",
+            (properties) -> new HoeItem(PRToolMaterial.COPPER, -2f, -1f, properties), (
             new Properties()
     ));
 
@@ -139,18 +139,18 @@ public final class PRItems {
                     .pickaxe(PRToolMaterial.ROSE, 1f, -2.8f)
                     .fireResistant()
     );
-    public static final AxeItem ROSE_AXE = register("rose_axe", (properties) ->
-            new AxeItem(PRToolMaterial.ROSE, 6f, -3.1f, properties), (
+    public static final AxeItem ROSE_AXE = register("rose_axe",
+            (properties) -> new AxeItem(PRToolMaterial.ROSE, 6f, -3.1f, properties), (
             new Properties()
                     .fireResistant()
     ));
-    public static final ShovelItem ROSE_SHOVEL = register("rose_shovel", (properties) ->
-            new ShovelItem(PRToolMaterial.ROSE, 1.5f, -3f, properties), (
+    public static final ShovelItem ROSE_SHOVEL = register("rose_shovel",
+            (properties) -> new ShovelItem(PRToolMaterial.ROSE, 1.5f, -3f, properties), (
             new Properties()
                     .fireResistant()
     ));
-    public static final HoeItem ROSE_HOE = register("rose_hoe", (properties) ->
-            new HoeItem(PRToolMaterial.ROSE, -2f, -1f, properties), (
+    public static final HoeItem ROSE_HOE = register("rose_hoe",
+            (properties) -> new HoeItem(PRToolMaterial.ROSE, -2f, -1f, properties), (
             new Properties()
                     .fireResistant()
     ));
