@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "progression_reborn:item/diamond_nugget"
+    "layer0": "progression_reborn:item/diamond_shard"
   }
 }

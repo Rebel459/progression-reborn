@@ -1,12 +1,12 @@
 {
   "criteria": {
-    "has_diamond_nugget": {
+    "has_diamond_shard": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "progression_reborn:diamond_nugget"
+              "progression_reborn:diamond_shard"
             ]
           }
         ]

@@ -55,7 +55,7 @@ public class PRCreativeInventorySorting {
 
 		addAfterInIngredients(Items.IRON_NUGGET, PRItems.COPPER_NUGGET);
 		addAfterInIngredients(Items.GOLD_NUGGET, PRItems.ROSE_NUGGET);
-		addAfterInIngredients(PRItems.ROSE_NUGGET, PRItems.DIAMOND_NUGGET);
+		addAfterInIngredients(PRItems.ROSE_NUGGET, PRItems.DIAMOND_SHARD);
 
 		addAfterInIngredients(Items.IRON_INGOT, PRItems.IRON_ALLOY);
 		addAfterInIngredients(Items.GOLD_INGOT, PRItems.ROSE_INGOT);

@@ -58,7 +58,7 @@ public final class PRItems {
                     .stacksTo(64)
                     .fireResistant()
     );
-    public static final Item DIAMOND_NUGGET = register("diamond_nugget",
+    public static final Item DIAMOND_SHARD = register("diamond_shard",
             Item::new,
             new Properties()
                     .stacksTo(64)

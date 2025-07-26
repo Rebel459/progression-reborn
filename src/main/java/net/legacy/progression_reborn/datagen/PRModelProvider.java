@@ -70,7 +70,7 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.RAW_ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(PRItems.DIAMOND_NUGGET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(PRItems.DIAMOND_SHARD, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_ROSE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_INGOT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.IRON_ALLOY, ModelTemplates.FLAT_ITEM);
