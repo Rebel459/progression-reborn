@@ -19,6 +19,4 @@ public final class PRDataFixer {
 		Schema schemaV1 = builder.addSchema(1, NamespacedSchema::new);
 		SimpleFixes.addBlockRenameFix(builder, "Rename diamond_nugget to diamond_shard", PRConstants.id("diamond_nugget"), PRConstants.id("diamond_shard"), schemaV1);
 	}
-
-
 }
