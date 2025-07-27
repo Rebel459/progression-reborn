@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.legacy.progression_reborn.config.PRConfig;
-import net.legacy.progression_reborn.datafix.PRDataFixer;
 import net.legacy.progression_reborn.registry.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
