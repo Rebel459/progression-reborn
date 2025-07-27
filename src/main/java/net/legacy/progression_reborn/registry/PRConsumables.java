@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn.food;
+package net.legacy.progression_reborn.registry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;

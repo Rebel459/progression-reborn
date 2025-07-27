@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn.food;
+package net.legacy.progression_reborn.registry;
 
 import net.minecraft.world.food.FoodProperties;
 
