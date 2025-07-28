@@ -14,6 +14,5 @@ public final class PRBlockRenderLayers {
 
 		renderLayerRegistry.putBlock(PRBlocks.ROSE_DOOR, RenderType.cutout());
 		renderLayerRegistry.putBlock(PRBlocks.ROSE_TRAPDOOR, RenderType.cutout());
-
 	}
 }
