@@ -1,12 +1,8 @@
-package net.legacy.progression_reborn.mixin;
+package net.legacy.progression_reborn.mixin.entity;
 
 import net.legacy.progression_reborn.tag.PRItemTags;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.FluidTags;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.effect.MobEffectUtil;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(value = Player.class, priority = 1001)
+@Mixin(value = Player.class)
 public class PlayerMixin {
 
     @Inject(method = "getDestroySpeed", at = @At(value = "TAIL"), cancellable = true)

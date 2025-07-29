@@ -87,6 +87,8 @@
   "text.autoconfig.progression_reborn.option.misc": "Miscellaneous",
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment": "Retextured Iron Equipment",
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment.@Tooltip": "Changes the textures of Iron tools and armor to better match the styles of Rose and Netherite.",
+  "text.autoconfig.progression_reborn.option.misc.mob_spawn_equipment": "Mob Spawn Equipment",
+  "text.autoconfig.progression_reborn.option.misc.mob_spawn_equipment.@Tooltip": "Whether Copper and Rose equipment should appear naturally on mobs.",
 
   "text.autoconfig.progression_reborn.option.integrations": "Mod Integration",
   "text.autoconfig.progression_reborn.option.integrations.end_reborn": "End Reborn",

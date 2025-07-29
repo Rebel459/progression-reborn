@@ -3,9 +3,12 @@
   "package": "net.legacy.progression_reborn.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ArmorMaterialsMixin",
-    "ToolMaterialMixin",
-    "PlayerMixin"
+    "entity.MobMixin",
+    "entity.PiglinMixin",
+    "entity.PlayerMixin",
+    "entity.ZombieMixin",
+    "item.ArmorMaterialsMixin",
+    "item.ToolMaterialMixin"
   ],
   "injectors": {
     "defaultRequire": 1

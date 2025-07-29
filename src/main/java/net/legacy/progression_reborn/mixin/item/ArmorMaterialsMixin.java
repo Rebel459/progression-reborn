@@ -1,4 +1,4 @@
-package net.legacy.progression_reborn.mixin;
+package net.legacy.progression_reborn.mixin.item;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.Util;
@@ -18,7 +18,7 @@ import java.util.Map;
 
 import static net.minecraft.world.item.equipment.EquipmentAssets.*;
 
-@Mixin(value = ArmorMaterials.class, priority = 1001)
+@Mixin(value = ArmorMaterials.class)
 public interface ArmorMaterialsMixin {
 
     @WrapOperation

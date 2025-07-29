@@ -4,3 +4,6 @@ accessible field net/minecraft/client/data/models/ItemModelGenerators$TrimMateri
 accessible method net/minecraft/world/item/equipment/trim/TrimMaterials register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/network/chat/Style;Lnet/minecraft/world/item/equipment/trim/MaterialAssetGroup;)V
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeIconList ()Ljava/util/List;
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeMaterialList ()Ljava/util/List;
+accessible field net/minecraft/world/entity/Mob EQUIPMENT_POPULATION_ORDER Ljava/util/List;
+accessible method net/minecraft/world/entity/Mob populateDefaultEquipmentSlots (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
+accessible method net/minecraft/world/entity/monster/piglin/Piglin maybeWearArmor (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/util/RandomSource;)V
