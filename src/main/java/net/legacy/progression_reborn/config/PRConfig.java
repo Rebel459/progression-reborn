@@ -45,8 +45,10 @@ public class PRConfig implements ConfigData {
   }
 
   public static class MiscConfig {
+    @ConfigEntry.Category("config")
     @ConfigEntry.Gui.Tooltip
     public boolean retextured_iron_equipment = true;
+    @ConfigEntry.Category("config")
     @ConfigEntry.Gui.Tooltip
     public boolean mob_spawn_equipment = true;
   }
