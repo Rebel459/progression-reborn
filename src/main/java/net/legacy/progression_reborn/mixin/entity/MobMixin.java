@@ -69,7 +69,10 @@ public class MobMixin {
                         i = i - 2;
                         item = getEquipmentForSlotNether(equipmentSlot, i);
                         if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
-                    } else if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
+                    } else if (item != null) {
+                        i = i - 1;
+                        livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
+                    }
                 }
             }
         }
