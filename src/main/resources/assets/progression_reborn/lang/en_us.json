@@ -65,6 +65,8 @@
   "enchantment.progression_reborn.reforge": "Reforge",
   "enchantment.progression_reborn.reforge.desc": "Smelts certain block drops and has a low chance to provide unique bonus drops when doing so",
 
+  "subtitles.item.armor.equip_copper": "Copper armor clonks",
+
   "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
   "pack.progression_reborn.modified_overworld_ores": "Modified Overworld Ores",
   "pack.progression_reborn.modified_nether_ores": "Modified Nether Ores",

@@ -6,7 +6,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import org.jetbrains.annotations.NotNull;
 
 public class PRSounds {
@@ -24,6 +23,8 @@ public class PRSounds {
 
 	public static final SoundEvent ROSE_DOOR_TOGGLE = register("block.rose_door.toggle");
 	public static final SoundEvent ROSE_TRAPDOOR_TOGGLE = register("block.rose_trapdoor.toggle");
+
+	public static final Holder.Reference<SoundEvent> ARMOR_EQUIP_COPPER = registerForHolder("item.armor.equip_copper");
 
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {

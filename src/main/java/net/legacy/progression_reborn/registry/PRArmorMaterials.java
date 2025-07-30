@@ -1,27 +1,38 @@
 package net.legacy.progression_reborn.registry;
 
+import com.google.common.collect.Maps;
+import net.legacy.progression_reborn.sound.PRSounds;
 import net.legacy.progression_reborn.tag.PRItemTags;
-import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 
-import java.util.EnumMap;
+import java.util.Map;
 
 public interface PRArmorMaterials {
-    ArmorMaterial COPPER = new net.minecraft.world.item.equipment.ArmorMaterial(7, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 1);
-        enumMap.put(ArmorType.LEGGINGS, 3);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, PRItemTags.REPAIRS_COPPER_ARMOR, PREquipmentAssets.COPPER);
+    ArmorMaterial COPPER = new ArmorMaterial(
+            11,
+            makeDefense(1, 3, 4, 2, 6),
+            8,
+            PRSounds.ARMOR_EQUIP_COPPER,
+            0.0F,
+            0.0F,
+            PRItemTags.REPAIRS_COPPER_ARMOR,
+            PREquipmentAssets.COPPER
+    );
 
-    ArmorMaterial ROSE = new net.minecraft.world.item.equipment.ArmorMaterial(10, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 2);
-        enumMap.put(ArmorType.LEGGINGS, 4);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 2F, 0.0F, PRItemTags.REPAIRS_ROSE_ARMOR, PREquipmentAssets.ROSE);
+    ArmorMaterial ROSE = new ArmorMaterial(
+            10,
+            makeDefense(2, 4, 4, 2, 6),
+            25,
+            SoundEvents.ARMOR_EQUIP_GOLD,
+            2F,
+            0.0F,
+            PRItemTags.REPAIRS_ROSE_ARMOR,
+            PREquipmentAssets.ROSE
+    );
+
+    private static Map<ArmorType, Integer> makeDefense(int boots, int leggings, int chestplate, int helmet, int body) {
+        return Maps.newEnumMap(Map.of(ArmorType.BOOTS, boots, ArmorType.LEGGINGS, leggings, ArmorType.CHESTPLATE, chestplate, ArmorType.HELMET, helmet, ArmorType.BODY, body));
+    }
 }
