@@ -45,6 +45,10 @@ public class MobMixin {
                 ++i;
             }
 
+            if (random.nextFloat() < 0.095F) {
+                ++i;
+            }
+
             boolean bl = true;
             Iterator var6 = Mob.EQUIPMENT_POPULATION_ORDER.iterator();
 
@@ -59,11 +63,10 @@ public class MobMixin {
                 if (itemStack.isEmpty()) {
                     Item item = getEquipmentForSlot(equipmentSlot, i);
                     if (livingEntity.level().dimension() == Level.OVERWORLD) {
-                        i = i + 1;
                         item = getEquipmentForSlotOverworld(equipmentSlot, i);
                         if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
                     } else if (livingEntity.level().dimension() == Level.NETHER) {
-                        i = i - 1;
+                        i = i - 2;
                         item = getEquipmentForSlotNether(equipmentSlot, i);
                         if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
                     } else if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
