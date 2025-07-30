@@ -25,7 +25,7 @@ public class ToolMaterialMixin {
             if (tagKey == BlockTags.INCORRECT_FOR_IRON_TOOL && tagKey2 == ItemTags.IRON_TOOL_MATERIALS) {
                 return original.call(tagKey, 510, f, g, j, tagKey2);
             } else if (tagKey == BlockTags.INCORRECT_FOR_GOLD_TOOL && tagKey2 == ItemTags.GOLD_TOOL_MATERIALS) {
-                return original.call(tagKey, 73, 10f, g, j, tagKey2);
+                return original.call(tagKey, 73, 10F, g, j, tagKey2);
             } else {
                 return original.call(tagKey, i, f, g, j, tagKey2);
         }
