@@ -27,6 +27,7 @@ public final class PRBlockLootProvider extends FabricBlockLootTableProvider {
 	public void generate() {
 		this.dropSelf(PRBlocks.COPPER_BLOCK);
 		this.dropSelf(PRBlocks.ROSE_BLOCK);
+		this.dropSelf(PRBlocks.RAW_ROSE_BLOCK);
 		this.dropSelf(PRBlocks.POLISHED_ROSE);
 		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE);
 		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE_STAIRS);
