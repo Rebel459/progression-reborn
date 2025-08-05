@@ -28,7 +28,8 @@ public final class PRBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(PRBlocks.ROSE_LAMP)
 				.add(PRBlocks.ROSE_TRAPDOOR)
 				.add(PRBlocks.ROSE_DOOR)
-				.add(PRBlocks.ROSE_BLOCK);
+				.add(PRBlocks.ROSE_BLOCK)
+				.add(PRBlocks.RAW_ROSE_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
 				.add(PRBlocks.COPPER_BLOCK)
@@ -40,7 +41,8 @@ public final class PRBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(PRBlocks.ROSE_LAMP)
 				.add(PRBlocks.ROSE_TRAPDOOR)
 				.add(PRBlocks.ROSE_DOOR)
-				.add(PRBlocks.ROSE_BLOCK);
+				.add(PRBlocks.ROSE_BLOCK)
+				.add(PRBlocks.RAW_ROSE_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
 			.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS);
