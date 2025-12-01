@@ -225,9 +225,13 @@ public final class PRItems {
     );
 
     public static ItemAttributeModifiers createNetheriteHorseArmorAttributes() {
-        if (!ProgressionReborn.isEndRebornLoaded) return ItemAttributeModifiers.builder().build();
-        return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, 12, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+        if (!ProgressionReborn.isEndRebornLoaded) return ItemAttributeModifiers.builder()
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, ArmorMaterials.NETHERITE.defense().get(ArmorType.BODY), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ArmorMaterials.NETHERITE.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+                .build();
+        else return ItemAttributeModifiers.builder()
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, ArmorMaterials.NETHERITE.defense().get(ArmorType.BODY), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ArmorMaterials.NETHERITE.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(BURNING_TIME_ID, -0.80, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.BODY)
