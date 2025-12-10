@@ -10,7 +10,6 @@ import net.legacy.progression_reborn.registry.*;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.renderer.block.model.ItemModelGenerator;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
@@ -83,10 +82,14 @@ public final class PRModelProvider extends FabricModelProvider {
         generator.generateFlatItem(PRItems.ROSE_SPEAR, ModelTemplates.SPEAR_IN_HAND);
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
-		this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
-		this.registerArmorTrims(generator, Items.LEATHER_CHESTPLATE, EquipmentAssets.LEATHER, "chestplate", true);
-		this.registerArmorTrims(generator, Items.LEATHER_LEGGINGS, EquipmentAssets.LEATHER, "leggings", true);
-		this.registerArmorTrims(generator, Items.LEATHER_BOOTS, EquipmentAssets.LEATHER, "boots", true);
+        this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
+        this.registerArmorTrims(generator, Items.LEATHER_CHESTPLATE, EquipmentAssets.LEATHER, "chestplate", true);
+        this.registerArmorTrims(generator, Items.LEATHER_LEGGINGS, EquipmentAssets.LEATHER, "leggings", true);
+        this.registerArmorTrims(generator, Items.LEATHER_BOOTS, EquipmentAssets.LEATHER, "boots", true);
+        this.registerArmorTrims(generator, Items.COPPER_HELMET, EquipmentAssets.COPPER, "helmet", true);
+        this.registerArmorTrims(generator, Items.COPPER_CHESTPLATE, EquipmentAssets.COPPER, "chestplate", true);
+        this.registerArmorTrims(generator, Items.COPPER_LEGGINGS, EquipmentAssets.COPPER, "leggings", true);
+        this.registerArmorTrims(generator, Items.COPPER_BOOTS, EquipmentAssets.COPPER, "boots", true);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_HELMET, EquipmentAssets.CHAINMAIL, "helmet", false);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_CHESTPLATE, EquipmentAssets.CHAINMAIL, "chestplate", false);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_LEGGINGS, EquipmentAssets.CHAINMAIL, "leggings", false);

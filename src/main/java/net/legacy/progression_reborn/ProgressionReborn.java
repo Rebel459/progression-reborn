@@ -36,17 +36,19 @@ public class ProgressionReborn implements ModInitializer {
 		PRItems.init();
 		PRBlocks.init();
 		PRCreativeInventorySorting.init();
+        PRDataComponents.init();
         PRAliases.init();
-        PRTrimItemModels.init();
 		PRConfig.initClient();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 
-		ResourceManagerHelper.registerBuiltinResourcePack(
-                Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "progression_reborn_asset_overrides"), modContainer.get(),
-				Component.translatable("pack.progression_reborn.progression_reborn_asset_overrides"),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
+        if (PRConfig.get.misc.trim_materials) {
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "trim_material_assets"), modContainer.get(),
+                    Component.translatable("pack.progression_reborn.trim_material_assets"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
+            );
+        }
 
 		if (PRConfig.get.generation.modified_overworld_ores) {
 			ResourceManagerHelper.registerBuiltinResourcePack(

@@ -65,9 +65,7 @@
   "enchantment.progression_reborn.reforge": "Reforge",
   "enchantment.progression_reborn.reforge.desc": "Smelts certain block drops and has a low chance to provide unique bonus drops when doing so",
 
-  "subtitles.item.armor.equip_copper": "Copper armor clonks",
-
-  "pack.progression_reborn.progression_reborn_asset_overrides": "Progression Reborn Asset Overrides",
+  "pack.progression_reborn.trim_material_assets": "Trim Material Assets",
   "pack.progression_reborn.modified_overworld_ores": "Modified Overworld Ores",
   "pack.progression_reborn.modified_nether_ores": "Modified Nether Ores",
   "pack.progression_reborn.retextured_iron_equipment": "Retextured Iron Equipment",
@@ -90,7 +88,9 @@
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment": "Retextured Iron Equipment",
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment.@Tooltip": "Changes the textures of Iron tools and armor to better match the styles of Rose and Netherite.",
   "text.autoconfig.progression_reborn.option.misc.mob_spawn_equipment": "Mob Spawn Equipment",
-  "text.autoconfig.progression_reborn.option.misc.mob_spawn_equipment.@Tooltip": "Whether Copper and Rose equipment should appear naturally on mobs.",
+  "text.autoconfig.progression_reborn.option.misc.mob_spawn_equipment.@Tooltip": "Whether mob spawn equipment should be enhanced with support for additional Copper & Rose equipment.",
+  "text.autoconfig.progression_reborn.option.misc.trim_materials": "Trim Materials",
+  "text.autoconfig.progression_reborn.option.misc.trim_materials.@Tooltip": "Whether armour should be trimmable with Rose Ingots.",
 
   "text.autoconfig.progression_reborn.option.integrations": "Mod Integration",
   "text.autoconfig.progression_reborn.option.integrations.end_reborn": "End Reborn",
