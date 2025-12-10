@@ -1,21 +1,15 @@
 package net.legacy.progression_reborn.registry;
 
 import net.legacy.progression_reborn.PRConstants;
-import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.Util;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
-import net.minecraft.world.item.component.ItemAttributeModifiers;
-import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
 import org.jetbrains.annotations.NotNull;
 
@@ -106,30 +100,6 @@ public final class PRItems {
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );
 
-    // Tools
-    public static final Item COPPER_SWORD = register("copper_sword",
-            Item::new,
-            new Properties()
-                    .sword(PRToolMaterial.COPPER, 3f, -2.4f)
-    );
-    public static final Item COPPER_PICKAXE = register("copper_pickaxe",
-            Item::new,
-            new Properties()
-                    .pickaxe(PRToolMaterial.COPPER, 1f, -2.8f)
-    );
-    public static final AxeItem COPPER_AXE = register("copper_axe",
-            (properties) -> new AxeItem(PRToolMaterial.COPPER, 6f, -3.1f, properties), (
-            new Properties()
-    ));
-    public static final ShovelItem COPPER_SHOVEL = register("copper_shovel",
-            (properties) -> new ShovelItem(PRToolMaterial.COPPER, 1.5f, -3f, properties), (
-            new Properties()
-    ));
-    public static final HoeItem COPPER_HOE = register("copper_hoe",
-            (properties) -> new HoeItem(PRToolMaterial.COPPER, -2f, -1f, properties), (
-            new Properties()
-    ));
-
     public static final Item ROSE_SWORD = register("rose_sword",
             Item::new,
             new Properties()
@@ -154,36 +124,15 @@ public final class PRItems {
     ));
     public static final HoeItem ROSE_HOE = register("rose_hoe",
             (properties) -> new HoeItem(PRToolMaterial.ROSE, -2f, -1f, properties), (
-            new Properties()
-                    .fireResistant()
-    ));
-
-    // Armor
-    public static final Item COPPER_HELMET = register("copper_helmet",
+                    new Properties()
+                            .fireResistant()
+            ));
+    public static final Item ROSE_SPEAR = register("rose_spear",
             Item::new,
-            new Properties()
-                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.HELMET)
-    );
-    public static final Item COPPER_CHESTPLATE = register("copper_chestplate",
-            Item::new,
-            new Properties()
-                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.CHESTPLATE)
-    );
-    public static final Item COPPER_LEGGINGS = register("copper_leggings",
-            Item::new,
-            new Properties()
-                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.LEGGINGS)
-    );
-    public static final Item COPPER_BOOTS = register("copper_boots",
-            Item::new,
-            new Properties()
-                    .humanoidArmor(PRArmorMaterials.COPPER, ArmorType.BOOTS)
-    );
-    public static final Item COPPER_HORSE_ARMOR = register("copper_horse_armor",
-            Item::new,
-            new Properties()
-                    .horseArmor(PRArmorMaterials.COPPER)
-    );
+                    new Properties()
+                            .fireResistant()
+                            .spear(PRToolMaterial.ROSE, 0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 5.1F, 11.25F, 4.6F)
+            );
 
     public static final Item ROSE_HELMET = register("rose_helmet",
             Item::new,
@@ -216,47 +165,19 @@ public final class PRItems {
                     .fireResistant()
     );
 
-    public static final Item NETHERITE_HORSE_ARMOR = register("netherite_horse_armor",
-            Item::new,
-            new Properties()
-                    .horseArmor(ArmorMaterials.NETHERITE)
-                    .attributes(createNetheriteHorseArmorAttributes())
-                    .fireResistant()
-    );
-
-    public static ItemAttributeModifiers createNetheriteHorseArmorAttributes() {
-        if (!ProgressionReborn.isEndRebornLoaded) return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, ArmorMaterials.NETHERITE.defense().get(ArmorType.BODY), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ArmorMaterials.NETHERITE.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .build();
-        else return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, ArmorMaterials.NETHERITE.defense().get(ArmorType.BODY), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ArmorMaterials.NETHERITE.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
-                .add(Attributes.BURNING_TIME, new AttributeModifier(BURNING_TIME_ID, -0.80, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.BODY)
-                .build();
-    }
-
-    public static final ResourceLocation ARMOR_ID = PRConstants.id("armor");
-    public static final ResourceLocation ARMOR_TOUGHNESS_ID = PRConstants.id("armor_toughness");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_ID = PRConstants.id("knockback_resistance");
-
-    public static final ResourceLocation BURNING_TIME_ID = PRConstants.id("burning_time");
-
     public static void init() {
     }
 
     private static @NotNull <T extends Item> T register(String name, @NotNull Function<Properties, Item> function, Item.@NotNull Properties properties) {
-        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, net.legacy.progression_reborn.PRConstants.id(name)), function, properties);
+        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, PRConstants.id(name)), function, properties);
     }
 
     public static SmithingTemplateItem createIronUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties
@@ -265,10 +186,10 @@ public final class PRItems {
 
     public static SmithingTemplateItem createRoseUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties

@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smithing_transform",
     "template": "progression_reborn:iron_upgrade_smithing_template",
-    "base": "progression_reborn:copper_pickaxe",
+    "base": "minecraft:copper_pickaxe",
     "addition": "minecraft:iron_ingot",
     "result": {
         "id": "minecraft:iron_pickaxe"

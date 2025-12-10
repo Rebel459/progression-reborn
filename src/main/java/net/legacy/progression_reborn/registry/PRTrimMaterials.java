@@ -12,16 +12,14 @@ import net.minecraft.world.item.equipment.trim.TrimMaterials;
 import java.util.List;
 
 public class PRTrimMaterials {
-    public static final List<String> TRIM_MATERIALS = List.of("rose_ingot", "rose_ingot_darker", "copper_darker");
+    public static final List<String> TRIM_MATERIALS = List.of("rose_ingot", "rose_ingot_darker");
 
     public static final ResourceKey<TrimMaterial> ROSE = register("rose_ingot");
     public static final ResourceKey<TrimMaterial> ROSE_DARKER = register("rose_ingot_darker");
-    public static final ResourceKey<TrimMaterial> COPPER_DARKER = register("copper_darker");
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         TrimMaterials.register(context, ROSE, Style.EMPTY.withColor(12876948), PRModelProvider.ROSE_INGOT);
         TrimMaterials.register(context, ROSE_DARKER, Style.EMPTY.withColor(12876948), PRModelProvider.ROSE_INGOT_DARKER);
-        TrimMaterials.register(context, COPPER_DARKER, Style.EMPTY.withColor(11823181), PRModelProvider.COPPER_DARKER);
     }
 
     private static ResourceKey<TrimMaterial> register(String name) {

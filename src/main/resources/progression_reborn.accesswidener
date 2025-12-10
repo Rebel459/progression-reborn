@@ -7,3 +7,4 @@ accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteU
 accessible field net/minecraft/world/entity/Mob EQUIPMENT_POPULATION_ORDER Ljava/util/List;
 accessible method net/minecraft/world/entity/Mob populateDefaultEquipmentSlots (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
 accessible method net/minecraft/world/entity/monster/piglin/Piglin maybeWearArmor (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/util/RandomSource;)V
+accessible method net/minecraft/world/item/equipment/ArmorMaterials makeDefense (IIIII)Ljava/util/Map;

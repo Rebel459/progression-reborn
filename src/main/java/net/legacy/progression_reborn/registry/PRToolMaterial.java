@@ -6,6 +6,7 @@ import net.minecraft.core.HolderSet;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -23,7 +24,6 @@ public record PRToolMaterial(
         TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems
 ) {
 
-    public static final ToolMaterial COPPER = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 190, 5.0F, 1.0F, 13, PRItemTags.COPPER_TOOL_MATERIALS);
     public static final ToolMaterial ROSE = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 281, 10.0F, 2.0F, 22, PRItemTags.ROSE_TOOL_MATERIALS);
 
     private Item.Properties applyCommonProperties(Item.Properties properties) {

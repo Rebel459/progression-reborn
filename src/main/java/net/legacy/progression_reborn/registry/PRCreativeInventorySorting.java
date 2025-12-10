@@ -1,42 +1,34 @@
 package net.legacy.progression_reborn.registry;
 
-import net.frozenblock.lib.item.api.FrozenCreativeTabs;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class PRCreativeInventorySorting {
 
 	public static void init() {
 
 		// Combat
-		addAfterInCombat(Items.CHAINMAIL_BOOTS, PRItems.COPPER_HELMET);
-		addAfterInCombat(PRItems.COPPER_HELMET, PRItems.COPPER_CHESTPLATE);
-		addAfterInCombat(PRItems.COPPER_CHESTPLATE, PRItems.COPPER_LEGGINGS);
-		addAfterInCombat(PRItems.COPPER_LEGGINGS, PRItems.COPPER_BOOTS);
-
 		addAfterInCombat(Items.GOLDEN_BOOTS, PRItems.ROSE_HELMET);
 		addAfterInCombat(PRItems.ROSE_HELMET, PRItems.ROSE_CHESTPLATE);
 		addAfterInCombat(PRItems.ROSE_CHESTPLATE, PRItems.ROSE_LEGGINGS);
 		addAfterInCombat(PRItems.ROSE_LEGGINGS, PRItems.ROSE_BOOTS);
 
-		addAfterInCombat(Items.STONE_SWORD, PRItems.COPPER_SWORD); // shovel pickaxe axe hoe
-		addAfterInCombat(Items.STONE_AXE, PRItems.COPPER_AXE);
-
 		addAfterInCombat(Items.GOLDEN_SWORD, PRItems.ROSE_SWORD);
-		addAfterInCombat(Items.GOLDEN_AXE, PRItems.ROSE_AXE);
+        addAfterInCombat(Items.GOLDEN_AXE, PRItems.ROSE_AXE);
+        addAfterInCombat(Items.GOLDEN_SPEAR, PRItems.ROSE_SPEAR);
 
-		addAfterInCombat(Items.LEATHER_HORSE_ARMOR, PRItems.COPPER_HORSE_ARMOR);
 		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PRItems.ROSE_HORSE_ARMOR);
-		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, PRItems.NETHERITE_HORSE_ARMOR);
 
 		// Tools and Utilities
-		addAfterInToolsAndUtilities(Items.STONE_HOE, PRItems.COPPER_SHOVEL);
-		addAfterInToolsAndUtilities(PRItems.COPPER_SHOVEL, PRItems.COPPER_PICKAXE);
-		addAfterInToolsAndUtilities(PRItems.COPPER_PICKAXE, PRItems.COPPER_AXE);
-		addAfterInToolsAndUtilities(PRItems.COPPER_AXE, PRItems.COPPER_HOE);
-
 		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PRItems.ROSE_SHOVEL);
 		addAfterInToolsAndUtilities(PRItems.ROSE_SHOVEL, PRItems.ROSE_PICKAXE);
 		addAfterInToolsAndUtilities(PRItems.ROSE_PICKAXE, PRItems.ROSE_AXE);
@@ -89,62 +81,149 @@ public class PRCreativeInventorySorting {
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.NATURAL_BLOCKS);
+		addAfter(comparedItem, item, CreativeModeTabs.NATURAL_BLOCKS);
 	}
 
 	private static void addBeforeInBuildingBlocks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.BUILDING_BLOCKS);
+		addBefore(comparedItem, item, CreativeModeTabs.BUILDING_BLOCKS);
 	}
 
 	private static void addAfterInBuildingBlocks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.BUILDING_BLOCKS);
+		addAfter(comparedItem, item, CreativeModeTabs.BUILDING_BLOCKS);
 	}
 
 	private static void addAfterInRedstone(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.REDSTONE_BLOCKS);
+		addAfter(comparedItem, item, CreativeModeTabs.REDSTONE_BLOCKS);
 	}
 
 	private static void addAfterInFunctionalBlocks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.FUNCTIONAL_BLOCKS);
+		addAfter(comparedItem, item, CreativeModeTabs.FUNCTIONAL_BLOCKS);
 	}
 
 	private static void addBeforeInRedstoneBlocks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.REDSTONE_BLOCKS);
+		addBefore(comparedItem, item, CreativeModeTabs.REDSTONE_BLOCKS);
 	}
 
 	private static void addInToolsAndUtilities(ItemLike item) {
-		FrozenCreativeTabs.add(item, CreativeModeTabs.TOOLS_AND_UTILITIES);
+		add(item, CreativeModeTabs.TOOLS_AND_UTILITIES);
 	}
 
 	private static void addAfterInToolsAndUtilities(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.TOOLS_AND_UTILITIES);
+		addAfter(comparedItem, item, CreativeModeTabs.TOOLS_AND_UTILITIES);
 	}
 
 	private static void addBeforeInIngredients(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.INGREDIENTS);
+		addBefore(comparedItem, item, CreativeModeTabs.INGREDIENTS);
 	}
 
 	private static void addAfterInIngredients(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.INGREDIENTS);
+		addAfter(comparedItem, item, CreativeModeTabs.INGREDIENTS);
 	}
 
 	private static void addBeforeInFoodAndDrinks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.FOOD_AND_DRINKS);
+		addBefore(comparedItem, item, CreativeModeTabs.FOOD_AND_DRINKS);
 	}
 
 	private static void addAfterInFoodAndDrinks(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.FOOD_AND_DRINKS);
+		addAfter(comparedItem, item, CreativeModeTabs.FOOD_AND_DRINKS);
 	}
 
 	private static void addAfterInCombat(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.COMBAT);
+		addAfter(comparedItem, item, CreativeModeTabs.COMBAT);
 	}
 
 	private static void addBeforeInSpawnEggs(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.SPAWN_EGGS);
+		addBefore(comparedItem, item, CreativeModeTabs.SPAWN_EGGS);
 	}
 
 	private static void addAfterInSpawnEggs(ItemLike comparedItem, ItemLike item) {
-		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.SPAWN_EGGS);
+		addAfter(comparedItem, item, CreativeModeTabs.SPAWN_EGGS);
 	}
+
+    public static void add(ItemLike item, ResourceKey<CreativeModeTab> @NotNull ... tabs) {
+        if (item == null || item.asItem() == null) return;
+        for (ResourceKey<CreativeModeTab> tab : tabs) {
+            ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> {
+                var stack = new ItemStack(item);
+                stack.setCount(1);
+                entries.accept(stack);
+            });
+        }
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addBefore(ItemLike comparedItem, ItemLike item, ResourceKey<CreativeModeTab>... tabs) {
+        addBefore(comparedItem, item, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addBefore(ItemLike comparedItem, ItemLike item, CreativeModeTab.TabVisibility tabVisibility, ResourceKey<CreativeModeTab> @NotNull ... tabs) {
+        if (comparedItem == null || comparedItem.asItem() == null || item == null || item.asItem() == null) return;
+        for (ResourceKey<CreativeModeTab> tab : tabs) {
+            var stack = new ItemStack(item);
+            stack.setCount(1);
+            List<ItemStack> list = List.of(stack);
+            ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.addBefore(comparedItem, list, tabVisibility));
+        }
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addBefore(ItemLike comparedItem, ItemLike item, String path, CreativeModeTab.TabVisibility tabVisibility, ResourceKey<CreativeModeTab> @NotNull ... tabs) {
+        if (comparedItem == null || comparedItem.asItem() == null || item == null || item.asItem() == null) return;
+        for (ResourceKey<CreativeModeTab> tab : tabs) {
+            var stack = new ItemStack(item);
+            stack.setCount(1);
+            List<ItemStack> list = List.of(stack);
+            ItemGroupEvents.modifyEntriesEvent(tab).register((entries) -> {
+                entries.addBefore(comparedItem, list, tabVisibility);
+            });
+        }
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addAfter(ItemLike comparedItem, ItemLike item, ResourceKey<CreativeModeTab>... tabs) {
+        addAfter(comparedItem, item, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addAfter(ItemLike comparedItem, ItemLike item, CreativeModeTab.TabVisibility tabVisibility, ResourceKey<CreativeModeTab> @NotNull ... tabs) {
+        if (comparedItem == null || comparedItem.asItem() == null || item == null || item.asItem() == null) return;
+        for (ResourceKey<CreativeModeTab> tab : tabs) {
+            var stack = new ItemStack(item);
+            stack.setCount(1);
+            List<ItemStack> list = List.of(stack);
+            ItemGroupEvents.modifyEntriesEvent(tab).register((entries) -> entries.addAfter(comparedItem, list, tabVisibility));
+        }
+    }
+
+    /**
+     * @param comparedItem	The item that the added item is compared to
+     * @param item	The item that is going to be added
+     */
+    public static void addAfter(ItemLike comparedItem, ItemLike item, String path, CreativeModeTab.TabVisibility tabVisibility, ResourceKey<CreativeModeTab> @NotNull ... tabs) {
+        if (comparedItem == null || comparedItem.asItem() == null || item == null || item.asItem() == null) return;
+        for (ResourceKey<CreativeModeTab> tab : tabs) {
+            var stack = new ItemStack(item);
+            stack.setCount(1);
+            List<ItemStack> list = List.of(stack);
+            ItemGroupEvents.modifyEntriesEvent(tab).register((entries) -> {
+                entries.addAfter(comparedItem, list, tabVisibility);
+            });
+        }
+    }
 }

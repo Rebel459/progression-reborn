@@ -87,7 +87,7 @@ public class MobMixin {
                 if (chance == 0) {
                     return Items.LEATHER_HELMET;
                 } else if (chance == 1) {
-                    return PRItems.COPPER_HELMET;
+                    return Items.COPPER_HELMET;
                 } else if (chance == 2) {
                     return Items.GOLDEN_HELMET;
                 } else if (chance == 3) {
@@ -101,7 +101,7 @@ public class MobMixin {
                 if (chance == 0) {
                     return Items.LEATHER_CHESTPLATE;
                 } else if (chance == 1) {
-                    return PRItems.COPPER_CHESTPLATE;
+                    return Items.COPPER_CHESTPLATE;
                 } else if (chance == 2) {
                     return Items.GOLDEN_CHESTPLATE;
                 } else if (chance == 3) {
@@ -115,7 +115,7 @@ public class MobMixin {
                 if (chance == 0) {
                     return Items.LEATHER_LEGGINGS;
                 } else if (chance == 1) {
-                    return PRItems.COPPER_LEGGINGS;
+                    return Items.COPPER_LEGGINGS;
                 } else if (chance == 2) {
                     return Items.GOLDEN_LEGGINGS;
                 } else if (chance == 3) {
@@ -129,7 +129,7 @@ public class MobMixin {
                 if (chance == 0) {
                     return Items.LEATHER_BOOTS;
                 } else if (chance == 1) {
-                    return PRItems.COPPER_BOOTS;
+                    return Items.COPPER_BOOTS;
                 } else if (chance == 2) {
                     return Items.GOLDEN_BOOTS;
                 } else if (chance == 3) {

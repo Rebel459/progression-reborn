@@ -40,7 +40,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "progression_reborn:copper_horse_armor",
+          "name": "minecraft:copper_horse_armor",
           "weight": 10
         },
         {

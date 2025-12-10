@@ -23,7 +23,7 @@
   "rewards": {
     "experience": 0,
     "recipes": [
-      "progression_reborn:netherite_horse_armor_smithing"
+      "minecraft:netherite_horse_armor_smithing"
     ]
   }
 }

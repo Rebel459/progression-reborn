@@ -1,12 +1,11 @@
 package net.legacy.progression_reborn.mixin.entity;
 
 import net.legacy.progression_reborn.config.PRConfig;
-import net.legacy.progression_reborn.registry.PRItems;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,8 +22,10 @@ public class ZombieMixin {
         LivingEntity livingEntity = LivingEntity.class.cast(this);
         int r = random.nextInt(3);
         if (r == 0 && livingEntity.getItemBySlot(EquipmentSlot.MAINHAND).is(Items.IRON_SWORD))
-            livingEntity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(PRItems.COPPER_SWORD));
+            livingEntity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.COPPER_SWORD));
         else if (r == 0 && livingEntity.getItemBySlot(EquipmentSlot.MAINHAND).is(Items.IRON_SHOVEL))
-            livingEntity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(PRItems.COPPER_SHOVEL));
+            livingEntity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.COPPER_SHOVEL));
+        else if (r == 0 && livingEntity.getItemBySlot(EquipmentSlot.MAINHAND).is(Items.IRON_SPEAR))
+            livingEntity.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.COPPER_SPEAR));
     }
 }

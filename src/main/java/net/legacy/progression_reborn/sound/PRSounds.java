@@ -4,7 +4,7 @@ import net.legacy.progression_reborn.PRConstants;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import org.jetbrains.annotations.NotNull;
 
@@ -24,23 +24,21 @@ public class PRSounds {
 	public static final SoundEvent ROSE_DOOR_TOGGLE = register("block.rose_door.toggle");
 	public static final SoundEvent ROSE_TRAPDOOR_TOGGLE = register("block.rose_trapdoor.toggle");
 
-	public static final Holder.Reference<SoundEvent> ARMOR_EQUIP_COPPER = registerForHolder("item.armor.equip_copper");
-
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {
-		ResourceLocation resourceLocation = PRConstants.id(string);
-		return Registry.register(BuiltInRegistries.SOUND_EVENT, resourceLocation, SoundEvent.createVariableRangeEvent(resourceLocation));
+        Identifier identifier = PRConstants.id(string);
+		return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(String id) {
 		return registerForHolder(PRConstants.id(id));
 	}
 
-	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(ResourceLocation id) {
+	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(Identifier id) {
 		return registerForHolder(id, id);
 	}
 
-	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(ResourceLocation id, ResourceLocation soundId) {
+	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(Identifier id, Identifier soundId) {
 		return Registry.registerForHolder(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(soundId));
 	}
 

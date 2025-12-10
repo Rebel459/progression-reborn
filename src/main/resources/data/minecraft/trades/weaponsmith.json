@@ -74,7 +74,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_axe"
+                "name": "minecraft:copper_axe"
               },
               "trader_experience": 1
             },
@@ -100,7 +100,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_sword",
+                "name": "minecraft:copper_sword",
                 "functions": [
                   {
                     "function": "minecraft:enchant_with_levels",

@@ -74,7 +74,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_leggings"
+                "name": "minecraft:copper_leggings"
               },
               "trader_experience": 1
             },
@@ -92,7 +92,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_boots"
+                "name": "minecraft:copper_boots"
               },
               "trader_experience": 1
             },
@@ -110,7 +110,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_helmet"
+                "name": "minecraft:copper_helmet"
               },
               "trader_experience": 1
             },
@@ -128,7 +128,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_chestplate"
+                "name": "minecraft:copper_chestplate"
               },
               "trader_experience": 1
             }

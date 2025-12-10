@@ -19,32 +19,27 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		this.getOrCreateTagBuilder(PRItemTags.COPPER_TOOL_MATERIALS)
-				.add(Items.COPPER_INGOT);
-		this.getOrCreateTagBuilder(PRItemTags.REPAIRS_COPPER_ARMOR)
-				.add(Items.COPPER_INGOT);
-
-		this.getOrCreateTagBuilder(PRItemTags.ROSE_TOOL_MATERIALS)
+		this.valueLookupBuilder(PRItemTags.ROSE_TOOL_MATERIALS)
 				.add(PRItems.ROSE_INGOT)
 				.add(PRItems.ROSE_ALLOY);
-		this.getOrCreateTagBuilder(PRItemTags.REPAIRS_ROSE_ARMOR)
+		this.valueLookupBuilder(PRItemTags.REPAIRS_ROSE_ARMOR)
 				.add(PRItems.ROSE_INGOT)
 				.add(PRItems.ROSE_ALLOY);
 
-		this.getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
+		this.valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
 				.add(PRItems.ROSE_INGOT);
 
-		this.getOrCreateTagBuilder(ItemTags.IRON_TOOL_MATERIALS)
+		this.valueLookupBuilder(ItemTags.IRON_TOOL_MATERIALS)
 				.add(PRItems.IRON_ALLOY);
-		this.getOrCreateTagBuilder(ItemTags.REPAIRS_IRON_ARMOR)
+		this.valueLookupBuilder(ItemTags.REPAIRS_IRON_ARMOR)
 				.add(PRItems.IRON_ALLOY);
 
-		this.getOrCreateTagBuilder(ItemTags.NETHERITE_TOOL_MATERIALS)
+		this.valueLookupBuilder(ItemTags.NETHERITE_TOOL_MATERIALS)
 				.add(Items.NETHERITE_SCRAP);
-		this.getOrCreateTagBuilder(ItemTags.REPAIRS_NETHERITE_ARMOR)
+		this.valueLookupBuilder(ItemTags.REPAIRS_NETHERITE_ARMOR)
 				.add(Items.NETHERITE_SCRAP);
 
-		this.getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
+		this.valueLookupBuilder(ItemTags.PIGLIN_LOVED)
 				.add(PRItems.RAW_GOLD_NUGGET)
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT)
 				.add(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE)
@@ -59,60 +54,49 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRItems.ROSE_BOOTS)
 				.add(PRItems.ROSE_HORSE_ARMOR);
 
-		this.getOrCreateTagBuilder(ItemTags.PIGLIN_SAFE_ARMOR)
+		this.valueLookupBuilder(ItemTags.PIGLIN_SAFE_ARMOR)
 				.add(PRItems.ROSE_HELMET)
 				.add(PRItems.ROSE_CHESTPLATE)
 				.add(PRItems.ROSE_LEGGINGS)
 				.add(PRItems.ROSE_BOOTS);
 
-		this.getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-				.add(PRItems.COPPER_HELMET)
-				.add(PRItems.COPPER_CHESTPLATE)
-				.add(PRItems.COPPER_LEGGINGS)
-				.add(PRItems.COPPER_BOOTS)
+		this.valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
 				.add(PRItems.ROSE_HELMET)
 				.add(PRItems.ROSE_CHESTPLATE)
 				.add(PRItems.ROSE_LEGGINGS)
 				.add(PRItems.ROSE_BOOTS);
 
-		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
-				.add(PRItems.COPPER_HELMET)
+		this.valueLookupBuilder(ItemTags.HEAD_ARMOR)
 				.add(PRItems.ROSE_HELMET);
-		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-				.add(PRItems.COPPER_CHESTPLATE)
+		this.valueLookupBuilder(ItemTags.CHEST_ARMOR)
 				.add(PRItems.ROSE_CHESTPLATE);
-		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
-				.add(PRItems.COPPER_LEGGINGS)
+		this.valueLookupBuilder(ItemTags.LEG_ARMOR)
 				.add(PRItems.ROSE_LEGGINGS);
-		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
-				.add(PRItems.COPPER_BOOTS)
+		this.valueLookupBuilder(ItemTags.FOOT_ARMOR)
 				.add(PRItems.ROSE_BOOTS);
 
-		this.getOrCreateTagBuilder(ItemTags.SWORDS)
-				.add(PRItems.COPPER_SWORD)
+		this.valueLookupBuilder(ItemTags.SWORDS)
 				.add(PRItems.ROSE_SWORD);
-		this.getOrCreateTagBuilder(ItemTags.AXES)
-				.add(PRItems.COPPER_AXE)
+		this.valueLookupBuilder(ItemTags.AXES)
 				.add(PRItems.ROSE_AXE);
-		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
-				.add(PRItems.COPPER_PICKAXE)
+		this.valueLookupBuilder(ItemTags.PICKAXES)
 				.add(PRItems.ROSE_PICKAXE);
-		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
-				.add(PRItems.COPPER_SHOVEL)
+		this.valueLookupBuilder(ItemTags.SHOVELS)
 				.add(PRItems.ROSE_SHOVEL);
-		this.getOrCreateTagBuilder(ItemTags.HOES)
-				.add(PRItems.COPPER_HOE)
-				.add(PRItems.ROSE_HOE);
+        this.valueLookupBuilder(ItemTags.HOES)
+                .add(PRItems.ROSE_HOE);
+        this.valueLookupBuilder(ItemTags.SPEARS)
+                .add(PRItems.ROSE_SPEAR);
 
-		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+		this.valueLookupBuilder(ItemTags.TRIM_MATERIALS)
 				.add(PRItems.ROSE_INGOT);
 
-		this.getOrCreateTagBuilder(ItemTags.HORSE_FOOD)
+		this.valueLookupBuilder(ItemTags.HORSE_FOOD)
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
-		this.getOrCreateTagBuilder(ItemTags.HORSE_TEMPT_ITEMS)
+		this.valueLookupBuilder(ItemTags.HORSE_TEMPT_ITEMS)
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
 
-		this.getOrCreateTagBuilder(PRItemTags.STONE_PICKAXES)
+		this.valueLookupBuilder(PRItemTags.STONE_PICKAXES)
 				.add(Items.STONE_PICKAXE);
 	}
 

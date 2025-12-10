@@ -16,15 +16,15 @@
   "rewards": {
     "experience": 0,
     "recipes": [
-      "progression_reborn:copper_sword",
-      "progression_reborn:copper_axe",
-      "progression_reborn:copper_pickaxe",
-      "progression_reborn:copper_shovel",
-      "progression_reborn:copper_hoe",
-      "progression_reborn:copper_helmet",
-      "progression_reborn:copper_chestplate",
-      "progression_reborn:copper_leggings",
-      "progression_reborn:copper_boots",
+      "minecraft:copper_sword",
+      "minecraft:copper_axe",
+      "minecraft:copper_pickaxe",
+      "minecraft:copper_shovel",
+      "minecraft:copper_hoe",
+      "minecraft:copper_helmet",
+      "minecraft:copper_chestplate",
+      "minecraft:copper_leggings",
+      "minecraft:copper_boots",
       "progression_reborn:copper_block"
     ]
   }

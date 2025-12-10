@@ -244,7 +244,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_axe",
+                "name": "minecraft:copper_axe",
                 "functions": [
                   {
                     "function": "minecraft:enchant_with_levels",
@@ -288,7 +288,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_shovel",
+                "name": "minecraft:copper_shovel",
                 "functions": [
                   {
                     "function": "minecraft:enchant_with_levels",
@@ -332,7 +332,7 @@
               },
               "result": {
                 "type": "minecraft:item",
-                "name": "progression_reborn:copper_pickaxe",
+                "name": "minecraft:copper_pickaxe",
                 "functions": [
                   {
                     "function": "minecraft:enchant_with_levels",

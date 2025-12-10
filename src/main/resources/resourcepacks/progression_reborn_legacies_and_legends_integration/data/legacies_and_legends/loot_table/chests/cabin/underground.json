@@ -54,7 +54,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "progression_reborn:copper_pickaxe",
+          "name": "minecraft:copper_pickaxe",
           "weight": 3,
           "functions": []
         },

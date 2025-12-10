@@ -3,9 +3,9 @@ package net.legacy.progression_reborn.registry;
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.legacy.progression_reborn.sound.PRSounds;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.sounds.SoundEvents;
 
 public class PRBlockSetType {
 

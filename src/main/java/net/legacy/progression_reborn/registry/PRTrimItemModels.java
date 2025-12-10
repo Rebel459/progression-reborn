@@ -1,19 +1,16 @@
 package net.legacy.progression_reborn.registry;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import net.legacy.progression_reborn.PRConstants;
-import net.minecraft.resources.ResourceLocation;
-import net.ramixin.mixson.inline.EventContext;
+import net.minecraft.resources.Identifier;
+/*import net.ramixin.mixson.inline.EventContext;
 import net.ramixin.mixson.inline.Mixson;
-import net.ramixin.mixson.inline.MixsonEvent;
+import net.ramixin.mixson.inline.MixsonEvent;*/
 
 import java.util.List;
 
 public final class PRTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
-    private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
+    private static final List<String> ARMOR_MATERIALS = List.of("leather", "copper", "chainmail", "iron", "golden", "diamond", "netherite");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private PRTrimItemModels() {
@@ -37,7 +34,7 @@ public final class PRTrimItemModels {
     }
 
     private static void registerAddTrimsToArmor(String armor, String armorMaterial) {
-        Mixson.registerEvent(
+/*        Mixson.registerEvent(
                 Mixson.DEFAULT_PRIORITY,
                 "minecraft:items/" + armorMaterial + "_" + armor,
                 PRConstants.MOD_ID + ":add_trims_to_" + armorMaterial + "_" + armor,
@@ -67,11 +64,11 @@ public final class PRTrimItemModels {
                     }
                 },
                 false
-        );
+        );*/
     }
 
     private static void registerAddTrimsToAtlas(String name) {
-        Mixson.registerEvent(
+/*        Mixson.registerEvent(
                 Mixson.DEFAULT_PRIORITY,
                 "minecraft:atlases/" + name,
                 PRConstants.MOD_ID + ":add_trims_to_" + name + "_atlas",
@@ -103,18 +100,18 @@ public final class PRTrimItemModels {
                     }
                 },
                 false
-        );
+        );*/
     }
 
-    private static ResourceLocation trimMaterialId(String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, trim);
+    private static Identifier trimMaterialId(String trim) {
+        return Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, trim);
     }
 
-    private static ResourceLocation itemModelId(String armor, String armorMaterial, String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "item/" + armorMaterial + "_" + armor + "_" + trim + "_trim");
+    private static Identifier itemModelId(String armor, String armorMaterial, String trim) {
+        return Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "item/" + armorMaterial + "_" + armor + "_" + trim + "_trim");
     }
 
-    private static ResourceLocation paletteId(String trim) {
-        return ResourceLocation.fromNamespaceAndPath(PRConstants.MOD_ID, "trims/color_palettes/" + trim);
+    private static Identifier paletteId(String trim) {
+        return Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "trims/color_palettes/" + trim);
     }
 }
