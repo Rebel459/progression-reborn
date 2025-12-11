@@ -39,9 +39,9 @@ public class PRCreativeInventorySorting {
 		addAfterInFoodAndDrinks(Items.GOLDEN_CARROT, PRItems.ENCHANTED_GOLDEN_CARROT);
 
 		// Ingredients
-		addAfterInIngredients(Items.CHARCOAL, PRItems.RAW_IRON_NUGGET);
-		addAfterInIngredients(PRItems.RAW_IRON_NUGGET, PRItems.RAW_COPPER_NUGGET);
-		addAfterInIngredients(PRItems.RAW_COPPER_NUGGET, PRItems.RAW_GOLD_NUGGET);
+		addAfterInIngredients(Items.CHARCOAL, PRItems.RAW_COPPER_NUGGET);
+		addAfterInIngredients(PRItems.RAW_COPPER_NUGGET, PRItems.RAW_IRON_NUGGET);
+		addAfterInIngredients(PRItems.RAW_IRON_NUGGET, PRItems.RAW_GOLD_NUGGET);
 		addAfterInIngredients(PRItems.RAW_GOLD_NUGGET, PRItems.RAW_ROSE_NUGGET);
 
 		addAfterInIngredients(Items.RAW_GOLD, PRItems.RAW_ROSE);
