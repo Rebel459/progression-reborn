@@ -5,7 +5,7 @@
     "minecraft:copper_ingot"
   ],
   "result": {
-    "id": "progression_reborn:copper_nugget",
+    "id": "minecraft:copper_nugget",
     "count": 9
   }
 }

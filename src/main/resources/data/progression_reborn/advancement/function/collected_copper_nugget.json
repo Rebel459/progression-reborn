@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "progression_reborn:copper_nugget"
+            "items": "minecraft:copper_nugget"
           }
         ]
       }
@@ -43,6 +43,6 @@
     }
   },
   "rewards": {
-    "function": "progression_reborn:copper_nugget_collection"
+    "function": "minecraft:copper_nugget_collection"
   }
 }

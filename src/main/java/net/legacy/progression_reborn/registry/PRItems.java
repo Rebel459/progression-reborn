@@ -39,11 +39,6 @@ public final class PRItems {
                     .stacksTo(64)
                     .fireResistant()
     );
-    public static final Item COPPER_NUGGET = register("copper_nugget",
-            Item::new,
-            new Properties()
-                    .stacksTo(64)
-    );
     public static final Item ROSE_NUGGET = register("rose_nugget",
             Item::new,
             new Properties()
@@ -113,25 +108,28 @@ public final class PRItems {
     );
     public static final AxeItem ROSE_AXE = register("rose_axe",
             (properties) -> new AxeItem(PRToolMaterial.ROSE, 6f, -3.1f, properties), (
-            new Properties()
-                    .fireResistant()
-    ));
+                    new Properties()
+                            .fireResistant()
+            )
+    );
     public static final ShovelItem ROSE_SHOVEL = register("rose_shovel",
             (properties) -> new ShovelItem(PRToolMaterial.ROSE, 1.5f, -3f, properties), (
-            new Properties()
-                    .fireResistant()
-    ));
+                    new Properties()
+                            .fireResistant()
+            )
+    );
     public static final HoeItem ROSE_HOE = register("rose_hoe",
             (properties) -> new HoeItem(PRToolMaterial.ROSE, -2f, -1f, properties), (
                     new Properties()
                             .fireResistant()
-            ));
+            )
+    );
     public static final Item ROSE_SPEAR = register("rose_spear",
             Item::new,
-                    new Properties()
-                            .fireResistant()
-                            .spear(PRToolMaterial.ROSE, 0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 5.1F, 11.25F, 4.6F)
-            );
+            new Properties()
+                    .fireResistant()
+                    .spear(PRToolMaterial.ROSE, 0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 5.1F, 11.25F, 4.6F)
+    );
 
     public static final Item ROSE_HELMET = register("rose_helmet",
             Item::new,
@@ -161,6 +159,12 @@ public final class PRItems {
             Item::new,
             new Properties()
                     .horseArmor(PRArmorMaterials.ROSE)
+                    .fireResistant()
+    );
+    public static final Item ROSE_NAUTILUS_ARMOR = register("rose_nautilus_armor",
+            Item::new,
+            new Properties()
+                    .nautilusArmor(PRArmorMaterials.ROSE)
                     .fireResistant()
     );
 

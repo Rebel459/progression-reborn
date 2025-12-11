@@ -61,7 +61,6 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.RAW_IRON_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_GOLD_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(PRItems.COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_NUGGET, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.DIAMOND_SHARD, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.RAW_ROSE, ModelTemplates.FLAT_ITEM);
@@ -72,14 +71,15 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.IRON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(PRItems.ROSE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(PRItems.ROSE_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(PRItems.ROSE_NAUTILUS_ARMOR, ModelTemplates.FLAT_ITEM);
 
 		generator.generateFlatItem(PRItems.ROSE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(PRItems.ROSE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(PRItems.ROSE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        generator.generateFlatItem(PRItems.ROSE_SPEAR, ModelTemplates.SPEAR_IN_HAND);
+        // Rose Spear is done manually
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
         this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
@@ -136,7 +136,7 @@ public final class PRModelProvider extends FabricModelProvider {
         Identifier armorTextures = TextureMapping.getItemTexture(armor);
         Identifier armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
 		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
-            Identifier trimmedModelId = Identifier.fromNamespaceAndPath(PRConstants.MOD_ID,
+            Identifier trimmedModelId = Identifier.withDefaultNamespace(
 					armorModelId.getPath()).withSuffix("_" + trimMaterial.assets().base().suffix() + "_trim");
             Identifier trimTextureId = Identifier.withDefaultNamespace(
 					"trims/items/" + armorType + "_trim_" + trimMaterial.assets().assetId(equipmentKey).suffix());

@@ -26,7 +26,8 @@ public class PRCreativeInventorySorting {
         addAfterInCombat(Items.GOLDEN_AXE, PRItems.ROSE_AXE);
         addAfterInCombat(Items.GOLDEN_SPEAR, PRItems.ROSE_SPEAR);
 
-		addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PRItems.ROSE_HORSE_ARMOR);
+        addAfterInCombat(Items.GOLDEN_HORSE_ARMOR, PRItems.ROSE_HORSE_ARMOR);
+        addAfterInCombat(Items.GOLDEN_NAUTILUS_ARMOR, PRItems.ROSE_NAUTILUS_ARMOR);
 
 		// Tools and Utilities
 		addAfterInToolsAndUtilities(Items.GOLDEN_HOE, PRItems.ROSE_SHOVEL);
@@ -45,7 +46,6 @@ public class PRCreativeInventorySorting {
 
 		addAfterInIngredients(Items.RAW_GOLD, PRItems.RAW_ROSE);
 
-		addAfterInIngredients(Items.IRON_NUGGET, PRItems.COPPER_NUGGET);
 		addAfterInIngredients(Items.GOLD_NUGGET, PRItems.ROSE_NUGGET);
 		addAfterInIngredients(PRItems.ROSE_NUGGET, PRItems.DIAMOND_SHARD);
 

@@ -52,7 +52,8 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRItems.ROSE_CHESTPLATE)
 				.add(PRItems.ROSE_LEGGINGS)
 				.add(PRItems.ROSE_BOOTS)
-				.add(PRItems.ROSE_HORSE_ARMOR);
+                .add(PRItems.ROSE_HORSE_ARMOR)
+                .add(PRItems.ROSE_NAUTILUS_ARMOR);
 
 		this.valueLookupBuilder(ItemTags.PIGLIN_SAFE_ARMOR)
 				.add(PRItems.ROSE_HELMET)
@@ -72,8 +73,8 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRItems.ROSE_CHESTPLATE);
 		this.valueLookupBuilder(ItemTags.LEG_ARMOR)
 				.add(PRItems.ROSE_LEGGINGS);
-		this.valueLookupBuilder(ItemTags.FOOT_ARMOR)
-				.add(PRItems.ROSE_BOOTS);
+        this.valueLookupBuilder(ItemTags.FOOT_ARMOR)
+                .add(PRItems.ROSE_BOOTS);
 
 		this.valueLookupBuilder(ItemTags.SWORDS)
 				.add(PRItems.ROSE_SWORD);

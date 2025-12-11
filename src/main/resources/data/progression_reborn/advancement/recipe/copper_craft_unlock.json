@@ -18,12 +18,12 @@
     "recipes": [
       "progression_reborn:raw_copper_from_nuggets",
       "progression_reborn:copper_ingot_to_nugget",
-      "progression_reborn:copper_nugget_to_ingot",
+      "minecraft:copper_nugget_to_ingot",
       "progression_reborn:raw_copper_to_nugget",
-      "progression_reborn:copper_nugget_blasting",
-      "progression_reborn:copper_nugget_smelting",
-      "progression_reborn:copper_nugget_from_blasting",
-      "progression_reborn:copper_nugget_from_smelting"
+      "minecraft:copper_nugget_blasting",
+      "minecraft:copper_nugget_smelting",
+      "minecraft:copper_nugget_from_blasting",
+      "minecraft:copper_nugget_from_smelting"
     ]
   }
 }

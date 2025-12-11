@@ -11,7 +11,7 @@ eb3465e0f4b44644520357b62e34159dc9ef3eff data/minecraft/tags/item/horse_tempt_it
 e41aea6780fe59886aba7cd451d20079d7458bc3 data/minecraft/tags/item/leg_armor.json
 63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/netherite_tool_materials.json
 81ac02cda6ce4cd6fa209d0c8694974cc71286d3 data/minecraft/tags/item/pickaxes.json
-06b0623097d15e778bca64c137758b1fbace8468 data/minecraft/tags/item/piglin_loved.json
+c03ac5a14a91baa5396a62410cc98dab2ad340ca data/minecraft/tags/item/piglin_loved.json
 834a46305ac63cf1f6bf65070a1215243c887ca6 data/minecraft/tags/item/piglin_safe_armor.json
 5978aeddcb27b2413e24b96a2b74d1bcdf5016ba data/minecraft/tags/item/repairs_iron_armor.json
 63ed37c88e729fae463f807af47c700250de9fb2 data/minecraft/tags/item/repairs_netherite_armor.json

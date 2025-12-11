@@ -16,6 +16,7 @@ public class PRAliases {
         convertToVanilla("copper_leggings");
         convertToVanilla("copper_boots");
         convertToVanilla("copper_horse_armor");
+        convertToVanilla("copper_nugget");
 
         convertToVanilla("netherite_horse_armor");
     }
