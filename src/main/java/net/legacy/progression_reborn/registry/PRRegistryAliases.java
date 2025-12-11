@@ -1,7 +1,8 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 
 public class PRRegistryAliases {
 
@@ -22,6 +23,6 @@ public class PRRegistryAliases {
     }
 
     public static void convertToVanilla(String name) {
-        BuiltInRegistries.ITEM.addAlias(PRConstants.id(name), PRConstants.vanillaId(name));
+        BuiltInRegistries.ITEM.addAlias(ProgressionReborn.id(name), Identifier.withDefaultNamespace(name));
     }
 }

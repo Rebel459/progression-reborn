@@ -1,6 +1,6 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -172,15 +172,15 @@ public final class PRItems {
     }
 
     private static @NotNull <T extends Item> T register(String name, @NotNull Function<Properties, Item> function, Item.@NotNull Properties properties) {
-        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, PRConstants.id(name)), function, properties);
+        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, ProgressionReborn.id(name)), function, properties);
     }
 
     public static SmithingTemplateItem createIronUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties
@@ -189,10 +189,10 @@ public final class PRItems {
 
     public static SmithingTemplateItem createRoseUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(PRConstants.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties

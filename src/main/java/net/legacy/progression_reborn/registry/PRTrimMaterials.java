@@ -1,6 +1,6 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.legacy.progression_reborn.datagen.PRModelProvider;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -23,7 +23,7 @@ public class PRTrimMaterials {
     }
 
     private static ResourceKey<TrimMaterial> register(String name) {
-        return ResourceKey.create(Registries.TRIM_MATERIAL, PRConstants.id(name));
+        return ResourceKey.create(Registries.TRIM_MATERIAL, ProgressionReborn.id(name));
 
     }
 

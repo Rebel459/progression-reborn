@@ -123,7 +123,7 @@ public class PRBlocks {
     }
 
     private static <T extends Block> @NotNull T registerWithoutItem(String path, Function<Properties, T> block, Properties properties) {
-        Identifier id = net.legacy.progression_reborn.PRConstants.id(path);
+        Identifier id = net.legacy.progression_reborn.ProgressionReborn.id(path);
         return doRegister(id, makeBlock(block, properties, id));
     }
 

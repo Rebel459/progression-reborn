@@ -1,6 +1,6 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -11,6 +11,6 @@ public interface PREquipmentAssets {
     ResourceKey<EquipmentAsset> ROSE = createId("rose");
 
     static ResourceKey<EquipmentAsset> createId(String path) {
-        return ResourceKey.create(ROOT_ID, PRConstants.id(path));
+        return ResourceKey.create(ROOT_ID, ProgressionReborn.id(path));
     }
 }

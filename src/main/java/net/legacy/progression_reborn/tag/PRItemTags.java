@@ -1,6 +1,6 @@
 package net.legacy.progression_reborn.tag;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -14,7 +14,7 @@ public class PRItemTags {
 
     @NotNull
     private static TagKey<Item> bind(@NotNull String path) {
-        return TagKey.create(Registries.ITEM, PRConstants.id(path));
+        return TagKey.create(Registries.ITEM, ProgressionReborn.id(path));
     }
 
 }

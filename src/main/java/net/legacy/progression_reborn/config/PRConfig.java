@@ -5,18 +5,18 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.file.Path;
 
-@Config(name = PRConstants.MOD_ID)
+@Config(name = ProgressionReborn.MOD_ID)
 public class PRConfig implements ConfigData {
 
     @Contract(pure = true)
     public static @NotNull Path configPath(boolean json5) {
-        return Path.of("./config/" + PRConstants.MOD_ID + "." + (json5 ? "json5" : "json"));
+        return Path.of("./config/" + ProgressionReborn.MOD_ID + "." + (json5 ? "json5" : "json"));
     }
 
     public static PRConfig get;

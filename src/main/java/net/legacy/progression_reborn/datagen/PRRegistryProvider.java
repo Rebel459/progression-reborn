@@ -2,7 +2,7 @@ package net.legacy.progression_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.legacy.progression_reborn.registry.PRTrimMaterials;
 import net.minecraft.core.*;
 import net.minecraft.core.registries.Registries;
@@ -22,7 +22,7 @@ public class PRRegistryProvider extends FabricDynamicRegistryProvider {
 
     @Override
     public void configure(HolderLookup.Provider registries, Entries entries) {
-        addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), PRConstants.MOD_ID);
+        addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), ProgressionReborn.MOD_ID);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class PRRegistryProvider extends FabricDynamicRegistryProvider {
     @SuppressWarnings("UnusedReturnValue")
     public <T> List<Holder<T>> addAll(Entries entries, HolderLookup.RegistryLookup<T> registry, String modId) {
         return registry.listElementIds()
-                .filter(registryKey -> registryKey.identifier().getNamespace().equals(PRConstants.MOD_ID))
+                .filter(registryKey -> registryKey.identifier().getNamespace().equals(ProgressionReborn.MOD_ID))
                 .map(key -> entries.add(registry, key))
                 .toList();
     }

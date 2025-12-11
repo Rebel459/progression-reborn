@@ -1,6 +1,6 @@
 package net.legacy.progression_reborn.sound;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -26,12 +26,12 @@ public class PRSounds {
 
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {
-        Identifier identifier = PRConstants.id(string);
+        Identifier identifier = ProgressionReborn.id(string);
 		return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(String id) {
-		return registerForHolder(PRConstants.id(id));
+		return registerForHolder(ProgressionReborn.id(id));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(Identifier id) {
