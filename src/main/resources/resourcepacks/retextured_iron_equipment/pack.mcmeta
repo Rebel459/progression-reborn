@@ -1,6 +1,8 @@
 {
   "pack": {
-    "pack_format": 55,
+    "pack_format": 75,
+    "min_format": 75,
+    "max_format": 75,
     "description": "Retextured Iron Equipment"
   }
 }
