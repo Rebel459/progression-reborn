@@ -133,6 +133,16 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:golden_spear",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": "#minecraft:on_random_loot"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:flint_and_steel"
         },
         {

@@ -3,7 +3,7 @@ package net.legacy.progression_reborn.registry;
 import net.legacy.progression_reborn.PRConstants;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-public class PRAliases {
+public class PRRegistryAliases {
 
     public static void init() {
         convertToVanilla("copper_sword");
