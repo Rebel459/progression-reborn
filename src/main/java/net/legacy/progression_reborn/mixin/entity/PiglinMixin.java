@@ -43,5 +43,6 @@ public class PiglinMixin {
     private void selectPiglinWeapon(CallbackInfoReturnable<ItemStack> cir) {
         if (!PRConfig.get.misc.mob_spawn_equipment) return;
         if (cir.getReturnValue() == Items.GOLDEN_SWORD.getDefaultInstance() && new Random().nextInt(5) == 0) cir.setReturnValue(new ItemStack(PRItems.ROSE_SWORD));
+        if (cir.getReturnValue() == Items.GOLDEN_SPEAR.getDefaultInstance() && new Random().nextInt(5) == 0) cir.setReturnValue(new ItemStack(PRItems.ROSE_SPEAR));
     }
 }

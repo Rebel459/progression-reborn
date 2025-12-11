@@ -28,32 +28,21 @@ public class MobMixin {
 
     @Inject(method = "populateDefaultEquipmentSlots", at = @At(value = "HEAD"), cancellable = true)
     private void selectMobArmor(RandomSource random, DifficultyInstance difficulty, CallbackInfo ci) {
-        if (!PRConfig.get.misc.mob_spawn_equipment) return;
         LivingEntity livingEntity = LivingEntity.class.cast(this);
+        if (!PRConfig.get.misc.mob_spawn_equipment || livingEntity.level().dimension() != Level.NETHER) return;
         if (random.nextFloat() < 0.15F * difficulty.getSpecialMultiplier()) {
-            int i = random.nextInt(2);
+            int i = random.nextInt(3);
+
+            for(int j = 1; (float)j <= 3.0F; ++j) {
+                if (random.nextFloat() < 0.1087F) {
+                    ++i;
+                }
+            }
+
             float f = livingEntity.level().getDifficulty() == Difficulty.HARD ? 0.1F : 0.25F;
-            if (random.nextFloat() < 0.095F) {
-                ++i;
-            }
-
-            if (random.nextFloat() < 0.095F) {
-                ++i;
-            }
-
-            if (random.nextFloat() < 0.095F) {
-                ++i;
-            }
-
-            if (random.nextFloat() < 0.095F) {
-                ++i;
-            }
-
             boolean bl = true;
-            Iterator var6 = Mob.EQUIPMENT_POPULATION_ORDER.iterator();
 
-            while (var6.hasNext()) {
-                EquipmentSlot equipmentSlot = (EquipmentSlot) var6.next();
+            for(EquipmentSlot equipmentSlot : Mob.EQUIPMENT_POPULATION_ORDER) {
                 ItemStack itemStack = livingEntity.getItemBySlot(equipmentSlot);
                 if (!bl && random.nextFloat() < f) {
                     break;
@@ -61,87 +50,13 @@ public class MobMixin {
 
                 bl = false;
                 if (itemStack.isEmpty()) {
-                    Item item = getEquipmentForSlot(equipmentSlot, i);
-                    if (livingEntity.level().dimension() == Level.OVERWORLD) {
-                        item = getEquipmentForSlotOverworld(equipmentSlot, i);
-                        if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
-                    } else if (livingEntity.level().dimension() == Level.NETHER) {
-                        i = i - 2;
-                        item = getEquipmentForSlotNether(equipmentSlot, i);
-                        if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
-                    } else if (item != null) {
-                        i = i - 1;
-                        livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
-                    }
+                    i = i - 1;
+                    Item item = getEquipmentForSlotNether(equipmentSlot, i);
+                    if (item != null) livingEntity.setItemSlot(equipmentSlot, new ItemStack(item));
                 }
             }
         }
         ci.cancel();
-    }
-
-    @Unique
-    @Nullable
-    private static Item getEquipmentForSlotOverworld(EquipmentSlot slot, int chance) {
-        switch (slot) {
-            case HEAD:
-                if (chance == 0) {
-                    return Items.LEATHER_HELMET;
-                } else if (chance == 1) {
-                    return Items.COPPER_HELMET;
-                } else if (chance == 2) {
-                    return Items.GOLDEN_HELMET;
-                } else if (chance == 3) {
-                    return Items.CHAINMAIL_HELMET;
-                } else if (chance == 4) {
-                    return Items.IRON_HELMET;
-                } else if (chance == 5) {
-                    return Items.DIAMOND_HELMET;
-                }
-            case CHEST:
-                if (chance == 0) {
-                    return Items.LEATHER_CHESTPLATE;
-                } else if (chance == 1) {
-                    return Items.COPPER_CHESTPLATE;
-                } else if (chance == 2) {
-                    return Items.GOLDEN_CHESTPLATE;
-                } else if (chance == 3) {
-                    return Items.CHAINMAIL_CHESTPLATE;
-                } else if (chance == 4) {
-                    return Items.IRON_CHESTPLATE;
-                } else if (chance == 5) {
-                    return Items.DIAMOND_CHESTPLATE;
-                }
-            case LEGS:
-                if (chance == 0) {
-                    return Items.LEATHER_LEGGINGS;
-                } else if (chance == 1) {
-                    return Items.COPPER_LEGGINGS;
-                } else if (chance == 2) {
-                    return Items.GOLDEN_LEGGINGS;
-                } else if (chance == 3) {
-                    return Items.CHAINMAIL_LEGGINGS;
-                } else if (chance == 4) {
-                    return Items.IRON_LEGGINGS;
-                } else if (chance == 5) {
-                    return Items.DIAMOND_LEGGINGS;
-                }
-            case FEET:
-                if (chance == 0) {
-                    return Items.LEATHER_BOOTS;
-                } else if (chance == 1) {
-                    return Items.COPPER_BOOTS;
-                } else if (chance == 2) {
-                    return Items.GOLDEN_BOOTS;
-                } else if (chance == 3) {
-                    return Items.CHAINMAIL_BOOTS;
-                } else if (chance == 4) {
-                    return Items.IRON_BOOTS;
-                } else if (chance == 5) {
-                    return Items.DIAMOND_BOOTS;
-                }
-            default:
-                return null;
-        }
     }
 
     @Unique
@@ -153,9 +68,11 @@ public class MobMixin {
                     return Items.LEATHER_HELMET;
                 } else if (chance == 1) {
                     return Items.GOLDEN_HELMET;
-                } else if (chance == 2) {
-                    return PRItems.ROSE_HELMET;
+                }  else if (chance == 2) {
+                    return Items.CHAINMAIL_HELMET;
                 } else if (chance == 3) {
+                    return PRItems.ROSE_HELMET;
+                } else if (chance == 4) {
                     return Items.DIAMOND_HELMET;
                 }
             case CHEST:
@@ -163,9 +80,11 @@ public class MobMixin {
                     return Items.LEATHER_CHESTPLATE;
                 } else if (chance == 1) {
                     return Items.GOLDEN_CHESTPLATE;
-                } else if (chance == 2) {
-                    return PRItems.ROSE_CHESTPLATE;
+                }  else if (chance == 2) {
+                    return Items.CHAINMAIL_CHESTPLATE;
                 } else if (chance == 3) {
+                    return PRItems.ROSE_CHESTPLATE;
+                } else if (chance == 4) {
                     return Items.DIAMOND_CHESTPLATE;
                 }
             case LEGS:
@@ -173,9 +92,11 @@ public class MobMixin {
                     return Items.LEATHER_LEGGINGS;
                 } else if (chance == 1) {
                     return Items.GOLDEN_LEGGINGS;
-                } else if (chance == 2) {
-                    return PRItems.ROSE_LEGGINGS;
+                }  else if (chance == 2) {
+                    return Items.CHAINMAIL_LEGGINGS;
                 } else if (chance == 3) {
+                    return PRItems.ROSE_LEGGINGS;
+                } else if (chance == 4) {
                     return Items.DIAMOND_LEGGINGS;
                 }
             case FEET:
@@ -183,9 +104,11 @@ public class MobMixin {
                     return Items.LEATHER_BOOTS;
                 } else if (chance == 1) {
                     return Items.GOLDEN_BOOTS;
-                } else if (chance == 2) {
-                    return PRItems.ROSE_BOOTS;
+                }  else if (chance == 2) {
+                    return Items.CHAINMAIL_BOOTS;
                 } else if (chance == 3) {
+                    return PRItems.ROSE_BOOTS;
+                } else if (chance == 4) {
                     return Items.DIAMOND_BOOTS;
                 }
             default:

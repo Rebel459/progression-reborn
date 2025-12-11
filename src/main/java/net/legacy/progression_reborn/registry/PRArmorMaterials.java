@@ -9,7 +9,7 @@ public interface PRArmorMaterials {
 
     ArmorMaterial ROSE = new ArmorMaterial(
             10,
-            ArmorMaterials.makeDefense(2, 4, 4, 2, 6),
+            ArmorMaterials.makeDefense(2, 4, 4, 2, 12),
             25,
             SoundEvents.ARMOR_EQUIP_GOLD,
             2F,
