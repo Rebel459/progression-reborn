@@ -6,14 +6,14 @@
         "items": [
           {
             "items": [
-              "minecraft:netherite_ingot"
+              "minecraft:iron_ingot"
             ]
           }
         ],
         "horse_armor": [
           {
             "items": [
-              "minecraft:diamond_horse_armor"
+              "minecraft:copper_nautilus_armor"
             ]
           }
         ]
@@ -23,7 +23,7 @@
   "rewards": {
     "experience": 0,
     "recipes": [
-      "minecraft:netherite_horse_armor_smithing"
+      "progression_reborn:iron_nautilus_armor_smithing"
     ]
   }
 }

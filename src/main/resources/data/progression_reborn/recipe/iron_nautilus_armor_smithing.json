@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progression_reborn:iron_upgrade_smithing_template",
+  "base": "minecraft:copper_nautilus_armor",
+  "addition": "minecraft:iron_ingot",
+  "result": {
+    "id": "minecraft:iron_nautilus_armor"
+  }
+}
