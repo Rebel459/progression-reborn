@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_remnant_template": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "end_reborn:remnant_upgrade_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "end_reborn:craft_remnant_upgrade_smithing_template"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_featherzeal_template": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "end_reborn:featherzeal_upgrade_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "end_reborn:craft_featherzeal_upgrade_smithing_template"
+    ]
+  }
+}
