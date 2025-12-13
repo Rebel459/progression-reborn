@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "end_reborn:item/featherzeal_leggings",
-    "layer1": "minecraft:trims/items/leggings_trim_featherzeal_ingot_darker"
-  }
-}

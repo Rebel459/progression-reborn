@@ -60,6 +60,7 @@ public final class PRItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
+                    .trimMaterial(PRTrimMaterials.ROSE)
                     .fireResistant()
     );
     public static final Item IRON_ALLOY = register("iron_alloy",

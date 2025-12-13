@@ -37,5 +37,4 @@ public class PRRegistryProvider extends FabricDynamicRegistryProvider {
                 .map(key -> entries.add(registry, key))
                 .toList();
     }
-
 }

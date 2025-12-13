@@ -17,8 +17,9 @@ repositories {
 }
 
 subprojects {
-	dependencies {
-	}
+    dependencies {
+        modImplementation "com.github.ramixin:mixson:${project.mixson_version}"
+    }
 }
 
 dependencies {
@@ -29,6 +30,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    include modImplementation("com.github.ramixin:mixson-fabric:${project.mixson_version}")
 
 	modImplementation("maven.modrinth:modmenu:$modmenu_version")
 

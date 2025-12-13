@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "legacies_and_legends:item/travelling_strides",
-    "layer1": "minecraft:trims/items/leggings_trim_rose_ingot"
-  }
-}

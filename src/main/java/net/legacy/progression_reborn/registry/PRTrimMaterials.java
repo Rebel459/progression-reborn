@@ -26,5 +26,4 @@ public class PRTrimMaterials {
         return ResourceKey.create(Registries.TRIM_MATERIAL, ProgressionReborn.id(name));
 
     }
-
 }

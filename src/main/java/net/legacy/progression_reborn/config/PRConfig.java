@@ -51,9 +51,6 @@ public class PRConfig implements ConfigData {
         @ConfigEntry.Category("config")
         @ConfigEntry.Gui.Tooltip
         public boolean mob_spawn_equipment = true;
-        @ConfigEntry.Category("config")
-        @ConfigEntry.Gui.Tooltip
-        public boolean trim_materials = true;
     }
 
     public static class IntegrationsConfig {
