@@ -28,7 +28,7 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    include modApi ("net.legacy.progression_reborn:TrimPatcher-1.0-pre1-mc1.21.11")
+    include modApi ("net.legacy.progression_reborn:TrimPatcher-1.0-pre2-mc1.21.11")
     //include modApi("maven.modrinth:trim-patcher:${project.patcher_version}")
 
 	modImplementation("maven.modrinth:modmenu:$modmenu_version")
