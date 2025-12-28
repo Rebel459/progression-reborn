@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:directory",
+      "prefix": "item/",
+      "source": "item"
+    },
+    {
+      "type": "minecraft:paletted_permutations",
+      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "permutations": {
+        "rose": "progression_reborn:trims/color_palettes/rose",
+        "rose_darker": "progression_reborn:trims/color_palettes/rose_darker"
+      },
+      "textures": []
+    }
+  ]
+}

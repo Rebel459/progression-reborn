@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.13-SNAPSHOT'
+	id 'fabric-loom' version '1.14-SNAPSHOT'
 }
 
 version = project.mod_version
@@ -14,11 +14,8 @@ repositories {
 	maven { url = 'https://maven.parchmentmc.org' }
 	maven{ url = "https://maven.shedaniel.me/" }
 	maven { url = 'https://jitpack.io' }
-}
-
-subprojects {
-    dependencies {
-        modImplementation "com.github.ramixin:mixson:${project.mixson_version}"
+    flatDir {
+        dirs 'lib'
     }
 }
 
@@ -31,7 +28,8 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    include modImplementation("com.github.ramixin:mixson-fabric:${project.mixson_version}")
+    include modApi ("net.legacy.progression_reborn:TrimPatcher-1.0-pre1-mc1.21.11")
+    //include modApi("maven.modrinth:trim-patcher:${project.patcher_version}")
 
 	modImplementation("maven.modrinth:modmenu:$modmenu_version")
 
@@ -67,22 +65,9 @@ loom {
 	accessWidenerPath = file("src/main/resources/progression_reborn.accesswidener")
 }
 
-// Datagen
-
 fabricApi {
-	configureDataGeneration()
-}
-
-loom {
-	mods {
-		"progression_reborn" {
-			sourceSet sourceSets.main
-		}
-	}
-
-	runs {
-		datagen {
-			inherit client
-		}
-	}
+    configureDataGeneration() {
+        client = true;
+        modId = "progression_reborn"
+    }
 }
