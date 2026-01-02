@@ -45,17 +45,14 @@ public class EnderscapeItemsMixin {
                             )
             )
     private static ArmorMaterial modifyEnderscapeArmor(int i, Map map, int j, Holder holder, float f, float g, TagKey tagKey, ResourceKey resourceKey, Operation<ArmorMaterial> original){
-        if (PRConfig.get.integrations.enderscape) {
         if (resourceKey == EnderscapeItems.SHADOLINE_ARMOR_ASSET) {
             return original.call(i, ArmorMaterials.makeDefense(2, 5, 6, 3, 16), j, holder, f, g, tagKey, resourceKey);
-        }
         }
         return original.call(i, map, j, holder, f, g, tagKey, resourceKey);
     }
 
     @Inject(method = "shadolineArmorProperties", at = @At(value = "HEAD"), cancellable = true)
     private static void modifyShadolineStealth(ArmorType type, CallbackInfoReturnable<Item.Properties> cir){
-        if (!PRConfig.get.integrations.enderscape) return;
         ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
         EquipmentSlotGroup group = EquipmentSlotGroup.bySlot(type.getSlot());
         Identifier identifier = Enderscape.id("armor." + type.getName());

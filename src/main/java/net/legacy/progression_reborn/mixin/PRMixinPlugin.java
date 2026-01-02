@@ -1,6 +1,7 @@
 package net.legacy.progression_reborn.mixin;
 
 import net.fabricmc.loader.api.FabricLoader;
+import net.legacy.progression_reborn.config.PRConfig;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.objectweb.asm.tree.ClassNode;
@@ -16,7 +17,7 @@ public final class PRMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-        this.hasEnderscape = FabricLoader.getInstance().isModLoaded("enderscape");
+        this.hasEnderscape = FabricLoader.getInstance().isModLoaded("enderscape") && PRConfig.get.integrations.enderscape;
     }
 
     @Override
