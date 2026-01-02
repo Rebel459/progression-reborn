@@ -2,11 +2,13 @@
   "required": true,
   "package": "net.legacy.progression_reborn.mixin",
   "compatibilityLevel": "JAVA_21",
+  "plugin": "net.legacy.progression_reborn.mixin.PRMixinPlugin",
   "mixins": [
     "entity.MobMixin",
     "entity.PiglinMixin",
     "entity.PlayerMixin",
     "entity.ZombieMixin",
+    "integration.enderscape.EnderscapeItemsMixin",
     "item.ArmorMaterialsMixin",
     "item.ToolMaterialMixin"
   ],

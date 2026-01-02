@@ -64,6 +64,9 @@ public class PRConfig implements ConfigData {
         public boolean legacies_and_legends = true;
 
         @ConfigEntry.Category("config")
+        public boolean enderscape = true;
+
+        @ConfigEntry.Category("config")
         public boolean wilder_wild = true;
 
         @ConfigEntry.Category("config")

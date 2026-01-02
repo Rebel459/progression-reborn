@@ -31,12 +31,12 @@ dependencies {
     include modApi ("net.legacy.progression_reborn:TrimPatcher-1.0-pre2-mc1.21.11")
     //include modApi("maven.modrinth:trim-patcher:${project.patcher_version}")
 
-	modImplementation("maven.modrinth:modmenu:$modmenu_version")
-
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-
+    
+    modImplementation("maven.modrinth:modmenu:$modmenu_version")
+    modCompileOnly("maven.modrinth:enderscape:$enderscape_version")
 }
 
 processResources {
