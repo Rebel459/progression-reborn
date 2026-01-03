@@ -17,6 +17,7 @@ public final class PRMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
+        PRConfig.initClient();
         this.hasEnderscape = FabricLoader.getInstance().isModLoaded("enderscape") && PRConfig.get.integrations.enderscape;
     }
 
