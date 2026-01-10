@@ -40,8 +40,12 @@ public interface ArmorMaterialsMixin {
             return original.call(i, ArmorMaterials.makeDefense(1, 3, 3, 1, 8), j, holder, 1f, g, tagKey, resourceKey);
         } else if (resourceKey == DIAMOND) {
             return original.call(i, ArmorMaterials.makeDefense(3, 6, 7, 4, 20), j, holder, 1f, g, tagKey, resourceKey);
+        } else if (resourceKey == TURTLE_SCUTE) {
+            return original.call(i, ArmorMaterials.makeDefense(2, 5, 6, 3, 16), j, holder, f, g, tagKey, resourceKey);
         } else if (resourceKey == NETHERITE) {
             return original.call(i, ArmorMaterials.makeDefense(3, 6, 7, 4, 20), j, holder, 2f, g, tagKey, resourceKey);
+        } else if (resourceKey == ARMADILLO_SCUTE) {
+            return original.call(i, ArmorMaterials.makeDefense(3, 6, 7, 4, 20), j, holder, f, g, tagKey, resourceKey);
         } else {
             return original.call(i, map, j, holder, f, g, tagKey, resourceKey);
         }
