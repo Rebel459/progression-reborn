@@ -1,15 +1,4 @@
 {
-  "item.armor.equip_copper": {
-    "sounds": [
-      "progression_reborn:item/armor/equip_copper1",
-      "progression_reborn:item/armor/equip_copper2",
-      "progression_reborn:item/armor/equip_copper3",
-      "progression_reborn:item/armor/equip_copper4",
-      "progression_reborn:item/armor/equip_copper5",
-      "progression_reborn:item/armor/equip_copper6"
-    ],
-    "subtitle": "subtitles.item.armor.equip_copper"
-  },
   "block.rose_block.break": {
     "sounds": [
       {
