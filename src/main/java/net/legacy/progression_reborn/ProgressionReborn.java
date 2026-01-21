@@ -103,13 +103,20 @@ public class ProgressionReborn implements ModInitializer {
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
-		if (FabricLoader.getInstance().isModLoaded("remnants") && PRConfig.get.integrations.remnants) {
-			ResourceManagerHelper.registerBuiltinResourcePack(
+        if (FabricLoader.getInstance().isModLoaded("remnants") && PRConfig.get.integrations.remnants) {
+            ResourceManagerHelper.registerBuiltinResourcePack(
                     ProgressionReborn.id("progression_reborn_remnants_integration"), modContainer.get(),
-					Component.translatable("pack.progression_reborn.remnants_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
+                    Component.translatable("pack.progression_reborn.remnants_integration"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
+            );
+        }
+        if (FabricLoader.getInstance().isModLoaded("bloom") && PRConfig.get.integrations.bloom) {
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    ProgressionReborn.id("progression_reborn_bloom_integration"), modContainer.get(),
+                    Component.translatable("pack.progression_reborn.bloom_integration"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
+            );
+        }
 	}
 
 }

@@ -56,24 +56,20 @@ public class PRConfig implements ConfigData {
     public static class IntegrationsConfig {
         @ConfigEntry.Category("config")
         public boolean end_reborn = true;
-
         @ConfigEntry.Category("config")
         public boolean farmers_delight = true;
-
         @ConfigEntry.Category("config")
         public boolean legacies_and_legends = true;
-
         @ConfigEntry.Category("config")
         public boolean enderscape = true;
-
         @ConfigEntry.Category("config")
         public boolean wilder_wild = true;
-
         @ConfigEntry.Category("config")
         public boolean trailier_tales = true;
-
         @ConfigEntry.Category("config")
         public boolean remnants = true;
+        @ConfigEntry.Category("config")
+        public boolean bloom = true;
     }
 
 }
