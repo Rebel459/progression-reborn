@@ -17,7 +17,6 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.Optional;
 
-import static net.legacy.progression_reborn.ProgressionReborn.MOD_ID;
 import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
 
 /**

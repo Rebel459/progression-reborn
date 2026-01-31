@@ -13,12 +13,9 @@ import java.util.Set;
 
 public final class PRMixinPlugin implements IMixinConfigPlugin {
 
-    private boolean hasEnderscape;
-
     @Override
     public void onLoad(String mixinPackage) {
         PRConfig.initClient();
-        this.hasEnderscape = FabricLoader.getInstance().isModLoaded("enderscape") && PRConfig.get.integrations.enderscape;
     }
 
     @Override
@@ -29,8 +26,6 @@ public final class PRMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, @NotNull String mixinClassName) {
-
-        if (mixinClassName.contains("integration.enderscape.")) return this.hasEnderscape;
 
         return true;
     }

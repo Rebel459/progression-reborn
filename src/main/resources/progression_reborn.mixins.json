@@ -8,8 +8,6 @@
     "entity.PiglinMixin",
     "entity.PlayerMixin",
     "entity.ZombieMixin",
-    "integration.enderscape.EnderscapeItemsMixin",
-    "item.ArmorMaterialsMixin",
     "item.ItemStackMixin",
     "item.ToolMaterialMixin"
   ],
