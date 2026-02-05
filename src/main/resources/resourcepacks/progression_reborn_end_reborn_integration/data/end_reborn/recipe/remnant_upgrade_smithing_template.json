@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cobbled_deepslate",
+    "#": "#end_reborn:remnant_upgrade_stones",
     "C": "end_reborn:remnant_scrap",
     "S": "end_reborn:remnant_upgrade_smithing_template"
   },

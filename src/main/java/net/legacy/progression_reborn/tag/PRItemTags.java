@@ -10,6 +10,8 @@ public class PRItemTags {
     public static final TagKey<Item> ROSE_TOOL_MATERIALS = bind("rose_tool_materials");
     public static final TagKey<Item> REPAIRS_ROSE_ARMOR = bind("repairs_rose_armor");
 
+    public static final TagKey<Item> IRON_UPGRADE_STONES = bind("iron_upgrade_stones");
+
     public static final TagKey<Item> STONE_PICKAXES = bind("stone_pickaxes");
 
     @NotNull

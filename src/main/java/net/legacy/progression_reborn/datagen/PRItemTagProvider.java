@@ -6,7 +6,12 @@ import net.legacy.progression_reborn.registry.PRItems;
 import net.legacy.progression_reborn.tag.PRItemTags;
 import net.legacy.progression_reborn.registry.PRItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.data.registries.VanillaRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
@@ -97,8 +102,21 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 		this.valueLookupBuilder(ItemTags.HORSE_TEMPT_ITEMS)
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
 
+        this.builder(PRItemTags.IRON_UPGRADE_STONES)
+                .add(getItem(Items.STONE))
+                .add(getItem(Items.ANDESITE))
+                .add(getItem(Items.DIORITE))
+                .add(getItem(Items.GRANITE))
+                .addOptional(this.getItem("bloom:dolerite"));
+
 		this.valueLookupBuilder(PRItemTags.STONE_PICKAXES)
 				.add(Items.STONE_PICKAXE);
 	}
 
+    private ResourceKey<Item> getItem(Item item) {
+        return item.builtInRegistryHolder().key();
+    }
+    private ResourceKey<Item> getItem(String id) {
+        return ResourceKey.create(this.registryKey, Identifier.parse(id));
+    }
 }

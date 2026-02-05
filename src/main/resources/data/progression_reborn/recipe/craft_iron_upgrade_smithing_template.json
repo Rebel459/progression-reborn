@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cobblestone",
+    "#": "#progression_reborn:iron_upgrade_stones",
     "C": "progression_reborn:iron_alloy",
     "S": "progression_reborn:copper_block"
   },
