@@ -103,7 +103,7 @@ public final class PRItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(PRItems.ENCHANTED_GOLDEN_CARROT);
 
         this.builder(PRItemTags.IRON_UPGRADE_STONES)
-                .add(getItem(Items.STONE))
+                .add(getItem(Items.COBBLESTONE))
                 .add(getItem(Items.ANDESITE))
                 .add(getItem(Items.DIORITE))
                 .add(getItem(Items.GRANITE))
