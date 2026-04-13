@@ -66,7 +66,7 @@ public class ProgressionReborn implements ModInitializer {
 			);
 		}
 
-		if (FabricLoader.getInstance().isModLoaded("farmersdelight") && FabricLoader.getInstance().isModLoaded("farmersknives") && PRConfig.get.integrations.farmers_delight) {
+		if (FabricLoader.getInstance().isModLoaded("farmersdelight") && PRConfig.get.integrations.farmers_delight) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
                     ProgressionReborn.id("progression_reborn_farmers_delight_integration"), modContainer.get(),
 					Component.translatable("pack.progression_reborn.farmers_delight_integration"),
