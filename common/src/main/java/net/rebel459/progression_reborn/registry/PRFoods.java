@@ -1,0 +1,10 @@
+package net.rebel459.progression_reborn.registry;
+
+import net.minecraft.world.food.FoodProperties;
+
+public class PRFoods {
+
+    public static final FoodProperties ENCHANTED_GOLDEN_CARROT = new FoodProperties.Builder().nutrition(6).saturationModifier(2.4F).alwaysEdible().build();
+
+    public PRFoods() {}
+}

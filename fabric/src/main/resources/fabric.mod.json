@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}-fabric",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "sources": "https://github.com/Rebel459/progression-reborn"
+  },
+  "license": "${license}",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.rebel459.progression_reborn.ProgressionRebornFabric"
+    ],
+    "client": [
+      "net.rebel459.progression_reborn.ProgressionRebornFabricClient"
+    ],
+    "fabric-datagen": [
+      "net.rebel459.progression_reborn.datagen.PRDataGenerator"
+    ],
+    "modmenu": [
+      "net.rebel459.progression_reborn.config.PRModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "progression_reborn.mixins.json",
+    "progression_reborn-fabric.mixins.json"
+  ],
+  "accessWidener": "progression_reborn.classtweaker",
+  "depends": {
+    "fabricloader": ">=0.18",
+    "fabric-api": "*",
+    "minecraft": "${fabric_minecraft_version}",
+    "java": ">=25",
+    "unified": "*",
+    "cloth-config": "*",
+    "trimpatcher": "*"
+  }
+}

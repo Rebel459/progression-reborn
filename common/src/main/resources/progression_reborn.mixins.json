@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "net.rebel459.progression_reborn.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "net.rebel459.progression_reborn.mixin.PRMixinPlugin",
+  "mixins": [
+    "entity.MobMixin",
+    "entity.PiglinMixin",
+    "entity.PlayerMixin",
+    "entity.ZombieMixin",
+    "integration.farmersdelight.KnifeMixin",
+    "item.ItemStackMixin",
+    "item.ToolMaterialMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": []
+}

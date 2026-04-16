@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "progression_reborn:block/rose_door_bottom",
+    "top": "progression_reborn:block/rose_door_top"
+  }
+}

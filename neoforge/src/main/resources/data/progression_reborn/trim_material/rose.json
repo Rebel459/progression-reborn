@@ -1,0 +1,10 @@
+{
+  "asset_name": "rose",
+  "description": {
+    "color": "#C47C94",
+    "translate": "trim_material.progression_reborn.rose"
+  },
+  "override_armor_assets": {
+    "progression_reborn:rose": "rose_darker"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.rebel459.progression_reborn.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "net.rebel459.progression_reborn.mixin.PRMixinPlugin",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
