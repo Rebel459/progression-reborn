@@ -1,0 +1,153 @@
+{
+  "processors":[
+    {
+      "processor_type":"minecraft:rule",
+      "rules":[
+        {
+          "location_predicate":{
+            "predicate_type":"minecraft:always_true"
+          },
+          "input_predicate":{
+            "predicate_type":"minecraft:random_block_match",
+            "block":"minecraft:nether_bricks",
+            "probability":0.05
+          },
+          "output_state":{
+            "Name":"minecraft:cracked_nether_bricks"
+          }
+        },
+        {
+          "location_predicate":{
+            "predicate_type":"minecraft:always_true"
+          },
+          "input_predicate":{
+            "predicate_type":"minecraft:random_block_match",
+            "block":"minecraft:ladder",
+            "probability":0.25
+          },
+          "output_state":{
+            "Name":"minecraft:air"
+          }
+        },
+        {
+          "location_predicate":{
+            "predicate_type":"minecraft:always_true"
+          },
+          "input_predicate":{
+            "predicate_type":"minecraft:random_block_match",
+            "block":"minecraft:soul_lantern",
+            "probability":0.25
+          },
+          "output_state":{
+            "Name":"minecraft:air"
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:iron_chain",
+              "Properties": {
+                "axis": "x"
+              }
+            }
+          },
+          "output_state": {
+            "Name": "progression_reborn:rose_chain",
+            "Properties": {
+              "axis": "x"
+            }
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:iron_chain",
+              "Properties": {
+                "axis": "y"
+              }
+            }
+          },
+          "output_state": {
+            "Name": "progression_reborn:rose_chain",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:iron_chain",
+              "Properties": {
+                "axis": "z"
+              }
+            }
+          },
+          "output_state": {
+            "Name": "progression_reborn:rose_chain",
+            "Properties": {
+              "axis": "z"
+            }
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:soul_lantern",
+              "Properties": {
+                "hanging": "true"
+              }
+            }
+          },
+          "output_state": {
+            "Name": "progression_reborn:rose_lantern",
+            "Properties": {
+              "hanging": "true"
+            }
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block_state": {
+              "Name": "minecraft:soul_lantern",
+              "Properties": {
+                "hanging": "false"
+              }
+            }
+          },
+          "output_state": {
+            "Name": "progression_reborn:rose_lantern",
+            "Properties": {
+              "hanging": "false"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
