@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+      "#": "progression_reborn:waxed_oxidized_copper"
+    },
+    "result": {
+      "id": "minecraft:waxed_oxidized_copper",
+      "count": 4
+    }
+  }

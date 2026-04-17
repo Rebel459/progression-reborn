@@ -17,6 +17,7 @@ dependencies {
     implementation("maven.modrinth:trim-patcher:$patcher_version-fabric")
 
     compileOnly("maven.modrinth:farmers-delight-refabricated:$fd_version")
+    compileOnly("maven.modrinth:item-tooltips:$tooltips_version-fabric")
 }
 
 fabricApi {

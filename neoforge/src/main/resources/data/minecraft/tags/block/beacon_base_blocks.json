@@ -1,6 +1,13 @@
 {
   "values": [
     "progression_reborn:copper_block",
+    "progression_reborn:exposed_copper",
+    "progression_reborn:weathered_copper",
+    "progression_reborn:oxidized_copper",
+    "progression_reborn:waxed_copper_block",
+    "progression_reborn:waxed_exposed_copper",
+    "progression_reborn:waxed_weathered_copper",
+    "progression_reborn:waxed_oxidized_copper",
     "progression_reborn:rose_block"
   ]
 }

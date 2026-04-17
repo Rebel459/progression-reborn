@@ -17,7 +17,6 @@
     "experience": 0,
     "recipes": [
       "progression_reborn:raw_copper_from_nuggets",
-      "progression_reborn:copper_ingot_to_nugget",
       "progression_reborn:raw_copper_to_nugget"
     ]
   }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "progression_reborn:block/rose_lantern"
+    },
+    "hanging=true": {
+      "model": "progression_reborn:block/rose_lantern_hanging"
+    }
+  }
+}

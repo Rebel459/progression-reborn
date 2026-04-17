@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N",
+    "N",
+    "N"
+  ],
+  "key": {
+    "N": "progression_reborn:rose_nugget"
+  },
+  "result": {
+    "id": "progression_reborn:rose_chain"
+  }
+}

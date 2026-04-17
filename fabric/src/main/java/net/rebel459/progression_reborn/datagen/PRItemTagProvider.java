@@ -108,6 +108,9 @@ public final class PRItemTagProvider extends FabricTagsProvider.ItemTagsProvider
 
 		this.valueLookupBuilder(PRItemTags.STONE_PICKAXES)
 				.add(Items.STONE_PICKAXE);
+
+		this.valueLookupBuilder(ItemTags.METAL_NUGGETS)
+				.add(PRItems.ROSE_NUGGET.get());
 	}
 
     private ResourceKey<Item> getItem(Item item) {

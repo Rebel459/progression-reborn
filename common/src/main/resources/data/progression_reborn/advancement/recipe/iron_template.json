@@ -6,7 +6,8 @@
         "items": [
           {
             "items": [
-              "minecraft:iron_ingot"
+              "minecraft:iron_ingot",
+              "progression_reborn:iron_upgrade_smithing_template"
             ]
           }
         ]
@@ -19,6 +20,8 @@
       "progression_reborn:craft_iron_upgrade_smithing_template",
       "progression_reborn:iron_upgrade_smithing_template",
       "progression_reborn:iron_alloy",
+      "progression_reborn:iron_horse_armor_smithing",
+      "progression_reborn:iron_nautilus_armor_smithing",
       "minecraft:iron_sword",
       "minecraft:iron_axe",
       "minecraft:iron_pickaxe",
@@ -27,7 +30,8 @@
       "minecraft:iron_helmet",
       "minecraft:iron_chestplate",
       "minecraft:iron_leggings",
-      "minecraft:iron_boots"
+      "minecraft:iron_boots",
+      "minecraft:iron_spear"
     ]
   }
 }

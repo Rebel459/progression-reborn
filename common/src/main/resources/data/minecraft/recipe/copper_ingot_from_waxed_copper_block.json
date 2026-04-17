@@ -1,9 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "copper_ingot",
   "ingredients": [
-    "minecraft:air"
+    "progression_reborn:waxed_copper_block"
   ],
   "result": {
-    "id": "minecraft:air"
+    "count": 9,
+    "id": "minecraft:copper_ingot"
   }
 }

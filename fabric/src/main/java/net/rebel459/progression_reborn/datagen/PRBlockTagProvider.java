@@ -17,6 +17,13 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
 		this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(PRBlocks.COPPER_BLOCK.get())
+				.add(PRBlocks.EXPOSED_COPPER.get())
+				.add(PRBlocks.WEATHERED_COPPER.get())
+				.add(PRBlocks.OXIDIZED_COPPER.get())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
 				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.get())
 				.add(PRBlocks.BLACKSTONE_GOLD_ORE.get())
 				.add(PRBlocks.BLACKSTONE_ROSE_ORE.get())
@@ -29,10 +36,21 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 				.add(PRBlocks.ROSE_TRAPDOOR.get())
 				.add(PRBlocks.ROSE_DOOR.get())
 				.add(PRBlocks.ROSE_BLOCK.get())
-				.add(PRBlocks.RAW_ROSE_BLOCK.get());
+				.add(PRBlocks.RAW_ROSE_BLOCK.get())
+				.add(PRBlocks.ROSE_LANTERN.get())
+				.add(PRBlocks.ROSE_CHAIN.get())
+				.add(PRBlocks.GOLD_LANTERN.get())
+				.add(PRBlocks.GOLD_CHAIN.get());
 
 		this.valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
 				.add(PRBlocks.COPPER_BLOCK.get())
+				.add(PRBlocks.EXPOSED_COPPER.get())
+				.add(PRBlocks.WEATHERED_COPPER.get())
+				.add(PRBlocks.OXIDIZED_COPPER.get())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
 				.add(PRBlocks.NETHER_ROSE_ORE.get())
 				.add(PRBlocks.POLISHED_ROSE.get())
 				.add(PRBlocks.POLISHED_CUT_ROSE.get())
@@ -56,8 +74,23 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 		this.valueLookupBuilder(BlockTags.TRAPDOORS)
 				.add(PRBlocks.ROSE_TRAPDOOR.get());
 
+		this.valueLookupBuilder(BlockTags.CHAINS)
+				.add(PRBlocks.ROSE_CHAIN.get())
+				.add(PRBlocks.GOLD_CHAIN.get());
+
+		this.valueLookupBuilder(BlockTags.LANTERNS)
+				.add(PRBlocks.ROSE_LANTERN.get())
+				.add(PRBlocks.GOLD_LANTERN.get());
+
 		this.valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
 				.add(PRBlocks.COPPER_BLOCK.get())
+				.add(PRBlocks.EXPOSED_COPPER.get())
+				.add(PRBlocks.WEATHERED_COPPER.get())
+				.add(PRBlocks.OXIDIZED_COPPER.get())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
 				.add(PRBlocks.ROSE_BLOCK.get());
 
 		this.valueLookupBuilder(BlockTags.PIGLIN_REPELLENTS)

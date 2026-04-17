@@ -1,37 +1,58 @@
 package net.rebel459.progression_reborn.registry;
-import java.util.function.Function;
 
-import net.rebel459.progression_reborn.ProgressionReborn;
-import net.rebel459.progression_reborn.sound.PRBlockSounds;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.rebel459.unified.platform.UnifiedHelpers;
+import net.rebel459.progression_reborn.ProgressionReborn;
+import net.rebel459.progression_reborn.sound.PRBlockSounds;
 import net.rebel459.unified.platform.UnifiedRegistries;
 import net.rebel459.unified.util.SuppliedBlock;
-import org.jetbrains.annotations.NotNull;
 
 public class PRBlocks {
 
     public static UnifiedRegistries.Blocks BLOCKS = UnifiedRegistries.Blocks.create(ProgressionReborn.MOD_ID);
 
     public static final SuppliedBlock COPPER_BLOCK = BLOCKS.register("copper_block",
-            Block::new,
+            properties -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, properties),
             () -> Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
                     .requiresCorrectToolForDrops()
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(3.0F, 6.0F)
                     .sound(SoundType.COPPER)
+    );
+    public static final SuppliedBlock WAXED_COPPER_BLOCK = BLOCKS.register("waxed_copper_block",
+            Block::new,
+            () -> Properties.ofFullCopy(COPPER_BLOCK.get())
+    );
+    public static final SuppliedBlock EXPOSED_COPPER = BLOCKS.register("exposed_copper",
+            properties -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, properties),
+            () -> Properties.ofFullCopy(COPPER_BLOCK.get())
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+    );
+    public static final SuppliedBlock WAXED_EXPOSED_COPPER = BLOCKS.register("waxed_exposed_copper",
+            Block::new,
+            () -> Properties.ofFullCopy(EXPOSED_COPPER.get())
+    );
+    public static final SuppliedBlock WEATHERED_COPPER = BLOCKS.register("weathered_copper",
+            properties -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, properties),
+            () -> Properties.ofFullCopy(COPPER_BLOCK.get())
+                    .mapColor(MapColor.WARPED_STEM)
+    );
+    public static final SuppliedBlock WAXED_WEATHERED_COPPER = BLOCKS.register("waxed_weathered_copper",
+            Block::new,
+            () -> Properties.ofFullCopy(WEATHERED_COPPER.get())
+    );
+    public static final SuppliedBlock OXIDIZED_COPPER = BLOCKS.register("oxidized_copper",
+            properties -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, properties),
+            () -> Properties.ofFullCopy(COPPER_BLOCK.get())
+                    .mapColor(MapColor.WARPED_NYLIUM)
+    );
+    public static final SuppliedBlock WAXED_OXIDIZED_COPPER = BLOCKS.register("waxed_oxidized_copper",
+            Block::new,
+            () -> Properties.ofFullCopy(OXIDIZED_COPPER.get())
     );
 
     public static final SuppliedBlock BLACKSTONE_QUARTZ_ORE = BLOCKS.register("blackstone_quartz_ore",
@@ -59,6 +80,7 @@ public class PRBlocks {
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(5.0F, 6.0F)
     );
+
     public static final SuppliedBlock ROSE_BLOCK = BLOCKS.register("rose_block",
             Block::new,
             () -> Properties.of()
@@ -108,7 +130,7 @@ public class PRBlocks {
     );
 
     public static final SuppliedBlock ROSE_DOOR = BLOCKS.register("rose_door",
-            properties -> new DoorBlock(PRBlockSetType.ROSE, properties),
+            properties -> new DoorBlock(PRBlockSetTypes.ROSE, properties),
             () -> Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .strength(5.0F)
@@ -116,13 +138,34 @@ public class PRBlocks {
                     .pushReaction(PushReaction.DESTROY)
     );
     public static final SuppliedBlock ROSE_TRAPDOOR = BLOCKS.register("rose_trapdoor",
-            properties -> new TrapDoorBlock(PRBlockSetType.ROSE, properties),
+            properties -> new TrapDoorBlock(PRBlockSetTypes.ROSE, properties),
             () -> Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
                     .strength(5.0F)
                     .noOcclusion()
                     .isValidSpawn((_, _, _, _) -> false)
                     .requiresCorrectToolForDrops()
+    );
+    public static final SuppliedBlock ROSE_CHAIN = BLOCKS.register("rose_chain",
+            ChainBlock::new,
+            () -> Properties.ofFullCopy(Blocks.IRON_CHAIN)
+                    .mapColor(MapColor.COLOR_MAGENTA)
+    );
+    public static final SuppliedBlock ROSE_LANTERN = BLOCKS.register("rose_lantern",
+            LanternBlock::new,
+            () -> Properties.ofFullCopy(Blocks.LANTERN)
+                    .mapColor(MapColor.COLOR_MAGENTA)
+    );
+
+    public static final SuppliedBlock GOLD_CHAIN = BLOCKS.register("gold_chain",
+            ChainBlock::new,
+            () -> Properties.ofFullCopy(Blocks.IRON_CHAIN)
+                    .mapColor(MapColor.GOLD)
+    );
+    public static final SuppliedBlock GOLD_LANTERN = BLOCKS.register("gold_lantern",
+            LanternBlock::new,
+            () -> Properties.ofFullCopy(Blocks.LANTERN)
+                    .mapColor(MapColor.GOLD)
     );
 
     public static void init() {}

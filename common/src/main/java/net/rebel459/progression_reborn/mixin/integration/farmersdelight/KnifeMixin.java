@@ -5,7 +5,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.progression_reborn.registry.PRItems;
-import net.rebel459.progression_reborn.registry.PRToolMaterial;
+import net.rebel459.progression_reborn.registry.PRToolMaterials;
 import net.rebel459.unified.platform.UnifiedHelpers;
 import net.rebel459.unified.util.SuppliedItem;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,7 +26,7 @@ public class KnifeMixin {
     private static void registerKnife(CallbackInfo ci) {
         ROSE_KNIFE = PRItems.ITEMS.register("rose_knife",
                 KnifeItem::new,
-                () -> ModItems.knifeItem(PRToolMaterial.ROSE)
+                () -> ModItems.knifeItem(PRToolMaterials.ROSE)
                         .fireResistant()
         );
     }

@@ -6,7 +6,8 @@
         "items": [
           {
             "items": [
-              "progression_reborn:raw_iron_nugget"
+              "progression_reborn:raw_iron_nugget",
+              "minecraft:iron_nugget"
             ]
           }
         ]

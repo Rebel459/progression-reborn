@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "progression_reborn:exposed_copper",
+  "result": {
+    "count": 16,
+    "id": "minecraft:exposed_chiseled_copper"
+  }
+}

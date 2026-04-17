@@ -2,11 +2,12 @@ package net.rebel459.progression_reborn.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
-import net.rebel459.progression_reborn.registry.PRBlocks;
-import net.rebel459.progression_reborn.registry.PRItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.rebel459.progression_reborn.registry.PRBlocks;
+import net.rebel459.progression_reborn.registry.PRItems;
 import org.jetbrains.annotations.NotNull;
 
 public final class PRModelProvider extends FabricModelProvider {
@@ -18,6 +19,14 @@ public final class PRModelProvider extends FabricModelProvider {
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
 		generator.createTrivialCube(PRBlocks.COPPER_BLOCK.get());
+		generator.createTrivialCube(PRBlocks.EXPOSED_COPPER.get());
+		generator.createTrivialCube(PRBlocks.WEATHERED_COPPER.get());
+		generator.createTrivialCube(PRBlocks.OXIDIZED_COPPER.get());
+		generator.copyModel(PRBlocks.COPPER_BLOCK.get(), PRBlocks.WAXED_COPPER_BLOCK.get());
+		generator.copyModel(PRBlocks.EXPOSED_COPPER.get(), PRBlocks.WAXED_EXPOSED_COPPER.get());
+		generator.copyModel(PRBlocks.WEATHERED_COPPER.get(), PRBlocks.WAXED_WEATHERED_COPPER.get());
+		generator.copyModel(PRBlocks.OXIDIZED_COPPER.get(), PRBlocks.WAXED_OXIDIZED_COPPER.get());
+
 		generator.createTrivialCube(PRBlocks.BLACKSTONE_QUARTZ_ORE.get());
 		generator.createTrivialCube(PRBlocks.BLACKSTONE_GOLD_ORE.get());
 		generator.createTrivialCube(PRBlocks.BLACKSTONE_ROSE_ORE.get());
@@ -29,7 +38,6 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.createTrivialCube(PRBlocks.ROSE_LAMP.get());
 		generator.createDoor(PRBlocks.ROSE_DOOR.get());
 		generator.createTrapdoor(PRBlocks.ROSE_TRAPDOOR.get());
-
 	}
 
 	@Override
@@ -62,6 +70,5 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(PRItems.ROSE_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(PRItems.ROSE_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateSpear(PRItems.ROSE_SPEAR.get());
-
 	}
 }

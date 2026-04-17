@@ -31,9 +31,19 @@ public class PRCreativeInventorySorting {
 
 		// Building Blocks
 		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, PRBlocks.COPPER_BLOCK);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.EXPOSED_COPPER, PRBlocks.EXPOSED_COPPER);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.WEATHERED_COPPER, PRBlocks.WEATHERED_COPPER);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.OXIDIZED_COPPER, PRBlocks.OXIDIZED_COPPER);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, PRBlocks.WAXED_COPPER_BLOCK);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_COPPER, PRBlocks.WAXED_EXPOSED_COPPER);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_COPPER, PRBlocks.WAXED_WEATHERED_COPPER);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER, PRBlocks.WAXED_OXIDIZED_COPPER);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.BUILDING_BLOCKS, Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, PRBlocks.GOLD_CHAIN);
+
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(
 				CreativeModeTabs.BUILDING_BLOCKS,
-				Blocks.WAXED_OXIDIZED_COPPER_BULB,
+				Blocks.COPPER_CHAIN.waxedOxidized(),
 				PRBlocks.ROSE_BLOCK,
 				PRBlocks.POLISHED_ROSE,
 				PRBlocks.POLISHED_CUT_ROSE,
@@ -41,7 +51,8 @@ public class PRCreativeInventorySorting {
 				PRBlocks.POLISHED_CUT_ROSE_SLAB,
 				PRBlocks.ROSE_DOOR,
 				PRBlocks.ROSE_TRAPDOOR,
-				PRBlocks.ROSE_LAMP
+				PRBlocks.ROSE_LAMP,
+				PRBlocks.ROSE_CHAIN
 		);
 
 		// Natural Blocks
@@ -51,5 +62,8 @@ public class PRCreativeInventorySorting {
 
 		// Functional Blocks
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER_BULB, PRBlocks.ROSE_LAMP);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.COPPER_LANTERN.waxedOxidized(), PRBlocks.GOLD_LANTERN, PRBlocks.ROSE_LANTERN);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.COPPER_CHAIN.waxedOxidized(), PRBlocks.GOLD_CHAIN, PRBlocks.ROSE_CHAIN);
+
 	}
 }

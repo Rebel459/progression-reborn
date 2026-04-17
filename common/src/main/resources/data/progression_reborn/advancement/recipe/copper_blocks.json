@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "has_copper_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:copper_block",
+              "progression_reborn:waxed_copper_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "minecraft:copper_block",
+      "progression_reborn:waxed_polished_copper",
+      "progression_reborn:exposed_copper",
+      "progression_reborn:waxed_exposed_copper",
+      "progression_reborn:weathered_copper",
+      "progression_reborn:waxed_weathered_copper",
+      "progression_reborn:oxidized_copper",
+      "progression_reborn:waxed_oxidized_copper"
+    ]
+  }
+}

@@ -6,7 +6,8 @@
         "items": [
           {
             "items": [
-              "progression_reborn:raw_rose_nugget"
+              "progression_reborn:raw_rose_nugget",
+              "progression_reborn:rose_nugget"
             ]
           }
         ]
@@ -26,7 +27,9 @@
       "progression_reborn:rose_ingot_from_blasting",
       "progression_reborn:rose_nugget_from_smelting",
       "progression_reborn:rose_nugget_from_blasting",
-      "progression_reborn:raw_rose_block"
+      "progression_reborn:raw_rose_block",
+      "progression_reborn:rose_horse_armor_smithing",
+      "progression_reborn:rose_nautilus_armor_smithing"
     ]
   }
 }

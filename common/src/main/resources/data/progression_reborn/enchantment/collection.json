@@ -14,7 +14,7 @@
     "per_level_above_first": 0
   },
   "slots": [
-    "mainhand"
+    "chest"
   ],
   "supported_items": "#minecraft:chest_armor",
   "weight": 1

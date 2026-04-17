@@ -1,21 +1,15 @@
 package net.rebel459.progression_reborn.registry;
 
-import net.rebel459.progression_reborn.ProgressionReborn;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Util;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.unified.platform.UnifiedRegistries;
 import net.rebel459.unified.util.SuppliedItem;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.function.Function;
 
 public final class PRItems {
 
@@ -102,29 +96,29 @@ public final class PRItems {
     public static final SuppliedItem ROSE_SWORD = ITEMS.register("rose_sword",
             Item::new,
             () -> new Properties()
-                    .sword(PRToolMaterial.ROSE, 3f, -2.4f)
+                    .sword(PRToolMaterials.ROSE, 3F, -2.4F)
                     .fireResistant()
     );
     public static final SuppliedItem ROSE_PICKAXE = ITEMS.register("rose_pickaxe",
             Item::new,
             () -> new Properties()
-                    .pickaxe(PRToolMaterial.ROSE, 1f, -2.8f)
+                    .pickaxe(PRToolMaterials.ROSE, 1F, -2.8F)
                     .fireResistant()
     );
     public static final SuppliedItem ROSE_AXE = ITEMS.register("rose_axe",
-            (properties) -> new AxeItem(PRToolMaterial.ROSE, 6f, -3.1f, properties), (
+            (properties) -> new AxeItem(PRToolMaterials.ROSE, 6F, -3.1F, properties), (
                     () -> new Properties()
                             .fireResistant()
             )
     );
     public static final SuppliedItem ROSE_SHOVEL = ITEMS.register("rose_shovel",
-            (properties) -> new ShovelItem(PRToolMaterial.ROSE, 1.5f, -3f, properties), (
+            (properties) -> new ShovelItem(PRToolMaterials.ROSE, 1.5F, -3F, properties), (
                     () -> new Properties()
                             .fireResistant()
             )
     );
     public static final SuppliedItem ROSE_HOE = ITEMS.register("rose_hoe",
-            (properties) -> new HoeItem(PRToolMaterial.ROSE, -2f, -1f, properties), (
+            (properties) -> new HoeItem(PRToolMaterials.ROSE, -2F, -1F, properties), (
                     () -> new Properties()
                             .fireResistant()
             )
@@ -133,7 +127,7 @@ public final class PRItems {
             Item::new,
             () -> new Properties()
                     .fireResistant()
-                    .spear(PRToolMaterial.ROSE, 0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 5.1F, 11.25F, 4.6F)
+                    .spear(PRToolMaterials.ROSE, 0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 5.1F, 11.25F, 4.6F)
     );
 
     public static final SuppliedItem ROSE_HELMET = ITEMS.register("rose_helmet",
@@ -177,10 +171,10 @@ public final class PRItems {
 
     public static SmithingTemplateItem createIronUpgradeTemplate(Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.iron_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.iron_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties
@@ -189,10 +183,10 @@ public final class PRItems {
 
     public static SmithingTemplateItem createRoseUpgradeTemplate(Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", Identifier.fromNamespaceAndPath(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.rose_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ProgressionReborn.id("smithing_template.rose_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties

@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.block.WeatheringCopperBlocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.rebel459.progression_reborn.config.PRConfig;
@@ -37,6 +38,7 @@ public class ProgressionReborn {
 		PRSounds.init();
 		PRBlocks.init();
 		PRRegistryAliases.init();
+		PRDataComponents.init();
 		UnifiedHelpers.BIOME_MODIFICATIONS.register(BiomeTags.IS_NETHER, context -> {
 			context.getFeatures().addFeature(NETHER_ROSE_ORE, GenerationStep.Decoration.UNDERGROUND_ORES);
 		});
@@ -46,12 +48,26 @@ public class ProgressionReborn {
 
 		PRCreativeInventorySorting.init();
 		PRLootTables.init();
-		
+
+		UnifiedHelpers.BLOCK_CONVERSIONS.addWeathering(new WeatheringCopperBlocks(
+				PRBlocks.COPPER_BLOCK.get(),
+				PRBlocks.EXPOSED_COPPER.get(),
+				PRBlocks.WEATHERED_COPPER.get(),
+				PRBlocks.OXIDIZED_COPPER.get(),
+				PRBlocks.WAXED_COPPER_BLOCK.get(),
+				PRBlocks.WAXED_EXPOSED_COPPER.get(),
+				PRBlocks.WAXED_WEATHERED_COPPER.get(),
+				PRBlocks.WAXED_OXIDIZED_COPPER.get()
+		));
+
 		if (PRConfig.get().generation.modified_overworld_ores) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("modified_overworld_ores"), PackType.REQUIRED_DATA);
 		}
 		if (PRConfig.get().generation.modified_nether_ores) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("modified_nether_ores"), PackType.REQUIRED_DATA);
+		}
+		if (PRConfig.get().generation.modified_bastions) {
+			UnifiedHelpers.PACKS.add(ProgressionReborn.id("modified_bastions"), PackType.REQUIRED_DATA);
 		}
 
 		if (UnifiedPlatform.get().isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {

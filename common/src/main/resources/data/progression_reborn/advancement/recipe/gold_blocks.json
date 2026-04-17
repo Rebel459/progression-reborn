@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "hardened_gold_recipe_unlock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:raw_gold_nugget"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:raw_gold_from_nuggets",
+      "progression_reborn:raw_gold_to_nugget"
+    ]
+  }
+}

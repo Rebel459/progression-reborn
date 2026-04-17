@@ -39,6 +39,9 @@ public class PRConfig implements ConfigData {
         @ConfigEntry.Category("config")
         @ConfigEntry.Gui.Tooltip
         public boolean modified_nether_ores = true;
+        @ConfigEntry.Category("config")
+        @ConfigEntry.Gui.Tooltip
+        public boolean modified_bastions = true;
     }
 
     public static class MiscConfig {

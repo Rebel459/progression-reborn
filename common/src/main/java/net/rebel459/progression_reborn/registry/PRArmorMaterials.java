@@ -5,9 +5,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterials;
 
-public interface PRArmorMaterials {
+public class PRArmorMaterials {
 
-    ArmorMaterial ROSE = new ArmorMaterial(
+    public static ArmorMaterial ROSE = new ArmorMaterial(
             10,
             ArmorMaterials.makeDefense(1, 4, 5, 2, 7),
             25,

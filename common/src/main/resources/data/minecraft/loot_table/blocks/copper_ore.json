@@ -61,8 +61,8 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:biased_to_bottom",
-                    "max": 9.0,
-                    "min": 3.0
+                    "max": 8.0,
+                    "min": 4.0
                   },
                   "function": "minecraft:set_count"
                 },
@@ -77,7 +77,7 @@
                 {
                   "function": "minecraft:limit_count",
                   "limit": {
-                    "max": 9.0,
+                    "max": 8.0,
                     "min": 1.0
                   }
                 },

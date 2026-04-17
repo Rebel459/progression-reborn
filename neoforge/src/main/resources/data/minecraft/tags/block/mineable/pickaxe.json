@@ -1,6 +1,13 @@
 {
   "values": [
     "progression_reborn:copper_block",
+    "progression_reborn:exposed_copper",
+    "progression_reborn:weathered_copper",
+    "progression_reborn:oxidized_copper",
+    "progression_reborn:waxed_copper_block",
+    "progression_reborn:waxed_exposed_copper",
+    "progression_reborn:waxed_weathered_copper",
+    "progression_reborn:waxed_oxidized_copper",
     "progression_reborn:blackstone_quartz_ore",
     "progression_reborn:blackstone_gold_ore",
     "progression_reborn:blackstone_rose_ore",
@@ -13,6 +20,10 @@
     "progression_reborn:rose_trapdoor",
     "progression_reborn:rose_door",
     "progression_reborn:rose_block",
-    "progression_reborn:raw_rose_block"
+    "progression_reborn:raw_rose_block",
+    "progression_reborn:rose_lantern",
+    "progression_reborn:rose_chain",
+    "progression_reborn:gold_lantern",
+    "progression_reborn:gold_chain"
   ]
 }

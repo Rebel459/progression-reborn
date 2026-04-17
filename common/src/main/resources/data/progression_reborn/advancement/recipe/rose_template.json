@@ -6,7 +6,8 @@
         "items": [
           {
             "items": [
-              "progression_reborn:rose_ingot"
+              "progression_reborn:rose_ingot",
+              "progression_reborn:rose_upgrade_smithing_template"
             ]
           }
         ]
@@ -36,7 +37,9 @@
       "progression_reborn:cut_rose_stairs",
       "progression_reborn:rose_door",
       "progression_reborn:rose_trapdoor",
-      "progression_reborn:rose_lamp"
+      "progression_reborn:rose_lamp",
+      "progression_reborn:rose_chain",
+      "progression_reborn:rose_lantern"
     ]
   }
 }

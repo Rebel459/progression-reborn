@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "progression_reborn:block/gold_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "progression_reborn:block/gold_chain"
+    },
+    "axis=z": {
+      "model": "progression_reborn:block/gold_chain",
+      "x": 90
+    }
+  }
+}

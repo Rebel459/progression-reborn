@@ -4,16 +4,24 @@
   "compatibilityLevel": "JAVA_25",
   "plugin": "net.rebel459.progression_reborn.mixin.PRMixinPlugin",
   "mixins": [
+    "entity.ItemEntityMixin",
+    "entity.LivingEntityMixin",
     "entity.MobMixin",
     "entity.PiglinMixin",
+    "inventory.ArmorSlotMixin",
     "entity.PlayerMixin",
     "entity.ZombieMixin",
     "integration.farmersdelight.KnifeMixin",
+    "item.EquippableMixin",
     "item.ItemStackMixin",
     "item.ToolMaterialMixin"
   ],
+  "client":[
+    "client.ClientTooltipComponentMixin",
+    "client.ItemStackMixin",
+    "integration.item_tooltips.StoredItemTooltipsMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
-  },
-  "client": []
+  }
 }

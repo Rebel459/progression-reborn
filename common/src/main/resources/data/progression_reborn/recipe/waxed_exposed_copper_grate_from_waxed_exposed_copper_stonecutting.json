@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "progression_reborn:waxed_exposed_copper",
+  "result": {
+    "count": 16,
+    "id": "minecraft:waxed_exposed_copper_grate"
+  }
+}

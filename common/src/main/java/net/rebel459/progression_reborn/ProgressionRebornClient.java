@@ -16,6 +16,6 @@ public class ProgressionRebornClient {
 		if (UnifiedPlatform.get().isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("farmers_delight_integration"), PackType.REQUIRED_RESOURCES);
 		}
-		UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(PREquipmentAssets.ROSE);
+		UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(PREquipmentAssets.ROSE, true);
 	}
 }

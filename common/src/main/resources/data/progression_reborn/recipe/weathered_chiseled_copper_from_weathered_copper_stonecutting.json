@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "progression_reborn:weathered_copper",
+  "result": {
+    "count": 16,
+    "id": "minecraft:weathered_chiseled_copper"
+  }
+}

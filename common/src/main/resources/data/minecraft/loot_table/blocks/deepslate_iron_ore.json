@@ -74,7 +74,7 @@
                   "count": {
                     "type": "minecraft:biased_to_bottom",
                     "max": 15.0,
-                    "min": 5.0
+                    "min": 3.0
                   },
                   "function": "minecraft:set_count"
                 },

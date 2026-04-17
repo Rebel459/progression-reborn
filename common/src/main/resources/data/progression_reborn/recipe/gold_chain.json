@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N",
+    "N",
+    "N"
+  ],
+  "key": {
+    "N": "minecraft:gold_nugget"
+  },
+  "result": {
+    "id": "progression_reborn:gold_chain"
+  }
+}

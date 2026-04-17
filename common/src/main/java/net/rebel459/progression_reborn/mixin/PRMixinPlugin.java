@@ -15,9 +15,14 @@ import java.util.Set;
 
 public final class PRMixinPlugin implements IMixinConfigPlugin {
 
+    private static boolean registeredConfig = false;
+
     @Override
     public void onLoad(String mixinPackage) {
-        AutoConfig.register(PRConfig.class, JanksonConfigSerializer::new);
+        if (!registeredConfig) {
+            AutoConfig.register(PRConfig.class, JanksonConfigSerializer::new);
+            registeredConfig = true;
+        }
     }
 
     @Override
@@ -30,6 +35,7 @@ public final class PRMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, @NotNull String mixinClassName) {
 
         if (mixinClassName.contains("integration.farmersdelight")) return UnifiedPlatform.get().isModLoaded("farmersdelight");
+        if (mixinClassName.contains("integration.item_tooltips")) return UnifiedPlatform.get().isModLoaded("item_tooltips");
 
         return true;
     }
