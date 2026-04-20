@@ -26,9 +26,17 @@ public class PRRegistryAliases {
             PRItems.ITEMS.addAlias(Identifier.fromNamespaceAndPath("farmersknives", "copper_knife"), Identifier.fromNamespaceAndPath("farmersdelight", "copper_knife"));
             PRItems.ITEMS.addAlias(Identifier.fromNamespaceAndPath("farmersknives", "rose_knife"), ProgressionReborn.id("rose_knife"));
         }
+
+        rename("polishedz_cut_rose", "cut_polishedz_rose");
+        rename("polishedz_cut_rose_stairs", "cut_polishedz_rose_stairs");
+        rename("polishedz_cut_rose_slab", "cut_polishedz_rose_slab");
     }
 
     public static void convertToVanilla(String name) {
         PRItems.ITEMS.addAlias(ProgressionReborn.id(name), Identifier.withDefaultNamespace(name));
+    }
+
+    public static void rename(String oldName, String newName) {
+        PRItems.ITEMS.addAlias(ProgressionReborn.id(oldName), ProgressionReborn.id(newName));
     }
 }

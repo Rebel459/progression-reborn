@@ -22,6 +22,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.rebel459.progression_reborn.config.PRConfig;
 import net.rebel459.unified.platform.UnifiedEvents;
 import net.rebel459.unified.platform.UnifiedPlatform;
+import net.rebel459.unified.util.LootEntry;
 import org.jetbrains.annotations.NotNull;
 
 public class PRLootTables {
@@ -53,65 +54,64 @@ public class PRLootTables {
                 table.addPool(pool);
             }
             if (key == BuiltInLootTables.ABANDONED_MINESHAFT) {
-                table.editPool(item -> item == Items.IRON_PICKAXE, LootItem.lootTableItem(Items.COPPER_PICKAXE).setWeight(5).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1)))), false);
-                table.editPool(item -> item == Items.IRON_PICKAXE, LootItem.lootTableItem(Items.IRON_PICKAXE).setWeight(5).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0)))), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1)))), false);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.IRON_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0)))), true);
+                table.editPool(item -> item == Items.IRON_PICKAXE, LootEntry.insert(LootItem.lootTableItem(Items.COPPER_PICKAXE).setWeight(5).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1))))));
+                table.editPool(item -> item == Items.IRON_PICKAXE, LootEntry.replace(LootItem.lootTableItem(Items.IRON_PICKAXE).setWeight(5).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0))))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.insert(LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1))))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(Items.IRON_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0))))));
             }
             if (key == BuiltInLootTables.SIMPLE_DUNGEON) {
-                table.editPool(item -> item == Items.COPPER_HORSE_ARMOR, LootItem.lootTableItem(Items.COPPER_HORSE_ARMOR).setWeight(15).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1)))), true);
-                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootItem.lootTableItem(Items.IRON_HORSE_ARMOR).setWeight(15).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0)))), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1)))), false);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.IRON_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0)))), true);
+                table.editPool(item -> item == Items.COPPER_HORSE_ARMOR, LootEntry.replace(LootItem.lootTableItem(Items.COPPER_HORSE_ARMOR).setWeight(15).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1))))));
+                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootEntry.replace(LootItem.lootTableItem(Items.IRON_HORSE_ARMOR).setWeight(15).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0))))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.insert(LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(1))))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(Items.IRON_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atMost(0))))));
             }
             if (key == createLaL("chests/dungeon/simple/chest") || key == createLaL("chests/dungeon/arid/chest") || key == createLaL("chests/dungeon/frozen/chest") || key == createLaL("chests/dungeon/verdant/chest")) {
-                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, EmptyLootItem.emptyItem(), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F))), true);
+                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootEntry.remove());
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 4F)))));
             }
             if (key == createLaL("chests/dungeon/deep/chest") || key == createLaL("chests/dungeon/infernal/chest")) {
-                table.editPool(item -> item == Items.COPPER_HORSE_ARMOR, EmptyLootItem.emptyItem(), true);
+                table.editPool(item -> item == Items.COPPER_HORSE_ARMOR, LootEntry.remove());
             }
             if (key == BuiltInLootTables.DESERT_PYRAMID) {
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))), false);
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.insert(LootItem.lootTableItem(Items.COPPER_INGOT).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F)))));
             }
             if (key == createLaL("chests/spire")) {
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 5F))), true);
-                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootItem.lootTableItem(PRItems.ROSE_HORSE_ARMOR).setWeight(1), true);
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(3).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 5F)))));
+                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_HORSE_ARMOR).setWeight(1)));
             }
             if (key == BuiltInLootTables.PIGLIN_BARTERING) {
-                table.editPool(item -> item == Items.IRON_BOOTS, LootItem.lootTableItem(PRItems.ROSE_BOOTS).setWeight(8).apply(new EnchantRandomlyFunction.Builder().withEnchantment(provider.lookup(Registries.ENCHANTMENT).get().getOrThrow(Enchantments.SOUL_SPEED))), true);
-                table.editPool(item -> item == Items.IRON_NUGGET, LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 36F))), true);
+                table.editPool(item -> item == Items.IRON_BOOTS, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_BOOTS).setWeight(8).apply(new EnchantRandomlyFunction.Builder().withEnchantment(provider.lookup(Registries.ENCHANTMENT).get().getOrThrow(Enchantments.SOUL_SPEED)))));
+                table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 36F)))));
             }
             if (key == BuiltInLootTables.BASTION_BRIDGE) {
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(3F, 7F))), true);
-                table.editPool(item -> item == Items.IRON_NUGGET, LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 6F))), true);
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(3F, 7F)))));
+                table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 6F)))));
             }
             if (key == BuiltInLootTables.BASTION_OTHER) {
-                table.editPool(item -> item == Items.IRON_SWORD, LootItem.lootTableItem(PRItems.ROSE_SWORD).setWeight(2).apply(new EnchantRandomlyFunction.Builder().withOneOf(provider.getOrThrow(EnchantmentTags.ON_RANDOM_LOOT))), true);
-                table.editPool(item -> item == Items.IRON_NUGGET, LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 8F))), true);
-                table.editPool(item -> item == Items.IRON_BLOCK, LootItem.lootTableItem(PRBlocks.ROSE_BLOCK).setWeight(2).apply(SetItemCountFunction.setCount(ConstantValue.exactly(1F), false)), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 6F))), true);
+                table.editPool(item -> item == Items.IRON_SWORD, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_SWORD).setWeight(2).apply(new EnchantRandomlyFunction.Builder().withOneOf(provider.getOrThrow(EnchantmentTags.ON_RANDOM_LOOT)))));
+                table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 8F)))));
+                table.editPool(item -> item == Items.IRON_BLOCK, LootEntry.replace(LootItem.lootTableItem(PRBlocks.ROSE_BLOCK).setWeight(2).apply(SetItemCountFunction.setCount(ConstantValue.exactly(1F), false))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(2).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 6F)))));
             }
             if (key == BuiltInLootTables.BASTION_TREASURE) {
-                table.editPool(item -> item == Items.IRON_BLOCK, LootItem.lootTableItem(PRBlocks.ROSE_BLOCK).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 4F))), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 8F))), true);
+                table.editPool(item -> item == Items.IRON_BLOCK, LootEntry.replace(LootItem.lootTableItem(PRBlocks.ROSE_BLOCK).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 4F)))));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 8F)))));
                 pool = LootPool.lootPool().setRolls(UniformGenerator.between(0F, 1F))
                         .add(LootItem.lootTableItem(Items.BOOK).apply(EnchantRandomlyFunction.randomEnchantment().withEnchantment(provider.lookup(Registries.ENCHANTMENT).get().getOrThrow(PREnchantments.REFORGE))));
                 table.addPool(pool);
-                table.editPool(item -> item == Items.ENCHANTED_GOLDEN_APPLE, LootItem.lootTableItem(PRItems.ENCHANTED_GOLDEN_CARROT).setWeight(2), true);
+                table.editPool(item -> item == Items.ENCHANTED_GOLDEN_APPLE, LootEntry.replace(LootItem.lootTableItem(PRItems.ENCHANTED_GOLDEN_CARROT).setWeight(2)));
             }
             if (key == BuiltInLootTables.NETHER_BRIDGE) {
-                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootItem.lootTableItem(PRItems.ROSE_HORSE_ARMOR).setWeight(5), true);
-                table.editPool(item -> item == Items.IRON_INGOT, LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F))), true);
+                table.editPool(item -> item == Items.IRON_HORSE_ARMOR, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_HORSE_ARMOR).setWeight(5)));
+                table.editPool(item -> item == Items.IRON_INGOT, LootEntry.replace(LootItem.lootTableItem(PRItems.ROSE_INGOT).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 5F)))));
             }
             if (key == BuiltInLootTables.RUINED_PORTAL) {
-                table.editPool(item -> item == Items.IRON_NUGGET, LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(40).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 18F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.inDimension(Level.NETHER))), false);
-                table.editPool(item -> item == Items.IRON_NUGGET, LootItem.lootTableItem(Items.IRON_NUGGET).setWeight(40).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 18F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.inDimension(Level.OVERWORLD))), true);
-                table.editPool(item -> item == Items.ENCHANTED_GOLDEN_APPLE, LootItem.lootTableItem(PRItems.ENCHANTED_GOLDEN_CARROT).setWeight(1), true);
-
+                table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.insert(LootItem.lootTableItem(PRItems.ROSE_NUGGET).setWeight(40).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 18F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.inDimension(Level.NETHER)))));
+                table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.replace(LootItem.lootTableItem(Items.IRON_NUGGET).setWeight(40).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 18F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.inDimension(Level.OVERWORLD)))));
+                table.editPool(item -> item == Items.ENCHANTED_GOLDEN_APPLE, LootEntry.replace(LootItem.lootTableItem(PRItems.ENCHANTED_GOLDEN_CARROT).setWeight(1)));
             }
             if (key == BuiltInLootTables.END_CITY_TREASURE && !UnifiedPlatform.get().isModLoaded("enderscape")) {
-                table.editPool(item -> item == Items.DIAMOND, LootItem.lootTableItem(Items.DIAMOND).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 5F))), true);
+                table.editPool(item -> item == Items.DIAMOND, LootEntry.replace(LootItem.lootTableItem(Items.DIAMOND).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 5F)))));
             }
         }));
     }

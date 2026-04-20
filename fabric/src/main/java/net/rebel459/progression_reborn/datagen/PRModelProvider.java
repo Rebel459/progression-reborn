@@ -34,7 +34,7 @@ public final class PRModelProvider extends FabricModelProvider {
 		generator.createTrivialCube(PRBlocks.RAW_ROSE_BLOCK.get());
 		generator.createTrivialCube(PRBlocks.ROSE_BLOCK.get());
 		generator.createTrivialCube(PRBlocks.POLISHED_ROSE.get());
-		generator.createTrivialCube(PRBlocks.POLISHED_CUT_ROSE.get());
+		generator.createTrivialCube(PRBlocks.CUT_POLISHED_ROSE.get());
 		generator.createTrivialCube(PRBlocks.ROSE_LAMP.get());
 		generator.createDoor(PRBlocks.ROSE_DOOR.get());
 		generator.createTrapdoor(PRBlocks.ROSE_TRAPDOOR.get());

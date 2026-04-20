@@ -27,12 +27,12 @@ public final class PRBlockLootProvider extends FabricBlockLootSubProvider {
 		this.dropSelf(PRBlocks.ROSE_BLOCK.get());
 		this.dropSelf(PRBlocks.RAW_ROSE_BLOCK.get());
 		this.dropSelf(PRBlocks.POLISHED_ROSE.get());
-		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE.get());
-		this.dropSelf(PRBlocks.POLISHED_CUT_ROSE_STAIRS.get());
+		this.dropSelf(PRBlocks.CUT_POLISHED_ROSE.get());
+		this.dropSelf(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get());
         this.add(PRBlocks.ROSE_DOOR.get(), this::createDoorTable);
 		this.dropSelf(PRBlocks.ROSE_TRAPDOOR.get());
 		this.dropSelf(PRBlocks.ROSE_LAMP.get());
-		this.add(PRBlocks.POLISHED_CUT_ROSE_SLAB.get(), this::createSlabItemTable);
+		this.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get(), this::createSlabItemTable);
 		this.dropSelf(PRBlocks.ROSE_LANTERN.get());
 		this.dropSelf(PRBlocks.ROSE_CHAIN.get());
 		this.dropSelf(PRBlocks.GOLD_LANTERN.get());

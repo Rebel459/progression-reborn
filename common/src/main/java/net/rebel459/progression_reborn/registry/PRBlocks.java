@@ -111,7 +111,7 @@ public class PRBlocks {
                     .sound(PRBlockSounds.ROSE_LAMP)
     );
 
-    public static final SuppliedBlock POLISHED_CUT_ROSE = BLOCKS.register("polished_cut_rose",
+    public static final SuppliedBlock CUT_POLISHED_ROSE = BLOCKS.register("cut_polished_rose",
             Block::new,
             () -> Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
@@ -120,13 +120,13 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
-    public static final SuppliedBlock POLISHED_CUT_ROSE_STAIRS = BLOCKS.register("polished_cut_rose_stairs",
-            properties -> new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), properties),
-            () -> Properties.ofFullCopy(POLISHED_CUT_ROSE.get())
+    public static final SuppliedBlock CUT_POLISHED_ROSE_STAIRS = BLOCKS.register("cut_polished_rose_stairs",
+            properties -> new StairBlock(CUT_POLISHED_ROSE.defaultBlockState(), properties),
+            () -> Properties.ofFullCopy(CUT_POLISHED_ROSE.get())
     );
-    public static final SuppliedBlock POLISHED_CUT_ROSE_SLAB = BLOCKS.register("polished_cut_rose_slab",
+    public static final SuppliedBlock CUT_POLISHED_ROSE_SLAB = BLOCKS.register("cut_polished_rose_slab",
             SlabBlock::new,
-            () -> Properties.ofFullCopy(POLISHED_CUT_ROSE.get())
+            () -> Properties.ofFullCopy(CUT_POLISHED_ROSE.get())
     );
 
     public static final SuppliedBlock ROSE_DOOR = BLOCKS.register("rose_door",

@@ -9,7 +9,11 @@
           "children": [
             {
               "type": "minecraft:group",
-              "children": [],
+              "children": [
+                {
+                  "type": "minecraft:empty"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

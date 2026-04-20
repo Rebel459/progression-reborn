@@ -29,9 +29,9 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 				.add(PRBlocks.BLACKSTONE_ROSE_ORE.get())
 				.add(PRBlocks.NETHER_ROSE_ORE.get())
 				.add(PRBlocks.POLISHED_ROSE.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get())
 				.add(PRBlocks.ROSE_LAMP.get())
 				.add(PRBlocks.ROSE_TRAPDOOR.get())
 				.add(PRBlocks.ROSE_DOOR.get())
@@ -53,9 +53,9 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
 				.add(PRBlocks.NETHER_ROSE_ORE.get())
 				.add(PRBlocks.POLISHED_ROSE.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB.get())
-				.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get())
+				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get())
 				.add(PRBlocks.ROSE_LAMP.get())
 				.add(PRBlocks.ROSE_TRAPDOOR.get())
 				.add(PRBlocks.ROSE_DOOR.get())
@@ -63,10 +63,10 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 				.add(PRBlocks.RAW_ROSE_BLOCK.get());
 
 		this.valueLookupBuilder(BlockTags.STAIRS)
-			.add(PRBlocks.POLISHED_CUT_ROSE_STAIRS.get());
+			.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get());
 
 		this.valueLookupBuilder(BlockTags.SLABS)
-				.add(PRBlocks.POLISHED_CUT_ROSE_SLAB.get());
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get());
 
 		this.valueLookupBuilder(BlockTags.DOORS)
 				.add(PRBlocks.ROSE_DOOR.get());
