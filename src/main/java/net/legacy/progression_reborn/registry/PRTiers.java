@@ -12,29 +12,32 @@ import java.util.function.Supplier;
 
 public enum PRTiers implements Tier {
 
-    COPPER(BlockTags.INCORRECT_FOR_STONE_TOOL, 190, 5.0F, 1.0F, 14, () -> Ingredient.of(Items.COPPER_INGOT)),
-    ROSE(BlockTags.INCORRECT_FOR_IRON_TOOL, 281, 10.0F, 2.0F, 22, () -> Ingredient.of(PRItems.ROSE_INGOT));
+    COPPER(BlockTags.NEEDS_STONE_TOOL, 190, 5.0F, 1.0F, 14, 1, () -> Ingredient.of(Items.COPPER_INGOT)),
+    ROSE(BlockTags.NEEDS_IRON_TOOL, 281, 10.0F, 2.0F, 22, 2, () -> Ingredient.of(PRItems.ROSE_INGOT));
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;
     private final float speed;
     private final float damage;
     private final int enchantmentValue;
+    private final int level;
     private final Supplier<Ingredient> repairIngredient;
 
     private PRTiers(
-            final TagKey<Block> incorrectBlockForDrops,
-            final int uses,
-            final float speed,
-            final float damage,
-            final int enchantmentValue,
-            final Supplier<Ingredient> repairIngredient
+            TagKey<Block> incorrectBlockForDrops,
+            int uses,
+            float speed,
+            float damage,
+            int enchantmentValue,
+            int level,
+            Supplier<Ingredient> repairIngredient
     ) {
         this.incorrectBlocksForDrops = incorrectBlockForDrops;
         this.uses = uses;
         this.speed = speed;
         this.damage = damage;
         this.enchantmentValue = enchantmentValue;
+        this.level = level;
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
@@ -53,10 +56,10 @@ public enum PRTiers implements Tier {
         return this.damage;
     }
 
-    @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return this.incorrectBlocksForDrops;
-    }
+//    @Override
+//    public TagKey<Block> getIncorrectBlocksForDrops() {
+//        return this.incorrectBlocksForDrops;
+//    }
 
     @Override
     public int getEnchantmentValue() {
@@ -65,6 +68,11 @@ public enum PRTiers implements Tier {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
+    }
+
+    @Override
+    public int getLevel() {
+        return this.level;
     }
 }

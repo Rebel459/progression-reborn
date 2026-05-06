@@ -1,0 +1,48 @@
+{
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "progression_reborn:raw_gold_nugget"
+          }
+        ]
+      }
+    },
+    "collection_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "armor.chest": {
+              "items": "#minecraft:chest_armor",
+              "predicates": {
+                "minecraft:enchantments": [
+                  {
+                    "enchantments": "progression_reborn:collection"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "holding_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "weapon.mainhand": {
+              "items": "#minecraft:pickaxes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "progression_reborn:raw_gold_nugget_collection"
+  }
+}

@@ -48,11 +48,11 @@ public class PRConstants {
 	}
 
 	public static ResourceLocation id(String path) {
-		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+		return new ResourceLocation(MOD_ID, path);
 	}
 
 	public static ResourceLocation vanillaId(String path) {
-		return ResourceLocation.fromNamespaceAndPath(ResourceLocation.DEFAULT_NAMESPACE, path);
+		return new ResourceLocation(ResourceLocation.DEFAULT_NAMESPACE, path);
 	}
 
 	@NotNull

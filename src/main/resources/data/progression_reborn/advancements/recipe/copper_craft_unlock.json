@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "has_raw_copper_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:raw_copper_nugget"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:raw_copper_from_nuggets",
+      "progression_reborn:copper_ingot_to_nugget",
+      "progression_reborn:copper_nugget_to_ingot",
+      "progression_reborn:raw_copper_to_nugget",
+      "progression_reborn:copper_nugget_blasting",
+      "progression_reborn:copper_nugget_smelting",
+      "progression_reborn:copper_nugget_from_blasting",
+      "progression_reborn:copper_nugget_from_smelting"
+    ]
+  }
+}

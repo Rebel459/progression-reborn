@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    },
+    {
+      "item": "progression_reborn:raw_rose"
+    }
+  ],
+  "result": {
+    "item": "progression_reborn:raw_rose_block",
+    "count": 1
+  }
+}

@@ -12,8 +12,8 @@ public class PRFoods {
     static {
         ENCHANTED_GOLDEN_CARROT = (new FoodProperties.Builder())
                 .nutrition(6)
-                .saturationModifier(2.4F)
-                .alwaysEdible()
+                .saturationMod(2.4F)
+                .alwaysEat()
                 .effect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1), 1F)
                 .effect(new MobEffectInstance(MobEffects.SATURATION, 10, 1), 1F)
                 .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1F)
