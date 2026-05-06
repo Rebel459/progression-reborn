@@ -17,7 +17,7 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/stripped_logs"
+                  "name": "progression_reborn:reforge/stripped_logs"
                 }
               ],
               "conditions": [

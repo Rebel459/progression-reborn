@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "progression_reborn:raw_rose"
   },
-  "result": {
-    "item": "progression_reborn:rose_ingot"
-  }
+  "result": "progression_reborn:rose_ingot"
 }

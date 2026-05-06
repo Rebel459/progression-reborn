@@ -17,23 +17,21 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/woods"
+                  "name": "progression_reborn:reforge/woods"
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "progression_reborn:reforge",
-                          "levels": {
-                            "min": 1
-                          }
+                    "enchantments": [
+                      {
+                        "enchantment": "progression_reborn:reforge",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
               ]

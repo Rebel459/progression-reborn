@@ -6,7 +6,5 @@
     "ingredient": {
         "item": "minecraft:raw_copper_block"
     },
-    "result": {
-        "item": "progression_reborn:copper_block"
-    }
+    "result": "progression_reborn:copper_block"
 }

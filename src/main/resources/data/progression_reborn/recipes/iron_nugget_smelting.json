@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "progression_reborn:raw_iron_nugget"
   },
-  "result": {
-    "item": "minecraft:iron_nugget"
-  }
+  "result": "minecraft:iron_nugget"
 }

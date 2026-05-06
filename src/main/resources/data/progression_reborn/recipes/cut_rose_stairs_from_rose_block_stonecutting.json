@@ -3,8 +3,6 @@
   "ingredient": {
     "item": "progression_reborn:rose_block"
   },
-  "result": {
-    "count": 16,
-    "item": "progression_reborn:polished_cut_rose_stairs"
-  }
+  "count": 16,
+  "result": "progression_reborn:polished_cut_rose_stairs"
 }

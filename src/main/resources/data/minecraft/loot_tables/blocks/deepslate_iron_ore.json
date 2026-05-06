@@ -8,63 +8,51 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:group",
-              "children": [],
+              "type": "minecraft:empty",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "items": "#progression_reborn:stone_pickaxes"
+                    "items": ["minecraft:stone_pickaxe"]
                   }
                 }
               ]
             },
             {
-              "type": "minecraft:group",
-              "children": [
-                {
-                  "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/deepslate_iron_ore"
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "progression_reborn:reforge/deepslate_iron_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "progression_reborn:reforge",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
-                    }
+                    "enchantments": [
+                      {
+                        "enchantment": "progression_reborn:reforge",
+                        "levels": { "min": 1 }
+                      }
+                    ]
                   }
                 }
               ]
             },
             {
               "type": "minecraft:item",
+              "name": "minecraft:deepslate_iron_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
-              ],
-              "name": "minecraft:deepslate_iron_ore"
+              ]
             },
             {
               "type": "minecraft:item",

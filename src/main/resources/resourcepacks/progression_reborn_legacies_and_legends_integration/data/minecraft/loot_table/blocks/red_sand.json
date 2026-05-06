@@ -68,7 +68,7 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/red_sand"
+                  "name": "progression_reborn:reforge/red_sand"
                 }
               ],
               "conditions": [

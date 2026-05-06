@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "minecraft:ancient_debris"
   },
-  "result": {
-    "item": "minecraft:netherite_scrap"
-  }
+  "result": "minecraft:netherite_scrap"
 }

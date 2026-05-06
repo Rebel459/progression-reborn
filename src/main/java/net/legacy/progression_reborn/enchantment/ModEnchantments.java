@@ -13,6 +13,12 @@ public class ModEnchantments {
             new ReforgeEnchantment()
     );
 
+    public static final Enchantment COLLECTION = Registry.register(
+            BuiltInRegistries.ENCHANTMENT,
+            new ResourceLocation("progression_reborn", "collection"),
+            new CollectionEnchantment()
+    );
+
     public static void register() {
     }
 }

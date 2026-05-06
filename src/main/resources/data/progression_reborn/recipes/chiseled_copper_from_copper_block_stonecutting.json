@@ -3,8 +3,6 @@
   "ingredient": {
     "item": "progression_reborn:copper_block"
   },
-  "result": {
-    "count": 16,
-    "item": "minecraft:chiseled_copper"
-  }
+  "count": 16,
+  "result": "minecraft:chiseled_copper"
 }

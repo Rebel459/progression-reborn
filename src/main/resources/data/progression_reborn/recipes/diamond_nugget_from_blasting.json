@@ -34,7 +34,5 @@
       "item": "minecraft:diamond_horse_armor"
     }
   ],
-  "result": {
-    "item": "progression_reborn:diamond_nugget"
-  }
+  "result": "progression_reborn:diamond_nugget"
 }

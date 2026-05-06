@@ -34,7 +34,5 @@
       "item": "progression_reborn:copper_horse_armor"
     }
   ],
-  "result": {
-    "item": "progression_reborn:copper_nugget"
-  }
+  "result": "progression_reborn:copper_nugget"
 }

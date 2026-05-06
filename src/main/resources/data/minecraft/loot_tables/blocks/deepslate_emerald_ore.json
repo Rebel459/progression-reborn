@@ -9,27 +9,26 @@
           "children": [
             {
               "type": "minecraft:item",
+              "name": "minecraft:deepslate_emerald_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
-              ],
-              "name": "minecraft:deepslate_emerald_ore"
+              ]
             },
             {
               "type": "minecraft:item",
+              "name": "minecraft:emerald",
               "functions": [
                 {
                   "add": false,
@@ -48,8 +47,7 @@
                 {
                   "function": "minecraft:explosion_decay"
                 }
-              ],
-              "name": "minecraft:emerald"
+              ]
             }
           ]
         }

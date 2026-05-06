@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "progression_reborn:nether_rose_ore"
   },
-  "result": {
-    "item": "progression_reborn:rose_ingot"
-  }
+  "result": "progression_reborn:rose_ingot"
 }

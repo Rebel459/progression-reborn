@@ -45,6 +45,7 @@
             },
             {
               "type": "minecraft:item",
+              "name": "progression_reborn:raw_copper_nugget",
               "functions": [
                 {
                   "add": false,
@@ -63,8 +64,7 @@
                 {
                   "function": "minecraft:explosion_decay"
                 }
-              ],
-              "name": "progression_reborn:raw_copper_nugget"
+              ]
             }
           ]
         }

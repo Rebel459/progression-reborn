@@ -8,54 +8,44 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:group",
-              "children": [
-                {
-                  "type": "minecraft:loot_table",
-                  "value": "progression_reborn:reforge/deepslate_gold_ore"
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "progression_reborn:reforge/deepslate_gold_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "progression_reborn:reforge",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
-                    }
+                    "enchantments": [
+                      {
+                        "enchantment": "progression_reborn:reforge",
+                        "levels": { "min": 1 }
+                      }
+                    ]
                   }
                 }
               ]
             },
             {
               "type": "minecraft:item",
+              "name": "minecraft:deepslate_gold_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
-              ],
-              "name": "minecraft:deepslate_gold_ore"
+              ]
             },
             {
               "type": "minecraft:item",
+              "name": "progression_reborn:raw_gold_nugget",
               "functions": [
                 {
                   "add": false,
@@ -74,8 +64,7 @@
                 {
                   "function": "minecraft:explosion_decay"
                 }
-              ],
-              "name": "progression_reborn:raw_gold_nugget"
+              ]
             }
           ]
         }
