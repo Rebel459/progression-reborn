@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "progression_reborn:raw_iron_nugget"
+            "items": [
+              "progression_reborn:raw_iron_nugget"
+            ]
           }
         ]
       }
@@ -14,16 +16,13 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "slots": {
-            "armor.chest": {
-              "items": "#minecraft:chest_armor",
-              "predicates": {
-                "minecraft:enchantments": [
-                  {
-                    "enchantments": "progression_reborn:collection"
-                  }
-                ]
-              }
+          "equipment": {
+            "chest": {
+              "enchantments": [
+                {
+                  "enchantment": "progression_reborn:collection"
+                }
+              ]
             }
           }
         }
@@ -33,9 +32,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "slots": {
-            "weapon.mainhand": {
-              "items": "#minecraft:pickaxes"
+          "equipment": {
+            "mainhand": {
+              "tag": "minecraft:pickaxes"
             }
           }
         }

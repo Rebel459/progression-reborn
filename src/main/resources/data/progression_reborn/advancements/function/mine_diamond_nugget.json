@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "items": "progression_reborn:diamond_nugget"
+            "items": [
+              "progression_reborn:diamond_nugget"
+            ]
           }
         ]
       }
