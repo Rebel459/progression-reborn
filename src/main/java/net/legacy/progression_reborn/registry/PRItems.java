@@ -159,7 +159,7 @@ public final class PRItems {
         PRCreativeTabs.addAfter(comparedItem, item, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
     }
 
-    private static void actualRegister(@PRNotNull Item item, @PRNotNull String path) {
+    public static void actualRegister(@PRNotNull Item item, @PRNotNull String path) {
         if (BuiltInRegistries.ITEM.getOptional(PRConstants.id(path)).isEmpty()) {
             Registry.register(BuiltInRegistries.ITEM, PRConstants.id(path), item);
         }

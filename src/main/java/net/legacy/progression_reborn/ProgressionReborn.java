@@ -3,6 +3,7 @@ package net.legacy.progression_reborn;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -81,12 +82,16 @@ public class ProgressionReborn implements ModInitializer {
 		}
 
 		// Integrations
+		KnifeIntegration.init();
+		ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+			KnifeIntegration.addCreativeTab();
+		});
 		if (FabricLoader.getInstance().isModLoaded("farmersdelight")
-				&& FabricLoader.getInstance().isModLoaded("farmersknives")
 				&& PRConfig.get.integrations.farmers_delight) {
+				// && FabricLoader.getInstance().isModLoaded("farmersknives")
 
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					new ResourceLocation(MOD_ID, "progression_reborn_farmers_delight_integration"),
+					new ResourceLocation(MOD_ID, "farmers_delight_integration"),
 					modContainer.get(),
 					Component.translatable("pack.progression_reborn.farmers_delight_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
