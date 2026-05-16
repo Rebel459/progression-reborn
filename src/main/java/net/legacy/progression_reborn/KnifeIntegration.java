@@ -25,6 +25,7 @@ import static vectorwing.farmersdelight.common.registry.ModItems.GOLDEN_KNIFE;
 public class KnifeIntegration {
     private static final Logger LOGGER = LoggerFactory.getLogger("Progression Reborn");
     private static Item RoseKnife;
+    private static Item CopperKnife;
 
     public static void init() {
         LOGGER.info("[Progression Reborn] farmersdelight:golden_knife found; trying to work out.");
@@ -35,9 +36,20 @@ public class KnifeIntegration {
                 new Item.Properties().fireResistant()
         );
 
+        CopperKnife = new KnifeItem(
+                PRTiers.COPPER,
+                0.5F,
+                -2.0F,
+                new Item.Properties()
+        );
         PRItems.actualRegister(
                 RoseKnife,
                 "rose_knife"
+//                CreativeModeTabs.COMBAT
+        );
+        PRItems.actualRegister(
+                CopperKnife,
+                "copper_knife"
 //                CreativeModeTabs.COMBAT
         );
     } 
@@ -50,7 +62,15 @@ public class KnifeIntegration {
             return;
         }
 
+        ResourceLocation flintKnifeId = new ResourceLocation("farmersdelight", "flint_knife");
+        Item flintKnife = BuiltInRegistries.ITEM.getOptional(flintKnifeId).orElse(null);
+        if (flintKnife == null) {
+            LOGGER.info("[Progression Reborn] farmersdelight:flint_knife not found; skipping FD compat.");
+            return;
+        }
+
         PRCreativeTabs.addAfter(goldenKnife, RoseKnife, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.COMBAT);
+        PRCreativeTabs.addAfter(flintKnife, CopperKnife, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.COMBAT);
 
 //        ItemGroupEvents.modifyEntriesEvent(
 //                ResourceKey.create(Registries.CREATIVE_MODE_TAB,
