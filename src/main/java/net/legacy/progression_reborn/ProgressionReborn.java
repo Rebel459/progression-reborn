@@ -81,15 +81,15 @@ public class ProgressionReborn implements ModInitializer {
 			);
 		}
 
-		// Integrations
-		KnifeIntegration.init();
-		ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-			KnifeIntegration.addCreativeTab();
-		});
 		if (FabricLoader.getInstance().isModLoaded("farmersdelight")
 				&& PRConfig.get.integrations.farmers_delight) {
 				// && FabricLoader.getInstance().isModLoaded("farmersknives")
 
+		// Integrations
+      KnifeIntegration.init();
+      ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+        KnifeIntegration.addCreativeTab();
+      });
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					new ResourceLocation(MOD_ID, "farmers_delight_integration"),
 					modContainer.get(),
