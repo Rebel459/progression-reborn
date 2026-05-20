@@ -1,0 +1,19 @@
+{
+  "block.minecraft.copper_block": "Полированная медь",
+  "block.minecraft.exposed_copper": "Полированная потускневшая медь",
+  "block.minecraft.weathered_copper": "Полированная окисленная медь",
+  "block.minecraft.oxidized_copper": "Полированная позеленевшая медь",
+  "block.minecraft.waxed_copper_block": "Вощёная медь",
+  "block.minecraft.cut_copper": "Полированная резная медь",
+  "block.minecraft.cut_copper_slab": "Полированная резная медная плита",
+  "block.minecraft.cut_copper_stairs": "Полированная резная медная лестница",
+  "block.minecraft.exposed_cut_copper": "Полированная потускневшая резная медь",
+  "block.minecraft.exposed_cut_copper_slab": "Полированная потускневшая резная медная плита",
+  "block.minecraft.exposed_cut_copper_stairs": "Полированная потускневшая резная медная лестница",
+  "block.minecraft.weathered_cut_copper": "Полированная окисленная резная медь",
+  "block.minecraft.weathered_cut_copper_slab": "Полированная окисленная резная медная плита",
+  "block.minecraft.weathered_cut_copper_stairs": "Полированная окисленная резная медная лестница",
+  "block.minecraft.oxidized_cut_copper": "Полированная позеленевшая резная медь",
+  "block.minecraft.oxidized_cut_copper_slab": "Полированная позеленевшая резная медная плита",
+  "block.minecraft.oxidized_cut_copper_stairs": "Полированная позеленевшая резная медная лестница"
+}
