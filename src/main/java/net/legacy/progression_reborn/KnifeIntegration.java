@@ -69,12 +69,18 @@ public class KnifeIntegration {
             return;
         }
 
-        PRCreativeTabs.addAfter(goldenKnife, RoseKnife, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.COMBAT);
-        PRCreativeTabs.addAfter(flintKnife, CopperKnife, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, CreativeModeTabs.COMBAT);
+        ItemGroupEvents.modifyEntriesEvent(
+            ResourceKey.create(Registries.CREATIVE_MODE_TAB,
+                new ResourceLocation("farmersdelight", "farmersdelight"))
+        ).register(entries -> {
+            entries.addAfter(goldenKnife, RoseKnife);
+        });
 
-//        ItemGroupEvents.modifyEntriesEvent(
-//                ResourceKey.create(Registries.CREATIVE_MODE_TAB,
-//                                   new ResourceLocation("farmersdelight", "farmersdelight")))
-//                .register(entries -> entries.accept(RoseKnife));
+        ItemGroupEvents.modifyEntriesEvent(
+            ResourceKey.create(Registries.CREATIVE_MODE_TAB,
+                new ResourceLocation("farmersdelight", "farmersdelight"))
+        ).register(entries -> {
+            entries.addAfter(flintKnife, CopperKnife);
+        });
     }
 }
