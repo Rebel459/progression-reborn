@@ -30,7 +30,7 @@
 		"progression_reborn.mixins.json"
 	],
 	"depends": {
-		"minecraft": ">=1.21 <=1.21.1",
+		"minecraft": ">=1.20 <=1.20.1",
 		"fabric-api": "*",
 		"cloth-config": "*"
 	}

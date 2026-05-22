@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    },
+    {
+      "item": "progression_reborn:rose_ingot"
+    }
+  ],
+  "result": {
+    "item": "progression_reborn:rose_block",
+    "count": 1
+  }
+}

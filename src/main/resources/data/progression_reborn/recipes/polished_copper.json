@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+      "#": {
+        "item": "progression_reborn:copper_block"
+      }
+    },
+    "result": {
+      "item": "minecraft:copper_block",
+      "count": 4
+    }
+  }

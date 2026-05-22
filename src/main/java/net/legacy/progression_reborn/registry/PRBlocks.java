@@ -27,17 +27,17 @@ public class PRBlocks {
     );
 
     public static final Block BLACKSTONE_QUARTZ_ORE = new Block(
-            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+            Properties.copy(Blocks.GILDED_BLACKSTONE)
     );
     public static final Block BLACKSTONE_GOLD_ORE = new Block(
-            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+            Properties.copy(Blocks.GILDED_BLACKSTONE)
     );
     public static final Block BLACKSTONE_ROSE_ORE = new Block(
-            Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)
+            Properties.copy(Blocks.GILDED_BLACKSTONE)
     );
 
     public static final Block NETHER_ROSE_ORE = new Block(
-            Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)
+            Properties.copy(Blocks.NETHER_GOLD_ORE)
     );
     public static final Block RAW_ROSE_BLOCK = new Block(
             BlockBehaviour.Properties.of()
@@ -81,25 +81,25 @@ public class PRBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(PRBlockSounds.ROSE_BLOCK)
     );
-    public static final StairBlock POLISHED_CUT_ROSE_STAIRS = new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), Properties.ofFullCopy(POLISHED_CUT_ROSE)
+    public static final StairBlock POLISHED_CUT_ROSE_STAIRS = new StairBlock(POLISHED_CUT_ROSE.defaultBlockState(), Properties.copy(POLISHED_CUT_ROSE)
     );
     public static final SlabBlock POLISHED_CUT_ROSE_SLAB = new SlabBlock(
-            Properties.ofFullCopy(POLISHED_CUT_ROSE)
+            Properties.copy(POLISHED_CUT_ROSE)
     );
 
-    public static final DoorBlock ROSE_DOOR = new DoorBlock(PRBlockSetType.ROSE, Properties.of()
+    public static final DoorBlock ROSE_DOOR = new DoorBlock(Properties.of()
             .mapColor(MapColor.COLOR_MAGENTA)
             .strength(5.0F)
             .noOcclusion()
             .pushReaction(PushReaction.DESTROY)
-            .requiresCorrectToolForDrops()
+            .requiresCorrectToolForDrops(), PRBlockSetType.ROSE
     );
-    public static final TrapDoorBlock ROSE_TRAPDOOR = new TrapDoorBlock(PRBlockSetType.ROSE, Properties.of()
+    public static final TrapDoorBlock ROSE_TRAPDOOR = new TrapDoorBlock(Properties.of()
             .mapColor(MapColor.COLOR_MAGENTA)
             .strength(5.0F)
             .noOcclusion()
             .isValidSpawn(Blocks::never)
-            .requiresCorrectToolForDrops()
+            .requiresCorrectToolForDrops(), PRBlockSetType.ROSE
     );
 
     public static void register() {
@@ -108,7 +108,7 @@ public class PRBlocks {
 
         registerBlockAfter(Blocks.AMETHYST_BLOCK, "copper_block", COPPER_BLOCK, CreativeModeTabs.BUILDING_BLOCKS);
 
-        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER_BULB, "rose_block", ROSE_BLOCK, CreativeModeTabs.BUILDING_BLOCKS);
+        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER, "rose_block", ROSE_BLOCK, CreativeModeTabs.BUILDING_BLOCKS);
         registerBlockAfter(ROSE_BLOCK, "polished_rose", POLISHED_ROSE, CreativeModeTabs.BUILDING_BLOCKS);
         registerBlockAfter(POLISHED_ROSE, "polished_cut_rose", POLISHED_CUT_ROSE, CreativeModeTabs.BUILDING_BLOCKS);
         registerBlockAfter(POLISHED_CUT_ROSE, "polished_cut_rose_stairs", POLISHED_CUT_ROSE_STAIRS, CreativeModeTabs.BUILDING_BLOCKS);
@@ -128,7 +128,7 @@ public class PRBlocks {
 
         // Functional Blocks
 
-        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER_BULB, "rose_lamp", ROSE_LAMP, CreativeModeTabs.FUNCTIONAL_BLOCKS);
+        registerBlockAfter(Blocks.WAXED_OXIDIZED_COPPER, "rose_lamp", ROSE_LAMP, CreativeModeTabs.FUNCTIONAL_BLOCKS);
 
     }
 

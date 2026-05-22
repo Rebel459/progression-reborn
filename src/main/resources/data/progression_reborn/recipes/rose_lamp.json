@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "pattern": [
+        "###",
+        "#I#",
+        "###"
+    ],
+    "key": {
+      "#": {
+        "item": "progression_reborn:rose_ingot"
+      },
+      "I": {
+        "item": "minecraft:soul_lantern"
+      }
+    },
+    "result": {
+      "item": "progression_reborn:rose_lamp",
+      "count": 1
+    }
+  }
