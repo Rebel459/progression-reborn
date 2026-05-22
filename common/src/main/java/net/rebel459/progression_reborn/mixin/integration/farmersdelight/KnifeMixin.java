@@ -33,6 +33,6 @@ public class KnifeMixin {
 
     @Inject(method = "init", at = @At(value = "TAIL"))
     private static void handleKnife(CallbackInfo ci) {
-        UnifiedHelpers.CREATIVE_ENTRIES.insert(ResourceKey.create(Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath("farmersdelight", "farmersdelight")), ROSE_KNIFE);
+        UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(ResourceKey.create(Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath("farmersdelight", "farmersdelight")), ModItems.GOLDEN_KNIFE.get(), ROSE_KNIFE);
     }
 }
