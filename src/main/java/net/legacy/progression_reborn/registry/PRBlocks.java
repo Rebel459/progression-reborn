@@ -1,6 +1,7 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.legacy.progression_reborn.lib.PRCreativeTabs;
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.minecraft.core.Registry;
@@ -14,6 +15,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+
+import java.util.List;
 
 public class PRBlocks {
 
@@ -139,25 +142,31 @@ public class PRBlocks {
     }
 
     @SafeVarargs
-    private static void registerBlockItemAfter(ItemLike comparedItem, String name, Block block, ResourceKey<CreativeModeTab>... tabs) {
-        registerBlockItemAfter(comparedItem, name, block, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
-    }
-
-    @SafeVarargs
-    private static void registerBlockItemAfter(ItemLike comparedItem, String path, Block block, CreativeModeTab.TabVisibility visibility, ResourceKey<CreativeModeTab>... tabs) {
+    private static void registerBlockItemAfter(ItemLike comparedItem, String path, Block block, ResourceKey<CreativeModeTab>... tabs) {
         actualRegisterBlockItem(path, block);
-        PRCreativeTabs.addAfter(comparedItem, block, visibility, tabs);
+        if (comparedItem != null) {
+            comparedItem.asItem();
+            if (block != null) {
+                block.asItem();
+                for (ResourceKey<CreativeModeTab> tab : tabs) {
+                    ItemStack stack = new ItemStack(block);
+                    stack.setCount(1);
+                    List<ItemStack> list = List.of(stack);
+                    ItemGroupEvents.modifyEntriesEvent(tab).register((entries) -> entries.addAfter(comparedItem, list, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS));
+                }
+            }
+        }
     }
 
     private static void actualRegisterBlock(String path, Block block) {
-        if (BuiltInRegistries.BLOCK.getOptional(PRConstants.id(path)).isEmpty()) {
-            Registry.register(BuiltInRegistries.BLOCK, PRConstants.id(path), block);
+        if (BuiltInRegistries.BLOCK.getOptional(ProgressionReborn.id(path)).isEmpty()) {
+            Registry.register(BuiltInRegistries.BLOCK, ProgressionReborn.id(path), block);
         }
     }
 
     private static void actualRegisterBlockItem(String path, Block block) {
-        if (BuiltInRegistries.ITEM.getOptional(PRConstants.id(path)).isEmpty()) {
-            Registry.register(BuiltInRegistries.ITEM, PRConstants.id(path), new BlockItem(block, new Item.Properties()));
+        if (BuiltInRegistries.ITEM.getOptional(ProgressionReborn.id(path)).isEmpty()) {
+            Registry.register(BuiltInRegistries.ITEM, ProgressionReborn.id(path), new BlockItem(block, new Item.Properties()));
         }
     }
 }

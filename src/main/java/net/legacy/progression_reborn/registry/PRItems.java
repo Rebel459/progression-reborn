@@ -1,8 +1,7 @@
 package net.legacy.progression_reborn.registry;
 
-import net.legacy.progression_reborn.PRConstants;
-import net.legacy.progression_reborn.lib.PRCreativeTabs;
-import net.legacy.progression_reborn.lib.PRNotNull;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.Registry;
@@ -10,9 +9,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
+
+import java.util.List;
 
 public final class PRItems {
 
@@ -154,25 +154,32 @@ public final class PRItems {
     }
 
     @SafeVarargs
-    private static void registerItemAfter(@PRNotNull ItemLike comparedItem, @PRNotNull Item item, @PRNotNull String path, @PRNotNull ResourceKey<CreativeModeTab>... tabs) {
+    private static void registerItemAfter(ItemLike comparedItem, Item item, String path, ResourceKey<CreativeModeTab>... tabs) {
         actualRegister(item, path);
-        PRCreativeTabs.addAfter(comparedItem, item, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, tabs);
+        if (comparedItem != null && comparedItem.asItem() != null && item != null && item.asItem() != null) {
+            for(ResourceKey<CreativeModeTab> tab : tabs) {
+                ItemStack stack = new ItemStack(item);
+                stack.setCount(1);
+                List<ItemStack> list = List.of(stack);
+                ItemGroupEvents.modifyEntriesEvent(tab).register((entries) -> entries.addAfter(comparedItem, list, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS));
+            }
+        }
     }
 
-    public static void actualRegister(@PRNotNull Item item, @PRNotNull String path) {
-        if (BuiltInRegistries.ITEM.getOptional(PRConstants.id(path)).isEmpty()) {
-            Registry.register(BuiltInRegistries.ITEM, PRConstants.id(path), item);
+    public static void actualRegister(Item item, String path) {
+        if (BuiltInRegistries.ITEM.getOptional(ProgressionReborn.id(path)).isEmpty()) {
+            Registry.register(BuiltInRegistries.ITEM, ProgressionReborn.id(path), item);
         }
     }
 
     // ====================== Smithing Templates ======================
     public static SmithingTemplateItem createIronUpgradeTemplate() {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.iron_upgrade"))).withStyle(ChatFormatting.GRAY),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade"))).withStyle(ChatFormatting.GRAY),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.iron_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList()
         );
@@ -180,11 +187,11 @@ public final class PRItems {
 
     public static SmithingTemplateItem createRoseUpgradeTemplate() {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.rose_upgrade"))).withStyle(ChatFormatting.GRAY),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(PRConstants.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade"))).withStyle(ChatFormatting.GRAY),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(ProgressionReborn.MOD_ID, "smithing_template.rose_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList()
         );

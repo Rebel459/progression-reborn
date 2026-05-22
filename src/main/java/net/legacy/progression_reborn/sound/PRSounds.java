@@ -1,12 +1,11 @@
 package net.legacy.progression_reborn.sound;
 
-import net.legacy.progression_reborn.PRConstants;
+import net.legacy.progression_reborn.ProgressionReborn;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import org.jetbrains.annotations.NotNull;
 
 public class PRSounds {
@@ -27,12 +26,12 @@ public class PRSounds {
 
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {
-		ResourceLocation resourceLocation = PRConstants.id(string);
+		ResourceLocation resourceLocation = ProgressionReborn.id(string);
 		return Registry.register(BuiltInRegistries.SOUND_EVENT, resourceLocation, SoundEvent.createVariableRangeEvent(resourceLocation));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(String id) {
-		return registerForHolder(PRConstants.id(id));
+		return registerForHolder(ProgressionReborn.id(id));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(ResourceLocation id) {

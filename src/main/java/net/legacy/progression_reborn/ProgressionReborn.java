@@ -19,13 +19,18 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.Optional;
 
-import static net.legacy.progression_reborn.PRConstants.MOD_ID;
+import static net.legacy.progression_reborn.ProgressionReborn.MOD_ID;
 import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
 
 /**
  * by Rebel459
  */
 public class ProgressionReborn implements ModInitializer {
+
+	public static final String MOD_ID = "progression_reborn";
+	public static ResourceLocation id(String path) {
+		return new ResourceLocation(MOD_ID, path);
+	}
 
 	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE =
 			ResourceKey.create(PLACED_FEATURE, new ResourceLocation(MOD_ID, "ore_rose_nether"));
@@ -47,13 +52,6 @@ public class ProgressionReborn implements ModInitializer {
 		);
 
 		// Register builtin resource packs
-		ResourceManagerHelper.registerBuiltinResourcePack(
-				new ResourceLocation(MOD_ID, "progression_reborn_asset_overrides"),
-				modContainer.get(),
-				Component.translatable("pack.progression_reborn.progression_reborn_asset_overrides"),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
-
 		if (PRConfig.get.generation.modified_overworld_ores) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					new ResourceLocation(MOD_ID, "modified_overworld_ores"),
@@ -83,61 +81,16 @@ public class ProgressionReborn implements ModInitializer {
 
 		if (FabricLoader.getInstance().isModLoaded("farmersdelight")
 				&& PRConfig.get.integrations.farmers_delight) {
-				// && FabricLoader.getInstance().isModLoaded("farmersknives")
 
-		// Integrations
-      KnifeIntegration.init();
-      ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-        KnifeIntegration.addCreativeTab();
-      });
+			// Integrations
+			KnifeIntegration.init();
+			ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+				KnifeIntegration.addCreativeTab();
+			});
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					new ResourceLocation(MOD_ID, "farmers_delight_integration"),
 					modContainer.get(),
 					Component.translatable("pack.progression_reborn.farmers_delight_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
-
-		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends")
-				&& PRConfig.get.integrations.legacies_and_legends) {
-
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					new ResourceLocation(MOD_ID, "progression_reborn_legacies_and_legends_integration"),
-					modContainer.get(),
-					Component.translatable("pack.progression_reborn.legacies_and_legends_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
-
-		if (FabricLoader.getInstance().isModLoaded("wilderwild")
-				&& PRConfig.get.integrations.wilder_wild) {
-
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					new ResourceLocation(MOD_ID, "progression_reborn_wilder_wild_integration"),
-					modContainer.get(),
-					Component.translatable("pack.progression_reborn.wilder_wild_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
-
-		if (FabricLoader.getInstance().isModLoaded("trailiertales")
-				&& PRConfig.get.integrations.trailier_tales) {
-
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					new ResourceLocation(MOD_ID, "progression_reborn_trailier_tales_integration"),
-					modContainer.get(),
-					Component.translatable("pack.progression_reborn.trailier_tales_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
-
-		if (FabricLoader.getInstance().isModLoaded("remnants")
-				&& PRConfig.get.integrations.remnants) {
-
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					new ResourceLocation(MOD_ID, "progression_reborn_remnants_integration"),
-					modContainer.get(),
-					Component.translatable("pack.progression_reborn.remnants_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}

@@ -11,6 +11,5 @@ public final class ProgressionRebornClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         PRBlockRenderLayers.init();
-
     }
 }

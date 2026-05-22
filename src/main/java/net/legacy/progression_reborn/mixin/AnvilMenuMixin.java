@@ -14,8 +14,7 @@ public class AnvilMenuMixin {
 
     @Inject(method = "createResult", at = @At("TAIL"))
     private void setReforgeCost(CallbackInfo ci) {
-
-        AnvilMenu menu = (AnvilMenu)(Object)this;
+        AnvilMenu menu = AnvilMenu.class.cast(this);
 
         ItemStack result = menu.getSlot(2).getItem();
 
