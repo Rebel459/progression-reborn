@@ -2,7 +2,6 @@ package net.legacy.progression_reborn.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.legacy.progression_reborn.ProgressionReborn;
-import net.legacy.progression_reborn.lib.PRCreativeTabs;
 import net.legacy.progression_reborn.sound.PRBlockSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
