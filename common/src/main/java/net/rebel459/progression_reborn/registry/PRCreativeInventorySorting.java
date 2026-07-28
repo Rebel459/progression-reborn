@@ -11,7 +11,9 @@ public class PRCreativeInventorySorting {
 
 		// Combat
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_BOOTS, PRItems.ROSE_HELMET, PRItems.ROSE_CHESTPLATE, PRItems.ROSE_LEGGINGS,  PRItems.ROSE_BOOTS);
-		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_SWORD, PRItems.ROSE_SWORD, PRItems.ROSE_AXE, PRItems.ROSE_SPEAR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_SWORD, PRItems.ROSE_SWORD);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_AXE, PRItems.ROSE_AXE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_SPEAR, PRItems.ROSE_SPEAR);
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_HORSE_ARMOR, PRItems.ROSE_HORSE_ARMOR);
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.GOLDEN_NAUTILUS_ARMOR, PRItems.ROSE_NAUTILUS_ARMOR);
 

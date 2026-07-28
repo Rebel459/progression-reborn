@@ -110,7 +110,7 @@ public class PRLootTables {
                 table.editPool(item -> item == Items.IRON_NUGGET, LootEntry.replace(LootItem.lootTableItem(Items.IRON_NUGGET).setWeight(40).apply(SetItemCountFunction.setCount(UniformGenerator.between(9F, 18F))).when(LocationCheck.checkLocation(LocationPredicate.Builder.inDimension(Level.OVERWORLD)))));
                 table.editPool(item -> item == Items.ENCHANTED_GOLDEN_APPLE, LootEntry.replace(LootItem.lootTableItem(PRItems.ENCHANTED_GOLDEN_CARROT).setWeight(1)));
             }
-            if (key == BuiltInLootTables.END_CITY_TREASURE && !UnifiedPlatform.get().isModLoaded("enderscape")) {
+            if (key == BuiltInLootTables.END_CITY_TREASURE && !UnifiedPlatform.isModLoaded("enderscape")) {
                 table.editPool(item -> item == Items.DIAMOND, LootEntry.replace(LootItem.lootTableItem(Items.DIAMOND).setWeight(5).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 5F)))));
             }
         }));

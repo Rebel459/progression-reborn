@@ -8,15 +8,16 @@
     "entity.LivingEntityMixin",
     "entity.MobMixin",
     "entity.PiglinMixin",
-    "inventory.ArmorSlotMixin",
     "entity.PlayerMixin",
     "entity.ZombieMixin",
     "integration.farmersdelight.KnifeMixin",
+    "inventory.ArmorSlotMixin",
     "item.EquippableMixin",
     "item.ItemStackMixin",
-    "item.ToolMaterialMixin"
+    "item.ToolMaterialMixin",
+    "worldgen.NoiseChunkMixin"
   ],
-  "client":[
+  "client": [
     "client.ClientTooltipComponentMixin",
     "client.ItemStackMixin",
     "integration.item_tooltips.StoredItemTooltipsMixin"

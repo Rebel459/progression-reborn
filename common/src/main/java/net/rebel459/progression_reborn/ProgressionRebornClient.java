@@ -13,7 +13,7 @@ public class ProgressionRebornClient {
 		if (PRConfig.get().misc.retextured_iron_equipment) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("retextured_iron_equipment"), PackType.REQUIRED_RESOURCES);
 		}
-		if (UnifiedPlatform.get().isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {
+		if (UnifiedPlatform.isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("farmers_delight_integration"), PackType.REQUIRED_RESOURCES);
 		}
 		UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(PREquipmentAssets.ROSE, true);

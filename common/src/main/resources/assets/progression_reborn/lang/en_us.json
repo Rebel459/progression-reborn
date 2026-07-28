@@ -88,6 +88,8 @@
   "text.autoconfig.progression_reborn.option.generation.modified_nether_ores.@Tooltip": "Adds new Blackstone ore variants to Nether generation.",
   "text.autoconfig.progression_reborn.option.generation.modified_bastions": "Modified Bastions",
   "text.autoconfig.progression_reborn.option.generation.modified_bastions.@Tooltip": "Whether Bastions should use Gold Lanterns and Gold Chains.",
+  "text.autoconfig.progression_reborn.option.generation.nether_ore_veins": "Nether Ore Veins",
+  "text.autoconfig.progression_reborn.option.generation.nether_ore_veins.@Tooltip": "Whether the Nether should have Netherrack-Quartz and Blackstone-Gold ore veins",
 
   "text.autoconfig.progression_reborn.option.misc": "Miscellaneous",
   "text.autoconfig.progression_reborn.option.misc.retextured_iron_equipment": "Retextured Iron Equipment",

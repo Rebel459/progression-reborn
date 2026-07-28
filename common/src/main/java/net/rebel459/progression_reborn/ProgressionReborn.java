@@ -1,7 +1,5 @@
 package net.rebel459.progression_reborn;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BiomeTags;
@@ -28,7 +26,7 @@ public class ProgressionReborn {
     }
 
     public static boolean isEndRebornLoaded() {
-		return UnifiedPlatform.get().isModLoaded("end_reborn");
+		return UnifiedPlatform.isModLoaded("end_reborn");
 	}
 
 	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
@@ -70,25 +68,25 @@ public class ProgressionReborn {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("modified_bastions"), PackType.REQUIRED_DATA);
 		}
 
-		if (UnifiedPlatform.get().isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {
+		if (UnifiedPlatform.isModLoaded("farmersdelight") && PRConfig.get().integrations.farmers_delight) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("farmers_delight_integration"), PackType.REQUIRED_DATA);
 		}
-		if (UnifiedPlatform.get().isModLoaded("legacies_and_legends") && PRConfig.get().integrations.legacies_and_legends) {
+		if (UnifiedPlatform.isModLoaded("legacies_and_legends") && PRConfig.get().integrations.legacies_and_legends) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("legacies_and_legends_integration"), PackType.REQUIRED_DATA);
 		}
 		if (isEndRebornLoaded() && PRConfig.get().integrations.end_reborn) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("end_reborn_integration"), PackType.REQUIRED_DATA);
 		}
-		if (UnifiedPlatform.get().isModLoaded("wilderwild") && PRConfig.get().integrations.wilder_wild) {
+		if (UnifiedPlatform.isModLoaded("wilderwild") && PRConfig.get().integrations.wilder_wild) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("wilder_wild_integration"), PackType.REQUIRED_DATA);
 		}
-		if (UnifiedPlatform.get().isModLoaded("trailiertales") && PRConfig.get().integrations.trailier_tales) {
+		if (UnifiedPlatform.isModLoaded("trailiertales") && PRConfig.get().integrations.trailier_tales) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("trailier_tales_integration"), PackType.REQUIRED_DATA);
 		}
-        if (UnifiedPlatform.get().isModLoaded("remnants") && PRConfig.get().integrations.remnants) {
+        if (UnifiedPlatform.isModLoaded("remnants") && PRConfig.get().integrations.remnants) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("remnants_integration"), PackType.REQUIRED_DATA);
         }
-        if (UnifiedPlatform.get().isModLoaded("bloom") && PRConfig.get().integrations.bloom) {
+        if (UnifiedPlatform.isModLoaded("bloom") && PRConfig.get().integrations.bloom) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("bloom_integration"), PackType.REQUIRED_DATA);
         }
 	}

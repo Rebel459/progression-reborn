@@ -9,7 +9,7 @@ import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.unified.platform.UnifiedRegistries;
-import net.rebel459.unified.util.SuppliedItem;
+import net.rebel459.unified.util.registry.SuppliedItem;
 
 public final class PRItems {
 

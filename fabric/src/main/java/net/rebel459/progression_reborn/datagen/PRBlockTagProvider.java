@@ -3,6 +3,7 @@ package net.rebel459.progression_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.world.level.block.Blocks;
 import net.rebel459.progression_reborn.registry.PRBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
@@ -95,6 +96,14 @@ public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 
 		this.valueLookupBuilder(BlockTags.PIGLIN_REPELLENTS)
 				.add(PRBlocks.ROSE_LAMP.get());
+
+		this.valueLookupBuilder(BlockTags.NETHER_CARVER_REPLACEABLES)
+				.add(Blocks.QUARTZ_BLOCK)
+				.add(Blocks.SMOOTH_BASALT)
+				.add(Blocks.RAW_GOLD_BLOCK)
+				.add(PRBlocks.NETHER_ROSE_ORE.get())
+				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.get())
+				.add(PRBlocks.BLACKSTONE_ROSE_ORE.get());
 	}
 
 }

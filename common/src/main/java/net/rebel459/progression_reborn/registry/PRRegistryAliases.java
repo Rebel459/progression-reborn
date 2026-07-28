@@ -22,7 +22,7 @@ public class PRRegistryAliases {
 
         convertToVanilla("netherite_horse_armor");
 
-        if (PRConfig.get().integrations.farmers_delight && UnifiedPlatform.get().isModLoaded("farmersdelight")) {
+        if (PRConfig.get().integrations.farmers_delight && UnifiedPlatform.isModLoaded("farmersdelight")) {
             PRItems.ITEMS.addAlias(Identifier.fromNamespaceAndPath("farmersknives", "copper_knife"), Identifier.fromNamespaceAndPath("farmersdelight", "copper_knife"));
             PRItems.ITEMS.addAlias(Identifier.fromNamespaceAndPath("farmersknives", "rose_knife"), ProgressionReborn.id("rose_knife"));
         }
