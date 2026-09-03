@@ -74,6 +74,8 @@ public class PRConfig implements ConfigData {
         public boolean remnants = true;
         @ConfigEntry.Category("config")
         public boolean bloom = true;
+        @ConfigEntry.Category("config")
+        public boolean enderscape = true;
     }
 
 }

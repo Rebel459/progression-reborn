@@ -2,6 +2,7 @@ package net.rebel459.progression_reborn.registry;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
+import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.unified.platform.UnifiedHelpers;
 import net.rebel459.unified.util.CreativeModeTabs;
 
@@ -25,6 +26,7 @@ public class PRCreativeInventorySorting {
 
 		// Ingredients
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.CHARCOAL, PRItems.RAW_COPPER_NUGGET, PRItems.RAW_IRON_NUGGET, PRItems.RAW_GOLD_NUGGET, PRItems.RAW_ROSE_NUGGET);
+		if (ProgressionReborn.doEnderscapeIntegration()) UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, PRItems.RAW_ROSE_NUGGET, PRItems.RAW_SHADOLINE_NUGGET);
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.RAW_GOLD, PRItems.RAW_ROSE);
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.GOLD_NUGGET, PRItems.ROSE_NUGGET, PRItems.DIAMOND_SHARD);
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.IRON_INGOT, PRItems.IRON_ALLOY);

@@ -1,38 +1,38 @@
 package net.rebel459.progression_reborn.util;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.rebel459.progression_reborn.registry.PRDataComponents;
 import net.rebel459.progression_reborn.registry.PRItems;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class CollectionHelper {
+public record CollectionData(int maxSize, Item conversionItem, int conversionCount) {
 
-    public static HashMap<Item, Item> COLLECTION_ITEMS = new HashMap<>(Map.of(
-            PRItems.RAW_COPPER_NUGGET.get(), Items.RAW_COPPER,
-            PRItems.RAW_IRON_NUGGET.get(), Items.RAW_IRON,
-            PRItems.RAW_GOLD_NUGGET.get(), Items.RAW_GOLD,
-            PRItems.RAW_ROSE_NUGGET.get(), PRItems.RAW_ROSE.get(),
-            Items.COPPER_NUGGET, Items.COPPER_INGOT,
-            Items.IRON_NUGGET, Items.IRON_INGOT,
-            Items.GOLD_NUGGET, Items.GOLD_INGOT,
-            PRItems.ROSE_NUGGET.get(), PRItems.ROSE_INGOT.get(),
-            PRItems.DIAMOND_SHARD.get(), Items.DIAMOND
-    ));
+    public static final Codec<CollectionData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+            ExtraCodecs.POSITIVE_INT.fieldOf("max_size").forGetter(CollectionData::maxSize),
+            BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(CollectionData::conversionItem),
+            ExtraCodecs.POSITIVE_INT.fieldOf("conversion_count").forGetter(CollectionData::conversionCount)
+    ).apply(instance, CollectionData::new));
 
-    public static int getMaxStackSize(Item item) {
-        return 64;
-    }
+    public static final StreamCodec<ByteBuf, CollectionData> STREAM_CODEC = ByteBufCodecs.fromCodec(CODEC);
 
-    public static int getCountPerConversion(Item item) {
-        return 9;
+    public CollectionData(ItemLike item) {
+        this(64, item.asItem(), 9);
     }
 
     public static void dropAllCollected(Player player, ItemStack chestplate) {

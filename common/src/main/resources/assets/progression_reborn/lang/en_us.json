@@ -33,6 +33,7 @@
   "item.progression_reborn.rose_spear": "Rose Spear",
   "item.progression_reborn.rose_nautilus_armor": "Rose Nautilus Armor",
   "item.progression_reborn.rose_knife": "Rose Knife",
+  "item.progression_reborn.raw_shadoline_nugget": "Raw Shadoline Nugget",
 
   "block.progression_reborn.blackstone_quartz_ore": "Blackstone Quartz Ore",
   "block.progression_reborn.blackstone_gold_ore": "Blackstone Gold Ore",
@@ -78,6 +79,7 @@
   "pack.progression_reborn.trailier_tales_integration": "Progression Reborn - Trailier Tales Integration",
   "pack.progression_reborn.remnants_integration": "Progression Reborn - Remnants Integration",
   "pack.progression_reborn.bloom_integration": "Progression Reborn - Bloom Integration",
+  "pack.progression_reborn.enderscape_integration": "Progression Reborn - Enderscape Integration",
 
   "text.autoconfig.progression_reborn.title": "Progression Reborn",
 
@@ -106,5 +108,6 @@
   "text.autoconfig.progression_reborn.option.integrations.wilder_wild": "Wilder Wild",
   "text.autoconfig.progression_reborn.option.integrations.trailier_tales": "Trailier Tales",
   "text.autoconfig.progression_reborn.option.integrations.remnants": "Remnants",
-  "text.autoconfig.progression_reborn.option.integrations.bloom": "Bloom"
+  "text.autoconfig.progression_reborn.option.integrations.bloom": "Bloom",
+  "text.autoconfig.progression_reborn.option.integrations.enderscape": "Enderscape"
 }

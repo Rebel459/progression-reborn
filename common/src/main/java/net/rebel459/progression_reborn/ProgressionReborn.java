@@ -20,14 +20,14 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class ProgressionReborn {
 
+	public static boolean doEnderscapeIntegration() {
+		return UnifiedPlatform.isModLoaded("enderscape") && PRConfig.get().integrations.enderscape;
+	}
+
     public static final String MOD_ID = "progression_reborn";
     public static Identifier id(String path) {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
-
-    public static boolean isEndRebornLoaded() {
-		return UnifiedPlatform.isModLoaded("end_reborn");
-	}
 
 	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, Identifier.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
 	
@@ -47,16 +47,16 @@ public class ProgressionReborn {
 		PRCreativeInventorySorting.init();
 		PRLootTables.init();
 
-		UnifiedHelpers.BLOCK_CONVERSIONS.addWeathering(new WeatheringCopperBlocks(
-				PRBlocks.COPPER_BLOCK.get(),
-				PRBlocks.EXPOSED_COPPER.get(),
-				PRBlocks.WEATHERED_COPPER.get(),
-				PRBlocks.OXIDIZED_COPPER.get(),
-				PRBlocks.WAXED_COPPER_BLOCK.get(),
-				PRBlocks.WAXED_EXPOSED_COPPER.get(),
-				PRBlocks.WAXED_WEATHERED_COPPER.get(),
-				PRBlocks.WAXED_OXIDIZED_COPPER.get()
-		));
+		UnifiedHelpers.BLOCK_CONVERSIONS.addWeathering(
+				PRBlocks.COPPER_BLOCK,
+				PRBlocks.EXPOSED_COPPER,
+				PRBlocks.WEATHERED_COPPER,
+				PRBlocks.OXIDIZED_COPPER,
+				PRBlocks.WAXED_COPPER_BLOCK,
+				PRBlocks.WAXED_EXPOSED_COPPER,
+				PRBlocks.WAXED_WEATHERED_COPPER,
+				PRBlocks.WAXED_OXIDIZED_COPPER
+		);
 
 		if (PRConfig.get().generation.modified_overworld_ores) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("modified_overworld_ores"), PackType.REQUIRED_DATA);
@@ -74,7 +74,7 @@ public class ProgressionReborn {
 		if (UnifiedPlatform.isModLoaded("legacies_and_legends") && PRConfig.get().integrations.legacies_and_legends) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("legacies_and_legends_integration"), PackType.REQUIRED_DATA);
 		}
-		if (isEndRebornLoaded() && PRConfig.get().integrations.end_reborn) {
+		if (UnifiedPlatform.isModLoaded("end_reborn") && PRConfig.get().integrations.end_reborn) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("end_reborn_integration"), PackType.REQUIRED_DATA);
 		}
 		if (UnifiedPlatform.isModLoaded("wilderwild") && PRConfig.get().integrations.wilder_wild) {
@@ -86,8 +86,11 @@ public class ProgressionReborn {
         if (UnifiedPlatform.isModLoaded("remnants") && PRConfig.get().integrations.remnants) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("remnants_integration"), PackType.REQUIRED_DATA);
         }
-        if (UnifiedPlatform.isModLoaded("bloom") && PRConfig.get().integrations.bloom) {
+		if (UnifiedPlatform.isModLoaded("bloom") && PRConfig.get().integrations.bloom) {
 			UnifiedHelpers.PACKS.add(ProgressionReborn.id("bloom_integration"), PackType.REQUIRED_DATA);
-        }
+		}
+		if (doEnderscapeIntegration()) {
+			UnifiedHelpers.PACKS.add(ProgressionReborn.id("enderscape_integration"), PackType.REQUIRED_DATA);
+		}
 	}
 }

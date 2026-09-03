@@ -4,7 +4,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.rebel459.progression_reborn.util.CollectionHelper;
+import net.rebel459.progression_reborn.util.CollectionData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,7 +20,7 @@ public abstract class LivingEntityMixin {
         if (oldStack.isEmpty()) return;
 
         if (!ItemStack.isSameItemSameComponents(oldStack, newStack) || oldStack.getCount() != newStack.getCount()) {
-            CollectionHelper.dropAllCollected(player, oldStack);
+            CollectionData.dropAllCollected(player, oldStack);
         }
     }
 }

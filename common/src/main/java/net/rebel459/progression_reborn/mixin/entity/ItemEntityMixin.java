@@ -11,7 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.rebel459.progression_reborn.registry.PRDataComponents;
 import net.rebel459.progression_reborn.registry.PREnchantments;
-import net.rebel459.progression_reborn.util.CollectionHelper;
+import net.rebel459.progression_reborn.util.CollectionData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -34,7 +34,8 @@ public abstract class ItemEntityMixin {
         ItemStack itemStack = itemEntity.getItem();
         Item item = itemStack.getItem();
         ItemStack chestplate = player.getItemBySlot(EquipmentSlot.CHEST);
-        if (!CollectionHelper.COLLECTION_ITEMS.containsKey(item) || chestplate.isEmpty() || chestplate.getEnchantments().getLevel(player.level().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(PREnchantments.COLLECTION)) <= 0) return;
+        CollectionData collection = itemStack.get(PRDataComponents.COLLECTION_DATA.get());
+        if (collection == null || chestplate.isEmpty() || chestplate.getEnchantments().getLevel(player.level().registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(PREnchantments.COLLECTION)) <= 0) return;
         var itemLookup = player.level().registryAccess().lookupOrThrow(Registries.ITEM);
         Identifier itemId = itemLookup.getKey(item);
         if (!chestplate.has(PRDataComponents.STORED_ITEMS.get())) {
@@ -45,7 +46,7 @@ public abstract class ItemEntityMixin {
         }
         Map<Identifier, Integer> stored = new HashMap<>(chestplate.getOrDefault(PRDataComponents.STORED_ITEMS.get(), Map.of()));
         int currentStoredCount = stored.getOrDefault(itemId, 0);
-        int remainingCapacity = CollectionHelper.getMaxStackSize(item) - currentStoredCount;
+        int remainingCapacity = collection.maxSize() - currentStoredCount;
         if (remainingCapacity <= 0) {
             return;
         }
@@ -61,17 +62,17 @@ public abstract class ItemEntityMixin {
                 return;
             }
 
-            Item resultItem = CollectionHelper.COLLECTION_ITEMS.get(optional.get().value());
+            Item resultItem = collection.conversionItem();
             if (resultItem == null) {
                 return;
             }
 
-            while (count >= CollectionHelper.getCountPerConversion(item)) {
+            while (count >= collection.conversionCount()) {
                 ItemStack resultStack = resultItem.getDefaultInstance();
                 if (!player.getInventory().add(resultStack)) {
                     break;
                 }
-                count -= CollectionHelper.getCountPerConversion(item);
+                count -= collection.conversionCount();
             }
 
             if (count == 0) {

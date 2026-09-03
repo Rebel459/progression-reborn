@@ -8,6 +8,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.rebel459.progression_reborn.ProgressionReborn;
+import net.rebel459.progression_reborn.util.CollectionData;
 import net.rebel459.unified.platform.UnifiedRegistries;
 import net.rebel459.unified.util.registry.SuppliedItem;
 
@@ -16,38 +17,6 @@ public final class PRItems {
     public static UnifiedRegistries.Items ITEMS = UnifiedRegistries.Items.create(ProgressionReborn.MOD_ID);
 
     // Items
-    public static final SuppliedItem RAW_COPPER_NUGGET = ITEMS.register("raw_copper_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-    );
-    public static final SuppliedItem RAW_IRON_NUGGET = ITEMS.register("raw_iron_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-    );
-    public static final SuppliedItem RAW_GOLD_NUGGET = ITEMS.register("raw_gold_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-    );
-    public static final SuppliedItem RAW_ROSE_NUGGET = ITEMS.register("raw_rose_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-                    .fireResistant()
-    );
-    public static final SuppliedItem ROSE_NUGGET = ITEMS.register("rose_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-                    .fireResistant()
-    );
-    public static final SuppliedItem DIAMOND_SHARD = ITEMS.register("diamond_shard",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
-    );
     public static final SuppliedItem RAW_ROSE = ITEMS.register("raw_rose",
             Item::new,
             () -> new Properties()
@@ -60,6 +29,44 @@ public final class PRItems {
                     .stacksTo(64)
                     .trimMaterial(PRTrimMaterials.ROSE)
                     .fireResistant()
+    );
+    public static final SuppliedItem RAW_COPPER_NUGGET = ITEMS.register("raw_copper_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_COPPER))
+    );
+    public static final SuppliedItem RAW_IRON_NUGGET = ITEMS.register("raw_iron_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_IRON))
+    );
+    public static final SuppliedItem RAW_GOLD_NUGGET = ITEMS.register("raw_gold_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_GOLD))
+    );
+    public static final SuppliedItem RAW_ROSE_NUGGET = ITEMS.register("raw_rose_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(RAW_ROSE))
+    );
+    public static final SuppliedItem ROSE_NUGGET = ITEMS.register("rose_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(ROSE_INGOT))
+    );
+    public static final SuppliedItem DIAMOND_SHARD = ITEMS.register("diamond_shard",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.DIAMOND))
     );
     public static final SuppliedItem IRON_ALLOY = ITEMS.register("iron_alloy",
             Item::new,
@@ -91,6 +98,11 @@ public final class PRItems {
                     .rarity(Rarity.RARE)
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT, PRConsumables.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+    );
+    public static final SuppliedItem RAW_SHADOLINE_NUGGET = ITEMS.register("raw_shadoline_nugget",
+            Item::new,
+            () -> new Properties()
+                    .stacksTo(64)
     );
 
     public static final SuppliedItem ROSE_SWORD = ITEMS.register("rose_sword",

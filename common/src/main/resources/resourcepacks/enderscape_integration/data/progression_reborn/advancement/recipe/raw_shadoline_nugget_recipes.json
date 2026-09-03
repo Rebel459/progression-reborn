@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "has_raw_shadoline_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "progression_reborn:raw_shadoline_nugget"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "progression_reborn:raw_shadoline",
+      "progression_reborn:raw_shadoline_nugget"
+    ]
+  }
+}
