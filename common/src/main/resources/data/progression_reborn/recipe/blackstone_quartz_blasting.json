@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 0.2,
+  "cookingtime": 100,
+  "ingredient": [
+    "progression_reborn:blackstone_quartz_ore"
+  ],
+  "result": {
+    "id": "minecraft:quartz"
+  }
+}
