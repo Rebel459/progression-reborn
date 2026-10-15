@@ -1,6 +1,7 @@
 package net.rebel459.progression_reborn.mixin.entity;
 
 import net.minecraft.core.component.DataComponentPatch;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.stats.Stats;
@@ -62,7 +63,7 @@ public abstract class ItemEntityMixin {
                 return;
             }
 
-            Item resultItem = collection.conversionItem();
+            Item resultItem = BuiltInRegistries.ITEM.getValue(collection.conversionItem());
             if (resultItem == null) {
                 return;
             }

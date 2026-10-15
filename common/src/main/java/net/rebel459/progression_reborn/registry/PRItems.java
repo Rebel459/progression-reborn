@@ -2,15 +2,31 @@ package net.rebel459.progression_reborn.registry;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.Util;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Tool;
+import net.minecraft.world.item.component.Weapon;
+import net.minecraft.world.item.enchantment.Repairable;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.progression_reborn.util.CollectionData;
-import net.rebel459.unified.platform.UnifiedRegistries;
-import net.rebel459.unified.util.registry.SuppliedItem;
+import net.rebel459.unified.api.core.SuppliedItem;
+import net.rebel459.unified.api.core.UnifiedRegistries;
+import net.rebel459.unified.api.data.registry.ItemGenerator;
+import net.rebel459.unified.api.registry.VanillaItemCodecs;
+import vectorwing.farmersdelight.common.item.KnifeItem;
+
+import java.util.List;
 
 public final class PRItems {
 
@@ -34,39 +50,39 @@ public final class PRItems {
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_COPPER))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_COPPER.builtInRegistryHolder().key()))
     );
     public static final SuppliedItem RAW_IRON_NUGGET = ITEMS.register("raw_iron_nugget",
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_IRON))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_IRON.builtInRegistryHolder().key()))
     );
     public static final SuppliedItem RAW_GOLD_NUGGET = ITEMS.register("raw_gold_nugget",
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_GOLD))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.RAW_GOLD.builtInRegistryHolder().key()))
     );
     public static final SuppliedItem RAW_ROSE_NUGGET = ITEMS.register("raw_rose_nugget",
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
                     .fireResistant()
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(RAW_ROSE))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(RAW_ROSE.key()))
     );
     public static final SuppliedItem ROSE_NUGGET = ITEMS.register("rose_nugget",
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
                     .fireResistant()
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(ROSE_INGOT))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(ROSE_INGOT.key()))
     );
     public static final SuppliedItem DIAMOND_SHARD = ITEMS.register("diamond_shard",
             Item::new,
             () -> new Properties()
                     .stacksTo(64)
-                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.DIAMOND))
+                    .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(Items.DIAMOND.builtInRegistryHolder().key()))
     );
     public static final SuppliedItem IRON_ALLOY = ITEMS.register("iron_alloy",
             Item::new,
@@ -99,10 +115,14 @@ public final class PRItems {
                     .food(PRFoods.ENCHANTED_GOLDEN_CARROT, PRConsumables.ENCHANTED_GOLDEN_CARROT)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
     );
-    public static final SuppliedItem RAW_SHADOLINE_NUGGET = ITEMS.register("raw_shadoline_nugget",
-            Item::new,
-            () -> new Properties()
-                    .stacksTo(64)
+    public static final SuppliedItem RAW_SHADOLINE_NUGGET = ProgressionReborn.ENDERSCAPE_DATA.registries().items().register("raw_shadoline_nugget",
+            VanillaItemCodecs.ITEM.create(),
+            builder -> builder
+                    .properties(properties -> properties
+                            .stacksTo(64)
+                            .component(PRDataComponents.COLLECTION_DATA.get(), new CollectionData(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "raw_shadoline"))))
+                    )
+                    .assets(ItemGenerator.Assets::generated)
     );
 
     public static final SuppliedItem ROSE_SWORD = ITEMS.register("rose_sword",
@@ -177,6 +197,31 @@ public final class PRItems {
             () -> new Properties()
                     .nautilusArmor(PRArmorMaterials.ROSE)
                     .fireResistant()
+    );
+
+    public static final SuppliedItem ROSE_KNIFE = ProgressionReborn.FARMERS_DELIGHT_DATA.registries().items().register(
+            "rose_knife",
+            PRItemCodecs.KNIFE.create(),
+            builder -> builder.properties(properties -> properties
+                    .durability(PRToolMaterials.ROSE.durability())
+                    .delayedComponent(DataComponents.REPAIRABLE, provider -> new Repairable(provider.lookup(Registries.ITEM).get().getOrThrow(PRToolMaterials.ROSE.repairItems())))
+                    .enchantable(PRToolMaterials.ROSE.enchantmentValue())
+                    .attributes(ItemAttributeModifiers.builder()
+                            .add(Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, 0.5F + PRToolMaterials.ROSE.attackDamageBonus(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+                            .add(Attributes.ATTACK_SPEED, new AttributeModifier(Item.BASE_ATTACK_SPEED_ID, -2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+                            .build()
+                    )
+                    .delayedComponent(DataComponents.TOOL, provider -> new Tool(
+                            List.of(
+                                    Tool.Rule.deniesDrops(provider.getOrThrow(PRToolMaterials.ROSE.incorrectBlocksForDrops())),
+                                    Tool.Rule.minesAndDrops(provider.getOrThrow(TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("farmersdelight", "mineable/knife"))), PRToolMaterials.ROSE.speed())
+                            ),
+                            1.0F,
+                            1,
+                            false
+                    ))
+                    .component(DataComponents.WEAPON, new Weapon(2))
+            )
     );
 
     public static void init() {}

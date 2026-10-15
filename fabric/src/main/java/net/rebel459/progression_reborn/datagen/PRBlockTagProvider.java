@@ -1,109 +1,104 @@
 package net.rebel459.progression_reborn.datagen;
 
-import java.util.concurrent.CompletableFuture;
-import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
-import net.minecraft.world.level.block.Blocks;
-import net.rebel459.progression_reborn.registry.PRBlocks;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.level.block.Blocks;
+import net.rebel459.progression_reborn.ProgressionReborn;
+import net.rebel459.progression_reborn.registry.PRBlocks;
 
-public final class PRBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
-	public PRBlockTagProvider(@NotNull FabricPackOutput output, @NotNull CompletableFuture<HolderLookup.Provider> registries) {
-		super(output, registries);
-	}
+public final class PRBlockTagProvider {
 
-	@Override
-	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-				.add(PRBlocks.COPPER_BLOCK.get())
-				.add(PRBlocks.EXPOSED_COPPER.get())
-				.add(PRBlocks.WEATHERED_COPPER.get())
-				.add(PRBlocks.OXIDIZED_COPPER.get())
-				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
-				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
-				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
-				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
-				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.get())
-				.add(PRBlocks.BLACKSTONE_GOLD_ORE.get())
-				.add(PRBlocks.BLACKSTONE_ROSE_ORE.get())
-				.add(PRBlocks.NETHER_ROSE_ORE.get())
-				.add(PRBlocks.POLISHED_ROSE.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get())
-				.add(PRBlocks.ROSE_LAMP.get())
-				.add(PRBlocks.ROSE_TRAPDOOR.get())
-				.add(PRBlocks.ROSE_DOOR.get())
-				.add(PRBlocks.ROSE_BLOCK.get())
-				.add(PRBlocks.RAW_ROSE_BLOCK.get())
-				.add(PRBlocks.ROSE_LANTERN.get())
-				.add(PRBlocks.ROSE_CHAIN.get())
-				.add(PRBlocks.GOLD_LANTERN.get())
-				.add(PRBlocks.GOLD_CHAIN.get());
+	public static void init() {
+		
+		var tags = ProgressionReborn.DATA.helpers().tags();
 
-		this.valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
-				.add(PRBlocks.COPPER_BLOCK.get())
-				.add(PRBlocks.EXPOSED_COPPER.get())
-				.add(PRBlocks.WEATHERED_COPPER.get())
-				.add(PRBlocks.OXIDIZED_COPPER.get())
-				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
-				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
-				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
-				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
-				.add(PRBlocks.NETHER_ROSE_ORE.get())
-				.add(PRBlocks.POLISHED_ROSE.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get())
-				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get())
-				.add(PRBlocks.ROSE_LAMP.get())
-				.add(PRBlocks.ROSE_TRAPDOOR.get())
-				.add(PRBlocks.ROSE_DOOR.get())
-				.add(PRBlocks.ROSE_BLOCK.get())
-				.add(PRBlocks.RAW_ROSE_BLOCK.get());
+		tags.create(BlockTags.MINEABLE_WITH_PICKAXE)
+				.add(PRBlocks.COPPER_BLOCK.key())
+				.add(PRBlocks.EXPOSED_COPPER.key())
+				.add(PRBlocks.WEATHERED_COPPER.key())
+				.add(PRBlocks.OXIDIZED_COPPER.key())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.key())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.key())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.key())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.key())
+				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.key())
+				.add(PRBlocks.BLACKSTONE_GOLD_ORE.key())
+				.add(PRBlocks.BLACKSTONE_ROSE_ORE.key())
+				.add(PRBlocks.NETHER_ROSE_ORE.key())
+				.add(PRBlocks.POLISHED_ROSE.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.key())
+				.add(PRBlocks.ROSE_LAMP.key())
+				.add(PRBlocks.ROSE_TRAPDOOR.key())
+				.add(PRBlocks.ROSE_DOOR.key())
+				.add(PRBlocks.ROSE_BLOCK.key())
+				.add(PRBlocks.RAW_ROSE_BLOCK.key())
+				.add(PRBlocks.ROSE_LANTERN.key())
+				.add(PRBlocks.ROSE_CHAIN.key())
+				.add(PRBlocks.GOLD_LANTERN.key())
+				.add(PRBlocks.GOLD_CHAIN.key());
 
-		this.valueLookupBuilder(BlockTags.STAIRS)
-			.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.get());
+		tags.create(BlockTags.NEEDS_STONE_TOOL)
+				.add(PRBlocks.COPPER_BLOCK.key())
+				.add(PRBlocks.EXPOSED_COPPER.key())
+				.add(PRBlocks.WEATHERED_COPPER.key())
+				.add(PRBlocks.OXIDIZED_COPPER.key())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.key())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.key())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.key())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.key())
+				.add(PRBlocks.NETHER_ROSE_ORE.key())
+				.add(PRBlocks.POLISHED_ROSE.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.key())
+				.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.key())
+				.add(PRBlocks.ROSE_LAMP.key())
+				.add(PRBlocks.ROSE_TRAPDOOR.key())
+				.add(PRBlocks.ROSE_DOOR.key())
+				.add(PRBlocks.ROSE_BLOCK.key())
+				.add(PRBlocks.RAW_ROSE_BLOCK.key());
 
-		this.valueLookupBuilder(BlockTags.SLABS)
-				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.get());
+		tags.create(BlockTags.STAIRS)
+			.add(PRBlocks.CUT_POLISHED_ROSE_STAIRS.key());
 
-		this.valueLookupBuilder(BlockTags.DOORS)
-				.add(PRBlocks.ROSE_DOOR.get());
+		tags.create(BlockTags.SLABS)
+				.add(PRBlocks.CUT_POLISHED_ROSE_SLAB.key());
 
-		this.valueLookupBuilder(BlockTags.TRAPDOORS)
-				.add(PRBlocks.ROSE_TRAPDOOR.get());
+		tags.create(BlockTags.DOORS)
+				.add(PRBlocks.ROSE_DOOR.key());
 
-		this.valueLookupBuilder(BlockTags.CHAINS)
-				.add(PRBlocks.ROSE_CHAIN.get())
-				.add(PRBlocks.GOLD_CHAIN.get());
+		tags.create(BlockTags.TRAPDOORS)
+				.add(PRBlocks.ROSE_TRAPDOOR.key());
 
-		this.valueLookupBuilder(BlockTags.LANTERNS)
-				.add(PRBlocks.ROSE_LANTERN.get())
-				.add(PRBlocks.GOLD_LANTERN.get());
+		tags.create(BlockTags.CHAINS)
+				.add(PRBlocks.ROSE_CHAIN.key())
+				.add(PRBlocks.GOLD_CHAIN.key());
 
-		this.valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
-				.add(PRBlocks.COPPER_BLOCK.get())
-				.add(PRBlocks.EXPOSED_COPPER.get())
-				.add(PRBlocks.WEATHERED_COPPER.get())
-				.add(PRBlocks.OXIDIZED_COPPER.get())
-				.add(PRBlocks.WAXED_COPPER_BLOCK.get())
-				.add(PRBlocks.WAXED_EXPOSED_COPPER.get())
-				.add(PRBlocks.WAXED_WEATHERED_COPPER.get())
-				.add(PRBlocks.WAXED_OXIDIZED_COPPER.get())
-				.add(PRBlocks.ROSE_BLOCK.get());
+		tags.create(BlockTags.LANTERNS)
+				.add(PRBlocks.ROSE_LANTERN.key())
+				.add(PRBlocks.GOLD_LANTERN.key());
 
-		this.valueLookupBuilder(BlockTags.PIGLIN_REPELLENTS)
-				.add(PRBlocks.ROSE_LAMP.get());
+		tags.create(BlockTags.BEACON_BASE_BLOCKS)
+				.add(PRBlocks.COPPER_BLOCK.key())
+				.add(PRBlocks.EXPOSED_COPPER.key())
+				.add(PRBlocks.WEATHERED_COPPER.key())
+				.add(PRBlocks.OXIDIZED_COPPER.key())
+				.add(PRBlocks.WAXED_COPPER_BLOCK.key())
+				.add(PRBlocks.WAXED_EXPOSED_COPPER.key())
+				.add(PRBlocks.WAXED_WEATHERED_COPPER.key())
+				.add(PRBlocks.WAXED_OXIDIZED_COPPER.key())
+				.add(PRBlocks.ROSE_BLOCK.key());
 
-		this.valueLookupBuilder(BlockTags.NETHER_CARVER_REPLACEABLES)
-				.add(Blocks.QUARTZ_BLOCK)
-				.add(Blocks.SMOOTH_BASALT)
-				.add(Blocks.RAW_GOLD_BLOCK)
-				.add(PRBlocks.NETHER_ROSE_ORE.get())
-				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.get())
-				.add(PRBlocks.BLACKSTONE_ROSE_ORE.get());
+		tags.create(BlockTags.PIGLIN_REPELLENTS)
+				.add(PRBlocks.ROSE_LAMP.key());
+
+		tags.create(BlockTags.NETHER_CARVER_REPLACEABLES)
+				.add(Blocks.QUARTZ_BLOCK.properties().blockId())
+				.add(Blocks.SMOOTH_BASALT.properties().blockId())
+				.add(Blocks.RAW_GOLD_BLOCK.properties().blockId())
+				.add(PRBlocks.NETHER_ROSE_ORE.key())
+				.add(PRBlocks.BLACKSTONE_QUARTZ_ORE.key())
+				.add(PRBlocks.BLACKSTONE_ROSE_ORE.key());
 	}
 
 }

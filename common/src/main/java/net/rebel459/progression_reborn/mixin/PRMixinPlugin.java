@@ -3,7 +3,7 @@ package net.rebel459.progression_reborn.mixin;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.rebel459.progression_reborn.config.PRConfig;
-import net.rebel459.unified.platform.UnifiedPlatform;
+import net.rebel459.unified.api.core.UnifiedPlatform;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.objectweb.asm.tree.ClassNode;

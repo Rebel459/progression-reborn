@@ -3,6 +3,14 @@ plugins {
     id 'net.fabricmc.fabric-loom'
 }
 
+fabricApi {
+    configureDataGeneration() {
+        client = true;
+        modId = "progression_reborn"
+        createSourceSet = true
+    }
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     api "net.fabricmc:fabric-loader:${fabric_loader}"
@@ -17,14 +25,12 @@ dependencies {
     implementation("maven.modrinth:trim-patcher:$patcher_version-fabric")
 
     compileOnly("maven.modrinth:farmers-delight-refabricated:$fd_version")
+    datagenRuntimeOnly("maven.modrinth:farmers-delight-refabricated:$fd_version")
     compileOnly("maven.modrinth:item-tooltips:$tooltips_version-fabric")
-}
 
-fabricApi {
-    configureDataGeneration() {
-        client = true;
-        modId = "progression_reborn"
-    }
+    datagenRuntimeOnly("maven.modrinth:enderscape:$enderscape_version")
+    datagenRuntimeOnly("maven.modrinth:lithostitched:$lithostitched_version")
+    datagenRuntimeOnly("maven.modrinth:yacl:$yacl_version")
 }
 
 loom {

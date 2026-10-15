@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.entity.player.Player;
@@ -21,18 +22,18 @@ import net.rebel459.progression_reborn.registry.PRItems;
 import java.util.HashMap;
 import java.util.Map;
 
-public record CollectionData(int maxSize, Item conversionItem, int conversionCount) {
+public record CollectionData(int maxSize, ResourceKey<Item> conversionItem, int conversionCount) {
 
     public static final Codec<CollectionData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ExtraCodecs.POSITIVE_INT.fieldOf("max_size").forGetter(CollectionData::maxSize),
-            BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(CollectionData::conversionItem),
+            ResourceKey.codec(Registries.ITEM).fieldOf("item").forGetter(CollectionData::conversionItem),
             ExtraCodecs.POSITIVE_INT.fieldOf("conversion_count").forGetter(CollectionData::conversionCount)
     ).apply(instance, CollectionData::new));
 
     public static final StreamCodec<ByteBuf, CollectionData> STREAM_CODEC = ByteBufCodecs.fromCodec(CODEC);
 
-    public CollectionData(ItemLike item) {
-        this(64, item.asItem(), 9);
+    public CollectionData(ResourceKey<Item> item) {
+        this(64, item, 9);
     }
 
     public static void dropAllCollected(Player player, ItemStack chestplate) {

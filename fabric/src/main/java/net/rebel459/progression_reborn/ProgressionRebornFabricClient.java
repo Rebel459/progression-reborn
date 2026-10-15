@@ -6,6 +6,6 @@ public class ProgressionRebornFabricClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ProgressionReborn.init();
+        ProgressionRebornClient.init();
     }
 }

@@ -1,0 +1,228 @@
+{
+  "entries": [
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:rose_helmet",
+        "progression_reborn:rose_chestplate",
+        "progression_reborn:rose_leggings",
+        "progression_reborn:rose_boots"
+      ],
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_boots"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_sword",
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_sword"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_axe",
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_axe"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_spear",
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_spear"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_horse_armor",
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_horse_armor"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_nautilus_armor",
+      "tab": "minecraft:combat",
+      "target": "minecraft:golden_nautilus_armor"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:rose_shovel",
+        "progression_reborn:rose_pickaxe",
+        "progression_reborn:rose_axe",
+        "progression_reborn:rose_hoe"
+      ],
+      "tab": "minecraft:tools_and_utilities",
+      "target": "minecraft:golden_hoe"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:enchanted_golden_carrot",
+      "tab": "minecraft:food_and_drinks",
+      "target": "minecraft:golden_carrot"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:raw_copper_nugget",
+        "progression_reborn:raw_iron_nugget",
+        "progression_reborn:raw_gold_nugget",
+        "progression_reborn:raw_rose_nugget"
+      ],
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:charcoal"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:raw_rose",
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:raw_gold"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:rose_nugget",
+        "progression_reborn:diamond_shard"
+      ],
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:gold_nugget"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:iron_alloy",
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:iron_ingot"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:rose_ingot",
+        "progression_reborn:rose_alloy"
+      ],
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:gold_ingot"
+    },
+    {
+      "type": "insert_before",
+      "items": [
+        "progression_reborn:iron_upgrade_smithing_template",
+        "progression_reborn:rose_upgrade_smithing_template"
+      ],
+      "tab": "minecraft:ingredients",
+      "target": "minecraft:netherite_upgrade_smithing_template"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:copper_block",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:copper_block"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:exposed_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:exposed_copper"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:weathered_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:weathered_copper"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:oxidized_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:oxidized_copper"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:waxed_copper_block",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:waxed_copper_block"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:waxed_exposed_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:waxed_exposed_copper"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:waxed_weathered_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:waxed_weathered_copper"
+    },
+    {
+      "type": "insert_before",
+      "items": "progression_reborn:waxed_oxidized_copper",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:waxed_oxidized_copper"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:gold_chain",
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:light_weighted_pressure_plate"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:rose_block",
+        "progression_reborn:polished_rose",
+        "progression_reborn:cut_polished_rose",
+        "progression_reborn:cut_polished_rose_stairs",
+        "progression_reborn:cut_polished_rose_slab",
+        "progression_reborn:rose_door",
+        "progression_reborn:rose_trapdoor",
+        "progression_reborn:rose_lamp",
+        "progression_reborn:rose_chain"
+      ],
+      "tab": "minecraft:building_blocks",
+      "target": "minecraft:waxed_oxidized_copper_chain"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:blackstone_quartz_ore",
+      "tab": "minecraft:natural_blocks",
+      "target": "minecraft:nether_quartz_ore"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:blackstone_gold_ore",
+        "progression_reborn:nether_rose_ore",
+        "progression_reborn:blackstone_rose_ore"
+      ],
+      "tab": "minecraft:natural_blocks",
+      "target": "minecraft:nether_gold_ore"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:raw_rose_block",
+      "tab": "minecraft:natural_blocks",
+      "target": "minecraft:raw_gold_block"
+    },
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_lamp",
+      "tab": "minecraft:functional_blocks",
+      "target": "minecraft:waxed_oxidized_copper_bulb"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:gold_lantern",
+        "progression_reborn:rose_lantern"
+      ],
+      "tab": "minecraft:functional_blocks",
+      "target": "minecraft:waxed_oxidized_copper_lantern"
+    },
+    {
+      "type": "insert_after",
+      "items": [
+        "progression_reborn:gold_chain",
+        "progression_reborn:rose_chain"
+      ],
+      "tab": "minecraft:functional_blocks",
+      "target": "minecraft:waxed_oxidized_copper_chain"
+    }
+  ]
+}

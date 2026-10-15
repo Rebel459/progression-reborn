@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:raw_shadoline_nugget",
+      "tab": "minecraft:ingredients",
+      "target": "progression_reborn:raw_rose_nugget"
+    }
+  ],
+  "load_requirement": {
+    "type": "unified:all_of",
+    "predicates": [
+      {
+        "type": "unified:mods_loaded",
+        "mods": [
+          "enderscape"
+        ]
+      },
+      "progression_reborn:enderscape_integration"
+    ]
+  }
+}

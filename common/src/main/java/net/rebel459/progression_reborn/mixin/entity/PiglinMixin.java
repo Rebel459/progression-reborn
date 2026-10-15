@@ -25,10 +25,10 @@ public class PiglinMixin {
         Piglin piglin = Piglin.class.cast(this);
         int i = random.nextInt(5);
         if (piglin.isAdult() && i == 0) {
-            piglin.maybeWearArmor(EquipmentSlot.HEAD, PRItems.ROSE_HELMET.getDefaultInstance(), random);
-            piglin.maybeWearArmor(EquipmentSlot.CHEST, PRItems.ROSE_CHESTPLATE.getDefaultInstance(), random);
-            piglin.maybeWearArmor(EquipmentSlot.LEGS, PRItems.ROSE_LEGGINGS.getDefaultInstance(), random);
-            piglin.maybeWearArmor(EquipmentSlot.FEET, PRItems.ROSE_BOOTS.getDefaultInstance(), random);
+            piglin.maybeWearArmor(EquipmentSlot.HEAD, PRItems.ROSE_HELMET.defaultItemStack(), random);
+            piglin.maybeWearArmor(EquipmentSlot.CHEST, PRItems.ROSE_CHESTPLATE.defaultItemStack(), random);
+            piglin.maybeWearArmor(EquipmentSlot.LEGS, PRItems.ROSE_LEGGINGS.defaultItemStack(), random);
+            piglin.maybeWearArmor(EquipmentSlot.FEET, PRItems.ROSE_BOOTS.defaultItemStack(), random);
         }
         else if (piglin.isAdult()) {
             piglin.maybeWearArmor(EquipmentSlot.HEAD, Items.GOLDEN_HELMET.getDefaultInstance(), random);
@@ -42,7 +42,7 @@ public class PiglinMixin {
     @Inject(method = "createSpawnWeapon", at = @At(value = "TAIL"), cancellable = true)
     private void selectPiglinWeapon(CallbackInfoReturnable<ItemStack> cir) {
         if (!PRConfig.get().misc.mob_spawn_equipment) return;
-        if (cir.getReturnValue().getItem() == Items.GOLDEN_SWORD && new Random().nextInt(5) == 0) cir.setReturnValue(PRItems.ROSE_SWORD.getDefaultInstance());
-        if (cir.getReturnValue().getItem() == Items.GOLDEN_SPEAR && new Random().nextInt(5) == 0) cir.setReturnValue(PRItems.ROSE_SPEAR.getDefaultInstance());
+        if (cir.getReturnValue().getItem() == Items.GOLDEN_SWORD && new Random().nextInt(5) == 0) cir.setReturnValue(PRItems.ROSE_SWORD.defaultItemStack());
+        if (cir.getReturnValue().getItem() == Items.GOLDEN_SPEAR && new Random().nextInt(5) == 0) cir.setReturnValue(PRItems.ROSE_SPEAR.defaultItemStack());
     }
 }

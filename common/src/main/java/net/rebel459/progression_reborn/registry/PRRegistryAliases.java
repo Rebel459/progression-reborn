@@ -3,7 +3,7 @@ package net.rebel459.progression_reborn.registry;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.minecraft.resources.Identifier;
 import net.rebel459.progression_reborn.config.PRConfig;
-import net.rebel459.unified.platform.UnifiedPlatform;
+import net.rebel459.unified.api.core.UnifiedPlatform;
 
 public class PRRegistryAliases {
 

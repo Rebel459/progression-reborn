@@ -3,6 +3,7 @@ package net.rebel459.progression_reborn.datagen;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
+import net.rebel459.unified.fabric.FabricUnifiedDatagen;
 import org.jetbrains.annotations.NotNull;
 
 public final class PRDataGenerator implements DataGeneratorEntrypoint {
@@ -10,11 +11,9 @@ public final class PRDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(@NotNull FabricDataGenerator dataGenerator) {
 
-		final FabricDataGenerator.Pack pack = dataGenerator.createPack();
+		final FabricUnifiedDatagen.Pack pack = FabricUnifiedDatagen.register(dataGenerator);
 
 		pack.addProvider(PRModelProvider::new);
-		pack.addProvider(PRItemTagProvider::new);
-		pack.addProvider(PRBlockTagProvider::new);
 		pack.addProvider(PRBlockLootProvider::new);
 		pack.addProvider(PRRegistryProvider::new);
 

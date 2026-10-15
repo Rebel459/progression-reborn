@@ -7,8 +7,8 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.progression_reborn.sound.PRBlockSounds;
-import net.rebel459.unified.platform.UnifiedRegistries;
-import net.rebel459.unified.util.registry.SuppliedBlock;
+import net.rebel459.unified.api.core.SuppliedBlock;
+import net.rebel459.unified.api.core.UnifiedRegistries;
 
 public class PRBlocks {
 

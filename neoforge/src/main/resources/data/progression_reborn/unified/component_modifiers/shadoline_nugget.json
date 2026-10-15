@@ -1,0 +1,25 @@
+{
+  "components": {
+    "progression_reborn:collection_data": {
+      "conversion_count": 9,
+      "item": "enderscape:shadoline_ingot",
+      "max_size": 64
+    }
+  },
+  "load_requirement": {
+    "type": "unified:all_of",
+    "predicates": [
+      {
+        "type": "unified:mods_loaded",
+        "mods": [
+          "enderscape"
+        ]
+      },
+      "progression_reborn:enderscape_integration"
+    ]
+  },
+  "predicate": {
+    "type": "unified:items",
+    "items": "enderscape:shadoline_ingot"
+  }
+}

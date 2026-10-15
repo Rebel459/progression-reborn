@@ -1,16 +1,20 @@
 package net.rebel459.progression_reborn.registry;
 
 import com.mojang.serialization.Codec;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.progression_reborn.util.CollectionData;
-import net.rebel459.unified.platform.UnifiedEvents;
-import net.rebel459.unified.platform.UnifiedRegistries;
+import net.rebel459.unified.api.core.UnifiedEvents;
+import net.rebel459.unified.api.core.UnifiedRegistries;
+import net.rebel459.unified.api.registry.UnifiedItemPredicateCodecs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,19 +24,13 @@ public class PRDataComponents {
 
     public static void init(){
         UnifiedEvents.DefaultDataComponents.modify(((item, builder, provider) -> {
-            if (item == Items.COPPER_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.COPPER_INGOT));
-            if (item == Items.IRON_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.IRON_INGOT));
-            if (item == Items.GOLD_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.GOLD_INGOT));
-
-            if (ProgressionReborn.doEnderscapeIntegration()) {
-                if (item == PRItems.RAW_SHADOLINE_NUGGET.get()) builder.set(COLLECTION_DATA.get(), new CollectionData(enderscape("raw_shadoline")));
-                if (item == enderscape("shadoline_nugget")) builder.set(COLLECTION_DATA.get(), new CollectionData(enderscape("shadoline_ingot")));
-            }
+            if (item == Items.COPPER_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.COPPER_INGOT.builtInRegistryHolder().key()));
+            if (item == Items.IRON_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.IRON_INGOT.builtInRegistryHolder().key()));
+            if (item == Items.GOLD_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.GOLD_INGOT.builtInRegistryHolder().key()));
         }));
-    }
-
-    private static Item enderscape(String path) {
-        return BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath("enderscape", path));
+        ProgressionReborn.ENDERSCAPE_DATA.helpers().componentModifiers()
+                .create("shadoline_nugget", provider -> UnifiedItemPredicateCodecs.ITEMS.create(() -> HolderSet.direct(provider.getOrThrow(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))))))
+                .set(COLLECTION_DATA.get(), new CollectionData(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))));
     }
 
     public static UnifiedRegistries.DataComponentTypes COMPONENTS = UnifiedRegistries.DataComponentTypes.create(ProgressionReborn.MOD_ID);

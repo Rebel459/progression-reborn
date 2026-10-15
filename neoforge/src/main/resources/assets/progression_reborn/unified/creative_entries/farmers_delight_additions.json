@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "type": "insert_after",
+      "items": "progression_reborn:rose_knife",
+      "tab": "farmersdelight:farmersdelight",
+      "target": "farmersdelight:golden_knife"
+    }
+  ],
+  "load_requirement": {
+    "type": "unified:all_of",
+    "predicates": [
+      {
+        "type": "unified:mods_loaded",
+        "mods": [
+          "farmersdelight"
+        ]
+      },
+      "progression_reborn:farmers_delight_integration"
+    ]
+  }
+}

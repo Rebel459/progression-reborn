@@ -1,0 +1,11 @@
+{
+  "targets": "#minecraft:is_nether",
+  "worldgen": {
+    "add_features": [
+      {
+        "feature": "progression_reborn:ore_rose_nether",
+        "step": "underground_ores"
+      }
+    ]
+  }
+}
