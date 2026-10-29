@@ -22,7 +22,7 @@ public enum PRTiers implements Tier {
     private final int enchantmentValue;
     private final Supplier<Ingredient> repairIngredient;
 
-    private PRTiers(
+    PRTiers(
             final TagKey<Block> incorrectBlockForDrops,
             final int uses,
             final float speed,
@@ -65,6 +65,6 @@ public enum PRTiers implements Tier {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }
