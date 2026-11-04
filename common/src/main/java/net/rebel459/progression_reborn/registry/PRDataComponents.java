@@ -13,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.rebel459.progression_reborn.ProgressionReborn;
 import net.rebel459.progression_reborn.util.CollectionData;
 import net.rebel459.unified.api.core.UnifiedEvents;
+import net.rebel459.unified.api.core.UnifiedPlatform;
 import net.rebel459.unified.api.core.UnifiedRegistries;
 import net.rebel459.unified.api.registry.UnifiedItemPredicateCodecs;
 
@@ -28,9 +29,11 @@ public class PRDataComponents {
             if (item == Items.IRON_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.IRON_INGOT.builtInRegistryHolder().key()));
             if (item == Items.GOLD_NUGGET) builder.set(COLLECTION_DATA.get(), new CollectionData(Items.GOLD_INGOT.builtInRegistryHolder().key()));
         }));
-        ProgressionReborn.ENDERSCAPE_DATA.helpers().componentModifiers()
-                .create("shadoline_nugget", provider -> UnifiedItemPredicateCodecs.ITEMS.create(() -> HolderSet.direct(provider.getOrThrow(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))))))
-                .set(COLLECTION_DATA.get(), new CollectionData(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))));
+        UnifiedPlatform.executeAfter(Registries.DATA_COMPONENT_TYPE, () ->
+                ProgressionReborn.ENDERSCAPE_DATA.helpers().componentModifiers()
+                        .create("shadoline_nugget", provider -> UnifiedItemPredicateCodecs.ITEMS.create(() -> HolderSet.direct(provider.getOrThrow(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))))))
+                        .set(COLLECTION_DATA.get(), new CollectionData(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("enderscape", "shadoline_ingot"))))
+        );
     }
 
     public static UnifiedRegistries.DataComponentTypes COMPONENTS = UnifiedRegistries.DataComponentTypes.create(ProgressionReborn.MOD_ID);

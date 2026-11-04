@@ -39,3 +39,5 @@ replay_*.log
 
 /fabric/runs
 /neoforge/runs
+/fabric/run
+/neoforge/run
