@@ -36,20 +36,20 @@ public class PRCreativeInventorySorting {
 		entries.insertBefore(CreativeModeTabIds.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, PRItems.IRON_UPGRADE_SMITHING_TEMPLATE, PRItems.ROSE_UPGRADE_SMITHING_TEMPLATE);
 
 		// Building Blocks
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, PRBlocks.COPPER_BLOCK);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.EXPOSED_COPPER, PRBlocks.EXPOSED_COPPER);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.WEATHERED_COPPER, PRBlocks.WEATHERED_COPPER);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.OXIDIZED_COPPER, PRBlocks.OXIDIZED_COPPER);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, PRBlocks.WAXED_COPPER_BLOCK);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_COPPER, PRBlocks.WAXED_EXPOSED_COPPER);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_COPPER, PRBlocks.WAXED_WEATHERED_COPPER);
-		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER, PRBlocks.WAXED_OXIDIZED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.weathering().unaffected(), PRBlocks.COPPER_BLOCK);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.weathering().exposed(), PRBlocks.EXPOSED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.weathering().weathered(), PRBlocks.WEATHERED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.weathering().oxidized(), PRBlocks.OXIDIZED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.waxed().unaffected(), PRBlocks.WAXED_COPPER_BLOCK);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.waxed().exposed(), PRBlocks.WAXED_EXPOSED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.waxed().weathered(), PRBlocks.WAXED_WEATHERED_COPPER);
+		entries.insertBefore(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.COPPER_BLOCK.waxed().oxidized(), PRBlocks.WAXED_OXIDIZED_COPPER);
 
 		entries.insertAfter(CreativeModeTabIds.BUILDING_BLOCKS, Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, PRBlocks.GOLD_CHAIN);
 
 		entries.insertAfter(
 				CreativeModeTabIds.BUILDING_BLOCKS,
-				Blocks.COPPER_CHAIN.waxedOxidized(),
+				Blocks.COPPER_CHAIN.waxed().oxidized(),
 				PRBlocks.ROSE_BLOCK,
 				PRBlocks.POLISHED_ROSE,
 				PRBlocks.CUT_POLISHED_ROSE,
@@ -67,8 +67,8 @@ public class PRCreativeInventorySorting {
 		entries.insertAfter(CreativeModeTabIds.NATURAL_BLOCKS, Blocks.RAW_GOLD_BLOCK, PRBlocks.RAW_ROSE_BLOCK);
 
 		// Functional Blocks
-		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER_BULB, PRBlocks.ROSE_LAMP);
-		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.COPPER_LANTERN.waxedOxidized(), PRBlocks.GOLD_LANTERN, PRBlocks.ROSE_LANTERN);
-		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.COPPER_CHAIN.waxedOxidized(), PRBlocks.GOLD_CHAIN, PRBlocks.ROSE_CHAIN);
+		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.COPPER_BULB.waxed().oxidized(), PRBlocks.ROSE_LAMP);
+		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.COPPER_LANTERN.waxed().oxidized(), PRBlocks.GOLD_LANTERN, PRBlocks.ROSE_LANTERN);
+		entries.insertAfter(CreativeModeTabIds.FUNCTIONAL_BLOCKS, Blocks.COPPER_CHAIN.waxed().oxidized(), PRBlocks.GOLD_CHAIN, PRBlocks.ROSE_CHAIN);
 	}
 }
